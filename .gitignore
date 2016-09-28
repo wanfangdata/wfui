@@ -1,3 +1,4 @@
 ﻿node_modules/
 obj/
+.vs/
 .ntvs_analysis.*
