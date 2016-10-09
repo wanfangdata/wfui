@@ -1,6 +1,5 @@
 ﻿node_modules/
 obj/
 .vs/
-.ntvs_analysis.*
 WFUI/.ntvs_analysis.dat
 WFUI/.vs/WFUI/v14/.suo
