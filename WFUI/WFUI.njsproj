@@ -32,7 +32,6 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="routes\index.js" />
-    <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="views\index.jade" />
@@ -41,10 +40,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="controllers\" />
+    <Folder Include="models\" />
     <Folder Include="public\" />
     <Folder Include="public\css\" />
     <Folder Include="public\img\" />
     <Folder Include="public\js\" />
+    <Folder Include="public\src\" />
+    <Folder Include="public\src\css\" />
+    <Folder Include="public\src\js\" />
+    <Folder Include="public\src\img\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
   </ItemGroup>
