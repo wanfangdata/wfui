@@ -1,2 +1,0 @@
-C:\Users\bss\Documents\GitHub\wfui\WFUI\obj\Debug\WFUI.njsprojResolveAssemblyReference.cache
-C:\Users\bss\Documents\GitHub\wfui\WFUI\bin\Microsoft.NodejsTools.WebRole.dll
