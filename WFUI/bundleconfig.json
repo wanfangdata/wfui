@@ -1,0 +1,12 @@
+[
+  {
+    "outputFileName": "public/dist/1.0.0/wf.js",
+    "inputFiles": [
+      "public/src/core/base.js",
+      "public/src/core/extension.js",
+      "public/src/core/log.js",
+      "public/src/core/cookie.js",
+      "public/src/core/loader.js"
+    ]
+  }
+]

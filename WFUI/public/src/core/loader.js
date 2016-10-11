@@ -1,4 +1,5 @@
-﻿f.define('loader', [], function () {
+﻿'use strict';
+wf.define('loader', [], function () {
     return {
         load: function (pathArr, callback) {
             for (var i = 0; i < pathArr.length; i++) {
