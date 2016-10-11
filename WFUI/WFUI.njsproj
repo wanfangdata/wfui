@@ -31,8 +31,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="controllers\index.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="bin\www" />
+    <Compile Include="src\js\core\base.js" />
+    <Compile Include="src\js\core\console.js" />
+    <Compile Include="src\js\core\cookie.js" />
+    <Compile Include="src\js\core\extension.js" />
     <Content Include="package.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
@@ -46,11 +51,17 @@
     <Folder Include="public\css\" />
     <Folder Include="public\img\" />
     <Folder Include="public\js\" />
+    <Folder Include="public\js\lib\" />
     <Folder Include="public\src\" />
     <Folder Include="public\src\css\" />
     <Folder Include="public\src\js\" />
     <Folder Include="public\src\img\" />
     <Folder Include="routes\" />
+    <Folder Include="src\" />
+    <Folder Include="src\css\" />
+    <Folder Include="src\img\" />
+    <Folder Include="src\js\" />
+    <Folder Include="src\js\core\" />
     <Folder Include="views\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
