@@ -1,10 +1,10 @@
 ﻿'use strict';
 
-(function (g) {
+(function (global) {
     /**
      * 兼容console
      */
-    var _console = g.console || {},
+    var _console = global.console || {},
 
         methods = [
             'assert', 
@@ -47,7 +47,7 @@
         }(key);
     }
     
-    g.console = console;
+    global.console = console;
 
 }(window));
 
