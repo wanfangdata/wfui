@@ -34,11 +34,19 @@
     <Compile Include="controllers\index.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="bin\www" />
-    <Compile Include="src\js\core\base.js" />
+    <Compile Include="src\core\base.js" />
+    <Compile Include="src\core\cookie.js" />
+    <Compile Include="src\core\extension.js" />
+    <Compile Include="src\core\loader.js" />
+    <Compile Include="src\core\log.js" />
     <Compile Include="src\js\core\console.js" />
     <Compile Include="src\js\core\cookie.js" />
     <Compile Include="src\js\core\extension.js" />
+    <Compile Include="src\test\js\core.js" />
+    <Compile Include="src\test\qunit-2.0.1\qunit.js" />
     <Content Include="package.json" />
+    <Content Include="src\test\qunit-2.0.1\qunit.css" />
+    <Content Include="src\test\test.html" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
@@ -58,10 +66,12 @@
     <Folder Include="public\src\img\" />
     <Folder Include="routes\" />
     <Folder Include="src\" />
-    <Folder Include="src\css\" />
-    <Folder Include="src\img\" />
+    <Folder Include="src\core\" />
     <Folder Include="src\js\" />
     <Folder Include="src\js\core\" />
+    <Folder Include="src\test\" />
+    <Folder Include="src\test\js\" />
+    <Folder Include="src\test\qunit-2.0.1\" />
     <Folder Include="views\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
