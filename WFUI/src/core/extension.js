@@ -1,6 +1,9 @@
-﻿//扩展String format
+﻿'use strict';
+/**
+ * 扩展String format.
+ */
 (function () {
-    'use strict';
+    
     String.prototype.format = function () {
         var source = this;
         if (arguments.length > 0) {
@@ -10,4 +13,5 @@
         }
         return source;
     };
+
 })();
