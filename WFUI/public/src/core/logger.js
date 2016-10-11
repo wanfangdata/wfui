@@ -51,7 +51,7 @@
 
 }(window));
 
-wf.define('log', [], function () {
+wf.define('logger', [], function () {
     
     /**
      * private
