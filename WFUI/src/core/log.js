@@ -55,7 +55,7 @@ wf.define('log', [], function () {
     
     /**
      * private
-     * 模块集合
+     * 日志级别
      */
     var LOG_LEVEL = {
         debug: 0,
