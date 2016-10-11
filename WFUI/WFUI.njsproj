@@ -32,21 +32,21 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="controllers\index.js" />
-    <Content Include="public\js\lib\wf-1.0.0.js" />
-    <Compile Include="public\js\lib\wf-1.0.0.min.js">
-      <SubType>Code</SubType>
-      <DependentUpon>public\js\lib\wf-1.0.0.js</DependentUpon>
-    </Compile>
+    <None Include="bundleconfig.json" />
     <Content Include="public\src\core\base.js" />
     <Content Include="public\src\core\cookie.js" />
     <Content Include="public\src\core\extension.js" />
     <Content Include="public\src\core\loader.js" />
-    <Content Include="public\src\core\log.js" />
+    <Content Include="public\src\core\logger.js" />
     <Content Include="public\src\test\js\core.js" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
+    <Content Include="public\dist\1.0.0\wf.js" />
+    <Compile Include="public\dist\1.0.0\wf.min.js">
+      <SubType>Code</SubType>
+      <DependentUpon>public\dist\1.0.0\wf.js</DependentUpon>
+    </Compile>
     <Compile Include="routes\index.js" />
     <Compile Include="bin\www" />
-    <None Include="bundleconfig.json" />
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
     <Content Include="public\src\test\test.html" />
@@ -60,9 +60,11 @@
     <Folder Include="models\" />
     <Folder Include="public\" />
     <Folder Include="public\css\" />
+    <Folder Include="public\dist\1.0.0\" />
     <Folder Include="public\img\" />
     <Folder Include="public\js\" />
     <Folder Include="public\js\lib\" />
+    <Folder Include="public\dist\" />
     <Folder Include="public\src\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\test\" />
