@@ -70,6 +70,7 @@
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
+    <Folder Include="public\src\test\js\NewFolder1\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
     <Folder Include="routes\" />
     <Folder Include="views\" />
