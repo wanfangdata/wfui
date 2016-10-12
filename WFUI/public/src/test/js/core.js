@@ -78,4 +78,8 @@ QUnit.test('wf.logger', function (assert) {
     assert.equal(logger.getOutputMode(), 'local', "wf.logger/getOutputMode;");
     logger.setOutputMode('http://www.wanfnagdata.com.cn/log');
     assert.equal(logger.getOutputMode(), 'remote', "wf.logger/setOutputMode;");
+    assert.equal(logger.debug('测试debug'), '测试debug', "wf.logger/debug;");
+    assert.equal(logger.info('测试info'), '测试info', "wf.logger/info;");
+    assert.equal(logger.warn('测试warn'), '测试warn', "wf.logger/warn;");
+    assert.equal(logger.error('测试error'), '测试error', "wf.logger/error;");
 });
