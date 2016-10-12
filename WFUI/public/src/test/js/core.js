@@ -71,5 +71,11 @@
 QUnit.test('wf.cookie', function (assert) {
     var cookie = wf.require('cookie');
     cookie.set('testCookie', 'value');
-    assert.equal(cookie.get('testCookie'), 'value', "wf.cookie");
+    assert.equal(cookie.get('testCookie'), 'value', "wf.cookie/get;set;");
+});
+QUnit.test('wf.logger', function (assert) {
+    var logger = wf.require('logger');
+    assert.equal(logger.getOutputMode(), 'local', "wf.logger/getOutputMode;");
+    logger.setOutputMode('http://www.wanfnagdata.com.cn/log');
+    assert.equal(logger.getOutputMode(), 'remote', "wf.logger/setOutputMode;");
 });

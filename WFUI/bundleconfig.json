@@ -4,7 +4,8 @@
     "inputFiles": [
       "public/src/core/base.js",
       "public/src/core/extension.js",
-      "public/src/core/log.js",
+      "public/src/core/console.js",
+      "public/src/core/logger.js",
       "public/src/core/cookie.js",
       "public/src/core/loader.js"
     ]
