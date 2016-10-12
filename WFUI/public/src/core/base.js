@@ -19,6 +19,9 @@
                  */
                 modules = {};
 
+            /**
+             * WFUI实例
+             */
             return {
                 
                 /**
