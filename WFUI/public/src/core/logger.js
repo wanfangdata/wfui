@@ -1,79 +1,53 @@
 ﻿'use strict';
 
-(function (global) {
-    /**
-     * 兼容console
-     */
-    var _console = global.console || {},
-
-        methods = [
-            'assert', 
-            'clear',
-            'count', 
-            'debug', 
-            'dir', 
-            'dirxml',
-            'exception',
-            'error', 
-            'group', 
-            'groupCollapsed',
-            'groupEnd',
-            'info', 
-            'log', 
-            'profile',
-            'profileEnd',
-            'table',
-            'time',
-            'timeEnd',
-            'timeStamp',
-            'trace', 
-            'warn'
-        ],
-        console = {
-            version: '1.0.0'
-        },
-        key;
-    
-    for (var i = 0, len = methods.length; i < len; i++) {
-        key = methods[i];
-        console[key] = function (key) {
-            return function () {
-                if (typeof _console[key] === 'undefined') {
-                    return 0;
-                }
-                
-                Function.prototype.apply.call(_console[key], _console, arguments);
-            };
-        }(key);
-    }
-    
-    global.console = console;
-
-}(window));
-
 wf.define('logger', [], function () {
-    
+
     /**
      * private
      * 日志级别
      */
-    var LOG_LEVEL = {
+    var LogLevel = {
         debug: 0,
         info: 1,
         warn: 2,
         error: 3
+    },
+
+    /**
+     * private
+     * 日志输出位置默认为本地输出
+     */
+    isLocal = true,
+
+    /**
+     * private
+     * 日志输出到远程地址
+     */
+    remoteUrl = '',
+
+    /**
+     * private
+     * 日志输出到远程地址
+     */
+    out = function (msg) {
+
     };
+
     return {
-        debug: function () { 
-            
+        setOutPosition: function (url) {
+            isLocal = false;
+
         },
-        info: function () { 
-        
+        debug: function (msg) {
+
         },
-        warn: function () { 
-        
+        info: function (msg) {
+
         },
-        error: function () {
+        warn: function (msg) {
+
+        },
+        error: function (msg) {
 
         }
     };
