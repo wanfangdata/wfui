@@ -33,20 +33,23 @@
     <Compile Include="app.js" />
     <Compile Include="controllers\index.js" />
     <None Include="bundleconfig.json" />
-    <Content Include="public\src\core\base.js" />
-    <Content Include="public\src\core\cookie.js" />
-    <Content Include="public\src\core\extension.js" />
-    <Content Include="public\src\core\loader.js" />
-    <Content Include="public\src\core\logger.js" />
+    <Content Include="public\src\core\js\base.js" />
+    <Content Include="public\src\core\js\cookie.js" />
+    <Content Include="public\src\core\js\extension.js" />
+    <Content Include="public\src\core\js\loader.js" />
+    <Content Include="public\src\core\js\logger.js" />
+    <Content Include="public\src\core\less\mixins.less" />
+    <Content Include="public\src\core\less\variables.less" />
     <Content Include="public\src\test\js\core.js" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
+    <Content Include="public\src\core\js\console.js" />
+    <Content Include="public\src\test\js\loaderTest.js" />
+    <Content Include="public\src\components\checkbox\checkbox.js" />
     <Content Include="public\dist\1.0.0\wf.js" />
     <Compile Include="public\dist\1.0.0\wf.min.js">
       <SubType>Code</SubType>
-      <DependentUpon>public\dist\1.0.0\wf.js</DependentUpon>
+      <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
     </Compile>
-    <Content Include="public\src\core\console.js" />
-    <Content Include="public\src\test\js\loaderTest.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
@@ -68,7 +71,14 @@
     <Folder Include="public\js\lib\" />
     <Folder Include="public\dist\" />
     <Folder Include="public\src\" />
+    <Folder Include="public\src\components\form\" />
+    <Folder Include="public\src\components\checkbox\" />
+    <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
+    <Folder Include="public\src\components\" />
+    <Folder Include="public\src\core\less\" />
+    <Folder Include="public\src\core\js\" />
+    <Folder Include="public\src\js\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
