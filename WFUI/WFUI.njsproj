@@ -33,6 +33,7 @@
     <Compile Include="app.js" />
     <Compile Include="controllers\index.js" />
     <None Include="bundleconfig.json" />
+    <Content Include="public\src\components\checkbox\index.less" />
     <Content Include="public\src\core\js\base.js" />
     <Content Include="public\src\core\js\cookie.js" />
     <Content Include="public\src\core\js\extension.js" />
@@ -44,7 +45,7 @@
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
     <Content Include="public\src\core\js\console.js" />
     <Content Include="public\src\test\js\loaderTest.js" />
-    <Content Include="public\src\components\checkbox\checkbox.js" />
+    <Content Include="public\src\components\checkbox\index.js" />
     <Content Include="public\dist\1.0.0\wf.js" />
     <Compile Include="public\dist\1.0.0\wf.min.js">
       <SubType>Code</SubType>
