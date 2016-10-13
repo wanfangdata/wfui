@@ -79,7 +79,6 @@
     <Folder Include="public\src\components\" />
     <Folder Include="public\src\core\less\" />
     <Folder Include="public\src\core\js\" />
-    <Folder Include="public\src\js\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
