@@ -355,27 +355,7 @@ wf.define('loader', [], function () {
             node.async = 'true';
             node.src = path + '.js';
             return node;
-        },
-
-        /**
-         * check所有模块加载完成执行callback
-         * @param {Function} callback 加载完成回调函数
-         * private
-         */
-        checkAllFiles = function (callback) {
-            var allLoaded = true;
-
-            for (var i = 0; i < pathArr.length; i++) {
-                if (!loadModules[pathArr[i]]) {
-                    allLoaded = false;
-                    break;
-                }
-            }
-
-            if (allLoaded) {
-                callback();
-            }
-        }
+        };
 
     /**
      * public api
@@ -391,12 +371,32 @@ wf.define('loader', [], function () {
                 var path = pathArr[i];
 
                 if (!loadModules[path]) {
-                    var head = document.getElementsByTagName('head')[0];
-                    var node = createModuleNode(path);
+                    var head = document.getElementsByTagName('head')[0],
+                        node = createModuleNode(path),
+
+                    /**
+                     * check所有模块加载完成执行callback
+                     * @param {Function} callback 加载完成回调函数
+                     * private
+                     */
+                    checkAllFiles = function () {
+                        var allLoaded = true;
+
+                        for (var i = 0; i < pathArr.length; i++) {
+                            if (!loadModules[pathArr[i]]) {
+                                allLoaded = false;
+                                break;
+                            }
+                        }
+
+                        if (allLoaded) {
+                            callback();
+                        }
+                    }
                     node.onload = function () {
                         loadModules[path] = true;
                         head.removeChild(node);
-                        checkAllFiles(callback);
+                        checkAllFiles(pathArr, callback);
                     };
                     head.appendChild(node);
                 }

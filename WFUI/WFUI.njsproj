@@ -46,6 +46,7 @@
       <DependentUpon>public\dist\1.0.0\wf.js</DependentUpon>
     </Compile>
     <Content Include="public\src\core\console.js" />
+    <Content Include="public\src\test\js\loaderTest.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />

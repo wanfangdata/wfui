@@ -2,49 +2,49 @@
     wf.define('constant.PI', [], function () {
         return 3.14159;
     });
-    
+
     wf.define('shape.Circle', ['constant.PI'], function (pi) {
         var Circle = function (r) {
             this.r = r;
         };
-        
+
         Circle.prototype = {
-            area : function () {
+            area: function () {
                 return pi * this.r * this.r;
             }
         }
-        
+
         return Circle;
     });
-    
+
     wf.define('shape.Rectangle', [], function () {
         var Rectangle = function (l, w) {
             this.l = l;
             this.w = w;
         };
-        
+
         Rectangle.prototype = {
             area: function () {
                 return this.l * this.w;
             }
         };
-        
+
         return Rectangle;
     });
-    
+
     wf.define('ShapeTypes', ['shape.Circle', 'shape.Rectangle'], function (Circle, Rectangle) {
         return {
             CIRCLE: Circle,
             RECTANGLE: Rectangle
         };
     });
-    
+
     wf.define('ShapeFactory', ['ShapeTypes'], function (ShapeTypes) {
-        
+
         return {
             getShape: function (type) {
                 var shape;
-                
+
                 switch (type) {
                     case 'CIRCLE': {
                         shape = new ShapeTypes[type](arguments[1]);
@@ -55,7 +55,7 @@
                         break;
                     }
                 }
-                
+
                 return shape;
             }
         };
@@ -82,4 +82,13 @@ QUnit.test('wf.logger', function (assert) {
     assert.equal(logger.info('测试info'), '测试info', "wf.logger/info;");
     assert.equal(logger.warn('测试warn'), '测试warn', "wf.logger/warn;");
     assert.equal(logger.error('测试error'), '测试error', "wf.logger/error;");
+});
+QUnit.test('wf.loader', function (assert) {
+    var done = assert.async();
+    var loader = wf.require('loader');
+    loader.load(['/src/test/js/loaderTest'], function () {
+        var loaderTest = wf.require('loaderTest');
+        assert.equal(loaderTest, 'loaderTest', "wf.loader/load;");
+        done();
+    });    
 });
