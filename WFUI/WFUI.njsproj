@@ -30,8 +30,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="controllers\test.js" />
+    <Compile Include="routes.js" />
     <Compile Include="app.js" />
-    <Compile Include="controllers\index.js" />
+    <Compile Include="controllers\home.js" />
     <None Include="bundleconfig.json" />
     <Content Include="public\src\components\checkbox\index.less" />
     <Content Include="public\src\core\js\base.js" />
@@ -51,7 +53,7 @@
       <SubType>Code</SubType>
       <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
     </Compile>
-    <Compile Include="routes\index.js" />
+    <Compile Include="public\src\core\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
@@ -77,12 +79,12 @@
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\components\" />
+    <Folder Include="public\src\core\js\lib\" />
     <Folder Include="public\src\core\less\" />
     <Folder Include="public\src\core\js\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
-    <Folder Include="routes\" />
     <Folder Include="views\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

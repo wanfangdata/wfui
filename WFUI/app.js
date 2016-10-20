@@ -4,8 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
-var routes = require('./routes/index');
+var routes = require('./routes');
 
 var app = express();
 
@@ -23,8 +22,10 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('./html'))
 
-app.use('/', routes);
-//app.use('/users', users);
+//路由注册
+for (var i = 0; i < routes.length; i++) {
+    app.use(routes[i].key, routes[i].value);
+};
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
