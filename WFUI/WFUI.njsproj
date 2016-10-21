@@ -60,7 +60,7 @@
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
     <Content Include="public\src\test\test.html" />
-    <Content Include="views\error.jade" />
+    <Content Include="views\error.vash" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
