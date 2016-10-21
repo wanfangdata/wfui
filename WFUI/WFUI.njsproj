@@ -34,18 +34,20 @@
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
+    <Content Include="views\index.vash" />
+    <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />
     <Content Include="public\src\components\checkbox\index.less" />
-    <Content Include="public\src\core\js\base.js" />
-    <Content Include="public\src\core\js\cookie.js" />
-    <Content Include="public\src\core\js\extension.js" />
-    <Content Include="public\src\core\js\loader.js" />
-    <Content Include="public\src\core\js\logger.js" />
+    <Compile Include="public\src\core\js\base.js" />
+    <Compile Include="public\src\core\js\cookie.js" />
+    <Compile Include="public\src\core\js\extension.js" />
+    <Compile Include="public\src\core\js\loader.js" />
+    <Compile Include="public\src\core\js\logger.js" />
     <Content Include="public\src\core\less\mixins.less" />
     <Content Include="public\src\core\less\variables.less" />
     <Content Include="public\src\test\js\core.js" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
-    <Content Include="public\src\core\js\console.js" />
+    <Compile Include="public\src\core\js\console.js" />
     <Content Include="public\src\test\js\loaderTest.js" />
     <Content Include="public\src\components\checkbox\index.js" />
     <Content Include="public\dist\1.0.0\wf.js" />
@@ -58,8 +60,6 @@
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
     <Content Include="public\src\test\test.html" />
-    <Content Include="views\index.jade" />
-    <Content Include="views\layout.jade" />
     <Content Include="views\error.jade" />
   </ItemGroup>
   <ItemGroup>
