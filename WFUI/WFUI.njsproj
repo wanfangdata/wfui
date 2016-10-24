@@ -34,6 +34,14 @@
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
+    <Content Include="public\src\core\less\grid.less" />
+    <Content Include="public\src\core\less\import.less" />
+    <Content Include="public\src\core\less\mixins\clearfix.less" />
+    <Content Include="public\src\core\less\mixins\grid.less" />
+    <Content Include="public\src\core\less\utilities.less" />
+    <Content Include="public\src\core\less\utilities\clearfix.less" />
+    <Content Include="public\src\core\less\utilities\normalize.less" />
+    <Content Include="public\src\core\less\variables\grid.less" />
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />
@@ -82,6 +90,9 @@
     <Folder Include="public\src\core\js\lib\" />
     <Folder Include="public\src\core\less\" />
     <Folder Include="public\src\core\js\" />
+    <Folder Include="public\src\core\less\mixins\" />
+    <Folder Include="public\src\core\less\variables\" />
+    <Folder Include="public\src\core\less\utilities\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
