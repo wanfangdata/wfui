@@ -39,23 +39,29 @@
       <SubType>Content</SubType>
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
-    <Content Include="public\src\core\less\grid.css">
+    <Content Include="public\dist\1.0.0\wf.css" />
+    <Content Include="public\dist\1.0.0\wf.min.css">
       <SubType>Content</SubType>
-      <DependentUpon>public\src\core\less\grid.less</DependentUpon>
+      <DependentUpon>public\dist\1.0.0\wf.css</DependentUpon>
     </Content>
     <Content Include="public\src\core\less\grid.less" />
-    <Content Include="public\src\core\less\grid.min.css">
-      <SubType>Content</SubType>
-      <DependentUpon>public\src\core\less\grid.css</DependentUpon>
-    </Content>
     <Content Include="public\src\core\less\import.less" />
     <Content Include="public\src\core\less\mixins\clearfix.less" />
     <Content Include="public\src\core\less\mixins\grid.less" />
     <Content Include="public\src\core\less\utilities.less" />
     <Content Include="public\src\core\less\utilities\clearfix.less" />
-    <Content Include="public\src\core\less\utilities\normalize.less" />
+    <Content Include="public\src\core\less\normalize.less" />
     <Content Include="public\src\core\less\variables\grid.less" />
     <Content Include="public\src\core\less\variables\var.less" />
+    <Content Include="public\src\core\less\wf.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\src\core\less\wf.less</DependentUpon>
+    </Content>
+    <Content Include="public\src\core\less\wf.less" />
+    <Content Include="public\src\core\less\wf.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\src\core\less\wf.css</DependentUpon>
+    </Content>
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />

@@ -9,5 +9,11 @@
       "public/src/core/js/cookie.js",
       "public/src/core/js/loader.js"
     ]
+  },
+  {
+    "outputFileName": "public/dist/1.0.0/wf.css",
+    "inputFiles": [
+      "public/src/core/less/wf.css"
+    ]
   }
 ]
