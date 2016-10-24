@@ -1,1 +1,52 @@
-﻿
+﻿@import "clearfix.less";
+@import "../variables/grid.less";
+
+.make-row() {
+    .clearfix();
+}
+
+.make-column(@columns; @gutter: @grid-gutter-width) {
+    position: relative;
+    min-height: 1px;
+    padding-left: (@gutter / 2);
+    padding-right: (@gutter / 2);
+    float: left;
+    width: percentage((@columns / @grid-columns));
+}
+
+.make-grid-columns() {
+
+    .col(@index) {
+        @item: ~".col-@{index}";
+        .col((@index + 1), @item);
+    }
+
+    .col(@index, @list) when (@index =< @grid-columns) {
+        @item: ~".col-@{index}";
+        .col((@index + 1), ~"@{list}, @{item}");
+    }
+
+    .col(@index, @list) when (@index > @grid-columns) {
+        @{list} {
+            position: relative;
+            min-height: 1px;
+            padding-left: (@grid-gutter-width / 2);
+            padding-right: (@grid-gutter-width / 2);
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+
+    .generate-columns-width(@n, @i: 1) when (@i =< @n) {
+        .col-@{i} {
+            width: (@i * 100% / @n);
+        }
+
+        .generate-columns-width(@n, (@i + 1));
+    }
+    //生成公共样式
+    .col(1);
+    //生成col宽度
+    .generate-columns-width(@grid-columns);
+}

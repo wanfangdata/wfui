@@ -34,7 +34,20 @@
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.defaults">
+      <SubType>Content</SubType>
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
+    <Content Include="public\src\core\less\grid.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\src\core\less\grid.less</DependentUpon>
+    </Content>
     <Content Include="public\src\core\less\grid.less" />
+    <Content Include="public\src\core\less\grid.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\src\core\less\grid.css</DependentUpon>
+    </Content>
     <Content Include="public\src\core\less\import.less" />
     <Content Include="public\src\core\less\mixins\clearfix.less" />
     <Content Include="public\src\core\less\mixins\grid.less" />
@@ -42,6 +55,7 @@
     <Content Include="public\src\core\less\utilities\clearfix.less" />
     <Content Include="public\src\core\less\utilities\normalize.less" />
     <Content Include="public\src\core\less\variables\grid.less" />
+    <Content Include="public\src\core\less\variables\var.less" />
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />
