@@ -82,7 +82,7 @@
       <SubType>Code</SubType>
       <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
     </Compile>
-    <Compile Include="public\js\lib\jquery-1.12.4.min.js" />
+    <Compile Include="public\site\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
@@ -94,12 +94,13 @@
     <Folder Include="controllers\" />
     <Folder Include="models\" />
     <Folder Include="public\" />
-    <Folder Include="public\css\" />
+    <Folder Include="public\site\css\" />
     <Folder Include="public\dist\1.0.0\" />
-    <Folder Include="public\img\" />
-    <Folder Include="public\js\" />
-    <Folder Include="public\js\lib\" />
+    <Folder Include="public\site\img\" />
+    <Folder Include="public\site\js\" />
+    <Folder Include="public\site\js\lib\" />
     <Folder Include="public\dist\" />
+    <Folder Include="public\site\" />
     <Folder Include="public\src\" />
     <Folder Include="public\src\components\form\" />
     <Folder Include="public\src\components\checkbox\" />
