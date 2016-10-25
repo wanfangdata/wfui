@@ -43,6 +43,7 @@
       <SubType>Content</SubType>
       <DependentUpon>public\dist\1.0.0\wf.css</DependentUpon>
     </Content>
+    <Content Include="public\site\src\less\var.less" />
     <Content Include="public\src\core\less\grid.less" />
     <Content Include="public\src\core\less\import.less" />
     <Content Include="public\src\core\less\mixins\clearfix.less" />
@@ -101,6 +102,11 @@
     <Folder Include="public\site\js\lib\" />
     <Folder Include="public\dist\" />
     <Folder Include="public\site\" />
+    <Folder Include="public\site\src\" />
+    <Folder Include="public\site\src\js\" />
+    <Folder Include="public\site\src\less\" />
+    <Folder Include="public\site\src\img\" />
+    <Folder Include="public\site\src\font\" />
     <Folder Include="public\src\" />
     <Folder Include="public\src\components\form\" />
     <Folder Include="public\src\components\checkbox\" />

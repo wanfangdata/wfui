@@ -7,8 +7,19 @@
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="header">
+        <a class="brand" href="/">WFUI</a>
+        <nav>
+            <a href=""></a>
+            <a href=""></a>
+        </nav>
+    </div>
     @html.block('content')
-    @html.block('footer')
+    <div class="footer">
+        <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
+        <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
+        <span class="copyright">©2016 万方数据技术研发中心</span>
+    </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../dist/1.0.0/wf.min.js"></script>
 </body>
