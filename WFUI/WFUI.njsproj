@@ -82,7 +82,7 @@
       <SubType>Code</SubType>
       <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
     </Compile>
-    <Compile Include="public\src\core\js\lib\jquery-1.12.4.min.js" />
+    <Compile Include="public\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
@@ -106,7 +106,6 @@
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\components\" />
-    <Folder Include="public\src\core\js\lib\" />
     <Folder Include="public\src\core\less\" />
     <Folder Include="public\src\core\js\" />
     <Folder Include="public\src\core\less\mixins\" />

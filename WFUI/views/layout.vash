@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@model.title</title>
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
 </head>
 <body>
     @html.block('content')
     @html.block('footer')
+    <script src="../js/lib/jquery-1.12.4.min.js"></script>
     <script src="../dist/1.0.0/wf.min.js"></script>
 </body>
 </html>
