@@ -18,9 +18,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static('./html'))
+app.use(express.static('public'))
 
 //路由注册
 for (var i = 0; i < routes.length; i++) {
