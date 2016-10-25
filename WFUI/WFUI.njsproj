@@ -30,7 +30,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="controllers\test.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
