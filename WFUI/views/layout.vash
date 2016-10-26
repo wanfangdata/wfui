@@ -6,6 +6,7 @@
     <title>@model.title</title>
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
     <link href="../site/css/global.min.css" rel="stylesheet" />
+    <link href="../site/css/animate.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
@@ -33,6 +34,8 @@
         </div>
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="../site/js/lib/animatedLetters.min.js"></script>
     <script src="../dist/1.0.0/wf.min.js"></script>
+    <script>$('.brand').textillate({ in: { effect: 'rotateIn' } });</script>
 </body>
 </html>

@@ -30,6 +30,14 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="public\site\js\lib\animatedLetters.js" />
+    <Compile Include="public\site\js\lib\animatedLetters.min.js">
+      <SubType>Code</SubType>
+      <DependentUpon>public\site\js\lib\animatedLetters.js</DependentUpon>
+    </Compile>
+    <Compile Include="public\site\js\lib\_animatedLetters\jquery.fittext.js" />
+    <Compile Include="public\site\js\lib\_animatedLetters\jquery.lettering.js" />
+    <Compile Include="public\site\js\lib\_animatedLetters\jquery.textillate.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
@@ -43,6 +51,7 @@
       <SubType>Content</SubType>
       <DependentUpon>public\dist\1.0.0\wf.css</DependentUpon>
     </Content>
+    <Content Include="public\site\css\animate.min.css" />
     <Content Include="public\site\css\global.css" />
     <Content Include="public\site\css\global.min.css">
       <SubType>Content</SubType>
@@ -121,6 +130,7 @@
     <Folder Include="public\site\js\lib\" />
     <Folder Include="public\dist\" />
     <Folder Include="public\site\" />
+    <Folder Include="public\site\js\lib\_animatedLetters\" />
     <Folder Include="public\site\src\" />
     <Folder Include="public\site\src\js\" />
     <Folder Include="public\site\src\less\" />

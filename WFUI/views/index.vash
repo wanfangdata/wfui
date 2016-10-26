@@ -2,11 +2,11 @@
     @html.block('content', function(model){
     <div class="content">
         <div class="wf-row">
-            <div class="wf-col-4">
-                @html.include('_menu', null)
+            <div class="wf-col-3">
+                @html.include('_menu')
             </div>
-            <div class="wf-col-8">
-                @html.include('pages/index', null)
+            <div class="wf-col-9">
+                @html.include('pages/index')
             </div>
         </div>        
     </div>    
