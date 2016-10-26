@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@model.title</title>
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
+    <link href="../site/css/global.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
