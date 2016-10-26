@@ -23,11 +23,11 @@
     ]
   },
   {
-    "outputFileName": "public/site/js/lib/animatedLetters.js",
+    "outputFileName": "public/site/js/lib/animated.js",
     "inputFiles": [
-      "public/site/js/lib/_animatedLetters/jquery.fittext.js",
-      "public/site/js/lib/_animatedLetters/jquery.lettering.js",
-      "public/site/js/lib/_animatedLetters/jquery.textillate.js"
+      "public/site/js/lib/_animated/jquery.fittext.js",
+      "public/site/js/lib/_animated/jquery.lettering.js",
+      "public/site/js/lib/_animated/jquery.textillate.js"
     ]
   }
 ]
