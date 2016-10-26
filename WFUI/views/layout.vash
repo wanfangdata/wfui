@@ -9,11 +9,13 @@
 </head>
 <body>
     <div class="header">
-        <a class="brand" href="/">WFUI</a>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+        <div class="wf-row">
+            <a class="brand" href="/">WFUI</a>
+            <nav>
+                <a href=""></a>
+                <a href=""></a>
+            </nav>
+        </div>
     </div>
     @html.block('content')
     <div class="footer-wrapper">
