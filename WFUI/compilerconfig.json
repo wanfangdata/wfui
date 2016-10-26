@@ -2,5 +2,9 @@
   {
     "outputFile": "public/src/core/less/wf.css",
     "inputFile": "public/src/core/less/wf.less"
+  },
+  {
+    "outputFile": "public/site/src/less/global.css",
+    "inputFile": "public/site/src/less/global.less"
   }
 ]

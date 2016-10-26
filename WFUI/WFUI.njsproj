@@ -43,7 +43,24 @@
       <SubType>Content</SubType>
       <DependentUpon>public\dist\1.0.0\wf.css</DependentUpon>
     </Content>
-    <Content Include="public\site\src\less\var.less" />
+    <Content Include="public\site\css\global.css" />
+    <Content Include="public\site\css\global.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\site\css\global.css</DependentUpon>
+    </Content>
+    <Content Include="public\site\src\less\footer.less" />
+    <Content Include="public\site\src\less\global.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\site\src\less\global.less</DependentUpon>
+    </Content>
+    <Content Include="public\site\src\less\global.less" />
+    <Content Include="public\site\src\less\global.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\site\src\less\global.css</DependentUpon>
+    </Content>
+    <Content Include="public\site\src\less\header.less" />
+    <Content Include="public\site\src\less\mixins.less" />
+    <Content Include="public\site\src\less\variables.less" />
     <Content Include="public\src\core\less\grid.less" />
     <Content Include="public\src\core\less\import.less" />
     <Content Include="public\src\core\less\mixins\clearfix.less" />

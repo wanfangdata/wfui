@@ -17,12 +17,12 @@
 .make-grid-columns() {
 
     .col(@index) {
-        @item: ~".col-@{index}";
+        @item: ~".wf-col-@{index}";
         .col((@index + 1), @item);
     }
 
     .col(@index, @list) when (@index =< @grid-columns) {
-        @item: ~".col-@{index}";
+        @item: ~".wf-col-@{index}";
         .col((@index + 1), ~"@{list}, @{item}");
     }
 
@@ -39,7 +39,7 @@
     }
 
     .generate-columns-width(@n, @i: 1) when (@i =< @n) {
-        .col-@{i} {
+        .wf-col-@{i} {
             width: (@i * 100% / @n);
         }
 

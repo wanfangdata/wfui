@@ -15,5 +15,11 @@
     "inputFiles": [
       "public/src/core/less/wf.css"
     ]
+  },
+    {
+    "outputFileName": "public/site/css/global.css",
+    "inputFiles": [
+      "public/site/src/less/global.css"
+    ]
   }
 ]
