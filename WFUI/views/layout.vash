@@ -16,10 +16,18 @@
         </nav>
     </div>
     @html.block('content')
-    <div class="footer">
-        <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
-        <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
-        <span class="copyright">©2016 万方数据技术研发中心</span>
+    <div class="footer-wrapper">
+        <div class="footer">
+            <div class="wf-row">
+                <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
+            </div>
+            <div class="wf-row">
+                <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
+            </div>
+            <div class="wf-row">
+                <span class="copyright">©2016 万方数据技术研发中心</span>
+            </div>
+        </div>
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../dist/1.0.0/wf.min.js"></script>
