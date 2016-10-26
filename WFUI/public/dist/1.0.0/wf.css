@@ -469,6 +469,7 @@ table {
 }
 .wf-col-1, .wf-col-2, .wf-col-3, .wf-col-4, .wf-col-5, .wf-col-6, .wf-col-7, .wf-col-8, .wf-col-9, .wf-col-10, .wf-col-11, .wf-col-12 {
   position: relative;
+  float: left;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;

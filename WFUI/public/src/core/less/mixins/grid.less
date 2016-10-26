@@ -5,15 +5,6 @@
     .ut-clearfix();
 }
 
-.make-column(@columns; @gutter: @grid-gutter-width) {
-    position: relative;
-    min-height: 1px;
-    padding-left: (@gutter / 2);
-    padding-right: (@gutter / 2);
-    float: left;
-    width: percentage((@columns / @grid-columns));
-}
-
 .make-grid-columns() {
 
     .col(@index) {
@@ -29,6 +20,7 @@
     .col(@index, @list) when (@index > @grid-columns) {
         @{list} {
             position: relative;
+            float:left;
             min-height: 1px;
             padding-left: (@grid-gutter-width / 2);
             padding-right: (@grid-gutter-width / 2);
