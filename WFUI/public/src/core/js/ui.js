@@ -1,7 +1,8 @@
 ﻿'use strict';
 
-wf.define('UI', [], function () {
-    var UI = function (name) { 
-        
-    };
+wf.define('UI', '_core_', function () {
+    return wf.inherit({
+        name: String.empty
+
+    });
 });

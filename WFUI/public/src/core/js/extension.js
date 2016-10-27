@@ -14,4 +14,16 @@
         return source;
     };
 
+    String.prototype.empty = function () {
+        return '';
+    };
+    Array.prototype.empty = function () {
+        return [];
+    };
+    Function.prototype.empty = function () { 
+        return function () { };
+    };
+    Object.prototype.empty = function () { 
+        return {};
+    };
 })();

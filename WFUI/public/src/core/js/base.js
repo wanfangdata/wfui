@@ -14,6 +14,16 @@
             
             var name = 'wf',
                 /**
+                 * 核心模块,dependencies
+                 */
+                core = {
+                    token: '_core_',
+                    values: [
+                        'logger',
+                        'loader'
+                    ]
+                },
+                /**
                  * private
                  * 模块集合
                  */
@@ -40,11 +50,15 @@
                  * 模块声明
                  * @method define
                  * @param {String} name 模块名称
-                 * @param {Array} dependencies 模块依赖项
+                 * @param {Array||String} dependencies 模块依赖项,为core.token时引用核心模块
                  * @param {String} factory 模块创建工厂
                  * @return {Module} 返回该定义模块
                  */
                 define: function (name, dependencies, factory) {
+                    
+                    if (typeof dependencies === 'string' && dependencies === core.token) {
+                        dependencies = core.values;
+                    }
                     
                     if (!modules[name]) {
                         var module = {
@@ -109,12 +123,12 @@
                     
                     // 本次调用所创建的类（构造函数）
                     function C() {
-
+                        
                         if (base) {
                             this.baseprototype = base.prototype;
                         }
-                        if (!this.init) { 
-                            throw new Error('init function is undefind');                            
+                        if (!this.init) {
+                            throw new Error('init function is undefind');
                         }
                         this.init.apply(this, arguments);
                     }
