@@ -2,45 +2,36 @@
     wf.define('constant.PI', [], function () {
         return 3.14159;
     });
-
     wf.define('shape.Circle', ['constant.PI'], function (pi) {
         var Circle = function (r) {
             this.r = r;
         };
-
         Circle.prototype = {
             area: function () {
                 return pi * this.r * this.r;
             }
         }
-
         return Circle;
     });
-
     wf.define('shape.Rectangle', [], function () {
         var Rectangle = function (l, w) {
             this.l = l;
             this.w = w;
         };
-
         Rectangle.prototype = {
             area: function () {
                 return this.l * this.w;
             }
         };
-
         return Rectangle;
     });
-
     wf.define('ShapeTypes', ['shape.Circle', 'shape.Rectangle'], function (Circle, Rectangle) {
         return {
             CIRCLE: Circle,
             RECTANGLE: Rectangle
         };
     });
-
     wf.define('ShapeFactory', ['ShapeTypes'], function (ShapeTypes) {
-
         return {
             getShape: function (type) {
                 var shape;
@@ -60,12 +51,38 @@
             }
         };
     });
+    wf.define('Person', [], function () {
+        return wf.inherit({
+            face: '',
+            init: function (face) {
+                this.face = face;
+            },
+            getFace: function () {
+                return this.face;
+            },
+            setFace: function (face) {
+                this.face = face;
+            }
+        });
+    });
+    wf.define('Employee', ['Person'], function (Person) {
+        return wf.inherit(Person, {
+            init: function (face) {
+                this.face = face;
+            }
+        });
+    });
     var pi = wf.require('constant.PI');
     var ShapeFactory = wf.require('ShapeFactory');
     var cirlceArea = ShapeFactory.getShape('CIRCLE', 5).area();
     var rectangleArea = ShapeFactory.getShape('RECTANGLE', 3, 4).area();
+    var Employee = wf.require('Employee');
+    var employee = new Employee('😆');
+    var currentFace = employee.getFace();
     assert.equal(pi, 3.14159, "module define successed");
     assert.ok(cirlceArea == 78.53975 && rectangleArea == 12, 'module require successed');
+    employee.setFace('😂');
+    assert.ok(currentFace == '😆' && employee.getFace() == '😂', 'module inherit successed');
 });
 
 QUnit.test('wf.cookie', function (assert) {
@@ -90,5 +107,5 @@ QUnit.test('wf.loader', function (assert) {
         var loaderTest = wf.require('loaderTest');
         assert.equal(loaderTest, 'loaderTest', "wf.loader/load;");
         done();
-    });    
+    });
 });

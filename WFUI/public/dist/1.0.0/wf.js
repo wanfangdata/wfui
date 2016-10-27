@@ -1,6 +1,6 @@
 'use strict';
 (function (global) {
-        
+    
     /**
      * wf module framework.
      * @module wf
@@ -11,14 +11,14 @@
     var wf = global.wf || {},
     
         wf = function () {
-
+            
             var name = 'wf',
                 /**
                  * private
                  * 模块集合
                  */
                 modules = {};
-
+            
             /**
              * WFUI实例
              */
@@ -58,17 +58,17 @@
                     
                     return modules[name];
                 },
-
+                
                 /**
-                 * 引用模块
+                 * 模块引用
                  * @method require
                  * @param {String} name 模块名称
                  * @return {Object} 返回该定义模块的实例
                  */
                 require: function (name) {
-
+                    
                     var module = modules[name];
-                                       
+                    
                     if (!module.entity) {
                         var args = [];
                         for (var i = 0; i < module.dependencies.length; i++) {
@@ -83,8 +83,79 @@
                         module.entity = module.factory.apply(function () { 
                             //noop
                         }, args);
-                    }                    
+                    }
                     return module.entity;
+                },
+                
+                /**
+                 * 模块继承
+                 * @method inherit
+                 * @param {String} base 父类
+                 * @return {Class} 返回该定义的类型
+                 */
+                inherit: function (base, prop) {
+                    
+                    /**
+                     * 正则匹配函数参数
+                     * private
+                     * @method argumentNames
+                     * @param {Function} fn 函数
+                     * @return {Array}names 参数名数组
+                     */
+                    var argumentNames = function (fn) {
+                        var names = fn.toString().match(/^[\s\(]*function[^(]*\(([^\)]*)\)/)[1].replace(/\s+/g, '').split(',');
+                        return names.length == 1 && !names[0] ? [] : names;
+                    }
+                    
+                    // 本次调用所创建的类（构造函数）
+                    function C() {
+
+                        if (base) {
+                            this.baseprototype = base.prototype;
+                        }
+                        if (!this.init) { 
+                            throw new Error('init function is undefind');                            
+                        }
+                        this.init.apply(this, arguments);
+                    }
+                    
+                    // 单参数情况下 - inherit(prop)
+                    if (typeof (base) === 'object') {
+                        prop = base;
+                        base = null;
+
+                    }
+                    
+                    if (base) {
+                        var MiddleClass = function () { };
+                        MiddleClass.prototype = base.prototype;
+                        C.prototype = new MiddleClass();
+                        C.prototype.constructor = C;
+                    }
+                    
+                    /**
+                     * 重写父类方法,特殊情况下使用_base_访问父类同名方法（必须为第一个参数）
+                     */
+                    for (var name in prop) {
+                        if (prop.hasOwnProperty(name)) {
+                            if (base && typeof (prop[name]) === 'function' && argumentNames(prop[name])[0] === '_base_') {
+                                C.prototype[name] = (function (name, fn) {
+                                    return function () {
+                                        var that = this,
+                                            _base_ = function () {
+                                                return base.prototype[name].apply(that, arguments);
+                                            };
+                                        return fn.apply(this, Array.prototype.concat.apply(_base_, arguments));
+                                    };
+                                })(name, prop[name]);
+                        
+                            } else {
+                                C.prototype[name] = prop[name];
+                            }
+                        }
+                    }
+                    
+                    return C;
                 }
             };
         };

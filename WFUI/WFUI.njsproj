@@ -38,6 +38,7 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Compile Include="public\src\core\js\ui.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
