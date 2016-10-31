@@ -8,7 +8,10 @@
  *      <span class="wf-checkbox-text"></span>
  *  </span>
  */
-wf.define('ui.Checkbox', [], function () {
+wf.define('UI.Checkbox', [], function () {
+    wf.inherit();
+
+
     var Checkbox = function (name, checked) {
         this.name = name;
         this.checked = checked;

@@ -7,7 +7,8 @@
       "public/src/core/js/console.js",
       "public/src/core/js/logger.js",
       "public/src/core/js/cookie.js",
-      "public/src/core/js/loader.js"
+      "public/src/core/js/loader.js",
+      "public/src/core/js/ui.js"
     ]
   },
   {

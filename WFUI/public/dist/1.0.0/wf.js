@@ -458,6 +458,9 @@ wf.define('loader', [], function () {
      * public api
      */
     return {
+        
+        name: 'model loader',
+
         /**
          * 获取日志输出模式
          * @method load 动态获取模块
@@ -501,4 +504,32 @@ wf.define('loader', [], function () {
 
         }
     };
+});
+'use strict';
+
+wf.define('UI', '_core_', function () {
+    return wf.inherit({
+
+        name: String.empty,
+
+        $element: Object.empty,
+        
+        init: function (name,$element) {
+            this.name = name;
+            this.$element = $element;
+        },
+
+        show: function () { 
+            this.$element.show();
+        },
+
+        hide: function () { 
+            this.$element.hide();
+        },
+
+        remove: function () { 
+            this.$element.remove();
+        }
+
+    });
 });
