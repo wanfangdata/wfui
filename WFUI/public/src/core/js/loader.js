@@ -27,6 +27,9 @@ wf.define('loader', [], function () {
      * public api
      */
     return {
+        
+        name: 'model loader',
+
         /**
          * 获取日志输出模式
          * @method load 动态获取模块
