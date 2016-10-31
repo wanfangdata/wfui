@@ -19,8 +19,7 @@
                 core = {
                     token: '_core_',
                     values: [
-                        'logger',
-                        'loader'
+                        'logger'
                     ]
                 },
                 /**
