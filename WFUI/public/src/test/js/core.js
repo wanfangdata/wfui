@@ -90,7 +90,7 @@
     assert.ok(cirlceArea == 78.53975 && rectangleArea == 12, 'module require successed');
     employee.setFace('😂');
     assert.ok(currentFace == '😆' && employee.getFace() == '😂', 'module inherit successed');
-    assert.ok(testCore.logger.getOutputMode() == 'local' && testCore.loader.name == 'model loader', '_core_');
+    assert.ok(testCore.logger.getOutputMode() == 'local', '_core_');
 });
 
 QUnit.test('wf.cookie', function (assert) {
