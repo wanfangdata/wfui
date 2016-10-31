@@ -72,6 +72,12 @@
             }
         });
     });
+    wf.define('testCore', '_core_', function (logger,loader) {
+        return {
+            logger: logger,
+            loader:loader
+        };
+    });
     var pi = wf.require('constant.PI');
     var ShapeFactory = wf.require('ShapeFactory');
     var cirlceArea = ShapeFactory.getShape('CIRCLE', 5).area();
@@ -79,10 +85,12 @@
     var Employee = wf.require('Employee');
     var employee = new Employee('😆');
     var currentFace = employee.getFace();
+    var testCore = wf.require('testCore');
     assert.equal(pi, 3.14159, "module define successed");
     assert.ok(cirlceArea == 78.53975 && rectangleArea == 12, 'module require successed');
     employee.setFace('😂');
     assert.ok(currentFace == '😆' && employee.getFace() == '😂', 'module inherit successed');
+    assert.ok(testCore.logger.getOutputMode() == 'local' && testCore.loader.name == 'model loader', '_core_');
 });
 
 QUnit.test('wf.cookie', function (assert) {
