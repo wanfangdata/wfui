@@ -36,6 +36,6 @@
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../site/js/lib/animated.min.js"></script>
     <script src="../dist/1.0.0/wf.min.js"></script>
-    <script>$('.brand').textillate({ in: { effect: 'rotateIn' } });</script>
+    <!--<script>$('.brand').textillate({ in: { effect: 'rotateIn' } });</script>-->
 </body>
 </html>
