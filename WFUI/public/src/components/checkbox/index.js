@@ -8,26 +8,32 @@
  *      <span class="wf-checkbox-text"></span>
  *  </span>
  */
-wf.define('UI.Checkbox', [], function () {
-    wf.inherit();
+wf.define('UI.Checkbox', ['UI'], function (UI) {
+    return wf.inherit(UI, {
 
+        checked: false,
 
-    var Checkbox = function (name, checked) {
-        this.name = name;
-        this.checked = checked;
-    };
+        event: {
+            click: function () {
 
+            },
+            checked: function () {
 
-    var checkbox = {
+            }
+        },        
 
-    };
-
-    return {
-        on: function (event) {
-
+        init: function (_base_, name, $element, checked) {
+            _base_(name, $element);
+            this.checked = checked;
         },
-        disable: function (disabled) {
 
+        /**
+         * 事件
+         * @event on
+         * @param {String} name 事件名称
+         */
+        on: function (name) {
+            this.event[name]();
         }
-    };
+    });
 });
