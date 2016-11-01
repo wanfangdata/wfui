@@ -38,7 +38,9 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Compile Include="public\src\core\js\event.js" />
     <Compile Include="public\src\core\js\ui.js" />
+    <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
@@ -94,7 +96,7 @@
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />
-    <Content Include="public\src\components\checkbox\index.less" />
+    <Content Include="public\src\components\checkbox\checkbox.less" />
     <Compile Include="public\src\core\js\base.js" />
     <Compile Include="public\src\core\js\cookie.js" />
     <Compile Include="public\src\core\js\extension.js" />
@@ -106,7 +108,7 @@
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
     <Compile Include="public\src\core\js\console.js" />
     <Content Include="public\src\test\js\loaderTest.js" />
-    <Content Include="public\src\components\checkbox\index.js" />
+    <Content Include="public\src\components\checkbox\checkbox.js" />
     <Content Include="public\dist\1.0.0\wf.js" />
     <Compile Include="public\dist\1.0.0\wf.min.js">
       <SubType>Code</SubType>

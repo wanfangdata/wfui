@@ -121,7 +121,7 @@
                     }
                     
                     // 本次调用所创建的类（构造函数）
-                    function C() {
+                    function UI() {
                         
                         if (base) {
                             this.baseprototype = base.prototype;
@@ -142,8 +142,8 @@
                     if (base) {
                         var MiddleClass = function () { };
                         MiddleClass.prototype = base.prototype;
-                        C.prototype = new MiddleClass();
-                        C.prototype.constructor = C;
+                        UI.prototype = new MiddleClass();
+                        UI.prototype.constructor = UI;
                     }
                     
                     /**
@@ -152,7 +152,7 @@
                     for (var name in prop) {
                         if (prop.hasOwnProperty(name)) {
                             if (base && typeof (prop[name]) === 'function' && argumentNames(prop[name])[0] === '_base_') {
-                                C.prototype[name] = (function (name, fn) {
+                                UI.prototype[name] = (function (name, fn) {
                                     return function () {
                                         var that = this,
                                             _base_ = function () {
@@ -163,12 +163,12 @@
                                 })(name, prop[name]);
                         
                             } else {
-                                C.prototype[name] = prop[name];
+                                UI.prototype[name] = prop[name];
                             }
                         }
                     }
                     
-                    return C;
+                    return UI;
                 }
             };
         };

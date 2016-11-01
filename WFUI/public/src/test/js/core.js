@@ -92,7 +92,6 @@
     assert.ok(currentFace == '😆' && employee.getFace() == '😂', 'module inherit successed');
     assert.ok(testCore.logger.getOutputMode() == 'local', '_core_');
 });
-
 QUnit.test('wf.cookie', function (assert) {
     var cookie = wf.require('cookie');
     cookie.set('testCookie', 'value');

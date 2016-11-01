@@ -2,7 +2,7 @@
 /**
  * UI组件
  */
-wf.define('UI', '_core_', function () {
+wf.define('UI', '_core_', function (logger) {
     /**
      * UI组件命名规则
      */
@@ -17,6 +17,11 @@ wf.define('UI', '_core_', function () {
          * 组件实例名
          */
         name: String.empty,
+        
+        /**
+         * 组件是否激活
+         */
+        active: true,
         
         /**
          * 组件实例JQuery对象
@@ -60,7 +65,48 @@ wf.define('UI', '_core_', function () {
          * @return {JQuery} 返回结构元素
          */
         find: function (name) {
-            return this.$element.find([CLS_PREFIX + _WF_, this.type, name].join(CHAIN));
+            return this.$element.find([CLS_PREFIX + _WF_, this.role, name].join(CHAIN));
+        },
+        
+        /**
+         * 初始化组件内部元素
+         * @param {String} elements 组件内部元素
+         */
+        initElement: function (elements) {
+            var _ui_ = this;
+            $.each(elements, function () {
+                this.$element = _ui_.find(this.selector);
+                if (this.action && $.isFunction(this.action)) {
+                    this.action(_ui_);
+                }
+            });
+        },
+        
+        /**
+         * 初始化组件内部元素
+         * @param {Array<Object>} events 组件事件
+         */
+        initEvent: function (events) {
+            var _ui_ = this,
+                parse = function (events) {
+                    var result = [];
+                    $.each(events, function () {
+                        for (key in this) {
+                            result.push({
+                                name: key,
+                                mothed: this[key]
+                            });
+                        }
+                    });
+                    return result;
+                };
+            $.each(parse(events), function () {
+                if (_ui_.eventMap[this.key]) {
+                    _ui_.eventMap[this.key] = _ui_.eventMap[this.key](this.mothed);
+                } else {
+                    logger.warn('{0}注册事件{1}失败,无此事件'.format(_ui_.name, this.key));
+                }
+            });
         }
     });
 });
