@@ -8,7 +8,7 @@
  *      <span class="wf-checkbox-text"></span>
  * </span>
  */
-wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
+wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
     return wf.inherit(UI, {
 
@@ -17,9 +17,12 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         role: 'checkbox',
 
+        /**
+         * checkbox ui
+         */
         inner: {
             selector: 'inner',
-            $element: null
+            $element: Object.empty
         },
 
         /**
@@ -27,7 +30,7 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         input: {
             selector: 'input',
-            $element: null
+            $element: Object.empty
         },
 
         /**
@@ -35,7 +38,7 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         text: {
             selector: 'text',
-            $element: null,
+            $element: Object.empty,
             action: function (instance) {
                 this.$element.click(function () {
                     instance.checked();
@@ -44,33 +47,37 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
         },
 
         /**
-         * checkbox组件事件
+         * 事件处理
          */
-        eventMap: function () {
+        actionHandler: function () {
             var _cb_ = this;
             return {
-                click: function (fire) {
-                    _cb_.click(function () {
-                        fire(_cb_);
+                click: new Action('click', function () {
+                    var _action_ = this;
+                    _cb_.$element.click(function () {
+                        console.log(123);
+                        _action_.piping();
+                        console.log(234);
                     });
-                },
-                change: function (fire) {
-                    return fire;
-                },
-                checked: function (fire) {
-                    return fire;
-                }
-            };
+                }, this),
+                change: new Action('change', function (piping) {
+
+                }, this.input)
+            }
         },
 
         /**
-         * 事件
+         * 注册用户自定义事件
          * @event on
          * @param {String} name 事件名称
-         * @param {Function} fun 事件函数
+         * @param {Function} func 事件函数
          */
-        on: function (name, fun) {
-            this.eventMap[name] = fun;
+        on: function (name, func) {
+            if (!this.action[name]) {
+                logger.error('checkbox 无{0}事件'.format(name));
+            } else {
+                this.action[name].register(func);
+            }
         },
 
         /**
@@ -94,19 +101,20 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
          * @param {Array<Object>} events 组件事件
+         * event:{'click',function($element){}}
          */
         init: function (_base_, name, $element, checked, events) {
-            _base_(name, $element);
+            _base_(name, $element, events);
             //初始化组件元素,为JQuery对象
             this.initElement([
                 this.inner,
                 this.input,
                 this.text
             ]);
+            //初始化选中状态
             this.checked(checked);
-            if (events && events.length > 0) {
-                this.initEvent(events);
-            }
+            //初始化事件
+            this.action = this.actionHandler();
         }
     });
 

@@ -2,7 +2,8 @@
 /**
  * UI组件
  */
-wf.define('UI', '_core_', function (logger) {
+wf.define('UI', ['logger'], function (logger) {
+    
     /**
      * UI组件命名规则
      */
@@ -26,17 +27,12 @@ wf.define('UI', '_core_', function (logger) {
         /**
          * 组件实例JQuery对象
          */
-        $element: Object.empty,
+        $element: Object.empty,   
         
         /**
-         * 初始化函数
-         * @param {String} name组件实例名
-         * @param {JQuery} 组件实例JQuery对象
+         * 事件对象
          */
-        init: function (name, $element) {
-            this.name = name;
-            this.$element = $element;
-        },
+        action: Object.empty,  
         
         /**
          * 显示
@@ -81,32 +77,16 @@ wf.define('UI', '_core_', function (logger) {
                 }
             });
         },
-        
+
         /**
-         * 初始化组件内部元素
-         * @param {Array<Object>} events 组件事件
+         * 初始化函数
+         * @param {String} name组件实例名
+         * @param {JQuery} 组件实例JQuery对象
+         * @param {Array} events 事件数组
          */
-        initEvent: function (events) {
-            var _ui_ = this,
-                parse = function (events) {
-                    var result = [];
-                    $.each(events, function () {
-                        for (key in this) {
-                            result.push({
-                                name: key,
-                                mothed: this[key]
-                            });
-                        }
-                    });
-                    return result;
-                };
-            $.each(parse(events), function () {
-                if (_ui_.eventMap[this.key]) {
-                    _ui_.eventMap[this.key] = _ui_.eventMap[this.key](this.mothed);
-                } else {
-                    logger.warn('{0}注册事件{1}失败,无此事件'.format(_ui_.name, this.key));
-                }
-            });
-        }
+        init: function (name, $element, events) {
+            this.name = name;
+            this.$element = $element;
+        },
     });
 });

@@ -506,9 +506,66 @@ wf.define('loader', [], function () {
 });
 'use strict';
 /**
+ * 事件系统
+ */
+wf.define('Action', '_core_', function (logger) {
+    
+    return wf.inherit({
+        /**
+         * 事件名称
+         */
+        name: String.empty,
+        
+        /**
+         * 触发对象
+         */
+        target: Object.empty,
+        
+        /**
+         * 事件注册的函数
+         */
+        funcs: [],
+        
+        /**
+         * 事件注册
+         * @param {Function} func
+         */
+        register: function (func) {
+            this.funcs.push(func);
+        },
+        
+        /**
+         * 事件管道
+         */
+        piping: function (funcs) {
+            var _ev_ = this;
+            $.each(_ev_.funcs, function () {
+                this(_ev_);
+            });
+        },
+        
+        /**
+         * 事件初始化
+         * @param {String} name 事件名
+         * @param {Function} 初始事件体
+         * @param {JQuery} target 触发对象
+         */
+        init: function (name , func, target) {
+            this.name = name;
+            this.target = target;
+            if ($.isFunction(func)) {
+                func.call(this);
+            }
+        }
+    });
+
+});
+'use strict';
+/**
  * UI组件
  */
-wf.define('UI', '_core_', function (logger) {
+wf.define('UI', ['logger'], function (logger) {
+    
     /**
      * UI组件命名规则
      */
@@ -532,17 +589,12 @@ wf.define('UI', '_core_', function (logger) {
         /**
          * 组件实例JQuery对象
          */
-        $element: Object.empty,
+        $element: Object.empty,   
         
         /**
-         * 初始化函数
-         * @param {String} name组件实例名
-         * @param {JQuery} 组件实例JQuery对象
+         * 事件对象
          */
-        init: function (name, $element) {
-            this.name = name;
-            this.$element = $element;
-        },
+        action: Object.empty,  
         
         /**
          * 显示
@@ -587,33 +639,17 @@ wf.define('UI', '_core_', function (logger) {
                 }
             });
         },
-        
+
         /**
-         * 初始化组件内部元素
-         * @param {Array<Object>} events 组件事件
+         * 初始化函数
+         * @param {String} name组件实例名
+         * @param {JQuery} 组件实例JQuery对象
+         * @param {Array} events 事件数组
          */
-        initEvent: function (events) {
-            var _ui_ = this,
-                parse = function (events) {
-                    var result = [];
-                    $.each(events, function () {
-                        for (key in this) {
-                            result.push({
-                                name: key,
-                                mothed: this[key]
-                            });
-                        }
-                    });
-                    return result;
-                };
-            $.each(parse(events), function () {
-                if (_ui_.eventMap[this.key]) {
-                    _ui_.eventMap[this.key] = _ui_.eventMap[this.key](this.mothed);
-                } else {
-                    logger.warn('{0}注册事件{1}失败,无此事件'.format(_ui_.name, this.key));
-                }
-            });
-        }
+        init: function (name, $element, events) {
+            this.name = name;
+            this.$element = $element;
+        },
     });
 });
 'use strict';
@@ -626,7 +662,7 @@ wf.define('UI', '_core_', function (logger) {
  *      <span class="wf-checkbox-text"></span>
  * </span>
  */
-wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
+wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
     return wf.inherit(UI, {
 
@@ -635,9 +671,12 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         role: 'checkbox',
 
+        /**
+         * checkbox ui
+         */
         inner: {
             selector: 'inner',
-            $element: null
+            $element: Object.empty
         },
 
         /**
@@ -645,7 +684,7 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         input: {
             selector: 'input',
-            $element: null
+            $element: Object.empty
         },
 
         /**
@@ -653,7 +692,7 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          */
         text: {
             selector: 'text',
-            $element: null,
+            $element: Object.empty,
             action: function (instance) {
                 this.$element.click(function () {
                     instance.checked();
@@ -662,33 +701,37 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
         },
 
         /**
-         * checkbox组件事件
+         * 事件处理
          */
-        eventMap: function () {
+        actionHandler: function () {
             var _cb_ = this;
             return {
-                click: function (fire) {
-                    _cb_.click(function () {
-                        fire(_cb_);
+                click: new Action('click', function () {
+                    var _action_ = this;
+                    _cb_.$element.click(function () {
+                        console.log(123);
+                        _action_.piping();
+                        console.log(234);
                     });
-                },
-                change: function (fire) {
-                    return fire;
-                },
-                checked: function (fire) {
-                    return fire;
-                }
-            };
+                }, this),
+                change: new Action('change', function (piping) {
+
+                }, this.input)
+            }
         },
 
         /**
-         * 事件
+         * 注册用户自定义事件
          * @event on
          * @param {String} name 事件名称
-         * @param {Function} fun 事件函数
+         * @param {Function} func 事件函数
          */
-        on: function (name, fun) {
-            this.eventMap[name] = fun;
+        on: function (name, func) {
+            if (!this.action[name]) {
+                logger.error('checkbox 无{0}事件'.format(name));
+            } else {
+                this.action[name].register(func);
+            }
         },
 
         /**
@@ -712,19 +755,20 @@ wf.define('UI.Checkbox', ['UI', 'logger'], function (UI, logger) {
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
          * @param {Array<Object>} events 组件事件
+         * event:{'click',function($element){}}
          */
         init: function (_base_, name, $element, checked, events) {
-            _base_(name, $element);
+            _base_(name, $element, events);
             //初始化组件元素,为JQuery对象
             this.initElement([
                 this.inner,
                 this.input,
                 this.text
             ]);
+            //初始化选中状态
             this.checked(checked);
-            if (events && events.length > 0) {
-                this.initEvent(events);
-            }
+            //初始化事件
+            this.action = this.actionHandler();
         }
     });
 

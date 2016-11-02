@@ -38,7 +38,7 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
-    <Compile Include="public\src\core\js\event.js" />
+    <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\ui.js" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />

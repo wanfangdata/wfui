@@ -8,6 +8,7 @@
       "public/src/core/js/logger.js",
       "public/src/core/js/cookie.js",
       "public/src/core/js/loader.js",
+      "public/src/core/js/action.js",
       "public/src/core/js/ui.js",
       "public/src/components/checkbox/checkbox.js"
     ]
