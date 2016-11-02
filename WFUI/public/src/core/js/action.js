@@ -13,7 +13,7 @@ wf.define('Action', '_core_', function (logger) {
         /**
          * 触发对象
          */
-        target: Object.empty,
+        $target: Object.empty,
         
         /**
          * 事件注册的函数
@@ -46,7 +46,7 @@ wf.define('Action', '_core_', function (logger) {
          */
         init: function (name , func, target) {
             this.name = name;
-            this.target = target;
+            this.$target = target;
             if ($.isFunction(func)) {
                 func.call(this);
             }
