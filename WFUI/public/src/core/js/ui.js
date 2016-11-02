@@ -82,9 +82,8 @@ wf.define('UI', ['logger'], function (logger) {
          * 初始化函数
          * @param {String} name组件实例名
          * @param {JQuery} 组件实例JQuery对象
-         * @param {Array} events 事件数组
          */
-        init: function (name, $element, events) {
+        init: function (name, $element) {
             this.name = name;
             this.$element = $element;
         },
