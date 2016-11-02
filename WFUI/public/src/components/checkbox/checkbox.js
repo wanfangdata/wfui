@@ -50,19 +50,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * 事件处理
          */
         actionHandler: function () {
-            var _cb_ = this;
             return {
                 click: new Action('click', function () {
                     var _action_ = this;
-                    _cb_.$element.click(function () {
-                        console.log(123);
+                    $(document).on('click', _action_.$target, function () {
                         _action_.piping();
-                        console.log(234);
                     });
-                }, this),
-                change: new Action('change', function (piping) {
-
-                }, this.input)
+                }, this.$element)
             }
         },
 
