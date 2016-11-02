@@ -18,11 +18,16 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         role: 'checkbox',
 
         /**
+         * 选中class
+         */
+        checkedCls: 'wf-checkbox-checked',
+
+        /**
          * checkbox ui
          */
         inner: {
             selector: 'inner',
-            $element: Object.empty
+            $element: {}
         },
 
         /**
@@ -30,7 +35,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          */
         input: {
             selector: 'input',
-            $element: Object.empty
+            $element: {}
         },
 
         /**
@@ -38,22 +43,19 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          */
         text: {
             selector: 'text',
-            $element: Object.empty,
-            action: function (instance) {
-                this.$element.click(function () {
-                    instance.checked();
-                });
-            }
+            $element: {}
         },
 
         /**
          * 事件处理
          */
         actionHandler: function () {
+            var _cb_ = this;
             return {
                 click: new Action('click', function () {
                     var _action_ = this;
-                    $(document).on('click', _action_.$target, function () {
+                    _action_.$target.click(function () {
+                        _cb_.checked();
                         _action_.piping();
                     });
                 }, this.$element)
@@ -80,12 +82,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * 如果为undefined则根据当前状态修改
          */
         checked: function (checked) {
-            var $ele = this.input.$element;
-            $ele.prop('checked',
-                checked === undefined ?
+            var $ele = this.input.$element,
+                result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
-                checked);
+                checked;
+            $ele.prop('checked', result);
+            this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls);
         },
 
         /**
@@ -94,8 +97,8 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
-         * @param {Array<Object>} events 组件事件
-         * event:{'click',function($element){}}
+         * @param {Object} events 组件事件
+         * events:{'click',function($element){}}
          */
         init: function (_base_, name, $element, checked, events) {
             _base_(name, $element, events);
@@ -106,9 +109,10 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
                 this.text
             ]);
             //初始化选中状态
-            this.checked(checked);
+            this.checked(checked || false);
             //初始化事件
             this.action = this.actionHandler();
+            this.initEvent(events);
         }
     });
 

@@ -27,12 +27,12 @@ wf.define('UI', ['logger'], function (logger) {
         /**
          * 组件实例JQuery对象
          */
-        $element: Object.empty,   
+        $element: {},   
         
         /**
          * 事件对象
          */
-        action: Object.empty,  
+        action: {},  
         
         /**
          * 显示
@@ -77,7 +77,17 @@ wf.define('UI', ['logger'], function (logger) {
                 }
             });
         },
-
+        
+        /**
+         * 初始化组件内部元素
+         * @param {Object} events 组件事件
+         */
+        initEvent: function (events) {
+            for (var key in events) {
+                this.on(key, events[key])
+            }
+        },
+        
         /**
          * 初始化函数
          * @param {String} name组件实例名

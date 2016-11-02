@@ -1,12 +1,13 @@
 ﻿QUnit.test('wf.ui.checkbox', function (assert) {
     var Checkbox = wf.require('UI.Checkbox');
-    var cb = new Checkbox('test', $('[data-role="checkbox"]'), false);
-    cb.checked(true);
-    cb.on('click', function () {
-        console.log('action1');
+    var cb = new Checkbox('test', $('[data-role="checkbox"]'), false ,{
+        click: function () {
+            console.log('init click');
+        }
     });
+    //cb.checked(true);
     cb.on('click', function () {
-        console.log('action2');
+        console.log('on click');
     });
-    assert.ok(true, '_core_');
+    assert.ok(true, 'wf.ui.checkbox');
 });

@@ -13,7 +13,7 @@ wf.define('Action', '_core_', function (logger) {
         /**
          * 触发对象
          */
-        $target: Object.empty,
+        $target: {},
         
         /**
          * 事件注册的函数
@@ -32,9 +32,9 @@ wf.define('Action', '_core_', function (logger) {
          * 事件管道
          */
         piping: function (funcs) {
-            var _ev_ = this;
-            $.each(_ev_.funcs, function () {
-                this(_ev_);
+            var _ac_ = this;
+            $.each(_ac_.funcs, function () {
+                this(_ac_);
             });
         },
         

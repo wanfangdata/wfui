@@ -199,12 +199,6 @@
     Array.prototype.empty = function () {
         return [];
     };
-    Function.prototype.empty = function () { 
-        return function () { };
-    };
-    Object.prototype.empty = function () { 
-        return {};
-    };
 })();
 'use strict';
 
@@ -519,7 +513,7 @@ wf.define('Action', '_core_', function (logger) {
         /**
          * 触发对象
          */
-        target: Object.empty,
+        $target: {},
         
         /**
          * 事件注册的函数
@@ -538,9 +532,9 @@ wf.define('Action', '_core_', function (logger) {
          * 事件管道
          */
         piping: function (funcs) {
-            var _ev_ = this;
-            $.each(_ev_.funcs, function () {
-                this(_ev_);
+            var _ac_ = this;
+            $.each(_ac_.funcs, function () {
+                this(_ac_);
             });
         },
         
@@ -552,7 +546,7 @@ wf.define('Action', '_core_', function (logger) {
          */
         init: function (name , func, target) {
             this.name = name;
-            this.target = target;
+            this.$target = target;
             if ($.isFunction(func)) {
                 func.call(this);
             }
@@ -589,12 +583,12 @@ wf.define('UI', ['logger'], function (logger) {
         /**
          * 组件实例JQuery对象
          */
-        $element: Object.empty,   
+        $element: {},   
         
         /**
          * 事件对象
          */
-        action: Object.empty,  
+        action: {},  
         
         /**
          * 显示
@@ -639,14 +633,23 @@ wf.define('UI', ['logger'], function (logger) {
                 }
             });
         },
-
+        
+        /**
+         * 初始化组件内部元素
+         * @param {Object} events 组件事件
+         */
+        initEvent: function (events) {
+            for (var key in events) {
+                this.on(key, events[key])
+            }
+        },
+        
         /**
          * 初始化函数
          * @param {String} name组件实例名
          * @param {JQuery} 组件实例JQuery对象
-         * @param {Array} events 事件数组
          */
-        init: function (name, $element, events) {
+        init: function (name, $element) {
             this.name = name;
             this.$element = $element;
         },
@@ -672,11 +675,16 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         role: 'checkbox',
 
         /**
+         * 选中class
+         */
+        checkedCls: 'wf-checkbox-checked',
+
+        /**
          * checkbox ui
          */
         inner: {
             selector: 'inner',
-            $element: Object.empty
+            $element: {}
         },
 
         /**
@@ -684,7 +692,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          */
         input: {
             selector: 'input',
-            $element: Object.empty
+            $element: {}
         },
 
         /**
@@ -692,12 +700,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          */
         text: {
             selector: 'text',
-            $element: Object.empty,
-            action: function (instance) {
-                this.$element.click(function () {
-                    instance.checked();
-                });
-            }
+            $element: {}
         },
 
         /**
@@ -708,15 +711,11 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             return {
                 click: new Action('click', function () {
                     var _action_ = this;
-                    _cb_.$element.click(function () {
-                        console.log(123);
+                    _action_.$target.click(function () {
+                        _cb_.checked();
                         _action_.piping();
-                        console.log(234);
                     });
-                }, this),
-                change: new Action('change', function (piping) {
-
-                }, this.input)
+                }, this.$element)
             }
         },
 
@@ -740,12 +739,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * 如果为undefined则根据当前状态修改
          */
         checked: function (checked) {
-            var $ele = this.input.$element;
-            $ele.prop('checked',
-                checked === undefined ?
+            var $ele = this.input.$element,
+                result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
-                checked);
+                checked;
+            $ele.prop('checked', result);
+            this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls);
         },
 
         /**
@@ -754,8 +754,8 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
-         * @param {Array<Object>} events 组件事件
-         * event:{'click',function($element){}}
+         * @param {Object} events 组件事件
+         * events:{'click',function($element){}}
          */
         init: function (_base_, name, $element, checked, events) {
             _base_(name, $element, events);
@@ -766,9 +766,10 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
                 this.text
             ]);
             //初始化选中状态
-            this.checked(checked);
+            this.checked(checked || false);
             //初始化事件
             this.action = this.actionHandler();
+            this.initEvent(events);
         }
     });
 
