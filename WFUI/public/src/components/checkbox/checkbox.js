@@ -10,7 +10,11 @@
  */
 wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    return wf.inherit(UI, {
+
+    /**
+     * @class Checkbox
+     */
+    var Checkbox = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -115,5 +119,11 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             this.initEvent(events);
         }
     });
+
+    Checkbox.auto = function () {
+        console.log('checkbox auto render');
+    };
+
+    return Checkbox;
 
 });
