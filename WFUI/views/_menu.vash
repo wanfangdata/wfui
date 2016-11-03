@@ -1,1 +1,13 @@
-﻿<div>menu页面</div>
+﻿@html.block('_menu',function(model){
+    var menu = model.menu;
+    var loopData = function(data){
+        
+    };
+    <div>@menu.label</div>
+    @menu.data.forEach(function(item){
+      <div>
+          <span>@item.label</span>
+          <span>@item.name</span>
+      </div>
+    })
+})

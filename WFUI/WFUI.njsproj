@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="data\menu.js" />
     <Compile Include="public\site\js\lib\animated.js" />
     <Compile Include="public\site\js\lib\animated.min.js">
       <SubType>Code</SubType>
@@ -40,6 +41,7 @@
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
     <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\ui.js" />
+    <Content Include="public\site\src\less\menu.less" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
@@ -125,6 +127,7 @@
     <Folder Include="bin\" />
     <Folder Include="controllers\" />
     <Folder Include="models\" />
+    <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\site\css\" />
     <Folder Include="public\dist\1.0.0\" />
