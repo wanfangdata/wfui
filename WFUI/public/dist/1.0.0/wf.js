@@ -819,6 +819,8 @@ wf.define('page', ['logger'], function (logger) {
             
         },        
         
+        logger: logger,
+
         /**
          * 初始化函数
          * @param {String} name页面名称
@@ -835,7 +837,9 @@ wf.define('page', ['logger'], function (logger) {
                 if (this.indexOf(UI_SPLITOR) > -1) {
                     _pg_.components[this.split(UI_SPLITOR)[1]] = wf.require(this);
                 } else {
-                    _pg_[this] = wf.require(this);
+                    if (!_pg_[this]) {
+                        _pg_[this] = wf.require(this);
+                    }
                 }
             });
             if ($.isFunction(func)) {

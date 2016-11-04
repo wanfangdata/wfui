@@ -47,8 +47,7 @@
             ],
             function (components) {
                 console.log(this);
-            },
-            true
+            }
         );
     </script>
 </body>
