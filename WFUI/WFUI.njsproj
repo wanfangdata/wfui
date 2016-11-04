@@ -31,6 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="data\menu.js" />
+    <Compile Include="public\site\js\doc.js" />
+    <Compile Include="public\site\js\doc.min.js">
+      <SubType>Code</SubType>
+      <DependentUpon>public\site\js\doc.js</DependentUpon>
+    </Compile>
     <Compile Include="public\site\js\lib\animated.js" />
     <Compile Include="public\site\js\lib\animated.min.js">
       <SubType>Code</SubType>
@@ -39,10 +44,13 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Content Include="public\src\components\menu\menu.js" />
+    <Compile Include="public\site\src\js\doc.js" />
     <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\page.js" />
     <Compile Include="public\src\core\js\ui.js" />
     <Content Include="public\site\src\less\menu.less" />
+    <Content Include="public\src\components\menu\menu.less" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
@@ -146,6 +154,7 @@
     <Folder Include="public\src\" />
     <Folder Include="public\src\components\form\" />
     <Folder Include="public\src\components\checkbox\" />
+    <Folder Include="public\src\components\menu\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\components\" />

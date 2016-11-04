@@ -33,5 +33,11 @@
       "public/site/js/lib/_animated/jquery.lettering.js",
       "public/site/js/lib/_animated/jquery.textillate.js"
     ]
+  },
+  {
+    "outputFileName": "public/site/js/doc.js",
+    "inputFiles": [
+      "public/site/src/js/doc.js"
+    ]
   }
 ]

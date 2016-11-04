@@ -11,4 +11,7 @@
         </div>        
     </div>    
     })
+    @html.block('script', function(model){
+        <script src="../site/js/doc.min.js"></script>
+    })
 })

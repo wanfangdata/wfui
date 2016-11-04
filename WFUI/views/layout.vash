@@ -38,17 +38,5 @@
     <script src="../dist/1.0.0/wf.js"></script>
     <script>$('.brand').textillate({ in: { effect: 'rotateIn' } });</script>
     @html.block('script')
-    <script>
-        wf.require('page').render(
-            'doc',
-            [
-                'logger',
-                'UI.Checkbox'
-            ],
-            function (components) {
-                console.log(this);
-            }
-        );
-    </script>
 </body>
 </html>
