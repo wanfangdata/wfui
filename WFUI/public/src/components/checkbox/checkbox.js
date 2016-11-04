@@ -24,7 +24,9 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         /**
          * 选中class
          */
-        checkedCls: 'wf-checkbox-checked',
+        checkedCls: function () {
+            return this.clsName('checked');
+        },
 
         /**
          * checkbox ui
@@ -92,7 +94,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
                 false : true :
                 checked;
             $ele.prop('checked', result);
-            this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls);
+            this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls());
         },
 
         /**
