@@ -123,7 +123,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
     });
 
     Checkbox.auto = function () {
-        logger.log('checkbox auto render');
+        logger.info('checkbox auto render');
     };
 
     return Checkbox;
