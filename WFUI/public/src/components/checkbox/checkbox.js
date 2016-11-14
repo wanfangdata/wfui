@@ -96,7 +96,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             $ele.prop('checked', result);
             this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls());
         },
-
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -123,7 +123,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
     });
 
     Checkbox.auto = function () {
-        console.log('checkbox auto render');
+        logger.log('checkbox auto render');
     };
 
     return Checkbox;
