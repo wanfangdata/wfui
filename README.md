@@ -9,3 +9,7 @@ WFUI是一个模块化UI框架，参考CommonJS规范设计。前端正处于一
 * 构建输出使用[Web Essentials ](http://vswebessentials.com/)
 * 测试使用[QUnit](https://qunitjs.com/)
 * 使用前建议安装github官方[Visual Studio扩展插件](https://visualstudio.github.com/)
+
+## 核心api
+
+![](img/core.png)
