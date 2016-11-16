@@ -55,6 +55,9 @@ wf.define('UI', ['logger'], function (logger) {
                 this.$element.remove();
             },
             
+            /**
+             * 组装class
+             */
             clsName: function (name) {
                 return [_WF_, this.role, name].join(CHAIN);
             },
@@ -100,7 +103,8 @@ wf.define('UI', ['logger'], function (logger) {
             init: function (name, $element) {
                 this.name = name;
                 this.$element = $element;
-            },
+            }
+
         });
     return UI;
 });
