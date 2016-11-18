@@ -1,13 +1,22 @@
 ﻿@html.block('_menu',function(model){
     var menu = model.menu;
-    var loopData = function(data){
-        
+    var menuItems = function(data,cls){
+        @data.forEach(function(item){
+            <div class="@(item.data&&item.data.length>0?'wf-menu-sub':'wf-menu-item')">
+                <i class="wf-icon wf-icon-menu"></i>
+                <div class="wf-menu-content">
+                    <span>@item.label</span>
+                    <span>@item.name</span>
+                </div>                 
+                @if(item.data&&item.data.length>0){
+                    <div class="wf-menu-items">
+                        @menuItems(item.data,'wf-menu-sub')
+                    </div>
+                }
+            </div>                        
+        })
     };
-    <div>@menu.label</div>
-    @menu.data.forEach(function(item){
-      <div>
-          <span>@item.label</span>
-          <span>@item.name</span>
-      </div>
-    })
+    <div data-role="menu" class="wf-menu">
+        @menuItems(menu.data)
+    </div>
 })
