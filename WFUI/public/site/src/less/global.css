@@ -48,3 +48,6 @@ a:hover {
   padding: 0 25px;
   font-size: 14px;
 }
+.doc-menu .wf-menu-items .wf-menu-item {
+  padding-left: 20px;
+}

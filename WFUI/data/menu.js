@@ -9,14 +9,20 @@
             name: '基础组件',
             data: [
                 {
-                    label: 'Layout',
-                    name: '栅格'
-                }, {
                     label: 'Button',
                     name: '按钮'
                 }, {
                     label: 'Icon',
                     name: '图标'
+                }
+            ]
+        }, {
+            label: 'Layout',
+            name: '布局',
+            data: [                
+                {
+                    label: 'Grid',
+                    name: '栅格'
                 }
             ]
         }, {
@@ -63,7 +69,16 @@
             ]
         }, {
             label: 'Popup',
-            name: '弹出层组件'
+            name: '弹出层组件',
+            data: [
+                {
+                    label: 'Message',
+                    name:'消息框'
+                }, {
+                    label: 'Dialog',
+                    name:'对话框'
+                }
+            ]
         }
     ]
 };
