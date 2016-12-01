@@ -1,0 +1,15 @@
+{
+  "images": {
+    "logo": "../src/img/logo.png",
+    "logo-footer": "../src/img/logo-footer.png"
+  },
+  "orientation": "vertical",
+  "optimize": "lossless",
+  "padding": 10,
+  "output": "png",
+  "stylesheet": "css",
+  "pathprefix": "",
+  "customstyles": {
+    "display": "inline-block"
+  }
+}

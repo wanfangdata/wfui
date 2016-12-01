@@ -1,0 +1,18 @@
+/*
+This is an example of how to use the image sprite in your own CSS files
+*/
+.icon-doc {
+	background-image: url('icon-doc.sprite.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.icon-doc.logo {
+	width: 18px;
+	height: 18px;
+	background-position: -10px -10px;
+}
+.icon-doc.logo-footer {
+	width: 18px;
+	height: 18px;
+	background-position: -10px -38px;
+}

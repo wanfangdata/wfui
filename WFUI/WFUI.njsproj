@@ -44,6 +44,19 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Content Include="public\site\img\favicon.ico" />
+    <None Include="public\site\img\icon-doc.sprite" />
+    <Content Include="public\site\img\icon-doc.sprite.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\site\img\icon-doc.sprite</DependentUpon>
+    </Content>
+    <Content Include="public\site\img\icon-doc.sprite.png">
+      <SubType>Content</SubType>
+      <DependentUpon>public\site\img\icon-doc.sprite</DependentUpon>
+    </Content>
+    <Content Include="public\site\src\font\font.less" />
+    <Content Include="public\site\src\img\logo-footer.png" />
+    <Content Include="public\site\src\img\logo.png" />
     <Content Include="public\src\components\menu\menu.js" />
     <Compile Include="public\site\src\js\doc.js" />
     <Compile Include="public\src\core\js\action.js" />

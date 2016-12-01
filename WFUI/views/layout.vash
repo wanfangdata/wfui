@@ -4,18 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@model.title</title>
+    <link href="../site/img/favicon.ico" rel="shortcut icon" />
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
+    <link href="//at.alicdn.com/t/font_d031s7ayzzs62yb9.css" rel="stylesheet" />
     <link href="../site/css/global.min.css" rel="stylesheet" />
     <link href="../site/css/animate.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
         <div class="wf-row">
-            <a class="brand" href="/">WFUI</a>
-            <!--<nav>
-                <a href=""></a>
-                <a href=""></a>
-            </nav>-->
+            <a class="brand" href="/">
+                <i class="icon-doc logo"></i>
+                <span class="text">WF Design</span>
+            </a>
+            <nav class="wf-menu">
+                <a href="">组件</a>
+                <a href="">规范</a>
+            </nav>
         </div>
     </div>
     @html.block('content')
@@ -36,7 +41,7 @@
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../site/js/lib/animated.min.js"></script>
     <script src="../dist/1.0.0/wf.js"></script>
-    <script>$('.brand').textillate({ in: { effect: 'rotateIn' } });</script>
+    <script>$('.brand .text').textillate({ in: { effect: 'rotateIn' } });</script>
     @html.block('script')
 </body>
 </html>

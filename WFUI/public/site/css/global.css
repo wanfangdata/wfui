@@ -1,3 +1,4 @@
+@import "../img/icon-doc.sprite.css";
 body {
   font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
   font-size: 12px;
@@ -20,8 +21,8 @@ a:hover {
   background-color: #fff;
 }
 .header {
-  height: 80px;
-  line-height: 80px;
+  height: 70px;
+  line-height: 70px;
   font-size: 16px;
   background-color: #fff;
 }
@@ -31,7 +32,7 @@ a:hover {
 }
 .header .wf-row .brand {
   font-size: 20px;
-  font-family: cursive;
+  font-family: Impact;
 }
 .footer-wrapper {
   padding: 20px 0;
