@@ -1,9 +1,85 @@
-﻿.doc-menu {
-    padding:0 25px;
-    font-size:14px;
-    .wf-menu-items{
-        .wf-menu-item{
-            padding-left:20px;
+﻿@import "mixins.less";
+@menu-item-gap: 22px;
+
+.menu-item-height() {
+    height: 48px;
+    line-height: 48px;
+}
+
+.menu-item-padding(@level: 1) {
+    padding: 0 @level*@menu-item-gap;
+}
+
+.wf-menu-horizonal {
+    font-size: 14px;
+
+    .wf-menu-item {
+        height: 68px;
+        line-height: 68px;
+        font-family: 'Microsoft YaHei';
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 30px;
+        color: #eee;
+
+        &.active {
+            border-top: 2px solid @base-color;
+        }
+    }
+}
+
+.wf-menu-vertical {
+    padding: @menu-item-gap 0;
+
+    .wf-menu-item {
+        .menu-item-height;
+        font-size: 14px;
+
+        .wf-menu-content {
+            .menu-item-padding;
+        }
+    }
+
+    .wf-menu-content {
+        .en {
+            font-size: 14px;
+            font-family: 'Arial';
+            margin-right: 2px;
+        }
+
+        .cn {
+            font-size: 12px;
+            font-family: 'Microsoft YaHei';
+        }
+    }
+
+    .wf-menu-sub {
+        font-size: 12px;
+
+        .wf-menu-content {
+            .menu-item-height;
+            .menu-item-padding();
+
+            .en, .cn {
+                color: #aaa;
+            }
+        }
+    }
+
+    .wf-menu-items {
+
+        .wf-menu-item {
+            .wf-menu-content {
+                .menu-item-padding(2);
+            }
+
+            .en {
+                color: @font-color-nomal;
+            }
+
+            .cn {
+                color: #aaa;
+            }
         }
     }
 }

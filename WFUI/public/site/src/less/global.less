@@ -2,10 +2,11 @@
     font-family: Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
     font-size: 12px;
     color: #333;
+    background-color: #fff;
 }
 
 a {
-    color: #2a6eb7;
+    color: @base-color;
     text-decoration: none;
 
     &:hover {
@@ -13,12 +14,31 @@ a {
     }
 }
 
-.content{
-    margin:0 auto;
-    padding:25px 0;
-    max-width:@base-width;
+.content-wrapper {
+    position: relative;
+
+    &:after {
+        width: 50%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: @base-color-ct;
+    }
+}
+
+.content {
+    margin: 0 auto;
+    max-width: @base-width;
     min-height: 572px;
-    background-color:#fff;
+    background-color: transparent;    
+    .doc-content{
+        min-height:1080px;
+        background-color:#fff;
+    }
 }
 
 @import "variables.less";
@@ -27,4 +47,3 @@ a {
 @import "header.less";
 @import "footer.less";
 @import "menu.less";
-

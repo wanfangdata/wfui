@@ -1,14 +1,12 @@
 ﻿@html.extend('layout', function(model){
     @html.block('content', function(model){
-    <div class="content">
-        <div class="wf-row">
-            <div class="wf-col-3 doc-menu">
-                @html.include('_menu',model.menu)
-            </div>
-            <div class="wf-col-9">
-                @html.include('pages/index')
-            </div>
-        </div>        
+    <div class="content wf-row">        
+        <div class="wf-col-2 doc-menu">
+            @html.include('_menu',model.menu)
+        </div>
+        <div class="wf-col-10 doc-content">
+            @html.include('pages/index')
+        </div>       
     </div>    
     })
     @html.block('script', function(model){

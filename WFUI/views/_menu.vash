@@ -5,8 +5,8 @@
             <div class="@(item.data&&item.data.length>0?'wf-menu-sub':'wf-menu-item')">
                 <i class="wf-icon wf-icon-menu"></i>
                 <div class="wf-menu-content">
-                    <span>@item.label</span>
-                    <span>@item.name</span>
+                    <span class="en">@item.label</span>
+                    <span class="cn">@item.name</span>
                 </div>                 
                 @if(item.data&&item.data.length>0){
                     <div class="wf-menu-items">
@@ -16,7 +16,7 @@
             </div>                        
         })
     };
-    <div data-role="menu" class="wf-menu">
+    <div data-role="menu" class="wf-menu wf-menu-vertical">
         @menuItems(menu.data)
     </div>
 })

@@ -54,7 +54,6 @@
       <SubType>Content</SubType>
       <DependentUpon>public\site\img\icon-doc.sprite</DependentUpon>
     </Content>
-    <Content Include="public\site\src\font\font.less" />
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
     <Content Include="public\src\components\menu\menu.js" />
