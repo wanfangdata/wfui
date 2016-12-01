@@ -51,22 +51,53 @@ a:hover {
   color: #6abbef;
   font-size: 22px;
   font-family: Impact;
+  text-align: center;
+  overflow: hidden;
 }
 .header .wf-row .brand .logo {
   width: 18px;
   height: 18px;
   margin-right: 2px;
 }
-.footer-wrapper {
-  padding: 20px 0;
-  width: 100%;
+.footer {
+  height: 100px;
+  line-height: 100px;
+  font-size: 16px;
   background-color: #353e43;
 }
-.footer-wrapper .footer {
+.footer .wf-row {
   max-width: 1200px;
   margin: 0 auto;
+}
+.footer .wf-row .brand {
+  color: #999;
+  font-size: 22px;
+  font-family: Impact;
   text-align: center;
-  font-size: 14px;
+  overflow: hidden;
+}
+.footer .wf-row .brand .logo-footer {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+}
+.footer .wf-row .links {
+  font-size: 12px;
+  font-family: 'Microsoft YaHei';
+}
+.footer .wf-row .links a {
+  display: inline-block;
+  margin: 0 30px;
+  color: #999;
+}
+.footer .wf-row .links a:hover {
+  color: #6abbef;
+}
+.footer .wf-row .copyright {
+  font-size: 12px;
+  float: right;
+  margin-right: 40px;
+  color: #999;
 }
 .wf-menu-horizonal {
   font-size: 14px;
@@ -94,6 +125,12 @@ a:hover {
 .wf-menu-vertical .wf-menu-item .wf-menu-content {
   padding: 0 22px;
 }
+.wf-menu-vertical .wf-menu-item .wf-menu-content .en {
+  color: #666;
+}
+.wf-menu-vertical .wf-menu-item .wf-menu-content .cn {
+  color: #aaa;
+}
 .wf-menu-vertical .wf-menu-content .en {
   font-size: 14px;
   font-family: 'Arial';
@@ -118,9 +155,9 @@ a:hover {
 .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content {
   padding: 0 44px;
 }
-.wf-menu-vertical .wf-menu-items .wf-menu-item .en {
+.wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .en {
   color: #666;
 }
-.wf-menu-vertical .wf-menu-items .wf-menu-item .cn {
+.wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .cn {
   color: #aaa;
 }

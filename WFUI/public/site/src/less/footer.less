@@ -1,14 +1,48 @@
 ﻿@import "mixins.less";
 
-.footer-wrapper {
-    padding: 20px 0;
-    width: 100%;
-    background-color:@base-color-bg;
+.footer {
+    height: 100px;
+    line-height: 100px;
+    font-size: 16px;
+    background-color: @base-color-bg;
 
-    .footer {
+    .wf-row {
         max-width: @base-width;
         margin: 0 auto;
-        text-align: center;
-        font-size: 14px;
+
+        .brand {
+            color: @font-color-light;
+            font-size: 22px;
+            font-family: Impact;
+            text-align: center;
+            overflow: hidden;
+
+            .logo-footer {
+                width: 18px;
+                height: 18px;
+                margin-right: 2px;
+            }
+        }
+
+        .links {
+            font-size: 12px;
+            font-family: 'Microsoft YaHei';
+
+            a {
+                display: inline-block;
+                margin: 0 30px;
+                color: @font-color-light;
+
+                &:hover {
+                    color: @base-color;
+                }
+            }
+        }
+        .copyright{
+            font-size: 12px;
+            float:right;
+            margin-right:40px;
+            color: @font-color-light;
+        }
     }
 }

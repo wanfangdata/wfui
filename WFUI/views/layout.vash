@@ -26,18 +26,20 @@
     <div class="content-wrapper">
         @html.block('content')
     </div>
-    <div class="footer-wrapper">
-        <div class="footer">
-            <div class="wf-row">
-                <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
-            </div>
-            <div class="wf-row">
-                <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
-                <a href="https://trello.com/wanfangfe">万方FE</a>
-            </div>
-            <div class="wf-row">
+    <div class="footer">
+        <div class="wf-row">
+            <span class="brand wf-col-2">
+                <i class="icon-doc logo-footer"></i>
+                <span class="text">WF Design</span>
+            </span>
+            <span class="wf-col-10">
+                <span class="links">
+                    <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
+                    <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
+                    <a href="https://trello.com/wanfangfe">万方FE</a>
+                </span>
                 <span class="copyright">©2016 万方数据技术研发中心</span>
-            </div>
+            </span>
         </div>
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>

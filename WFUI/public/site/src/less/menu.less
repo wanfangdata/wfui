@@ -10,6 +10,16 @@
     padding: 0 @level*@menu-item-gap;
 }
 
+.menu-item-content-color() {
+    .en {
+        color: @font-color-nomal;
+    }
+
+    .cn {
+        color: #aaa;
+    }
+}
+
 .wf-menu-horizonal {
     font-size: 14px;
 
@@ -37,6 +47,7 @@
 
         .wf-menu-content {
             .menu-item-padding;
+            .menu-item-content-color
         }
     }
 
@@ -71,14 +82,7 @@
         .wf-menu-item {
             .wf-menu-content {
                 .menu-item-padding(2);
-            }
-
-            .en {
-                color: @font-color-nomal;
-            }
-
-            .cn {
-                color: #aaa;
+                .menu-item-content-color
             }
         }
     }
