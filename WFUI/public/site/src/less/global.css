@@ -14,7 +14,7 @@ a:hover {
 .content {
   margin: 0 auto;
   padding: 25px 0;
-  width: 92%;
+  max-width: 1200px;
   min-height: 572px;
   background-color: #fff;
 }
@@ -25,7 +25,7 @@ a:hover {
   background-color: #353e43;
 }
 .header .wf-row {
-  width: 92%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .header .wf-row .brand {
@@ -39,7 +39,7 @@ a:hover {
   background-color: #353e43;
 }
 .footer-wrapper .footer {
-  width: 92%;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   font-size: 14px;
