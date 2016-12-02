@@ -1,8 +1,10 @@
 ﻿@html.block('_menu',function(model){
+    var hasChild;
     var menu = model.menu;
     var menuItems = function(data,cls){
         @data.forEach(function(item){
-            <div class="@(item.data&&item.data.length>0?'wf-menu-sub':'wf-menu-item')">
+            hasChild = item.data && item.data.length>0;
+            <div class="@(hasChild?'wf-menu-sub':'wf-menu-item') @(!hasChild&&item.label.toLowerCase()==model.page.toLowerCase()?'active':'')">
                 <i class="wf-icon wf-icon-menu"></i>
                 <a class="wf-menu-content" @(item.data&&item.data.length>0?'':('href=/components/'+item.label.toLowerCase()+''))>
                     <span class="en">@item.label</span>

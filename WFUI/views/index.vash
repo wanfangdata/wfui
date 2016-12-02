@@ -2,7 +2,7 @@
     @html.block('content', function(model){
     <div class="content wf-row">        
         <div class="wf-col-2 doc-menu">
-            @html.include('_menu',model.menu)
+            @html.include('_menu',model)
         </div>
         <div class="wf-col-10 doc-content">
             @html.include('pages/'+ model.page)

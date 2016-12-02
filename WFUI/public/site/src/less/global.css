@@ -135,6 +135,11 @@ a:hover {
 .wf-menu-vertical .wf-menu-item .wf-menu-content .cn {
   color: #aaa;
 }
+.wf-menu-vertical .wf-menu-item.active {
+  border-left: 2px solid #6abbef;
+  background-color: #fff;
+  color: #6abbef;
+}
 .wf-menu-vertical .wf-menu-content .en {
   font-size: 14px;
   font-family: 'Arial';
