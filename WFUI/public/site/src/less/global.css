@@ -82,6 +82,7 @@ a:hover {
   margin-right: 2px;
 }
 .footer .wf-row .links {
+  float: left;
   font-size: 12px;
   font-family: 'Microsoft YaHei';
 }
