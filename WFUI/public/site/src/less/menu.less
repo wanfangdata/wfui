@@ -40,11 +40,10 @@
 
 .wf-menu-vertical {
     padding: @menu-item-gap 0;
-    
-    a{
-        &:hover{
-            opacity:1;
 
+    a {
+        &:hover {
+            opacity: 1;
         }
     }
 
@@ -55,12 +54,6 @@
         .wf-menu-content {
             .menu-item-padding;
             .menu-item-content-color
-        }
-
-        &.active {
-            border-left: 2px solid @base-color;
-            background-color:#fff;
-            color:@base-color;
         }
     }
 
@@ -96,6 +89,17 @@
             .wf-menu-content {
                 .menu-item-padding(2);
                 .menu-item-content-color
+            }
+        }
+    }
+
+    .wf-menu-item.active {
+        border-left: 2px solid @base-color;
+        background-color: #fff;
+
+        .wf-menu-content {
+            .en, .cn {
+                color: @base-color;
             }
         }
     }

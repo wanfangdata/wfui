@@ -58,6 +58,7 @@
     </Content>
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
+    <Content Include="public\src\components\button\button.less" />
     <Content Include="public\src\components\menu\menu.js" />
     <Compile Include="public\site\src\js\doc.js" />
     <Compile Include="public\src\core\js\action.js" />
@@ -106,7 +107,6 @@
     <Content Include="public\src\core\less\utilities\clearfix.less" />
     <Content Include="public\src\core\less\normalize.less" />
     <Content Include="public\src\core\less\variables\grid.less" />
-    <Content Include="public\src\core\less\variables\var.less" />
     <Content Include="public\src\core\less\wf.css">
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.less</DependentUpon>
@@ -170,6 +170,7 @@
     <Folder Include="public\src\components\form\" />
     <Folder Include="public\src\components\checkbox\" />
     <Folder Include="public\src\components\menu\" />
+    <Folder Include="public\src\components\button\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\components\" />
