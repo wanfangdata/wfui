@@ -118,6 +118,9 @@ a:hover {
 .wf-menu-vertical {
   padding: 22px 0;
 }
+.wf-menu-vertical a:hover {
+  opacity: 1;
+}
 .wf-menu-vertical .wf-menu-item {
   height: 48px;
   line-height: 48px;

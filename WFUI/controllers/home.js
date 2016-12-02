@@ -4,9 +4,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    var items = [];
-    
     res.render('index', {
+        page: 'getstarted',
         menu: menu
     });
 });

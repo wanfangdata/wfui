@@ -5,11 +5,11 @@
             @html.include('_menu',model.menu)
         </div>
         <div class="wf-col-10 doc-content">
-            @html.include('pages/index')
+            @html.include('pages/'+ model.page)
         </div>       
     </div>    
     })
     @html.block('script', function(model){
-        <script src="../site/js/doc.min.js"></script>
+        <script src="../site/js/doc.js"></script>
     })
 })

@@ -30,6 +30,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="controllers\components.js" />
     <Compile Include="data\menu.js" />
     <Compile Include="public\site\js\doc.js" />
     <Compile Include="public\site\js\doc.min.js">
@@ -41,6 +42,7 @@
       <SubType>Code</SubType>
       <DependentUpon>public\site\js\lib\animated.js</DependentUpon>
     </Compile>
+    <Compile Include="public\site\js\lib\jquery.pjax-1.9.6.min.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
@@ -114,7 +116,8 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
-    <Content Include="views\pages\index.vash" />
+    <Content Include="views\pages\button.vash" />
+    <Content Include="views\pages\getstarted.vash" />
     <Content Include="views\_menu.vash" />
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />

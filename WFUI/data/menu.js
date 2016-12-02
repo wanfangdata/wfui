@@ -2,7 +2,7 @@
     label: 'WFUI',
     data: [
         {
-            label: 'Get started',
+            label: 'GetStarted',
             name: '开始使用'            
         }, {
             label: 'Basic',

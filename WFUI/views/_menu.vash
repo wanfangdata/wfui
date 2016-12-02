@@ -4,10 +4,10 @@
         @data.forEach(function(item){
             <div class="@(item.data&&item.data.length>0?'wf-menu-sub':'wf-menu-item')">
                 <i class="wf-icon wf-icon-menu"></i>
-                <div class="wf-menu-content">
+                <a class="wf-menu-content" @(item.data&&item.data.length>0?'':('href=/components/'+item.label.toLowerCase()+''))>
                     <span class="en">@item.label</span>
                     <span class="cn">@item.name</span>
-                </div>                 
+                </a>                 
                 @if(item.data&&item.data.length>0){
                     <div class="wf-menu-items">
                         @menuItems(item.data,'wf-menu-sub')
