@@ -1,1 +1,10 @@
 ﻿<div>button页面</div>
+<button class="wf-btn wf-btn-primary wf-btn-large">Primary</button>
+<button class="wf-btn">Default</button>
+<button class="wf-btn wf-btn-ghost">Ghost</button>
+
+<button class="wf-btn" disabled>Disabled</button>
+<button class="wf-btn disabled" >Disabled</button>
+
+<button class="wf-btn wf-btn-primary wf-btn-large">Large</button>
+<button class="wf-btn wf-btn-primary wf-btn-small">Small</button>

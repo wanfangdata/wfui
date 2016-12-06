@@ -1,3 +1,67 @@
 ﻿@import "../../core/less/import.less";
 
+.hover {
+    &:hover {
+        color: @color-primary;
+        border-color: @color-primary;
+        background-color:#fff;
+    }
+}
 
+//btn default
+.wf-btn {
+    display: inline-block;
+    line-height: 1.5;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: #666;
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    outline: none;
+    .hover;
+}
+.wf-btn.disabled,.wf-btn.disabled:hover,button[disabled],button[disabled]:hover{
+    cursor:default;
+    background-color:#f7f7f7;
+    border-color:#f7f7f7;
+    color:#ccc;
+}
+.wf-btn-primary {
+    background-color: @color-primary;
+    color: #fff;
+    border-color: @color-primary;
+
+    &:hover {
+        color:#fff;
+        border-color:#88cbf6;
+        background-color:#88cbf6;
+    }
+}
+
+.wf-btn-ghost {
+    background-color: #fff;
+    border-color: #e6e6e6;
+    .hover;
+}
+
+.wf-btn-large {
+    font-size:14px;
+    padding:8px 23px;
+}
+.wf-btn-small {
+    padding:2px 8px;
+}
