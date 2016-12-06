@@ -4,17 +4,60 @@
     .title {
         color: @font-color-deep;
         font-size: 24px;
+        line-height: 24px;
     }
 
     .desc {
         color: @font-color-nomal;
         background-color: @base-color-ct;
         padding: 20px;
+        margin-top: 25px;
     }
 
     .section {
-        .title {
+        margin-top: 40px;
 
+        .title {
+            position: relative;
+            overflow: hidden;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                left: -62px;
+                top: 12px;
+                background-color: #e6e6e6;
+                z-index: 0;
+            }
+
+            .text {
+                position: relative;
+                display: inline-block;
+                padding-right: 10px;
+                background-color: #fff;
+            }
+
+            .wf-btn {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        .demo {
+            margin-top: 25px;
+
+            .wf-btn {
+                margin-right: 8px;
+            }
+        }
+
+        .explain {
+            margin-top: 25px;
+            line-height: 22px;
         }
     }
 }

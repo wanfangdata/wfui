@@ -178,9 +178,50 @@ a:hover {
 .page .title {
   color: #333;
   font-size: 24px;
+  line-height: 24px;
 }
 .page .desc {
   color: #666;
   background-color: #f7f7f7;
   padding: 20px;
+  margin-top: 25px;
+}
+.page .section {
+  margin-top: 40px;
+}
+.page .section .title {
+  position: relative;
+  overflow: hidden;
+}
+.page .section .title:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: -62px;
+  top: 12px;
+  background-color: #e6e6e6;
+  z-index: 0;
+}
+.page .section .title .text {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+  background-color: #fff;
+}
+.page .section .title .wf-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.page .section .demo {
+  margin-top: 25px;
+}
+.page .section .demo .wf-btn {
+  margin-right: 8px;
+}
+.page .section .explain {
+  margin-top: 25px;
+  line-height: 22px;
 }
