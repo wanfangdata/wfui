@@ -58,6 +58,7 @@
     </Content>
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
+    <Content Include="public\site\src\less\page.less" />
     <Content Include="public\src\components\button\button.less" />
     <Content Include="public\src\components\menu\menu.js" />
     <Compile Include="public\site\src\js\doc.js" />
