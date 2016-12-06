@@ -175,11 +175,11 @@ a:hover {
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content .cn {
   color: #6abbef;
 }
-.title {
+.page .title {
   color: #333;
   font-size: 24px;
 }
-.desc {
+.page .desc {
   color: #666;
   background-color: #f7f7f7;
   padding: 20px;

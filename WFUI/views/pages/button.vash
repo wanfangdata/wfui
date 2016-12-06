@@ -1,16 +1,21 @@
-﻿<h1 class="title">
-    Button 按钮
-</h1>
-<p class="desc">
-    用于接受用户点击操作。
-</p>
-<div>button页面</div>
-<button class="wf-btn wf-btn-primary wf-btn-large">Primary</button>
-<button class="wf-btn">Default</button>
-<button class="wf-btn wf-btn-ghost">Ghost</button>
+﻿<div class="page">
+    <h1 class="title">
+        Button 按钮
+    </h1>
+    <p class="desc">
+        用于接受用户点击操作。
+    </p>
+    <section>
+        <h1>按钮类型</h1>
+    </section>
+    <div>button页面</div>
+    <button class="wf-btn wf-btn-primary wf-btn-large">Primary</button>
+    <button class="wf-btn">Default</button>
+    <button class="wf-btn wf-btn-ghost">Ghost</button>
 
-<button class="wf-btn" disabled>Disabled</button>
-<button class="wf-btn disabled" >Disabled</button>
+    <button class="wf-btn" disabled>Disabled</button>
+    <button class="wf-btn disabled">Disabled</button>
 
-<button class="wf-btn wf-btn-primary wf-btn-large">Large</button>
-<button class="wf-btn wf-btn-primary wf-btn-small">Small</button>
+    <button class="wf-btn wf-btn-primary wf-btn-large">Large</button>
+    <button class="wf-btn wf-btn-primary wf-btn-small">Small</button>
+</div>
