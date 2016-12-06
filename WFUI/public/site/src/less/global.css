@@ -35,6 +35,8 @@ a:hover {
 .content .doc-content {
   min-height: 1080px;
   background-color: #fff;
+  padding-top: 40px;
+  padding-left: 40px;
 }
 /*内容或代码背景色*/
 .header {
@@ -172,4 +174,13 @@ a:hover {
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content .en,
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content .cn {
   color: #6abbef;
+}
+.title {
+  color: #333;
+  font-size: 24px;
+}
+.desc {
+  color: #666;
+  background-color: #f7f7f7;
+  padding: 20px;
 }
