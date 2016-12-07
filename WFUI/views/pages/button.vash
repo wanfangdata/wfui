@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="explain">
-            <p>添加<code>wf-btn-hover</code>即可让按钮处于悬停状态。</p>
+            <p>添加<code>wf-btn-hover</code>类即可让按钮处于悬停状态。</p>
         </div>
         <pre class="language-html">
         <code class="html">
