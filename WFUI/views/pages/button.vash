@@ -133,22 +133,53 @@
             </div>
         </div>
         <div class="explain">
-            <p>按钮有大、中、小三种尺寸。</p>
-            <p>
-                通过设置<code>size</code>为<code>large</code><code>small</code>分别把按钮设为大、小尺寸。若不设置<code>size</code>，则尺寸为中。
-            </p>
+            <p>添加<code>wf-btn-hover</code>即可让按钮处于悬停状态。</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;button class=&quot;wf-btn wf-btn-primary wf-btn-large&quot;&gt;Large&lt;/button&gt;
-    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Default&lt;/button&gt;
-    &lt;button class=&quot;wf-btn wf-btn-primary wf-btn-small&quot;&gt;Small&lt;/button&gt;
-            </code>
-        </pre>
     </div>
-    <button class="wf-btn" disabled>Disabled</button>
-    <button class="wf-btn disabled">Disabled</button>
-
-    <button class="wf-btn wf-btn-primary wf-btn-large">Large</button>
-    <button class="wf-btn wf-btn-primary wf-btn-small">Small</button>
+    <div class="section">
+        <h1 class="title">
+            <span class="text">不可用状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <button class="wf-btn wf-btn-primary">Primary</button>
+                <button class="wf-btn wf-btn-primary" disabled>Primary</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn">Default</button>
+                <button class="wf-btn" disabled>Default</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn wf-btn-ghost">Ghost</button>
+                <button class="wf-btn wf-btn-ghost" disabled>Ghost</button>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>disabled</code>属性即可让按钮处于悬停状态。</p>
+        </div>
+    </div>
+    <div class="section">
+        <h1 class="title">
+            <span class="text">按钮组合</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <button class="wf-btn wf-btn-primary">Primary</button>
+                <button class="wf-btn wf-btn-primary" disabled>Primary</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn">Default</button>
+                <button class="wf-btn" disabled>Default</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn wf-btn-ghost">Ghost</button>
+                <button class="wf-btn wf-btn-ghost" disabled>Ghost</button>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>disabled</code>属性即可让按钮处于悬停状态。</p>
+        </div>
+    </div>
 </div>
