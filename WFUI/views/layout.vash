@@ -34,9 +34,9 @@
             </span>
             <span class="wf-col-10">
                 <span class="links">
-                    <a href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
-                    <a href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
-                    <a href="https://trello.com/wanfangfe">万方FE</a>
+                    <a target="_blank" href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
+                    <a target="_blank" href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
+                    <a target="_blank" href="https://trello.com/wanfangfe">万方FE</a>
                 </span>
                 <span class="copyright">©2016 万方数据技术研发中心</span>
             </span>
