@@ -1,6 +1,7 @@
 ﻿<div class="page">
     <h1 class="title">
         Button 按钮
+        <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
     <p class="desc">
         用于接受用户点击操作。

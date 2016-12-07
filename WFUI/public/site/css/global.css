@@ -184,6 +184,9 @@ a:hover {
   font-size: 24px;
   line-height: 24px;
 }
+.page .title .wf-btn {
+  float: right;
+}
 .page .desc {
   color: #666;
   background-color: #f7f7f7;
@@ -199,6 +202,9 @@ a:hover {
   padding: 1px 5px;
   margin: 0 2px;
   line-height: 1.5;
+}
+.page pre {
+  display: none;
 }
 .page pre code {
   border: none;

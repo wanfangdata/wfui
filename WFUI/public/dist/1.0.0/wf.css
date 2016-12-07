@@ -633,9 +633,9 @@ button[disabled]:hover {
   margin: 0 0 0 -1px;
 }
 .wf-btn-group .wf-btn-primary:first-child:not(:last-child) {
-  border-right-color: #5ab2eb;
+  border-right-color: #88cbf6;
 }
 .wf-btn-group .wf-btn-primary:last-child:not(:first-child),
 .wf-btn-group .wf-btn-group .wf-btn-primary + .wf-btn {
-  border-left-color: #5ab2eb;
+  border-left-color: #88cbf6;
 }
