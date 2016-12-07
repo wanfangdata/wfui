@@ -39,6 +39,17 @@ a:hover {
   padding-left: 40px;
   padding-bottom: 80px;
 }
+.content .doc-content nav {
+  position: fixed;
+  top: 108px;
+  left: 50%;
+  margin-left: 600px;
+}
+.content .doc-content nav a {
+  margin: 5px 0 5px 15px;
+  color: #666;
+  display: block;
+}
 /*内容或代码背景色*/
 .header {
   height: 70px;

@@ -34,13 +34,27 @@ a {
     margin: 0 auto;
     max-width: @base-width;
     min-height: 572px;
-    background-color: transparent;    
-    .doc-content{
-        min-height:1080px;
-        background-color:#fff;
-        padding-top:40px;
-        padding-left:40px;
-        padding-bottom:80px;
+    background-color: transparent;
+
+    .doc-content {
+        min-height: 1080px;
+        background-color: #fff;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-bottom: 80px;
+
+        nav {
+            position: fixed;
+            top: 108px;
+            left: 50%;
+            margin-left: @base-width/2;
+
+            a {
+                margin: 5px 0 5px 15px;
+                color: @font-color-nomal;
+                display: block;
+            }
+        }
     }
 }
 

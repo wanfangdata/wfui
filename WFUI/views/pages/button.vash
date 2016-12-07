@@ -6,7 +6,7 @@
     <p class="desc">
         用于接受用户点击操作。
     </p>
-    <div class="section">
+    <div class="section" id="btn-type">
         <h1 class="title">
             <span class="text">按钮类型</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -36,7 +36,7 @@
             </code>
         </pre>
     </div>
-    <div class="section">
+    <div class="section" id="btn-icon">
         <h1 class="title">
             <span class="text">图标按钮</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -90,7 +90,7 @@
             </code>
         </pre>
     </div>
-    <div class="section">
+    <div class="section" id="btn-size">
         <h1 class="title">
             <span class="text">按钮尺寸</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -114,7 +114,7 @@
             </code>
         </pre>
     </div>
-    <div class="section">
+    <div class="section"  id="btn-hover">
         <h1 class="title">
             <span class="text">悬停状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -147,7 +147,7 @@
             </code>
         </pre>
     </div>
-    <div class="section">
+    <div class="section"  id="btn-disabled">
         <h1 class="title">
             <span class="text">不可用状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -182,7 +182,7 @@
             </code>
         </pre>
     </div>
-    <div class="section">
+    <div class="section" id="btn-group">
         <h1 class="title">
             <span class="text">按钮组合</span>
             <button class="wf-btn wf-btn-small">Code</button>

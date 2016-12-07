@@ -6,6 +6,7 @@
         </div>
         <div class="wf-col-10 doc-content">
             @html.include('pages/'+ model.page)
+            <nav></nav>
         </div>       
     </div>    
     })
