@@ -199,6 +199,9 @@ a:hover {
 .page pre code {
   border: none;
 }
+.page pre code .hljs-tag {
+  line-height: 22px;
+}
 .page .wf-icon {
   width: 16px;
   height: 16px;

@@ -537,7 +537,8 @@ table {
 .icon-browse:before {
   content: "\e6e6";
 }
-.hover:hover {
+.hover:hover,
+.hover.wf-btn-hover {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
@@ -566,7 +567,8 @@ table {
   border: 1px solid #e1e1e1;
   outline: none;
 }
-.wf-btn:hover {
+.wf-btn:hover,
+.wf-btn.wf-btn-hover {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
@@ -585,7 +587,8 @@ button[disabled]:hover {
   color: #fff;
   border-color: #6abbef;
 }
-.wf-btn-primary:hover {
+.wf-btn-primary:hover,
+.wf-btn-primary.wf-btn-hover {
   color: #fff;
   border-color: #88cbf6;
   background-color: #88cbf6;
@@ -594,7 +597,8 @@ button[disabled]:hover {
   background-color: #fff;
   border-color: #e6e6e6;
 }
-.wf-btn-ghost:hover {
+.wf-btn-ghost:hover,
+.wf-btn-ghost.wf-btn-hover {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
