@@ -28,7 +28,7 @@
             </p>
         </div>
         <pre>
-            <code class="html">
+        <code class="html">
     &lt;button class=&quot;wf-btn wf-btn&quot;&gt;Default&lt;/button&gt;
     &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Primary&lt;/button&gt;
     &lt;button class=&quot;wf-btn wf-btn-ghost&quot;&gt;Ghost&lt;/button&gt;
@@ -99,7 +99,7 @@
             <button class="wf-btn wf-btn-primary">Default</button>
             <button class="wf-btn wf-btn-primary wf-btn-small">Small</button>
         </div>
-        <div class="explain">         
+        <div class="explain">
             <p>按钮有大、中、小三种尺寸。</p>
             <p>
                 通过设置<code>size</code>为<code>large</code><code>small</code>分别把按钮设为大、小尺寸。若不设置<code>size</code>，则尺寸为中。
@@ -135,6 +135,16 @@
         <div class="explain">
             <p>添加<code>wf-btn-hover</code>即可让按钮处于悬停状态。</p>
         </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;button class="wf-btn wf-btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-primary wf-btn-hover"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn  wf-btn-hover"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost"&gt;Ghost&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost  wf-btn-hover"&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
     </div>
     <div class="section">
         <h1 class="title">
@@ -156,8 +166,20 @@
             </div>
         </div>
         <div class="explain">
-            <p>添加<code>disabled</code>属性即可让按钮处于悬停状态。</p>
+            <p>添加<code>disabled</code>属性即可让按钮处于不可用状态。</p>
         </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;button class="wf-btn wf-btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-primary" disabled&gt;Primary&lt;/button&gt;
+
+    &lt;button class="wf-btn"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn" disabled&gt;Default&lt;/button&gt;
+
+    &lt;button class="wf-btn wf-btn-ghost"&gt;Ghost&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost" disabled&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
     </div>
     <div class="section">
         <h1 class="title">
@@ -166,20 +188,54 @@
         </h1>
         <div class="demo">
             <div class="row">
-                <button class="wf-btn wf-btn-primary">Primary</button>
-                <button class="wf-btn wf-btn-primary" disabled>Primary</button>
+                <label>Basic</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">Left</button><button class="wf-btn wf-btn-primary">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">Left</button><button class="wf-btn">Middle</button><button class="wf-btn">Right</button>
+                </div>
             </div>
             <div class="row">
-                <button class="wf-btn">Default</button>
-                <button class="wf-btn" disabled>Default</button>
+                <label>With Icon</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">
+                        <i class="wf-icon icon-back"></i><span class="text">Left</span>
+                    </button><button class="wf-btn"><span class="text">Right</span><i class="wf-icon icon-more"></i></button>
+                </div>
             </div>
             <div class="row">
-                <button class="wf-btn wf-btn-ghost">Ghost</button>
-                <button class="wf-btn wf-btn-ghost" disabled>Ghost</button>
+                <label>Size</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary wf-btn-large">Left</button><button class="wf-btn wf-btn-primary wf-btn-large">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary">Left</button><button class="wf-btn wf-btn-primary">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary wf-btn-small">Left</button><button class="wf-btn wf-btn-primary wf-btn-small">Right</button>
+                </div>
             </div>
         </div>
         <div class="explain">
-            <p>添加<code>disabled</code>属性即可让按钮处于悬停状态。</p>
+            <p>可以把多个<code>Button</code>添加到<code>Button Group</code>中。</p>
         </div>
+        <pre class="language-html">
+            <code class="html">
+        &lt;div class="wf-btn-group"&gt;
+            &lt;button class="wf-btn"&gtLeft&lt;/button&gt;
+            &lt;button class="wf-btn wf-btn-primary"&gtRight&lt;/button&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="wf-btn-group"&gt;
+            &lt;button class="wf-btn"&gt;
+                &lt;i class="wf-icon icon-back"&gt;&lt;/i&gt;&lt;span class="text"&gt;Left&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="wf-btn"&gt;
+                &lt;span class="text"&gt;Right&lt;/span&gt;&lt;i class="wf-icon icon-more"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+            </code>
+        </pre>
     </div>
 </div>

@@ -176,6 +176,9 @@ a:hover {
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content .cn {
   color: #6abbef;
 }
+.wf-btn {
+  margin-right: 8px;
+}
 .page .title {
   color: #333;
   font-size: 24px;
@@ -209,6 +212,7 @@ a:hover {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
+  margin-top: -1px;
   -webkit-text-stroke-width: 0;
 }
 .page .section {
@@ -255,13 +259,23 @@ a:hover {
 .page .section .demo {
   margin-top: 25px;
 }
-.page .section .demo .wf-btn {
-  margin-right: 8px;
-}
 .page .section .demo .row {
   margin-bottom: 10px;
+}
+.page .section .demo .row label {
+  min-width: 80px;
+  display: inline-block;
 }
 .page .section .explain {
   margin-top: 25px;
   line-height: 22px;
+}
+.page .wf-btn-group {
+  margin-right: 8px;
+}
+.page .wf-btn-group .icon-back {
+  margin-right: .5em;
+}
+.page .wf-btn-group .icon-more {
+  margin-left: .5em;
 }

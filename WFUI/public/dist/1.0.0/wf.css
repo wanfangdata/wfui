@@ -542,6 +542,7 @@ table {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
+  z-index: 1;
 }
 .wf-btn {
   display: inline-block;
@@ -572,6 +573,7 @@ table {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
+  z-index: 1;
 }
 .wf-btn.disabled,
 .wf-btn.disabled:hover,
@@ -592,6 +594,7 @@ button[disabled]:hover {
   color: #fff;
   border-color: #88cbf6;
   background-color: #88cbf6;
+  z-index: 1;
 }
 .wf-btn-ghost {
   background-color: #fff;
@@ -602,6 +605,7 @@ button[disabled]:hover {
   color: #6abbef;
   border-color: #6abbef;
   background-color: #fff;
+  z-index: 1;
 }
 .wf-btn-large {
   font-size: 14px;
@@ -609,4 +613,29 @@ button[disabled]:hover {
 }
 .wf-btn-small {
   padding: 2px 8px;
+}
+.wf-btn-group {
+  position: relative;
+  display: inline-block;
+}
+.wf-btn-group > .wf-btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0 0 0 -1px;
+}
+.wf-btn-group > .wf-btn:first-child:not(:last-child) {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin: 0;
+}
+.wf-btn-group .wf-btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+  margin: 0 0 0 -1px;
+}
+.wf-btn-group .wf-btn-primary:first-child:not(:last-child) {
+  border-right-color: #5ab2eb;
+}
+.wf-btn-group .wf-btn-primary:last-child:not(:first-child),
+.wf-btn-group .wf-btn-group .wf-btn-primary + .wf-btn {
+  border-left-color: #5ab2eb;
 }
