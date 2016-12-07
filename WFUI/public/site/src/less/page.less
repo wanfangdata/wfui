@@ -13,6 +13,32 @@
         padding: 20px;
         margin-top: 25px;
     }
+    
+    code {
+        color: #656565;
+        font-family: "微软雅黑";
+        font-size: 12px;
+        background-color: #f8f8f8;
+        border: 1px solid #f0f0f0;
+        padding: 1px 5px;
+        margin: 0 2px;
+        line-height: 1.5;
+    }
+
+    pre {
+        code {
+            border: none;
+        }
+    }
+
+    .wf-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align:middle;
+        line-height: 1;
+        -webkit-text-stroke-width: 0;
+    }
 
     .section {
         margin-top: 40px;
@@ -27,7 +53,7 @@
                 height: 1px;
                 width: 100%;
                 position: absolute;
-                left: -62px;
+                left: 0;
                 top: 12px;
                 background-color: #e6e6e6;
                 z-index: 0;
@@ -40,10 +66,23 @@
                 background-color: #fff;
             }
 
+            &:after {
+                content: '';
+                display: block;
+                height: 100%;
+                width: 62px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #fff;
+                z-index: 0;
+            }
+
             .wf-btn {
                 position: absolute;
                 right: 0;
                 top: 0;
+                z-index: 1;
             }
         }
 
@@ -53,6 +92,10 @@
             .wf-btn {
                 margin-right: 8px;
             }
+
+            .row{
+                margin-bottom:10px;
+            }
         }
 
         .explain {
@@ -60,4 +103,5 @@
             line-height: 22px;
         }
     }
+
 }

@@ -56,17 +56,24 @@
       <SubType>Content</SubType>
       <DependentUpon>public\site\img\icon-doc.sprite</DependentUpon>
     </Content>
+    <Content Include="public\site\module\highlight-9.8.0\highlight.min.css" />
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
     <Content Include="public\site\src\less\page.less" />
     <Content Include="public\src\components\button\button.less" />
     <Content Include="public\src\components\menu\menu.js" />
+    <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
     <Compile Include="public\site\src\js\doc.js" />
     <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\page.js" />
     <Compile Include="public\src\core\js\ui.js" />
     <Content Include="public\site\src\less\menu.less" />
     <Content Include="public\src\components\menu\menu.less" />
+    <Content Include="public\src\core\font\iconfont.eot" />
+    <Content Include="public\src\core\font\iconfont.less" />
+    <Content Include="public\src\core\font\iconfont.svg" />
+    <Content Include="public\src\core\font\iconfont.ttf" />
+    <Content Include="public\src\core\font\iconfont.woff" />
     <Content Include="public\src\core\less\variables\var.less" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
@@ -163,6 +170,8 @@
     <Folder Include="public\dist\" />
     <Folder Include="public\site\" />
     <Folder Include="public\site\js\lib\_animated\" />
+    <Folder Include="public\site\module\" />
+    <Folder Include="public\site\module\highlight-9.8.0\" />
     <Folder Include="public\site\src\" />
     <Folder Include="public\site\src\js\" />
     <Folder Include="public\site\src\less\" />
@@ -181,6 +190,7 @@
     <Folder Include="public\src\core\less\mixins\" />
     <Folder Include="public\src\core\less\variables\" />
     <Folder Include="public\src\core\less\utilities\" />
+    <Folder Include="public\src\core\font\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />

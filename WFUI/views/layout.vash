@@ -6,9 +6,9 @@
     <title>@model.title</title>
     <link href="../site/img/favicon.ico" rel="shortcut icon" />
     <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
-    <link href="//at.alicdn.com/t/font_d031s7ayzzs62yb9.css" rel="stylesheet" />
     <link href="../site/css/global.min.css" rel="stylesheet" />
     <link href="../site/css/animate.min.css" rel="stylesheet" />
+    <link href="../site/module/highlight-9.8.0/highlight.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
@@ -45,8 +45,12 @@
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../site/js/lib/animated.min.js"></script>
     <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
+    <script src="../site/module/highlight-9.8.0/highlight.min.js"></script>
     <script src="../dist/1.0.0/wf.js"></script>
-    <script>$('.brand .text').textillate({ in: { effect: 'rotateIn' } });</script>
+    <script>
+        $('.brand .text').textillate({ in: { effect: 'rotateIn' } });
+        hljs.initHighlightingOnLoad();
+    </script>
     @html.block('script')
 </body>
 </html>
