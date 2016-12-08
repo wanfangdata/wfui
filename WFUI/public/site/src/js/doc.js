@@ -7,11 +7,10 @@
         });
         $('.doc-content nav').html((function () {
             var result = [];
-            var temp = '<a href="#{0}">{1}</a>';
             $('.doc-content .section').each(function (i,item) { 
-                result.push(temp.format($(this).attr('id'), $(this).find('h1.title .text').html()));
+                result.push('<a href="#{0}">{1}</a>'.format($(this).attr('id'), $(this).find('h1.title .text').html()));
             });
             return result.join('');
-        })(this));
+        })());
     },true
 );
