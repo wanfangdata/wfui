@@ -70,7 +70,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Microsoft YaHei', Arial;
+  font-family: Arial, 'Microsoft YaHei';
 }
 /**
  * Address margins handled incorrectly in IE 6/7.
