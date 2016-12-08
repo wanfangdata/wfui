@@ -642,3 +642,41 @@ button[disabled]:hover {
 .wf-btn-group .wf-btn-group .wf-btn-primary + .wf-btn {
   border-left-color: #88cbf6;
 }
+.wf-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  zoom: 1;
+}
+.wf-checkbox:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-checkbox .wf-checkbox-inner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+  margin-right: 8px;
+  float: left;
+}
+.wf-checkbox .wf-checkbox-input {
+  display: none;
+}
+.wf-checkbox .wf-checkbox-text {
+  float: left;
+  color: #666;
+  line-height: 16px;
+}
+.wf-checkbox-checked .wf-checkbox-inner {
+  background-color: #6abbef;
+  border: none;
+  width: 16px;
+  height: 16px;
+}

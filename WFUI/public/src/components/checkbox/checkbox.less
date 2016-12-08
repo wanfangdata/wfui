@@ -1,2 +1,39 @@
-﻿body {
+﻿@import "../../core/less/import.less";
+
+.wf-checkbox {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    .clearfix;
+
+    .wf-checkbox-inner {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        color: #fff;
+        border-radius: 3px;
+        border: 1px solid #dcdcdc;
+        margin-right: 8px;
+        float: left;
+    }
+
+    .wf-checkbox-input {
+        display: none;
+    }
+
+    .wf-checkbox-text {
+        float: left;
+        color: @font-color-nomal;
+        line-height: 16px;
+    }
+}
+
+.wf-checkbox-checked {
+    .wf-checkbox-inner {
+        background-color: @color-primary;
+        border: none;
+        width: 16px;
+        height: 16px;
+    }
 }

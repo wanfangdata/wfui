@@ -19,6 +19,19 @@ wf.define('page', ['logger'], function (logger) {
         components: {},
         
         /**
+         * 添加组件
+         * @param {String} id组件id
+         * @param {Object} component组件
+         */
+        setComponents: function (id, component) {
+            if (components[id]) {
+                logger.error('页面组件id' + id + '重复');
+                return;
+            }
+            this[id] = component;
+        },
+        
+        /**
          * 自动render页面所有组件
          */
         auto: function () {
@@ -34,7 +47,7 @@ wf.define('page', ['logger'], function (logger) {
         },        
         
         logger: logger,
-
+        
         /**
          * 初始化函数
          * @param {String} name页面名称

@@ -3,13 +3,16 @@
 /**
  * html结构：
  * <span data-role="checkbox" class="wf-checkbox">
- *      <span class="wf-checkbox-inner"></span>
+ *      <span class="wf-checkbox-inner">
+ *          <i class="wf-icon icon-selected"></i>
+ *      </span>
  *      <input class="wf-checkbox-input" type="checkbox"/>
  *      <span class="wf-checkbox-text"></span>
  * </span>
  */
 wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
+    var role = 'checkbox';
 
     /**
      * @class Checkbox
@@ -19,7 +22,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         /**
          * [data-role]
          */
-        role: 'checkbox',
+        role: role,
 
         /**
          * 选中class
@@ -96,7 +99,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             $ele.prop('checked', result);
             this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls());
         },
-        
+
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -123,7 +126,14 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
     });
 
     Checkbox.auto = function () {
-        logger.info('checkbox auto render');
+        //logger.info('checkbox auto render');
+        var cb;
+        $.each($('[data-role="' + role + '"]'), function (i) {
+            cb = $(this);
+            new Checkbox(
+                cb.attr('name') || role + i,
+                cb,cb.hasClass('wf-checkbox-checked'));
+        });
     };
 
     return Checkbox;

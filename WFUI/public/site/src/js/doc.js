@@ -7,8 +7,11 @@
         });
         $('.doc-content nav').html((function () {
             var result = [];
-            $('.doc-content .section').each(function (i,item) { 
-                result.push('<a href="#{0}">{1}</a>'.format($(this).attr('id'), $(this).find('h1.title .text').html()));
+            $('.doc-content .section').each(function (i,item) {
+                result.push('<a href="#{0}">{1}</a>'.format(
+                    $(this).attr('id'), 
+                    $(this).find('h1.title .text').html())
+                );
             });
             return result.join('');
         })());
