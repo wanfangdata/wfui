@@ -1,0 +1,244 @@
+﻿<div class="page">
+    <h1 class="title">
+        Checkbox 多选框
+        <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
+    </h1>
+    <p class="desc">
+        多选框。
+    </p>
+    <div class="section" id="btn-type">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <span data-role="checkbox" class="wf-checkbox">
+                <span class="wf-checkbox-inner"></span>
+                <input class="wf-checkbox-input" type="checkbox" />
+                <span class="wf-checkbox-text">Checkbox</span>
+            </span>
+        </div>
+        <div class="explain">
+            <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>
+            <p>
+                通过设置
+                <code>wf-btn-primary</code>
+                <code>wf-btn-ghost</code>
+                可分别创建主按钮、幽灵按钮，若不设置则为次按钮。不同的样式可以用来区别其重要程度。
+            </p>
+            <p>
+                主按钮和次按钮可独立使用，幽灵按钮用于和主按钮组合。需要强引导用主按钮，切记主按钮在同一个操作区域最多出现一次。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;button class=&quot;wf-btn wf-btn&quot;&gt;Default&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-ghost&quot;&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="btn-icon">
+        <h1 class="title">
+            <span class="text">图标按钮</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <button class="wf-btn wf-btn-primary">
+                    <i class="wf-icon icon-search"></i>
+                    <span class="text">Search</span>
+                </button>
+                <button class="wf-btn wf-btn-primary">
+                    <i class="wf-icon icon-search"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button class="wf-btn">
+                    <i class="wf-icon icon-search"></i>
+                    <span class="test">Search</span>
+                </button>
+                <button class="wf-btn">
+                    <i class="wf-icon icon-search"></i>
+                </button>
+            </div>
+            <div class="row">
+                <button class="wf-btn wf-btn-ghost">
+                    <i class="wf-icon icon-search"></i>
+                    <span class="text">Search</span>
+                </button>
+                <button class="wf-btn wf-btn-ghost">
+                    <i class="wf-icon icon-search"></i>
+                </button>
+            </div>
+        </div>
+        <div class="explain">
+            <p>
+                需要在<code>button</code>内嵌入<code>icon</code>，
+                如果想控制<code>icon</code>具体的位置，通过控制<code>icon</code>组件。
+            </p>
+        </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;div class="row"&gt;
+        &lt;button class="wf-btn wf-btn-primary"&gt;
+            &lt;i class="wf-icon icon-search"&gt;&lt;/i&gt;
+            &lt;span class="text"&gt;Search&lt;/span&gt;
+        &lt;/button&gt;
+        &lt;button class="wf-btn wf-btn-primary"&gt;
+            &lt;i class="wf-icon icon-search"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="btn-size">
+        <h1 class="title">
+            <span class="text">按钮尺寸</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <button class="wf-btn wf-btn-primary wf-btn-large">Large</button>
+            <button class="wf-btn wf-btn-primary">Default</button>
+            <button class="wf-btn wf-btn-primary wf-btn-small">Small</button>
+        </div>
+        <div class="explain">
+            <p>按钮有大、中、小三种尺寸。</p>
+            <p>
+                通过设置<code>size</code>为<code>large</code><code>small</code>分别把按钮设为大、小尺寸。若不设置<code>size</code>，则尺寸为中。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;button class=&quot;wf-btn wf-btn-primary wf-btn-large&quot;&gt;Large&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Default&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-primary wf-btn-small&quot;&gt;Small&lt;/button&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section"  id="btn-hover">
+        <h1 class="title">
+            <span class="text">悬停状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <button class="wf-btn wf-btn-primary">Primary</button>
+                <button class="wf-btn wf-btn-primary wf-btn-hover">Primary</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn">Default</button>
+                <button class="wf-btn  wf-btn-hover">Default</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn wf-btn-ghost">Ghost</button>
+                <button class="wf-btn wf-btn-ghost  wf-btn-hover">Ghost</button>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>wf-btn-hover</code>类即可让按钮处于悬停状态。</p>
+        </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;button class="wf-btn wf-btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-primary wf-btn-hover"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn  wf-btn-hover"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost"&gt;Ghost&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost  wf-btn-hover"&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section"  id="btn-disabled">
+        <h1 class="title">
+            <span class="text">不可用状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <button class="wf-btn wf-btn-primary">Primary</button>
+                <button class="wf-btn wf-btn-primary" disabled>Primary</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn">Default</button>
+                <button class="wf-btn" disabled>Default</button>
+            </div>
+            <div class="row">
+                <button class="wf-btn wf-btn-ghost">Ghost</button>
+                <button class="wf-btn wf-btn-ghost" disabled>Ghost</button>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>disabled</code>属性即可让按钮处于不可用状态。</p>
+        </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;button class="wf-btn wf-btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-primary" disabled&gt;Primary&lt;/button&gt;
+
+    &lt;button class="wf-btn"&gt;Default&lt;/button&gt;
+    &lt;button class="wf-btn" disabled&gt;Default&lt;/button&gt;
+
+    &lt;button class="wf-btn wf-btn-ghost"&gt;Ghost&lt;/button&gt;
+    &lt;button class="wf-btn wf-btn-ghost" disabled&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="btn-group">
+        <h1 class="title">
+            <span class="text">按钮组合</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="row">
+                <label>Basic</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">Left</button><button class="wf-btn wf-btn-primary">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">Left</button><button class="wf-btn">Middle</button><button class="wf-btn">Right</button>
+                </div>
+            </div>
+            <div class="row">
+                <label>With Icon</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn">
+                        <i class="wf-icon icon-back"></i><span class="text">Left</span>
+                    </button><button class="wf-btn"><span class="text">Right</span><i class="wf-icon icon-more"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <label>Size</label>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary wf-btn-large">Left</button><button class="wf-btn wf-btn-primary wf-btn-large">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary">Left</button><button class="wf-btn wf-btn-primary">Right</button>
+                </div>
+                <div class="wf-btn-group">
+                    <button class="wf-btn wf-btn-primary wf-btn-small">Left</button><button class="wf-btn wf-btn-primary wf-btn-small">Right</button>
+                </div>
+            </div>
+        </div>
+        <div class="explain">
+            <p>可以把多个<code>Button</code>添加到<code>Button Group</code>中。</p>
+        </div>
+        <pre class="language-html">
+            <code class="html">
+        &lt;div class="wf-btn-group"&gt;
+            &lt;button class="wf-btn"&gtLeft&lt;/button&gt;
+            &lt;button class="wf-btn wf-btn-primary"&gtRight&lt;/button&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="wf-btn-group"&gt;
+            &lt;button class="wf-btn"&gt;
+                &lt;i class="wf-icon icon-back"&gt;&lt;/i&gt;&lt;span class="text"&gt;Left&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="wf-btn"&gt;
+                &lt;span class="text"&gt;Right&lt;/span&gt;&lt;i class="wf-icon icon-more"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+</div>

@@ -500,9 +500,9 @@ table {
 }
 @font-face {
   font-family: "wf-icon";
-  src: url('../../src/core/font/iconfont.eot?t=1481076036552');
+  src: url('../../src/core/font/iconfont.eot?t=1481176455663');
   /* IE9*/
-  src: url('../../src/core/font/iconfont.eot?t=1481076036552#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../../src/core/font/iconfont.woff?t=1481076036552') format('woff'), /* chrome, firefox */ url('../../src/core/font/iconfont.ttf?t=1481076036552') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../../src/core/font/iconfont.svg?t=1481076036552#wf-icon') format('svg');
+  src: url('../../src/core/font/iconfont.eot?t=1481176455663#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../../src/core/font/iconfont.woff?t=1481176455663') format('woff'), /* chrome, firefox */ url('../../src/core/font/iconfont.ttf?t=1481176455663') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../../src/core/font/iconfont.svg?t=1481176455663#wf-icon') format('svg');
   /* iOS 4.1- */
 }
 .wf-icon {
@@ -527,6 +527,9 @@ table {
 }
 .icon-search:before {
   content: "\e6ac";
+}
+.icon-selected:before {
+  content: "\e6ad";
 }
 .icon-viewgallery:before {
   content: "\e6b4";

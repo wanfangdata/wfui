@@ -125,6 +125,7 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
+    <Content Include="views\pages\checkbox.vash" />
     <Content Include="views\pages\button.vash" />
     <Content Include="views\pages\getstarted.vash" />
     <Content Include="views\_menu.vash" />
