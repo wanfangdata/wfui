@@ -32,6 +32,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         },
 
         /**
+         * disabled class
+         */
+        disabledCls: function () {
+            return this.clsName('disabled');
+        },
+
+        /**
          * 注册用户自定义事件
          * @event on
          * @param {String} name 事件名称
@@ -86,6 +93,9 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
                 click: new Action('click', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
+                        if (me.$element.hasClass(me.disabledCls())) {
+                            return false;
+                        }
                         me.set();
                         _action_.piping();
                     });

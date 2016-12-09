@@ -578,6 +578,9 @@ table {
   background-color: #fff;
   z-index: 1;
 }
+.wf-btn .wf-checkbox-inner {
+  border-color: #6abbef;
+}
 .wf-btn.disabled,
 .wf-btn.disabled:hover,
 button[disabled],
@@ -609,6 +612,9 @@ button[disabled]:hover {
   border-color: #6abbef;
   background-color: #fff;
   z-index: 1;
+}
+.wf-btn-ghost .wf-checkbox-inner {
+  border-color: #6abbef;
 }
 .wf-btn-large {
   font-size: 14px;
@@ -679,10 +685,37 @@ button[disabled]:hover {
   color: #666;
   line-height: 16px;
 }
+.wf-checkbox:hover:hover,
+.wf-checkbox:hover.wf-btn-hover {
+  color: #6abbef;
+  border-color: #6abbef;
+  background-color: #fff;
+  z-index: 1;
+}
 .wf-checkbox:hover .wf-checkbox-inner {
+  border-color: #6abbef;
+}
+.wf-checkbox-hover:hover,
+.wf-checkbox-hover.wf-btn-hover {
+  color: #6abbef;
+  border-color: #6abbef;
+  background-color: #fff;
+  z-index: 1;
+}
+.wf-checkbox-hover .wf-checkbox-inner {
   border-color: #6abbef;
 }
 .wf-checkbox-checked .wf-checkbox-inner {
   background-color: #6abbef;
   border-color: transparent;
+}
+.wf-checkbox-disabled .wf-checkbox-inner {
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+  color: #dcdcdc;
+}
+.wf-checkbox-disabled:hover .wf-checkbox-inner {
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+  color: #dcdcdc;
 }
