@@ -16,6 +16,12 @@
         border: 1px solid #dcdcdc;
         margin-right: 8px;
         float: left;
+        -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+        transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+
+        .wf-icon {
+            margin: -1px 0 0 -1px;
+        }
     }
 
     .wf-checkbox-input {
@@ -27,13 +33,17 @@
         color: @font-color-nomal;
         line-height: 16px;
     }
+
+    &:hover {
+        .wf-checkbox-inner {
+            border-color: @color-primary;
+        }
+    }
 }
 
 .wf-checkbox-checked {
     .wf-checkbox-inner {
         background-color: @color-primary;
-        border: none;
-        width: 16px;
-        height: 16px;
+        border-color: transparent;
     }
 }

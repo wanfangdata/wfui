@@ -563,13 +563,13 @@ table {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
   color: #666;
   background-color: #f7f7f7;
   border: 1px solid #e1e1e1;
   outline: none;
+  -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .wf-btn:hover,
 .wf-btn.wf-btn-hover {
@@ -665,6 +665,11 @@ button[disabled]:hover {
   border: 1px solid #dcdcdc;
   margin-right: 8px;
   float: left;
+  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.wf-checkbox .wf-checkbox-inner .wf-icon {
+  margin: -1px 0 0 -1px;
 }
 .wf-checkbox .wf-checkbox-input {
   display: none;
@@ -674,9 +679,10 @@ button[disabled]:hover {
   color: #666;
   line-height: 16px;
 }
+.wf-checkbox:hover .wf-checkbox-inner {
+  border-color: #6abbef;
+}
 .wf-checkbox-checked .wf-checkbox-inner {
   background-color: #6abbef;
-  border: none;
-  width: 16px;
-  height: 16px;
+  border-color: transparent;
 }

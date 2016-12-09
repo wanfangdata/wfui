@@ -1,10 +1,9 @@
 ﻿@import "../../core/less/import.less";
 
-@color-primary-hover:#88cbf6;
-@color-default:#f7f7f7;
-@color-default-border:#e1e1e1;
-@color-ghost-border:#e6e6e6;
-@color-disabled:#ccc;
+@color-default: #f7f7f7;
+@color-default-border: #e1e1e1;
+@color-ghost-border: #e6e6e6;
+@color-disabled: #ccc;
 
 .hover {
     &:hover, &.wf-btn-hover {
@@ -32,13 +31,13 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
     position: relative;
     color: #666;
     background-color: @color-default;
     border: 1px solid @color-default-border;
     outline: none;
+    -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     .hover;
 }
 
