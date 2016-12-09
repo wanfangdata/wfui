@@ -12,14 +12,14 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <span data-role="checkbox" class="wf-checkbox">
+            <span data-role="checkbox" class="wf-checkbox" name="cb1" id="cb1">
                 <span class="wf-checkbox-inner">
                     <i class="wf-icon icon-selected"></i>
                 </span>
-                <input class="wf-checkbox-input" type="checkbox" />
+                <input id="test" class="wf-checkbox-input" type="checkbox" />
                 <span class="wf-checkbox-text">Checkbox</span>
             </span>
-            <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked">
+            <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" name="cb2"  id="cb2">
                 <span class="wf-checkbox-inner">
                     <i class="wf-icon icon-selected"></i>
                 </span>

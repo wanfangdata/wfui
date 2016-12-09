@@ -9,17 +9,7 @@ wf.define('Action', '_core_', function (logger) {
          * 事件名称
          */
         name: String.empty,
-        
-        /**
-         * 触发对象
-         */
-        $target: {},
-        
-        /**
-         * 事件注册的函数
-         */
-        funcs: [],
-        
+
         /**
          * 事件注册
          * @param {Function} func
@@ -46,6 +36,13 @@ wf.define('Action', '_core_', function (logger) {
          */
         init: function (name , func, target) {
             this.name = name;
+            /**
+             * 事件注册的函数
+             */
+            this.funcs = [];
+            /**
+             * 触发对象
+             */
             this.$target = target;
             if ($.isFunction(func)) {
                 func.call(this);

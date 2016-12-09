@@ -509,17 +509,7 @@ wf.define('Action', '_core_', function (logger) {
          * 事件名称
          */
         name: String.empty,
-        
-        /**
-         * 触发对象
-         */
-        $target: {},
-        
-        /**
-         * 事件注册的函数
-         */
-        funcs: [],
-        
+
         /**
          * 事件注册
          * @param {Function} func
@@ -546,6 +536,13 @@ wf.define('Action', '_core_', function (logger) {
          */
         init: function (name , func, target) {
             this.name = name;
+            /**
+             * 事件注册的函数
+             */
+            this.funcs = [];
+            /**
+             * 触发对象
+             */
             this.$target = target;
             if ($.isFunction(func)) {
                 func.call(this);
@@ -638,6 +635,7 @@ wf.define('UI', ['logger'], function (logger) {
                     if (this.action && $.isFunction(this.action)) {
                         this.action(_ui_);
                     }
+                    _ui_[this.selector] = this;
                 });
             },
             
@@ -698,46 +696,6 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         },
 
         /**
-         * checkbox ui
-         */
-        inner: {
-            selector: 'inner',
-            $element: {}
-        },
-
-        /**
-         * 实际checkbox元素
-         */
-        input: {
-            selector: 'input',
-            $element: {}
-        },
-
-        /**
-         * 文本元素
-         */
-        text: {
-            selector: 'text',
-            $element: {}
-        },
-
-        /**
-         * 事件处理
-         */
-        actionHandler: function () {
-            var _cb_ = this;
-            return {
-                click: new Action('click', function () {
-                    var _action_ = this;
-                    _action_.$target.click(function () {
-                        _cb_.checked();
-                        _action_.piping();
-                    });
-                }, this.$element)
-            }
-        },
-
-        /**
          * 注册用户自定义事件
          * @event on
          * @param {String} name 事件名称
@@ -756,13 +714,14 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * @param {Bool||undefined} checked 是否选中
          * 如果为undefined则根据当前状态修改
          */
-        checked: function (checked) {
+        set: function (checked) {
             var $ele = this.input.$element,
                 result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
                 checked;
             $ele.prop('checked', result);
+            this.checked = result;
             this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls());
         },
 
@@ -776,29 +735,42 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * events:{'click',function($element){}}
          */
         init: function (_base_, name, $element, checked, events) {
-            _base_(name, $element, events);
+            var me = this;
+            _base_(name, $element);
             //初始化组件元素,为JQuery对象
-            this.initElement([
-                this.inner,
-                this.input,
-                this.text
+            me.initElement([
+                {selector: 'inner'},
+                { selector: 'input' },
+                { selector: 'text' }
             ]);
             //初始化选中状态
-            this.checked(checked || false);
+            me.set(checked || false);
             //初始化事件
-            this.action = this.actionHandler();
-            this.initEvent(events);
+            me.action = {
+                click: new Action('click', function () {
+                    var _action_ = this;
+                    _action_.$target.click(function () {
+                        me.set();
+                        _action_.piping();
+                    });
+                }, this.$element)
+            };
+            me.initEvent(events);
         }
     });
 
-    Checkbox.auto = function () {
+    Checkbox.auto = function (page) {
         //logger.info('checkbox auto render');
         var cb;
         $.each($('[data-role="' + role + '"]'), function (i) {
             cb = $(this);
-            new Checkbox(
-                cb.attr('name') || role + i,
-                cb,cb.hasClass('wf-checkbox-checked'));
+            page.setElement(
+                cb.attr('id') || role + i,
+                new Checkbox(
+                    cb.attr('name'),
+                    cb, cb.hasClass('wf-checkbox-checked')
+                )
+            );
         });
     };
 
@@ -826,16 +798,21 @@ wf.define('page', ['logger'], function (logger) {
         components: {},
         
         /**
+         * 页面组件实例
+         */
+        element: {},
+        
+        /**
          * 添加组件
          * @param {String} id组件id
-         * @param {Object} component组件
+         * @param {Object} element组件
          */
-        setComponents: function (id, component) {
-            if (components[id]) {
+        setElement: function (id, element) {
+            if (this.element[id]) {
                 logger.error('页面组件id' + id + '重复');
                 return;
             }
-            this[id] = component;
+            this.element[id] = element;
         },
         
         /**
@@ -845,7 +822,7 @@ wf.define('page', ['logger'], function (logger) {
             
             for (var com in this.components) {
                 if ($.isFunction(this.components[com].auto)) {
-                    this.components[com].auto();
+                    this.components[com].auto(this);
                 } else {
                     logger.error(com + '缺少auto render');
                 }

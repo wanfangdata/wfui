@@ -82,6 +82,7 @@ wf.define('UI', ['logger'], function (logger) {
                     if (this.action && $.isFunction(this.action)) {
                         this.action(_ui_);
                     }
+                    _ui_[this.selector] = this;
                 });
             },
             

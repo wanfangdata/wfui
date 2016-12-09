@@ -19,16 +19,21 @@ wf.define('page', ['logger'], function (logger) {
         components: {},
         
         /**
+         * 页面组件实例
+         */
+        element: {},
+        
+        /**
          * 添加组件
          * @param {String} id组件id
-         * @param {Object} component组件
+         * @param {Object} element组件
          */
-        setComponents: function (id, component) {
-            if (components[id]) {
+        setElement: function (id, element) {
+            if (this.element[id]) {
                 logger.error('页面组件id' + id + '重复');
                 return;
             }
-            this[id] = component;
+            this.element[id] = element;
         },
         
         /**
@@ -38,7 +43,7 @@ wf.define('page', ['logger'], function (logger) {
             
             for (var com in this.components) {
                 if ($.isFunction(this.components[com].auto)) {
-                    this.components[com].auto();
+                    this.components[com].auto(this);
                 } else {
                     logger.error(com + '缺少auto render');
                 }
