@@ -761,14 +761,14 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
 
     Checkbox.auto = function (page) {
         //logger.info('checkbox auto render');
-        var cb;
+        var cb, name;
         $.each($('[data-role="' + role + '"]'), function (i) {
             cb = $(this);
+            name = cb.attr('id') || role + i;
             page.setElement(
-                cb.attr('id') || role + i,
+                name,
                 new Checkbox(
-                    cb.attr('name'),
-                    cb, cb.hasClass('wf-checkbox-checked')
+                    name, cb, cb.hasClass('wf-checkbox-checked')
                 )
             );
         });
