@@ -37,6 +37,7 @@
 
         .wf-icon {
             margin: -1px 0 0 -1px;
+            display: none;
         }
     }
 
@@ -63,10 +64,15 @@
     .wf-checkbox-inner {
         background-color: @color-primary;
         border-color: transparent;
+
+        .wf-icon {
+            display: inline-block;
+        }
     }
 }
 
 .wf-checkbox-disabled {
+    cursor: default;
     .disabled;
 
     &:hover {

@@ -42,7 +42,7 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-primary">
                     <i class="wf-icon icon-search"></i>
                     <span class="text">Search</span>
@@ -51,7 +51,7 @@
                     <i class="wf-icon icon-search"></i>
                 </button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn">
                     <i class="wf-icon icon-search"></i>
                     <span class="test">Search</span>
@@ -60,7 +60,7 @@
                     <i class="wf-icon icon-search"></i>
                 </button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-ghost">
                     <i class="wf-icon icon-search"></i>
                     <span class="text">Search</span>
@@ -78,7 +78,7 @@
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;div class="row"&gt;
+    &lt;div class="wf-row"&gt;
         &lt;button class="wf-btn wf-btn-primary"&gt;
             &lt;i class="wf-icon icon-search"&gt;&lt;/i&gt;
             &lt;span class="text"&gt;Search&lt;/span&gt;
@@ -120,15 +120,15 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-primary">Primary</button>
                 <button class="wf-btn wf-btn-primary wf-btn-hover">Primary</button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn">Default</button>
                 <button class="wf-btn  wf-btn-hover">Default</button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-ghost">Ghost</button>
                 <button class="wf-btn wf-btn-ghost  wf-btn-hover">Ghost</button>
             </div>
@@ -153,15 +153,15 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-primary">Primary</button>
                 <button class="wf-btn wf-btn-primary" disabled>Primary</button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn">Default</button>
                 <button class="wf-btn" disabled>Default</button>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <button class="wf-btn wf-btn-ghost">Ghost</button>
                 <button class="wf-btn wf-btn-ghost" disabled>Ghost</button>
             </div>
@@ -188,7 +188,7 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="row">
+            <div class="wf-row">
                 <label>Basic</label>
                 <div class="wf-btn-group">
                     <button class="wf-btn">Left</button><button class="wf-btn wf-btn-primary">Right</button>
@@ -197,7 +197,7 @@
                     <button class="wf-btn">Left</button><button class="wf-btn">Middle</button><button class="wf-btn">Right</button>
                 </div>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <label>With Icon</label>
                 <div class="wf-btn-group">
                     <button class="wf-btn">
@@ -205,7 +205,7 @@
                     </button><button class="wf-btn"><span class="text">Right</span><i class="wf-icon icon-more"></i></button>
                 </div>
             </div>
-            <div class="row">
+            <div class="wf-row">
                 <label>Size</label>
                 <div class="wf-btn-group">
                     <button class="wf-btn wf-btn-primary wf-btn-large">Left</button><button class="wf-btn wf-btn-primary wf-btn-large">Right</button>

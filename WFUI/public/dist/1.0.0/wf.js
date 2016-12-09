@@ -733,6 +733,14 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         },
 
         /**
+         * 设置checkbox的文本内容
+         * @param {String} text 文本内容
+         */
+        setText: function (text) {
+            this.text.$element.text(text);
+        },
+
+        /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
          * @param {String} name ui名

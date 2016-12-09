@@ -15,5 +15,9 @@
             });
             return result.join('');
         })());
+
+        $('.demo-checked-disabled button').click(function () { 
+            
+        });
     }, true
 );

@@ -281,10 +281,10 @@ a:hover {
 .page .section .demo {
   margin-top: 25px;
 }
-.page .section .demo .row {
+.page .section .demo .wf-row {
   margin-bottom: 10px;
 }
-.page .section .demo .row label {
+.page .section .demo .wf-row label {
   min-width: 80px;
   display: inline-block;
 }

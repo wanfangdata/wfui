@@ -15,5 +15,9 @@ var page = wf.require('page').render(
             });
             return result.join('');
         })());
+
+        $('.demo-checked-disabled button').click(function () { 
+            
+        });
     }, true
 );
