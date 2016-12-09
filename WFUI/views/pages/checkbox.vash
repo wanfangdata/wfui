@@ -323,7 +323,7 @@
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-all  wf-checkbox-checked" id="cbDemoGroup1" data-target="cbGroup">
+                <span data-role="checkbox" class="wf-checkbox wf-checkbox-all  wf-checkbox-checked" id="cbDemoAll" data-target="cbGroup">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
@@ -332,21 +332,21 @@
                 </span>
             </div>
             <div id="cbGroup" class="wf-checkbox-group wf-row">
-                <span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoGroup1">
+                <span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoAll1">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
                     <input id="test" class="wf-checkbox-input" type="checkbox" />
                     <span class="wf-checkbox-text">item1</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup2">
+                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll2">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
                     <input class="wf-checkbox-input" type="checkbox" />
                     <span class="wf-checkbox-text">item2</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup3">
+                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll3">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
@@ -359,50 +359,36 @@
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoGroup1"&gt;
+    &lt;div class="wf-row"&gt;
+        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-all  wf-checkbox-checked" id="cbDemoAll" data-target="cbGroup"&gt;
+            &lt;span class="wf-checkbox-inner"&gt;
+                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
+            &lt;span class="wf-checkbox-text"&gt;Check all&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div id="cbGroup" class="wf-checkbox-group wf-row"&gt;
+        &lt;span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoAll1"&gt;
             &lt;span class="wf-checkbox-inner"&gt;
                 &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
             &lt;/span&gt;
             &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
             &lt;span class="wf-checkbox-text"&gt;item1&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup2"&gt;
+        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoAll2"&gt;
             &lt;span class="wf-checkbox-inner"&gt;
                 &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
             &lt;/span&gt;
             &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
             &lt;span class="wf-checkbox-text"&gt;item2&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup3"&gt;
+        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoAll3"&gt;
             &lt;span class="wf-checkbox-inner"&gt;
                 &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
             &lt;/span&gt;
             &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
             &lt;span class="wf-checkbox-text"&gt;item3&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup4"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item4&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemoGroup5"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item5&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="cbDemoGroup6"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item6&lt;/span&gt;
         &lt;/span&gt;
     &lt;/div&gt;
         </code>
