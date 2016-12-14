@@ -56,7 +56,8 @@ wf.define('UI', ['logger'], function (logger) {
             },
             
             /**
-             * 组装class
+             * 组装className
+             * @param {String} name元素名
              */
             clsName: function (name) {
                 return [_WF_, this.role, name].join(CHAIN);
@@ -107,5 +108,15 @@ wf.define('UI', ['logger'], function (logger) {
             }
 
         });
+
+    /**
+     * static 组装className
+     * @param {String} 元素名
+     * @param {role} 组件role
+     * @return {String} 返回className
+     */
+    UI.clsName = function (name, role) {
+        return [_WF_, role, name].join(CHAIN);
+    };
     return UI;
 });

@@ -323,7 +323,7 @@
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-all  wf-checkbox-checked" id="cbDemoAll" data-target="cbGroup">
+                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll" data-target="cbGroup">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
@@ -360,7 +360,7 @@
         <pre class="language-html">
         <code class="html">
     &lt;div class="wf-row"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-all  wf-checkbox-checked" id="cbDemoAll" data-target="cbGroup"&gt;
+        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoAll" data-target="cbGroup"&gt;
             &lt;span class="wf-checkbox-inner"&gt;
                 &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
             &lt;/span&gt;

@@ -713,6 +713,21 @@ button[disabled]:hover {
 .wf-checkbox-checked .wf-checkbox-inner .wf-icon {
   display: inline-block;
 }
+.wf-checkbox-checked[data-target] .wf-checkbox-inner {
+  background-color: #fff;
+  border-color: #6abbef;
+  color: #6abbef;
+}
+.wf-checkbox-checked[data-target] .wf-checkbox-inner .wf-icon {
+  width: 10px;
+  height: 10px;
+  background-color: #6abbef;
+  margin-left: 2px;
+  overflow: hidden;
+}
+.wf-checkbox-checked[data-target] .wf-checkbox-inner .wf-icon:before {
+  display: none;
+}
 .wf-checkbox-disabled {
   cursor: default;
 }

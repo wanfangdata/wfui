@@ -609,7 +609,8 @@ wf.define('UI', ['logger'], function (logger) {
             },
             
             /**
-             * 组装class
+             * 组装className
+             * @param {String} name元素名
              */
             clsName: function (name) {
                 return [_WF_, this.role, name].join(CHAIN);
@@ -660,6 +661,16 @@ wf.define('UI', ['logger'], function (logger) {
             }
 
         });
+
+    /**
+     * static 组装className
+     * @param {String} 元素名
+     * @param {role} 组件role
+     * @return {String} 返回className
+     */
+    UI.clsName = function (name, role) {
+        return [_WF_, role, name].join(CHAIN);
+    };
     return UI;
 });
 'use strict';
@@ -746,20 +757,22 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
+         * @param {String} groupId 组id
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, events) {
+        init: function (_base_, name, $element, checked, groupId, events) {
             var me = this;
             _base_(name, $element);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                {selector: 'inner'},
+                { selector: 'inner' },
                 { selector: 'input' },
                 { selector: 'text' }
             ]);
             //初始化选中状态
             me.set(checked || false);
+            me.groupId = groupId;
             //初始化事件
             me.action = {
                 click: new Action('click', function () {
@@ -783,11 +796,19 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         $.each($('[data-role="' + role + '"]'), function (i) {
             cb = $(this);
             name = cb.attr('id') || role + i;
-            page.setElement(
+            page.addElement(
                 name,
                 new Checkbox(
-                    name, cb, cb.hasClass('wf-checkbox-checked')
-                )
+                    name, cb, cb.hasClass(UI.clsName('checked',role))
+                ), {
+                    click: function () {
+                        var $this = $(this),
+                            target = $this.data('target');
+                        if (target) {
+
+                        }
+                    }
+                }
             );
         });
     };
@@ -825,7 +846,7 @@ wf.define('page', ['logger'], function (logger) {
          * @param {String} id组件id
          * @param {Object} element组件
          */
-        setElement: function (id, element) {
+        addElement: function (id, element) {
             if (this.element[id]) {
                 logger.error('页面组件id' + id + '重复');
                 return;

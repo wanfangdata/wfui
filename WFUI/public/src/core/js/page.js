@@ -28,7 +28,7 @@ wf.define('page', ['logger'], function (logger) {
          * @param {String} id组件id
          * @param {Object} element组件
          */
-        setElement: function (id, element) {
+        addElement: function (id, element) {
             if (this.element[id]) {
                 logger.error('页面组件id' + id + '重复');
                 return;

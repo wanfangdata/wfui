@@ -69,6 +69,25 @@
             display: inline-block;
         }
     }
+
+    &[data-target] {
+        .wf-checkbox-inner {
+            background-color: #fff;
+            border-color: @color-primary;
+            color: @color-primary;
+
+            .wf-icon {
+                width: 10px;
+                height: 10px;
+                background-color: @color-primary;
+                margin-left: 2px;
+                overflow: hidden;
+                &:before{
+                    display:none;
+                }
+            }
+        }
+    }
 }
 
 .wf-checkbox-disabled {
