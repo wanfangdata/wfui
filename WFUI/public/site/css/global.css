@@ -217,7 +217,7 @@ a:hover {
   background-color: #f8f8f8;
   border: 1px solid #f0f0f0;
   padding: 1px 5px;
-  margin: 0 2px;
+  margin: 0 5px;
   line-height: 1.5;
 }
 .page pre {
@@ -291,6 +291,12 @@ a:hover {
 .page .section .explain {
   margin-top: 25px;
   line-height: 22px;
+}
+.page .section-api {
+  margin-top: 70px;
+}
+.page .section-api .title:before {
+  display: none;
 }
 .page .wf-btn-group {
   margin-right: 8px;
