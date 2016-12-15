@@ -521,7 +521,7 @@ wf.define('Action', '_core_', function (logger) {
         /**
          * 事件管道
          */
-        piping: function (funcs) {
+        piping: function () {
             var _ac_ = this;
             $.each(_ac_.funcs, function () {
                 this(_ac_);
@@ -823,16 +823,28 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
              * 创建group
              * @param {Object} controller checkbox控制
              * @param {String} groupId组id
-             * @param {String} index组 checkbox index
+             * @param {String} index checkbox index
              */
             generateGroup = function (controller, groupId, index) {
                 var result = { items: {} }, $cb;
                 $.each($('#' + groupId).find(dataRole), function (i) {
                     $cb = $(this);
                     result.items[name($cb, groupId + i)] =
-                        generateCB($cb, groupId + i, function () {
-
-                        });
+                    generateCB($cb, groupId + i, function () {
+                        var valide = [];
+                        var all = true;
+                        for (var key in result.items) {
+                            if (valide.length == 0) {
+                                valide.push(result.items[key].checked);
+                                continue;
+                            }
+                            if ($.inArray(result.items[key].checked, valide) < 0) {
+                                all = false;
+                                break;
+                            }
+                        }
+                        result.controller.set(all ? valide[0] : false);
+                    });
                 });
                 result.controller = generateCB(controller, index, function (cb) {
                     for (var key in result.items) {

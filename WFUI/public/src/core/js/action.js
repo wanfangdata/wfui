@@ -21,7 +21,7 @@ wf.define('Action', '_core_', function (logger) {
         /**
          * 事件管道
          */
-        piping: function (funcs) {
+        piping: function () {
             var _ac_ = this;
             $.each(_ac_.funcs, function () {
                 this(_ac_);
