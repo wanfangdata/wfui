@@ -305,6 +305,7 @@ a:hover {
   padding-left: 16px;
 }
 .page .section-api .ul-apis li {
+  list-style: circle;
   margin: 10px 0;
 }
 .page .section-api .ul-apis li code {

@@ -64,11 +64,13 @@
     <Content Include="public\src\components\menu\menu.js" />
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
     <Compile Include="public\site\src\js\doc.js" />
+    <Content Include="public\src\components\radio\radio.js" />
     <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\page.js" />
     <Compile Include="public\src\core\js\ui.js" />
     <Content Include="public\site\src\less\menu.less" />
     <Content Include="public\src\components\menu\menu.less" />
+    <Content Include="public\src\components\radio\radio.less" />
     <Content Include="public\src\core\font\iconfont.eot" />
     <Content Include="public\src\core\font\iconfont.less" />
     <Content Include="public\src\core\font\iconfont.svg" />
@@ -125,6 +127,7 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
+    <Content Include="views\pages\radio.vash" />
     <Content Include="views\pages\checkbox.vash" />
     <Content Include="views\pages\button.vash" />
     <Content Include="views\pages\getstarted.vash" />
@@ -183,6 +186,7 @@
     <Folder Include="public\src\components\checkbox\" />
     <Folder Include="public\src\components\menu\" />
     <Folder Include="public\src\components\button\" />
+    <Folder Include="public\src\components\radio\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
     <Folder Include="public\src\components\" />
