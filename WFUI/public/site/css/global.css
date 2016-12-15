@@ -298,6 +298,15 @@ a:hover {
 .page .section-api .title:before {
   display: none;
 }
+.page .section-api pre {
+  display: block;
+}
+.page .section-api .ul-apis li {
+  margin: 10px 0;
+}
+.page .section-api .ul-apis li code {
+  margin-left: 0;
+}
 .page .wf-btn-group {
   margin-right: 8px;
 }

@@ -222,7 +222,7 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1em 0;
+  margin: 0;
 }
 dd {
   margin: 0 0 0 40px;
@@ -233,7 +233,7 @@ dd {
 menu,
 ol,
 ul {
-  padding: 0 0 0 40px;
+  padding: 0;
 }
 /**
  * Correct list images handled incorrectly in IE 7.

@@ -394,14 +394,15 @@
         </code>
         </pre>
     </div>
-    <div class="section section-api" id="btn-type">
+    <div class="section section-api">
         <h1 class="title">
             <span class="text">API</span>
         </h1>
-        <table>
-            <tr>
-                <th></th>
-            </tr>
-        </table>
+        <ul class="ul-apis">
+            <li><code>checkbox.set(checked)</code></li>
+            <li><code>checkbox.set(checked)</code></li>
+            <li><code>checkbox.set(checked)</code></li>
+            <li><code>checkbox.set(checked)</code></li>
+        </ul>
     </div>
 </div>
