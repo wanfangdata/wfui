@@ -332,21 +332,21 @@
                 </span>
             </div>
             <div id="cbGroup" class="wf-checkbox-group wf-row">
-                <span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoAll1">
+                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item wf-checkbox-checked" id="cbDemoAll1">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
                     <input id="test" class="wf-checkbox-input" type="checkbox" />
                     <span class="wf-checkbox-text">item1</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll2">
+                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item" id="cbDemoAll2">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>
                     <input class="wf-checkbox-input" type="checkbox" />
                     <span class="wf-checkbox-text">item2</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll3">
+                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item" id="cbDemoAll3">
                     <span class="wf-checkbox-inner">
                         <i class="wf-icon icon-selected"></i>
                     </span>

@@ -671,8 +671,8 @@ button[disabled]:hover {
   border: 1px solid #dcdcdc;
   margin-right: 8px;
   float: left;
-  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -webkit-transition: all 0.1s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.1s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
 .wf-checkbox .wf-checkbox-inner .wf-icon {
   margin: -1px 0 0 -1px;

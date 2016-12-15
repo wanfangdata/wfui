@@ -645,6 +645,7 @@ wf.define('UI', ['logger'], function (logger) {
              * @param {Object} events 组件事件
              */
             initEvent: function (events) {
+                if (!events) { return; }
                 for (var key in events) {
                     this.on(key, events[key])
                 }
@@ -661,7 +662,7 @@ wf.define('UI', ['logger'], function (logger) {
             }
 
         });
-
+    
     /**
      * static 组装className
      * @param {String} 元素名
@@ -757,11 +758,10 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
-         * @param {String} groupId 组id
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, groupId, events) {
+        init: function (_base_, name, $element, checked, events) {
             var me = this;
             _base_(name, $element);
             //初始化组件元素,为JQuery对象
@@ -772,7 +772,6 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             ]);
             //初始化选中状态
             me.set(checked || false);
-            me.groupId = groupId;
             //初始化事件
             me.action = {
                 click: new Action('click', function () {
@@ -790,25 +789,68 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         }
     });
 
+    /**
+     * 自动初始化
+     * @param {Object} page页面容器
+     */
     Checkbox.auto = function (page) {
-        //logger.info('checkbox auto render');
-        var cb, name;
-        $.each($('[data-role="' + role + '"]'), function (i) {
-            cb = $(this);
-            name = cb.attr('id') || role + i;
-            page.addElement(
-                name,
-                new Checkbox(
-                    name, cb, cb.hasClass(UI.clsName('checked',role))
-                ), {
-                    click: function () {
-                        var $this = $(this),
-                            target = $this.data('target');
-                        if (target) {
 
-                        }
+        //logger.info('checkbox auto render');
+
+        var $this, target,
+            dataRole = '[data-role="' + role + '"]',
+
+            name = function ($ele, index) {
+                return $ele.attr('id') || role + index;
+            },
+
+            /**
+             * 创建checkbox
+             * @param {Object} $elm checkbox jquery object
+             * @param {String} index checkbox index
+             * @param {Function} click click事件
+             */
+            generateCB = function ($elm, index, click) {
+                return new Checkbox(
+                    name($elm, index),
+                    $elm,
+                    $elm.hasClass(UI.clsName('checked', role)),
+                    click ? { click: click } : null
+                );
+            },
+
+            /**
+             * 创建group
+             * @param {Object} controller checkbox控制
+             * @param {String} groupId组id
+             * @param {String} index组 checkbox index
+             */
+            generateGroup = function (controller, groupId, index) {
+                var result = { items: {} }, $cb;
+                $.each($('#' + groupId).find(dataRole), function (i) {
+                    $cb = $(this);
+                    result.items[name($cb, groupId + i)] =
+                        generateCB($cb, groupId + i, function () {
+
+                        });
+                });
+                result.controller = generateCB(controller, index, function (cb) {
+                    for (var key in result.items) {
+                        result.items[key].set(
+                            controller.hasClass(UI.clsName('checked', role))
+                        );
                     }
-                }
+                });
+                result.name = result.controller.name;
+                return result;
+            };
+
+        $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
+            $this = $(this);
+            target = $this.data('target');
+            page.addElement(target ?
+                generateGroup($this, target, index) :
+                generateCB($this, index)
             );
         });
     };
@@ -843,15 +885,14 @@ wf.define('page', ['logger'], function (logger) {
         
         /**
          * 添加组件
-         * @param {String} id组件id
          * @param {Object} element组件
          */
-        addElement: function (id, element) {
-            if (this.element[id]) {
-                logger.error('页面组件id' + id + '重复');
+        addElement: function (element) {
+            if (this.element[element.name]) {
+                logger.error('页面组件id' + element.name + '重复');
                 return;
             }
-            this.element[id] = element;
+            this.element[element.name] = element;
         },
         
         /**

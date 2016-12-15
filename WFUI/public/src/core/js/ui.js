@@ -92,6 +92,7 @@ wf.define('UI', ['logger'], function (logger) {
              * @param {Object} events 组件事件
              */
             initEvent: function (events) {
+                if (!events) { return; }
                 for (var key in events) {
                     this.on(key, events[key])
                 }
@@ -108,7 +109,7 @@ wf.define('UI', ['logger'], function (logger) {
             }
 
         });
-
+    
     /**
      * static 组装className
      * @param {String} 元素名

@@ -25,15 +25,14 @@ wf.define('page', ['logger'], function (logger) {
         
         /**
          * 添加组件
-         * @param {String} id组件id
          * @param {Object} element组件
          */
-        addElement: function (id, element) {
-            if (this.element[id]) {
-                logger.error('页面组件id' + id + '重复');
+        addElement: function (element) {
+            if (this.element[element.name]) {
+                logger.error('页面组件id' + element.name + '重复');
                 return;
             }
-            this.element[id] = element;
+            this.element[element.name] = element;
         },
         
         /**
