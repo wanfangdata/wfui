@@ -316,7 +316,7 @@
         </code>
         </pre>
     </div>
-    <div class="section" id="btn-group">
+    <div class="section" id="btn-checkall">
         <h1 class="title">
             <span class="text">全选</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -429,7 +429,7 @@
                     <tr>
                         <td>events</td>
                         <td>事件函数，目前默认只提供click</td>
-                        <td>Function</td>
+                        <td>Object { Function }</td>
                         <td>-</td>
                     </tr>
                 </table>
