@@ -301,11 +301,42 @@ a:hover {
 .page .section-api pre {
   display: block;
 }
+.page .section-api .ul-apis {
+  padding-left: 16px;
+}
 .page .section-api .ul-apis li {
   margin: 10px 0;
 }
 .page .section-api .ul-apis li code {
   margin-left: 0;
+}
+.page .section-api table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  empty-cells: show;
+  border: 1px solid #e9e9e9;
+  width: 100%;
+  margin: 16px 0;
+}
+.page .section-api table th {
+  border: 1px solid #e9e9e9;
+  padding: 8px 16px;
+  text-align: left;
+  background: #F7F7F7;
+}
+.page .section-api table td {
+  border: 1px solid #e9e9e9;
+  padding: 8px 16px;
+  text-align: left;
+}
+.page .section-api table td:first-child {
+  width: 20%;
+}
+.page .section-api table td:nth-child(3) {
+  width: 20%;
+}
+.page .section-api table td:last-child {
+  width: 15%;
 }
 .page .wf-btn-group {
   margin-right: 8px;
