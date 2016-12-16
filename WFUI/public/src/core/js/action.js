@@ -32,9 +32,9 @@ wf.define('Action', '_core_', function (logger) {
          * 事件初始化
          * @param {String} name 事件名
          * @param {Function} 初始事件体
-         * @param {JQuery} target 触发对象
+         * @param {JQuery} $target 触发对象
          */
-        init: function (name , func, target) {
+        init: function (name , func, $target) {
             this.name = name;
             /**
              * 事件注册的函数
@@ -43,7 +43,7 @@ wf.define('Action', '_core_', function (logger) {
             /**
              * 触发对象
              */
-            this.$target = target;
+            this.$target = $target;
             if ($.isFunction(func)) {
                 func.call(this);
             }

@@ -4,7 +4,7 @@
  * html结构：
  * <span data-role="radio" class="wf-radio">
  *      <span class="wf-radio-inner">
- *          <i class="wf-icon icon-selected"></i>
+ *          <i class="wf-icon icon-radio"></i>
  *      </span>
  *      <input class="wf-radio-input" type="radio"/>
  *      <span class="wf-radio-text"></span>
@@ -104,7 +104,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
                         if (me.$element.hasClass(me.disabledCls())) {
                             return false;
                         }
-                        me.set();
+                        me.set(true);
                         _action_.piping();
                     });
                 }, this.$element)
@@ -119,10 +119,60 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      */
     Radio.auto = function (page) {
 
-        //logger.info('radio auto render');
+        var $this, target,
+            dataRole = '[data-role="' + role + '"]',
+
+            name = function ($ele, index) {
+                return $ele.attr('id') || role + index;
+            },
+
+            /**
+             * 创建radio
+             * @param {Object} $elm radio jquery object
+             * @param {String} index radio index
+             * @param {Function} click click事件
+             */
+            generateRD = function ($elm, index, click) {
+                return new Radio(
+                    name($elm, index),
+                    $elm,
+                    $elm.hasClass(UI.clsName('checked', role)),
+                    click ? { click: click } : null
+                );
+            },
+
+            /**
+             * 创建group
+             * @param {Object} $group radio组
+             * @param {String} index radio index
+             */
+            generateGroup = function ($group, index) {
+                var result = { items: {} }, $rd, groupId = name($group, index);
+                $.each($group.find(dataRole), function (i) {
+                    $rd = $(this);
+                    result.items[name($rd, groupId + i)] =
+                    generateRD($rd, groupId + i, function (e) {
+                        for (var key in result.items) {
+                            if (key !== e.$target.attr('id')) {
+                                result.items[key].set(false);
+                            }
+                        }
+                    });
+                });
+                result.name = groupId;
+                return result;
+            };
+
+        $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
+            page.addElement(generateRD($(this), index));
+        });
+
+        $.each($('.' + UI.clsName('group', role)), function (index) {
+            page.addElement(generateGroup($(this), index));
+        });
 
     };
 
-    return radio;
+    return Radio;
 
 });

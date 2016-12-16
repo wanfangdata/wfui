@@ -193,8 +193,9 @@ a:hover {
 .wf-btn .wf-icon {
   margin-top: -1px;
 }
-.wf-checkbox {
-  margin-right: 30px;
+.wf-checkbox,
+.wf-radio {
+  margin-right: 50px;
 }
 .page .title {
   color: #333;

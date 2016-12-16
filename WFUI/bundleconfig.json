@@ -11,6 +11,7 @@
       "public/src/core/js/action.js",
       "public/src/core/js/ui.js",
       "public/src/components/checkbox/checkbox.js",
+      "public/src/components/radio/radio.js",
       "public/src/core/js/page.js"
     ]
   },

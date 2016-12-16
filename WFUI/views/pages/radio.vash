@@ -1,50 +1,50 @@
 ﻿<div class="page">
     <h1 class="title">
-        Checkbox 多选框
+        Radio 单选框
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
     <p class="desc">
-        多选框。
+        单选框，用于在多个备选项中选中单个状态。
     </p>
     <div class="section" id="btn-type">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
-        <div class="demo">
-            <span data-role="checkbox" class="wf-checkbox" id="cbDemo1">
-                <span class="wf-checkbox-inner">
-                    <i class="wf-icon icon-selected"></i>
+        <div class="demo wf-radio-group" id="wfradioGroupDemo1">
+            <span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
                 </span>
-                <input id="test" class="wf-checkbox-input" type="radio" />
-                <span class="wf-checkbox-text">Checkbox</span>
+                <input id="test" class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">Radio</span>
             </span>
-            <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" id="cbDemo2">
-                <span class="wf-checkbox-inner">
-                    <i class="wf-icon icon-selected"></i>
+            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
                 </span>
-                <input class="wf-checkbox-input" type="checkbox" />
-                <span class="wf-checkbox-text">多选框</span>
+                <input id="test" class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">Radio</span>
             </span>
         </div>
         <div class="explain">
-            <p>简单的checkbox</p>
+            <p>简单的radio</p>
         </div>
         <pre>
         <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio" id="cbDemo1"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
+        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" id="cbDemo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-checked" id="cbDemo2"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;多选框&lt;/span&gt;
     &lt;/span&gt;
             </code>
         </pre>
@@ -55,41 +55,41 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <span data-role="checkbox" class="wf-checkbox" id="cbDemoHover1">
-                <span class="wf-checkbox-inner">
-                    <i class="wf-icon icon-selected"></i>
+            <span data-role="radio" class="wf-radio" id="cbDemoHover1">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
                 </span>
-                <input id="test" class="wf-checkbox-input" type="checkbox" />
-                <span class="wf-checkbox-text">Checkbox</span>
+                <input id="test" class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">Radio</span>
             </span>
-            <span data-role="checkbox" class="wf-checkbox wf-checkbox-hover" id="cbDemoHover2">
-                <span class="wf-checkbox-inner">
-                    <i class="wf-icon icon-selected"></i>
+            <span data-role="radio" class="wf-radio wf-radio-hover" id="cbDemoHover2">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
                 </span>
-                <input class="wf-checkbox-input" type="checkbox" />
-                <span class="wf-checkbox-text">多选框</span>
+                <input class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">多选框</span>
             </span>
         </div>
         <div class="explain">
             <p>
-                添加<code>wf-checkbox-hover</code>类。
+                添加<code>wf-radio-hover</code>类。
             </p>
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio" id="cbDemo1"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
+        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-hover" id="cbDemo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-hover" id="cbDemo2"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;多选框&lt;/span&gt;
     &lt;/span&gt;
             </code>
         </pre>
@@ -101,83 +101,83 @@
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemodisabled1">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemodisabled1">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
+                    <input id="test" class="wf-radio-input" type="radio" />
                 </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemodisabled2">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemodisabled2">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">Checkbox</span>
+                    <input id="test" class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">Radio</span>
                 </span>
             </div>
             <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="cbDemodisabled3">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemodisabled3">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
+                    <input id="test" class="wf-radio-input" type="radio" />
                 </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="cbDemodisabled4">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemodisabled4">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">Checkbox</span>
+                    <input id="test" class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">Radio</span>
                 </span>
             </div>
         </div>
         <div class="explain">
-            <p>添加<code>wf-checkbox-disabled</code>类即可让checkbox处于不可用状态。</p>
+            <p>添加<code>wf-radio-disabled</code>类即可让radio处于不可用状态。</p>
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo1"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
+        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo2"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo1"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
+        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo2"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
             </code>
         </pre>
     </div>
     <!--<div class="section" id="btn-icon">
         <h1 class="title">
-            <span class="text">联动 Checkbox</span>
+            <span class="text">联动 Radio</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" id="cbDemoCheckedEnabled">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-checked" id="cbDemoCheckedEnabled">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">Checked-Enabled</span>
+                    <input id="test" class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">Checked-Enabled</span>
                 </span>
             </div>
             <div class="wf-row demo-checked-disabled">
@@ -187,208 +187,130 @@
         </div>
         <div class="explain">
             <p>
-                添加<code>wf-checkbox-hover</code>类。
+                添加<code>wf-radio-hover</code>类。
             </p>
         </div>
         <pre class="language-html">
             <code class="html ">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio" id="cbDemo1"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
+        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-hover" id="cbDemo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-hover" id="cbDemo2"&gt;
+        &lt;span class="wf-radio-inner"&gt;
+            &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
+        &lt;span class="wf-radio-text"&gt;多选框&lt;/span&gt;
     &lt;/span&gt;
             </code>
         </pre>
     </div>-->
     <div class="section" id="btn-group">
         <h1 class="title">
-            <span class="text">Checkbox 组</span>
+            <span class="text">Radio 组</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="wf-checkbox-group wf-row">
-                <span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoGroup1">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+            <div class="wf-radio-group wf-row">
+                <span data-role="radio" class="wf-radio  wf-radio-checked" id="cbDemoGroup1">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item1</span>
+                    <input id="test" class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item1</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup2">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio" id="cbDemoGroup2">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item2</span>
+                    <input class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item2</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup3">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio" id="cbDemoGroup3">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item3</span>
+                    <input class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item3</span>
                 </span>
             </div>
-            <div class="wf-checkbox-group wf-row">
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup4">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+            <div class="wf-radio-group wf-row">
+                <span data-role="radio" class="wf-radio" id="cbDemoGroup4">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item4</span>
+                    <input id="test" class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item4</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemoGroup5">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemoGroup5">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item5</span>
+                    <input class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item5</span>
                 </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="cbDemoGroup6">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
+                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemoGroup6">
+                    <span class="wf-radio-inner">
+                        <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item6</span>
+                    <input class="wf-radio-input" type="radio" />
+                    <span class="wf-radio-text">item6</span>
                 </span>
             </div>
         </div>
         <div class="explain">
-            <p>可以把多个<code>Checkbox</code>添加到<code>Checkbox Group</code>中。</p>
+            <p>可以把多个<code>Radio</code>添加到<code>Radio Group</code>中。</p>
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="cbDemoGroup1"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;div class="wf-radio-group"&gt;
+        &lt;span data-role="radio" class="wf-radio  wf-radio-checked" id="cbDemoGroup1"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item1&lt;/span&gt;
+            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item1&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup2"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+        &lt;span data-role="radio" class="wf-radio" id="cbDemoGroup2"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item2&lt;/span&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item2&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup3"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+        &lt;span data-role="radio" class="wf-radio" id="cbDemoGroup3"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item3&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoGroup4"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item4&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="cbDemoGroup5"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item5&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="cbDemoGroup6"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item6&lt;/span&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item3&lt;/span&gt;
         &lt;/span&gt;
     &lt;/div&gt;
-        </code>
-        </pre>
-    </div>
-    <div class="section" id="btn-group">
-        <h1 class="title">
-            <span class="text">全选</span>
-            <button class="wf-btn wf-btn-small">Code</button>
-        </h1>
-        <div class="demo">
-            <div class="wf-row">
-                <span data-role="checkbox" class="wf-checkbox" id="cbDemoAll" data-target="cbGroup">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
-                    </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">Check all</span>
-                </span>
-            </div>
-            <div id="cbGroup" class="wf-checkbox-group wf-row">
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item wf-checkbox-checked" id="cbDemoAll1">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
-                    </span>
-                    <input id="test" class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item1</span>
-                </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item" id="cbDemoAll2">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
-                    </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item2</span>
-                </span>
-                <span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item" id="cbDemoAll3">
-                    <span class="wf-checkbox-inner">
-                        <i class="wf-icon icon-selected"></i>
-                    </span>
-                    <input class="wf-checkbox-input" type="checkbox" />
-                    <span class="wf-checkbox-text">item3</span>
-                </span>
-            </div>
-        </div>
-        <div class="explain">
-        </div>
-        <pre class="language-html">
-        <code class="html">
-    &lt;div class="wf-row"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoAll" data-target="cbGroup"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+    &lt;div class="wf-radio-group"&gt;
+        &lt;span data-role="radio" class="wf-radio" id="cbDemoGroup4"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;Check all&lt;/span&gt;
+            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item4&lt;/span&gt;
         &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="cbGroup" class="wf-checkbox-group wf-row"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item   wf-checkbox-checked" id="cbDemoAll1"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemoGroup5"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item1&lt;/span&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item5&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item " id="cbDemoAll2"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemoGroup6"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item2&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item " id="cbDemoAll3"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item3&lt;/span&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;item6&lt;/span&gt;
         &lt;/span&gt;
     &lt;/div&gt;
         </code>
@@ -400,7 +322,7 @@
         </h1>
         <ul class="ul-apis">
             <li>
-                <h3><code>new Checkbox ( name,$element, checked, events ) </code>构造函数</h3>
+                <h3><code>new Radio ( name,$element, checked, events ) </code>构造函数</h3>
                 <table>
                     <tr>
                         <th>参数</th>
@@ -436,7 +358,7 @@
             </li>
             <li>
                 <h3>
-                    <code>checkbox.set ( checked ) </code>
+                    <code>radio.set ( checked ) </code>
                     设置选中状态
                 </h3>
                 <table>
@@ -456,8 +378,8 @@
             </li>            
             <li>
                 <h3>
-                    <code>checkbox.setText ( text ) </code>
-                    设置checkbox文本
+                    <code>radio.setText ( text ) </code>
+                    设置radio文本
                 </h3>
                 <table>
                     <tr>
@@ -506,7 +428,7 @@
                 </h3>
                 <pre class="language-javascript">
                 <code class="javascript">
-    var cb = new Checkbox ( 'checkbox' , $('#checkbox') , true , {
+    var cb = new Radio ( 'radio' , $('#radio') , true , {
         click : function () {
             console.log( '构造函数click' );
         }
