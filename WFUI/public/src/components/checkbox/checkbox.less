@@ -36,8 +36,8 @@
         .wf-icon {
             margin: -1px 0 0 -1px;
             transform: scale(0);
-            -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-            transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+            -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+            transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
         }
 
         .wf-icon-ie {
@@ -57,6 +57,20 @@
 
     &:hover {
         .hover;
+    }
+
+    &[data-target] {
+        .wf-checkbox-inner {
+            position: relative;
+
+            .wf-icon {
+                .center-middle(10px,10px);
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -85,11 +99,7 @@
             color: @color-primary;
 
             .wf-icon {
-                width: 10px;
-                height: 10px;
                 background-color: @color-primary;
-                margin-left: 2px;
-                overflow: hidden;
 
                 &:before {
                     display: none;

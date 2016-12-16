@@ -681,8 +681,8 @@ button[disabled]:hover {
 .wf-checkbox .wf-checkbox-inner .wf-icon {
   margin: -1px 0 0 -1px;
   transform: scale(0);
-  -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
 .wf-checkbox .wf-checkbox-inner .wf-icon-ie {
   display: none;
@@ -707,6 +707,21 @@ button[disabled]:hover {
 }
 .wf-checkbox:hover .wf-radio-inner {
   border-color: #6abbef;
+}
+.wf-checkbox[data-target] .wf-checkbox-inner {
+  position: relative;
+}
+.wf-checkbox[data-target] .wf-checkbox-inner .wf-icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+.wf-checkbox[data-target] .wf-checkbox-inner .wf-icon:before {
+  display: none;
 }
 .wf-checkbox-hover:hover,
 .wf-checkbox-hover.wf-btn-hover {
@@ -737,11 +752,7 @@ button[disabled]:hover {
   color: #6abbef;
 }
 .wf-checkbox-checked[data-target] .wf-checkbox-inner .wf-icon {
-  width: 10px;
-  height: 10px;
   background-color: #6abbef;
-  margin-left: 2px;
-  overflow: hidden;
 }
 .wf-checkbox-checked[data-target] .wf-checkbox-inner .wf-icon:before {
   display: none;
@@ -802,11 +813,12 @@ button[disabled]:hover {
 }
 .wf-radio .wf-radio-inner .wf-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -4px 0 0 -4px;
   width: 8px;
   height: 8px;
+  top: 50%;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -4px;
   border-radius: 50%;
   background-color: #6abbef;
   transform: scale(0);
