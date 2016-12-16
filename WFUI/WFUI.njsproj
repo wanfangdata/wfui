@@ -76,6 +76,7 @@
     <Content Include="public\src\core\font\iconfont.svg" />
     <Content Include="public\src\core\font\iconfont.ttf" />
     <Content Include="public\src\core\font\iconfont.woff" />
+    <Content Include="public\src\core\less\mixins\center-middle.less" />
     <Content Include="public\src\core\less\variables\var.less" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
