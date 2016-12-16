@@ -514,7 +514,7 @@
 
     cb.set( false );
     cb.setText( '测试' );
-    cb.on( 'click' , function( ){
+    cb.on( 'click' , function( e ){
         console.log('注册事件click');
     });
                     </code>
