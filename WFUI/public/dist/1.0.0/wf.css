@@ -221,11 +221,9 @@ sub {
 dl,
 menu,
 ol,
-ul {
-  margin: 0;
-}
+ul,
 dd {
-  margin: 0 0 0 40px;
+  margin: 0;
 }
 /**
  * Address paddings set differently in IE 6/7.
@@ -239,7 +237,8 @@ ul {
  * Correct list images handled incorrectly in IE 7.
  */
 nav ul,
-nav ol {
+nav ol,
+li {
   list-style: none;
   list-style-image: none;
 }
@@ -320,6 +319,9 @@ textarea {
   /* 3 */
   *vertical-align: middle;
   /* 3 */
+  outline: none;
+  border: none;
+  background-color: #fff;
 }
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in

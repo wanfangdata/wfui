@@ -6,47 +6,43 @@
     <p class="desc">
         选择器，弹出一个下拉列表给用户选择操作，用于代替原生的选择器。
     </p>
-    <div class="section" id="select -type">
+    <div class="section" id="select-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
-        <div class="demo wf-radio-group" id="demo">
-            <span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1">
-                <span class="wf-radio-inner">
-                    <i class="wf-icon icon-radio"></i>
-                </span>
-                <input id="test" class="wf-radio-input" type="radio" />
-                <span class="wf-radio-text">Radio</span>
-            </span>
-            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2">
-                <span class="wf-radio-inner">
-                    <i class="wf-icon icon-radio"></i>
-                </span>
-                <input id="test" class="wf-radio-input" type="radio" />
-                <span class="wf-radio-text">单选框</span>
-            </span>
+        <div class="demo" id="demo">
+            <div data-role="select" class="wf-select" id="stDemo1">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li class="wf-select-option">wangfangdata</li>
+                    <li class="wf-select-option">wffe</li>
+                    <li class="wf-select-option">bishanshan</li>
+                    <li class="wf-select-option">选择器</li>
+                </ul>
+            </div>
         </div>
         <div class="explain">
-            <p>简单的radio</p>
+            <p>基本使用</p>
         </div>
         <pre>
         <code class="html">
-    &lt;div class="demo wf-radio-group" id="wfradioGroupDemo1"&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1"&gt;
-            &lt;span class="wf-radio-inner"&gt;
-                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
-            &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2"&gt;
-            &lt;span class="wf-radio-inner"&gt;
-                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-radio-input" type="radio" /&gt;
-            &lt;span class="wf-radio-text"&gt;多选框&lt;/span&gt;
-        &lt;/span&gt;
+    &lt;div data-role="select" class="wf-select" id="stDemo1"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
     &lt;/div&gt;
             </code>
         </pre>
