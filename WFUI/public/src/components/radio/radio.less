@@ -46,10 +46,6 @@
             -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
             transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
         }
-
-        .wf-icon-ie {
-            display: none;
-        }
     }
 
     .wf-radio-input {
@@ -77,10 +73,6 @@
 
         .wf-icon {
             transform: scale(1);
-        }
-
-        .wf-icon-ie {
-            display: inline-block;
         }
     }
 
@@ -111,5 +103,24 @@
 
     &:hover {
         .disabled;
+    }
+}
+
+/*lt ie9*/
+.ltie9 {
+    .wf-radio {
+        .wf-radio-inner {
+            .wf-icon {
+                display: none;
+            }
+        }
+    }
+
+    .wf-radio-checked {
+        .wf-radio-inner {
+            .wf-icon {
+                display: inline-block;
+            }
+        }
     }
 }
