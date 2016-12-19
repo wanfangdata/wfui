@@ -213,7 +213,7 @@ a:hover {
 }
 .page code {
   color: #656565;
-  font-family: "微软雅黑";
+  font-family: "Lucida Console", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 12px;
   background-color: #f8f8f8;
   border: 1px solid #f0f0f0;
