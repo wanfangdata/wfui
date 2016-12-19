@@ -973,3 +973,30 @@ button[disabled]:hover {
 .wf-select .wf-select-input {
   display: none;
 }
+.wf-select .wf-select-options {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 1050;
+  position: absolute;
+  overflow: hidden;
+  font-size: 12px;
+  outline: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  max-height: 250px;
+}
+.wf-select .wf-select-options .wf-select-option {
+  position: relative;
+  display: block;
+  padding: 7px 16px;
+  font-weight: normal;
+  color: #666;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+/*lt ie9*/
