@@ -502,7 +502,7 @@
             </li>
             <li>
                 <h3>
-                    <code>static Checkbox.group ( $controller, groupId ) </code>
+                    <code>Checkbox.group ( $controller, groupId ) </code>
                     创建checkbox组
                 </h3>
                 <table>

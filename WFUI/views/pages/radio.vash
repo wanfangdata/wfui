@@ -378,6 +378,32 @@
             </li>
             <li>
                 <h3>
+                    <code>Radio.group ( $group, index ) </code>
+                    创建radio组
+                </h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                    <tr>
+                        <td>$group</td>
+                        <td>radio组</td>
+                        <td>JQuery</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>index</td>
+                        <td>所有组中index,如果group含有id则可为空</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
                     <code>on ( name , func )</code>
                     注册事件
                 </h3>
