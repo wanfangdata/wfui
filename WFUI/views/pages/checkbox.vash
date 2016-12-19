@@ -6,7 +6,7 @@
     <p class="desc">
         多选框。
     </p>
-    <div class="section" id="btn-type">
+    <div class="section" id="checkbox-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -49,7 +49,7 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="btn-icon">
+    <div class="section" id="checkbox-hover">
         <h1 class="title">
             <span class="text">悬停状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -94,7 +94,7 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="btn-disabled">
+    <div class="section" id="checkbox-disabled">
         <h1 class="title">
             <span class="text">不可用状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -165,7 +165,7 @@
             </code>
         </pre>
     </div>
-    <!--<div class="section" id="btn-icon">
+    <!--<div class="section" id="checkbox-icon">
         <h1 class="title">
             <span class="text">联动 Checkbox</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -209,7 +209,7 @@
             </code>
         </pre>
     </div>-->
-    <div class="section" id="btn-group">
+    <div class="section" id="checkbox-group">
         <h1 class="title">
             <span class="text">Checkbox 组</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -316,7 +316,7 @@
         </code>
         </pre>
     </div>
-    <div class="section" id="btn-checkall">
+    <div class="section" id="checkbox-checkall">
         <h1 class="title">
             <span class="text">全选</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -394,7 +394,7 @@
         </code>
         </pre>
     </div>
-    <div class="section section-api" id="api">
+    <div class="section section-api" id="checkbox-api">
         <h1 class="title">
             <span class="text">API</span>
         </h1>

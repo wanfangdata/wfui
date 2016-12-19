@@ -6,7 +6,7 @@
     <p class="desc">
         单选框，用于在多个备选项中选中单个状态。
     </p>
-    <div class="section" id="btn-type">
+    <div class="section" id="radio-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -51,7 +51,7 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="btn-icon">
+    <div class="section" id="radio-hover">
         <h1 class="title">
             <span class="text">悬停状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -98,7 +98,7 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="btn-disabled">
+    <div class="section" id="radio-disabled">
         <h1 class="title">
             <span class="text">不可用状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -169,7 +169,7 @@
             </code>
         </pre>
     </div>
-    <!--<div class="section" id="btn-icon">
+    <!--<div class="section" id="radio-icon">
         <h1 class="title">
             <span class="text">联动 Radio</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -213,7 +213,7 @@
             </code>
         </pre>
     </div>-->
-    <div class="section" id="btn-group">
+    <div class="section" id="radio-group">
         <h1 class="title">
             <span class="text">Radio 组</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -296,7 +296,7 @@
         </code>
         </pre>
     </div>
-    <div class="section section-api" id="api">
+    <div class="section section-api" id="radio-api">
         <h1 class="title">
             <span class="text">API</span>
         </h1>

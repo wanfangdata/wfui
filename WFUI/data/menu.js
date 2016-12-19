@@ -64,7 +64,7 @@
                     name: '单选框'
                 }, {
                     label: 'Select',
-                    name: '选择框'
+                    name: '选择器'
                 }
             ]
         }, {

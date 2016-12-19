@@ -3,4 +3,52 @@
         Select 选择器
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <p class="desc">
+        选择器，弹出一个下拉列表给用户选择操作，用于代替原生的选择器。
+    </p>
+    <div class="section" id="select -type">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo wf-radio-group" id="demo">
+            <span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
+                </span>
+                <input id="test" class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">Radio</span>
+            </span>
+            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2">
+                <span class="wf-radio-inner">
+                    <i class="wf-icon icon-radio"></i>
+                </span>
+                <input id="test" class="wf-radio-input" type="radio" />
+                <span class="wf-radio-text">单选框</span>
+            </span>
+        </div>
+        <div class="explain">
+            <p>简单的radio</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div class="demo wf-radio-group" id="wfradioGroupDemo1"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2"&gt;
+            &lt;span class="wf-radio-inner"&gt;
+                &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
+            &lt;span class="wf-radio-text"&gt;多选框&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
 </div>
