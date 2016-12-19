@@ -15,5 +15,6 @@ var page = wf.require('page').render(
             return result.join('');
         })());
         //components.Checkbox.group($('#cbDemoAll'));
+        //components.Radio.group($('#rdgroupDemo1'));
     }, true
 );

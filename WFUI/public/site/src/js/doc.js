@@ -15,5 +15,6 @@
             return result.join('');
         })());
         //components.Checkbox.group($('#cbDemoAll'));
+        //components.Radio.group($('#rdgroupDemo1'));
     }, true
 );

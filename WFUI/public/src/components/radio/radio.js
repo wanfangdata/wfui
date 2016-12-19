@@ -12,12 +12,12 @@
  */
 wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'radio';
+    var role = 'radio',
 
     /**
      * @class Radio
      */
-    var Radio = wf.inherit(UI, {
+    Radio = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -111,7 +111,59 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             };
             me.initEvent(events);
         }
-    });
+    }),
+
+    /**
+     * dataRole
+     */
+    dataRole = '[data-role="' + role + '"]',
+
+    /**
+     * radio实例name
+     * @param {Object} $ele Radio JQuery元素
+     * @param {String} index 元素index
+     */
+    name = function ($ele, index) {
+        return $ele.attr('id') || role + index;
+    },
+
+    /**
+     * 创建radio
+     * @param {Object} $elm radio jquery object
+     * @param {String} index radio index
+     * @param {Function} click click事件
+     */
+    generateRD = function ($elm, index, click) {
+        return new Radio(
+            name($elm, index),
+            $elm,
+            $elm.hasClass(UI.clsName('checked', role)),
+            click ? { click: click } : null
+        );
+    };
+
+    /**
+     * 创建radio组
+     * @param {Object} $group radio控制
+     * @param {String} index $group index
+     * @return {items}
+     */
+    Radio.group = function ($group, index) {
+        var result = { items: {} }, $rd, groupId = name($group, index);
+        $.each($group.find(dataRole), function (i) {
+            $rd = $(this);
+            result.items[name($rd, groupId + i)] =
+            generateRD($rd, groupId + i, function (e) {
+                for (var key in result.items) {
+                    if (key !== e.$target.attr('id')) {
+                        result.items[key].set(false);
+                    }
+                }
+            });
+        });
+        result.name = groupId;
+        return result;
+    };
 
     /**
      * 自动初始化
@@ -119,56 +171,14 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      */
     Radio.auto = function (page) {
 
-        var $this, target,
-            dataRole = '[data-role="' + role + '"]',
-
-            name = function ($ele, index) {
-                return $ele.attr('id') || role + index;
-            },
-
-            /**
-             * 创建radio
-             * @param {Object} $elm radio jquery object
-             * @param {String} index radio index
-             * @param {Function} click click事件
-             */
-            generateRD = function ($elm, index, click) {
-                return new Radio(
-                    name($elm, index),
-                    $elm,
-                    $elm.hasClass(UI.clsName('checked', role)),
-                    click ? { click: click } : null
-                );
-            },
-
-            /**
-             * 创建group
-             * @param {Object} $group radio组
-             * @param {String} index radio index
-             */
-            generateGroup = function ($group, index) {
-                var result = { items: {} }, $rd, groupId = name($group, index);
-                $.each($group.find(dataRole), function (i) {
-                    $rd = $(this);
-                    result.items[name($rd, groupId + i)] =
-                    generateRD($rd, groupId + i, function (e) {
-                        for (var key in result.items) {
-                            if (key !== e.$target.attr('id')) {
-                                result.items[key].set(false);
-                            }
-                        }
-                    });
-                });
-                result.name = groupId;
-                return result;
-            };
+        var $this, target;
 
         $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
             page.addElement(generateRD($(this), index));
         });
 
         $.each($('.' + UI.clsName('group', role)), function (index) {
-            page.addElement(generateGroup($(this), index));
+            page.addElement(Radio.group($(this)));
         });
 
     };
