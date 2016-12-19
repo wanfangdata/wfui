@@ -1,4 +1,3 @@
-@import "../img/icon-doc.sprite.css";
 body {
   /*font-family: Lato,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;*/
   font-size: 12px;
@@ -348,4 +347,22 @@ a:hover {
 }
 .page .wf-btn-group .icon-more {
   margin-left: .5em;
+}
+/*
+This is an example of how to use the image sprite in your own CSS files
+*/
+.icon-doc {
+	background-image: url('../img/icon-doc.sprite.png');
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.icon-doc.logo {
+	width: 18px;
+	height: 18px;
+	background-position: -10px -10px;
+}
+.icon-doc.logo-footer {
+	width: 18px;
+	height: 18px;
+	background-position: -10px -38px;
 }

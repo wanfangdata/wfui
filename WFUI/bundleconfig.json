@@ -24,7 +24,8 @@
   {
     "outputFileName": "public/site/css/global.css",
     "inputFiles": [
-      "public/site/src/less/global.css"
+      "public/site/src/less/global.css",
+      "public/site/img/icon-doc.sprite.css"
     ]
   },
   {
