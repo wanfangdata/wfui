@@ -502,6 +502,32 @@
             </li>
             <li>
                 <h3>
+                    <code>static Checkbox.group ( $controller, groupId ) </code>
+                    创建checkbox组
+                </h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                    <tr>
+                        <td>$controller</td>
+                        <td>checkbox组控制者</td>
+                        <td>JQuery</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>groupId</td>
+                        <td>组id</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
                     常用示例
                 </h3>
                 <pre class="language-javascript">

@@ -1,6 +1,5 @@
 ﻿var page = wf.require('page').render(
     'doc', ['UI.Checkbox','UI.Radio'], function (components) {
-        console.log(this);
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
             $(this).parent().parent().find('pre').toggle(200);
@@ -15,9 +14,6 @@
             });
             return result.join('');
         })());
-
-        $('.demo-checked-disabled button').click(function () { 
-            
-        });
+        //components.Checkbox.group($('#cbDemoAll'));
     }, true
 );

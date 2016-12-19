@@ -688,12 +688,12 @@ wf.define('UI', ['logger'], function (logger) {
  */
 wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'checkbox';
+    var role = 'checkbox',
 
     /**
      * @class Checkbox
      */
-    var Checkbox = wf.inherit(UI, {
+    Checkbox = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -787,7 +787,80 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             };
             me.initEvent(events);
         }
-    });
+    }),
+
+    /**
+     * dataRole
+     */
+    dataRole = '[data-role="' + role + '"]',
+
+    /**
+     * checkbox实例name
+     * @param {Object} $ele Checkbox JQuery元素
+     * @param {String} index 元素index
+     */
+    name = function ($ele, index) {
+        return $ele.attr('id') || role + index;
+    },
+
+    /**
+     * 创建checkbox
+     * @param {Object} $elm checkbox jquery object
+     * @param {String} index checkbox index
+     * @param {Function} click click事件
+     */
+    generateCB = function ($elm, index, click) {
+        return new Checkbox(
+            name($elm, index),
+            $elm,
+            $elm.hasClass(UI.clsName('checked', role)),
+            click ? { click: click } : null
+        );
+    };
+
+    /**
+     * 创建checkbox组
+     * @param {Object} $controller checkbox控制
+     * @return {$controller,items}
+     */
+    Checkbox.group = function ($controller) {
+        var result = { items: {} }, $cb, groupId = $controller.data('target');
+        $.each($('#' + groupId).find(dataRole), function (i) {
+            $cb = $(this);
+            result.items[name($cb, groupId + i)] =
+            generateCB($cb, groupId + i, function () {
+                var valide = [];
+                var all = true;
+                for (var key in result.items) {
+                    if (valide.length == 0) {
+                        valide.push(result.items[key].checked);
+                        continue;
+                    }
+                    if ($.inArray(result.items[key].checked, valide) < 0) {
+                        all = false;
+                        break;
+                    }
+                }
+                result.controller.set(all ? valide[0] : false);
+            });
+        });
+        result.controller = new Checkbox(
+            groupId + 'controller',
+            $controller,
+            $controller.hasClass(UI.clsName('checked', role)),
+            {
+                click: function (cb) {
+                    for (var key in result.items) {
+                        result.items[key].set(
+                            $controller.hasClass(UI.clsName('checked', role))
+                        );
+                    }
+                }
+            }
+        );
+        result.name = groupId;
+        return result;
+    };
 
     /**
      * 自动初始化
@@ -795,73 +868,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      */
     Checkbox.auto = function (page) {
 
-        //logger.info('checkbox auto render');
-
-        var $this, target,
-            dataRole = '[data-role="' + role + '"]',
-
-            name = function ($ele, index) {
-                return $ele.attr('id') || role + index;
-            },
-
-            /**
-             * 创建checkbox
-             * @param {Object} $elm checkbox jquery object
-             * @param {String} index checkbox index
-             * @param {Function} click click事件
-             */
-            generateCB = function ($elm, index, click) {
-                return new Checkbox(
-                    name($elm, index),
-                    $elm,
-                    $elm.hasClass(UI.clsName('checked', role)),
-                    click ? { click: click } : null
-                );
-            },
-
-            /**
-             * 创建group
-             * @param {Object} controller checkbox控制
-             * @param {String} groupId组id
-             * @param {String} index checkbox index
-             */
-            generateGroup = function (controller, groupId, index) {
-                var result = { items: {} }, $cb;
-                $.each($('#' + groupId).find(dataRole), function (i) {
-                    $cb = $(this);
-                    result.items[name($cb, groupId + i)] =
-                    generateCB($cb, groupId + i, function () {
-                        var valide = [];
-                        var all = true;
-                        for (var key in result.items) {
-                            if (valide.length == 0) {
-                                valide.push(result.items[key].checked);
-                                continue;
-                            }
-                            if ($.inArray(result.items[key].checked, valide) < 0) {
-                                all = false;
-                                break;
-                            }
-                        }
-                        result.controller.set(all ? valide[0] : false);
-                    });
-                });
-                result.controller = generateCB(controller, index, function (cb) {
-                    for (var key in result.items) {
-                        result.items[key].set(
-                            controller.hasClass(UI.clsName('checked', role))
-                        );
-                    }
-                });
-                result.name = result.controller.name;
-                return result;
-            };
+        var $this, target;
 
         $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?
-                generateGroup($this, target, index) :
+                Checkbox.group($this, target) :
                 generateCB($this, index)
             );
         });
