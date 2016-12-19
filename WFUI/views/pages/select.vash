@@ -14,7 +14,7 @@
         <div class="demo" id="demo">
             <div data-role="select" class="wf-select" id="stDemo1">
                 <div class="wf-select-selection">
-                    <div class="wf-select-selection-value"></div>
+                    <div class="wf-select-selection-value">默认值</div>
                     <i class="wf-icon icon-moreunfold"></i>
                 </div>
                 <input class="wf-select-input" type="text" />

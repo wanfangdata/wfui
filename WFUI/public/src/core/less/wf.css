@@ -917,3 +917,57 @@ button[disabled]:hover {
 .wf-radio-disabled:hover .wf-radio-inner .wf-icon {
   background-color: #dcdcdc;
 }
+.wf-select {
+  display: inline-block;
+  position: relative;
+  zoom: 1;
+}
+.wf-select:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-select .wf-select-selection {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 0 10px;
+  min-width: 138px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  zoom: 1;
+}
+.wf-select .wf-select-selection:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-select .wf-select-selection .wf-select-selection-value {
+  display: inline-block;
+  float: left;
+  width: 122px;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.wf-select .wf-select-selection .wf-icon {
+  float: right;
+  margin-top: 7px;
+  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.wf-select .wf-select-selection:hover {
+  border-color: #6abbef;
+}
+.wf-select .wf-select-input {
+  display: none;
+}
