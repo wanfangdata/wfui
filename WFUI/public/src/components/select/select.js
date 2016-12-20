@@ -2,22 +2,28 @@
 
 /**
  * html结构：
- * <span data-role="select" class="wf-select">
- *      <span class="wf-select-inner">
- *          <i class="wf-icon icon-select"></i>
- *      </span>
- *      <input class="wf-select-input" type="select"/>
- *      <span class="wf-select-text"></span>
- * </span>
+ * <div data-role="select" class="wf-select" id="selectDemo1">
+ *     <div class="wf-select-selection">
+ *         <div class="wf-select-selection-value">默认值</div>
+ *         <i class="wf-icon icon-moreunfold"></i>
+ *     </div>
+ *     <input class="wf-select-input" type="text" />
+ *     <ul class="wf-select-options">
+ *         <li data-value="wanfangdata" class="wf-select-option wf-select-option-selected">wangfangdata</li>
+ *         <li data-value="wffe" class="wf-select-option">wffe</li>
+ *         <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+ *         <li data-value="selector" class="wf-select-option">选择器</li>
+ *     </ul>
+ * </div>
  */
 wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action) {
     
-    var role = 'select';
+    var role = 'select',
     
     /**
      * @class Select
      */
-    var Select = wf.inherit(UI, {
+    Select = wf.inherit(UI, {
         
         /**
          * [data-role]
@@ -61,6 +67,9 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
 
         },
         
+        /**
+         * select打开选项列表
+         */
         open: function () {
             this.$element.addClass(this.openCls());
             this.animation(this.options.$element, 
@@ -68,6 +77,9 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             );
         },    
         
+        /**
+         * select收起选项列表
+         */
         close: function () {
             var me = this;
             if (me.supportCss3('animation')) {
@@ -130,7 +142,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
     /**
      * dataRole
      */
-        dataRole = '[data-role="' + role + '"]';
+    dataRole = '[data-role="' + role + '"]';
     
     /**
      * 自动初始化
