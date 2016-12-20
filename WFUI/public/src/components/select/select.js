@@ -10,34 +10,34 @@
  *      <span class="wf-select-text"></span>
  * </span>
  */
-wf.define('UI.Select', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
+wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action) {
     
-    var role = 'select',
-
+    var role = 'select';
+    
     /**
      * @class Select
      */
-    Select = wf.inherit(UI, {
-            
+    var Select = wf.inherit(UI, {
+        
         /**
          * [data-role]
          */
         role: role,
-            
+        
         /**
          * 选中class
          */
-        checkedCls: function () {
-            return this.clsName('checked');
+        openCls: function () {
+            return this.clsName('open');
         },
-            
+        
         /**
          * disabled class
          */
         disabledCls: function () {
             return this.clsName('disabled');
         },
-            
+        
         /**
          * 注册用户自定义事件
          * @event on
@@ -51,51 +51,42 @@ wf.define('UI.Select', ['UI', 'logger', 'Action'], function (UI, logger, Action)
                 this.action[name].register(func);
             }
         },
-            
+        
         /**
          * 设置select的选中状态
          * @param {Bool||undefined} checked 是否选中
          * 如果为undefined则根据当前状态修改
          */
-        set: function (checked) {
-            var $ele = this.input.$element,
-                result = checked === undefined ?
-            $ele.is(':checked') ?
-            false : true :
-            checked;
-            $ele.prop('checked', result);
-            this.checked = result;
-            this.$element[result ? 'addClass' : 'removeClass'](this.checkedCls());
+        set: function () {
+
         },
-            
-        /**
-         * 设置select的文本内容
-         * @param {String} text 文本内容
-         */
-        setText: function (text) {
-            this.text.$element.text(text);
+        
+        open: function () {
+            this.$element.addClass(this.openCls());
+        },    
+        
+        close: function () {
+            this.$element.removeClass(this.openCls());
         },
-            
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
-         * @param {Bool} checked 是否选中
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, events) {
+        init: function (_base_, name, $element, events) {
             var me = this;
             _base_(name, $element);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: 'inner' },
+                { selector: 'selection' },
                 { selector: 'input' },
-                { selector: 'text' }
+                { selector: 'options' }
             ]);
             //初始化选中状态
-            me.set(checked || false);
             //初始化事件
             me.action = {
                 click: new Action('click', function () {
@@ -104,12 +95,17 @@ wf.define('UI.Select', ['UI', 'logger', 'Action'], function (UI, logger, Action)
                         if (me.$element.hasClass(me.disabledCls())) {
                             return false;
                         }
-                        me.set(true);
+                        me[me.$element.hasClass(me.openCls())?'close':'open']();
                         _action_.piping();
                     });
-                }, this.$element)
+                }, this.selection.$element)
             };
             me.initEvent(events);
+            //设置空白处点击关闭
+            me.blankClick($([
+                UI.CLS_PREFIX + me.clsName('options', role),
+                UI.CLS_PREFIX + me.clsName('selection', role),
+            ].join(',')), function () { me.close(); });            
         }
     }),
 
@@ -123,7 +119,10 @@ wf.define('UI.Select', ['UI', 'logger', 'Action'], function (UI, logger, Action)
      * @param {Object} page页面容器
      */
     Select.auto = function (page) {
-    
+        
+        $.each($(dataRole), function (index) {
+            page.addElement(new Select('testSelect', $(this)));
+        });
 
     };
     

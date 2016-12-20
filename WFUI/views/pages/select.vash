@@ -12,14 +12,14 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo" id="demo">
-            <div data-role="select" class="wf-select" id="stDemo1">
+            <div data-role="select" class="wf-select" id="selectDemo1">
                 <div class="wf-select-selection">
                     <div class="wf-select-selection-value">默认值</div>
                     <i class="wf-icon icon-moreunfold"></i>
                 </div>
                 <input class="wf-select-input" type="text" />
                 <ul class="wf-select-options">
-                    <li class="wf-select-option">wangfangdata</li>
+                    <li class="wf-select-option wf-select-option-selected">wangfangdata</li>
                     <li class="wf-select-option">wffe</li>
                     <li class="wf-select-option">bishanshan</li>
                     <li class="wf-select-option">选择器</li>

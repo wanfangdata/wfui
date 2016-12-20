@@ -922,6 +922,8 @@ button[disabled]:hover {
 .wf-select {
   display: inline-block;
   position: relative;
+  -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   zoom: 1;
 }
 .wf-select:after {
@@ -942,6 +944,8 @@ button[disabled]:hover {
   line-height: 30px;
   font-size: 12px;
   cursor: pointer;
+  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   zoom: 1;
 }
 .wf-select .wf-select-selection:after {
@@ -963,9 +967,8 @@ button[disabled]:hover {
 }
 .wf-select .wf-select-selection .wf-icon {
   float: right;
-  margin-top: 7px;
-  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  font-size: 14px;
+  margin-top: 8px;
 }
 .wf-select .wf-select-selection:hover {
   border-color: #6abbef;
@@ -986,6 +989,7 @@ button[disabled]:hover {
   margin-bottom: 0;
   padding-left: 0;
   max-height: 250px;
+  display: none;
 }
 .wf-select .wf-select-options .wf-select-option {
   position: relative;
@@ -998,5 +1002,11 @@ button[disabled]:hover {
   overflow: hidden;
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
+}
+.wf-select .wf-select-options .wf-select-option-selected {
+  background-color: #f7f7f7;
+}
+.wf-select-open .wf-select-options {
+  display: block;
 }
 /*lt ie9*/

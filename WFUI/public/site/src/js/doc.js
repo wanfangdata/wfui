@@ -1,5 +1,9 @@
 ﻿var page = wf.require('page').render(
-    'doc', ['UI.Checkbox','UI.Radio'], function (components) {
+    'doc', [
+        'UI.Checkbox',
+        'UI.Radio',
+        'UI.Select',
+    ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
             $(this).parent().parent().find('pre').toggle(200);

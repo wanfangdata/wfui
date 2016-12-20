@@ -73,6 +73,42 @@ wf.define('UI', ['logger'], function (logger) {
             },
             
             /**
+             * 设置全局点击机制
+             */
+            blankClick: (function () {
+                /**
+                 * 全局目标对象列表
+                 */
+                var $targetList = [];
+                $(document).mouseup(function (e) {
+                    $.each($targetList, function () {
+                        if (!this.target.is(e.target) && 
+                            this.target.has(e.target).length === 0) {
+                            if ($.isFunction(this.clickOut)) {
+                                this.clickOut();
+                            }
+                        } else {
+                            if ($.isFunction(this.clickIn)) {
+                                this.clickIn();
+                            };
+                        }
+                    });
+                });
+                /**
+                 * @param {JQuery} $target目标对象
+                 * @param {Function} clickOut点击非目标对象时执行函数
+                 * @param {Function} clickIn点击目标对象时执行函数
+                 */
+                return function ($target, clickOut, clickIn) {
+                    $targetList.push({
+                        target: $target,
+                        clickIn: clickIn,
+                        clickOut: clickOut
+                    });
+                }
+            })(),
+            
+            /**
              * 初始化组件内部元素
              * @param {String} elements 组件内部元素
              */
@@ -119,5 +155,8 @@ wf.define('UI', ['logger'], function (logger) {
     UI.clsName = function (name, role) {
         return [_WF_, role, name].join(CHAIN);
     };
+
+    UI.CLS_PREFIX = CLS_PREFIX;
+    
     return UI;
 });
