@@ -170,7 +170,7 @@ wf.define('UI', ['logger'], function (logger) {
                 $.each(elements, function () {
                     this.$element = _ui_.find(this.selector);
                     if (this.action && $.isFunction(this.action)) {
-                        this.action(_ui_);
+                        this.action(this.$element);
                     }
                     _ui_[this.selector] = this;
                 });

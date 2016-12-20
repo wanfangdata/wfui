@@ -723,7 +723,7 @@ wf.define('UI', ['logger'], function (logger) {
                 $.each(elements, function () {
                     this.$element = _ui_.find(this.selector);
                     if (this.action && $.isFunction(this.action)) {
-                        this.action(_ui_);
+                        this.action(this.$element);
                     }
                     _ui_[this.selector] = this;
                 });
@@ -1169,7 +1169,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  * html结构：
  * <div data-role="select" class="wf-select" id="selectDemo1">
  *     <div class="wf-select-selection">
- *         <div class="wf-select-selection-value">默认值</div>
+ *         <div class="wf-select-selection-value"></div>
  *         <i class="wf-icon icon-moreunfold"></i>
  *     </div>
  *     <input class="wf-select-input" type="text" />
@@ -1208,7 +1208,14 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
         disabledCls: function () {
             return this.clsName('disabled');
         },
-        
+            
+        /**
+         * disabled class
+         */
+        selectCls: function () {
+            return this.clsName('option-selected');
+        },    
+
         /**
          * 注册用户自定义事件
          * @event on
@@ -1221,15 +1228,6 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             } else {
                 this.action[name].register(func);
             }
-        },
-        
-        /**
-         * 设置select的选中状态
-         * @param {Bool||undefined} checked 是否选中
-         * 如果为undefined则根据当前状态修改
-         */
-        set: function () {
-
         },
         
         /**
@@ -1258,8 +1256,30 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             } else {
                 me.$element.removeClass(me.openCls());
             }
-        },
-        
+        },            
+            
+        /**
+         * 设置select的选中状态
+         * @param {String} value 选中值
+         * @param {String} text 选中文本
+         */
+        set: function (value,text) {
+            this.selection
+            .$element
+            .find(UI.CLS_PREFIX + this.clsName('selection-value'))
+            .text(text);
+            this.input.$element.val(value);
+        }, 
+           
+        /**
+         * 获取select值，TODO：与set合并
+         * @param {String} value 选中值
+         * @param {String} text 选中文本
+         */  
+        value: function () { 
+            return this.input.$element.val();
+        },    
+
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -1273,11 +1293,28 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             _base_(name, $element);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: 'selection' },
-                { selector: 'input' },
-                { selector: 'options' }
+                {
+                    selector: 'selection'
+                },
+                {
+                    selector: 'input'
+                },
+                {
+                    selector: 'options', 
+                    action: function ($options) {
+                        var selectCls = me.selectCls();
+                        var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role))
+                        $optionList.click(function () {
+                            $(this)
+                            .addClass(selectCls)
+                            .siblings()
+                            .removeClass(selectCls);
+                            me.set($(this).data('value'), $(this).text());
+                            me.close();
+                        });
+                    }
+                }
             ]);
-            //初始化选中状态
             //初始化事件
             me.action = {
                 click: new Action('click', function () {
