@@ -19,10 +19,10 @@
                 </div>
                 <input class="wf-select-input" type="text" />
                 <ul class="wf-select-options">
-                    <li class="wf-select-option wf-select-option-selected">wangfangdata</li>
-                    <li class="wf-select-option">wffe</li>
-                    <li class="wf-select-option">bishanshan</li>
-                    <li class="wf-select-option">选择器</li>
+                    <li data-value="wanfangdata" class="wf-select-option wf-select-option-selected">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
                 </ul>
             </div>
         </div>
@@ -38,10 +38,10 @@
         &lt;/div&gt;
         &lt;input class="wf-select-input" type="text" /&gt;
         &lt;ul class="wf-select-options"&gt;
-            &lt;li class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
-            &lt;li class="wf-select-option"&gt;wffe&lt;/li&gt;
-            &lt;li class="wf-select-option"&gt;bishanshan&lt;/li&gt;
-            &lt;li class="wf-select-option"&gt;选择器&lt;/li&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
             </code>

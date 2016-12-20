@@ -63,10 +63,24 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
         
         open: function () {
             this.$element.addClass(this.openCls());
+            this.animation(this.options.$element, 
+                this.animationCls(['slide', 'up', 'in'])
+            );
         },    
         
         close: function () {
-            this.$element.removeClass(this.openCls());
+            var me = this;
+            if (me.supportCss3('animation')) {
+                me.animation(
+                    this.options.$element,
+                    this.animationCls(['slide', 'up', 'out']),
+                    function () {
+                        me.$element.removeClass(me.openCls());
+                    }
+                );
+            } else {
+                me.$element.removeClass(me.openCls());
+            }
         },
         
         /**
@@ -105,14 +119,18 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             me.blankClick($([
                 UI.CLS_PREFIX + me.clsName('options', role),
                 UI.CLS_PREFIX + me.clsName('selection', role),
-            ].join(',')), function () { me.close(); });            
+            ].join(',')), function () {
+                if (me.$element.hasClass(me.openCls())) {
+                    me.close();
+                }
+            });
         }
     }),
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]';
+        dataRole = '[data-role="' + role + '"]';
     
     /**
      * 自动初始化

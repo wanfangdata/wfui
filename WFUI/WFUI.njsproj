@@ -78,6 +78,11 @@
     <Content Include="public\src\core\font\iconfont.svg" />
     <Content Include="public\src\core\font\iconfont.ttf" />
     <Content Include="public\src\core\font\iconfont.woff" />
+    <Content Include="public\src\core\less\animate.less" />
+    <Content Include="public\src\core\less\animate\slideDownIn.less" />
+    <Content Include="public\src\core\less\animate\slideDownOut.less" />
+    <Content Include="public\src\core\less\animate\slideUpOut.less" />
+    <Content Include="public\src\core\less\animate\slideUpIn.less" />
     <Content Include="public\src\core\less\mixins\center-middle.less" />
     <Content Include="public\src\core\less\mixins\overflow-hide.less" />
     <Content Include="public\src\core\less\variables\var.less" />
@@ -198,6 +203,7 @@
     <Folder Include="public\src\core\less\" />
     <Folder Include="public\src\core\js\" />
     <Folder Include="public\src\core\less\mixins\" />
+    <Folder Include="public\src\core\less\animate\" />
     <Folder Include="public\src\core\less\variables\" />
     <Folder Include="public\src\core\less\utilities\" />
     <Folder Include="public\src\core\font\" />

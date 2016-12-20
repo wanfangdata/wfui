@@ -629,6 +629,7 @@ wf.define('UI', ['logger'], function (logger) {
              * 设置全局点击机制
              */
             blankClick: (function () {
+                
                 /**
                  * 全局目标对象列表
                  */
@@ -647,6 +648,7 @@ wf.define('UI', ['logger'], function (logger) {
                         }
                     });
                 });
+                
                 /**
                  * @param {JQuery} $target目标对象
                  * @param {Function} clickOut点击非目标对象时执行函数
@@ -660,6 +662,57 @@ wf.define('UI', ['logger'], function (logger) {
                     });
                 }
             })(),
+            
+            /**
+             * 判断浏览器是否支持某一个CSS3属性
+             * @param  {String} style 属性名称
+             * @return {Boolean} true/false
+             */
+            supportCss3: function supportCss3(style) {
+                var prefix = ['webkit', 'Moz', 'ms', 'o'],
+                    i,
+                    humpString = [],
+                    htmlStyle = document.documentElement.style,
+                    _toHumb = function (string) {
+                        return string.replace(/-(\w)/g, function ($0, $1) {
+                            return $1.toUpperCase();
+                        });
+                    };
+                
+                for (i in prefix) {
+                    humpString.push(_toHumb(prefix[i] + '-' + style));
+                }
+                
+                humpString.push(_toHumb(style));
+                
+                for (i in humpString) {
+                    if (humpString[i] in htmlStyle) return true;
+                }                
+                return false;
+            },
+
+            /**
+             * 获取动画class
+             * @param {Array} keywords 动画关键词
+             */
+            animationCls: function (keywords) {
+                return _WF_ + CHAIN + keywords.join(CHAIN);
+            },
+            
+            /**
+             * 为UI添加一段动画
+             * @param {Object}  $ui jquery对象
+             * @param {String}  cls 动画class
+             * @param {Function}  callback 动画结束后回调
+             */
+            animation: function ($ui, cls, callback) {
+                $ui.addClass(cls);$ui.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                    $ui.removeClass(cls);
+                    if ($.isFunction(callback)) {
+                        callback();
+                    }
+                });
+            },
             
             /**
              * 初始化组件内部元素
@@ -708,7 +761,7 @@ wf.define('UI', ['logger'], function (logger) {
     UI.clsName = function (name, role) {
         return [_WF_, role, name].join(CHAIN);
     };
-
+    
     UI.CLS_PREFIX = CLS_PREFIX;
     
     return UI;
@@ -1175,10 +1228,24 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
         
         open: function () {
             this.$element.addClass(this.openCls());
+            this.animation(this.options.$element, 
+                this.animationCls(['slide', 'up', 'in'])
+            );
         },    
         
         close: function () {
-            this.$element.removeClass(this.openCls());
+            var me = this;
+            if (me.supportCss3('animation')) {
+                me.animation(
+                    this.options.$element,
+                    this.animationCls(['slide', 'up', 'out']),
+                    function () {
+                        me.$element.removeClass(me.openCls());
+                    }
+                );
+            } else {
+                me.$element.removeClass(me.openCls());
+            }
         },
         
         /**
@@ -1217,14 +1284,18 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
             me.blankClick($([
                 UI.CLS_PREFIX + me.clsName('options', role),
                 UI.CLS_PREFIX + me.clsName('selection', role),
-            ].join(',')), function () { me.close(); });            
+            ].join(',')), function () {
+                if (me.$element.hasClass(me.openCls())) {
+                    me.close();
+                }
+            });
         }
     }),
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]';
+        dataRole = '[data-role="' + role + '"]';
     
     /**
      * 自动初始化
