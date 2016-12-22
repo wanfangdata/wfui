@@ -232,7 +232,7 @@
         </h1>
         <ul class="ul-apis">
             <li>
-                <h3><code>new Select ( name,$element, events ) </code>构造函数</h3>
+                <h3><code>new Select ( name, $element, events ) </code>构造函数</h3>
                 <table>
                     <tr>
                         <th>参数</th>
@@ -262,7 +262,7 @@
             </li>
             <li>
                 <h3>
-                    <code>select.set ( value,text ) </code>
+                    <code>select.set ( value, text ) </code>
                     设置选中项
                 </h3>
                 <table>
