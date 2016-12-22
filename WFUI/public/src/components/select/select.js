@@ -138,21 +138,24 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                     selector: 'options', 
                     action: function ($options) {
                         var $selected;
+                        var $item;
                         var selectCls = me.selectCls();
                         var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role));
                         var selected = function ($item) { 
                             me.set($item.data('value'), $item.text());                                
                         };
-                        $optionList.click(function () {
-                            $(this)
-                            .addClass(selectCls)
-                            .siblings()
-                            .removeClass(selectCls);
-                            selected($(this));
-                            me.close();
-                        }).each(function () {
-                            if ($(this).hasClass(selectCls)) { 
-                                $selected = $(this);
+                        $optionList.each(function () {
+                            $item = $(this);
+                            $item.click(function () {
+                                $(this)
+                                .addClass(selectCls)
+                                .siblings()
+                                .removeClass(selectCls);
+                                selected($(this));
+                                me.close();
+                            });
+                            if ($item.hasClass(selectCls)) { 
+                                $selected = $item;
                             }
                         });
                         if(!$selected){ $selected = $($optionList[0]).addClass(selectCls);}
@@ -174,7 +177,6 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                 }, this.selection.$element)
             };
             me.initEvent(events);
-            //设置空白处点击关闭
             me.blankClick($([
                 UI.CLS_PREFIX + me.clsName('options', role),
                 UI.CLS_PREFIX + me.clsName('selection', role),
