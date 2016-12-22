@@ -34,7 +34,10 @@
         float: left;
 
         .wf-icon {
-            margin: -1px 0 0 -1px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform: scale(0);
             transform: scale(0);
             -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
             transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
@@ -80,6 +83,7 @@
         border-color: transparent;
 
         .wf-icon {
+            -webkit-transform: scale(1);
             transform: scale(1);
         }
     }

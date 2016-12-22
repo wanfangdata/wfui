@@ -882,7 +882,10 @@ button[disabled]:hover {
   float: left;
 }
 .wf-checkbox .wf-checkbox-inner .wf-icon {
-  margin: -1px 0 0 -1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
@@ -941,6 +944,7 @@ button[disabled]:hover {
   border-color: transparent;
 }
 .wf-checkbox-checked .wf-checkbox-inner .wf-icon {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .wf-checkbox-checked[data-target] .wf-checkbox-inner {
@@ -1169,7 +1173,6 @@ button[disabled]:hover {
 .wf-select .wf-select-selection .wf-icon {
   float: right;
   font-size: 14px;
-  margin-top: 8px;
 }
 .wf-select .wf-select-selection:hover {
   border-color: #6abbef;
@@ -1213,15 +1216,9 @@ button[disabled]:hover {
   height: 38px;
   line-height: 38px;
 }
-.wf-select-large .wf-select-selection .wf-icon {
-  margin-top: 12px;
-}
 .wf-select-small .wf-select-selection {
   height: 22px;
   line-height: 22px;
-}
-.wf-select-small .wf-select-selection .wf-icon {
-  margin-top: 5px;
 }
 .wf-select-hover .wf-select-selection {
   border-color: #6abbef;

@@ -147,6 +147,11 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                         $optionList.each(function () {
                             $item = $(this);
                             $item.click(function () {
+                                if ($(this).hasClass(selectCls)) {
+                                    return;
+                                } else {
+                                    me.action.change.piping($(this));
+                                }
                                 $(this)
                                 .addClass(selectCls)
                                 .siblings()
@@ -158,6 +163,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                                 $selected = $item;
                             }
                         });
+                        //默认项
                         if(!$selected){ $selected = $($optionList[0]).addClass(selectCls);}
                         selected($selected);
                     }
@@ -174,12 +180,15 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                         me[me.$element.hasClass(me.openCls())?'close':'open']();
                         _action_.piping();
                     });
-                }, this.selection.$element)
+                }, this.selection.$element),
+                    change: new Action('change', function () { 
+                    //在$optionList click触发
+                },this.options.$element)
             };
             me.initEvent(events);
             me.blankClick(me.find([
                 UI.CLS_PREFIX + me.clsName('options', role),
-                UI.CLS_PREFIX + me.clsName('selection', role),
+                UI.CLS_PREFIX + me.clsName('selection', role)
             ].join(',')), function () {
                 if (me.$element.hasClass(me.openCls())) {
                     me.close();
@@ -200,7 +209,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
     Select.auto = function (page) {
         
         $.each($(dataRole), function (index) {
-            page.addElement(new Select($(this).attr('id')||role + index, $(this)));
+            page.addElement(new Select($(this).attr('id') || role + index, $(this)));
         });
 
     };

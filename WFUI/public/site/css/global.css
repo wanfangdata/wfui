@@ -233,7 +233,7 @@ a:hover {
 .page pre code .hljs-tag {
   line-height: 22px;
 }
-.page .wf-icon {
+.page .wf-btn .wf-icon {
   width: 16px;
   height: 16px;
   line-height: 1;

@@ -20,11 +20,12 @@ wf.define('Action', '_core_', function (logger) {
         
         /**
          * 事件管道
+         * @parma {*} param 事件自定义参数
          */
-        piping: function () {
+        piping: function (param) {
             var _ac_ = this;
             $.each(_ac_.funcs, function () {
-                this(_ac_);
+                this(_ac_, param);
             });
         },
         
