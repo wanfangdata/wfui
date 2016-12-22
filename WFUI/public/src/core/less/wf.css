@@ -1209,6 +1209,18 @@ button[disabled]:hover {
 .wf-select .wf-select-options .wf-select-option-selected {
   background-color: #f7f7f7;
 }
+.wf-select-hover .wf-select-selection {
+  border-color: #6abbef;
+}
+.wf-select-disabled .wf-select-selection {
+  cursor: default;
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+  color: #dcdcdc;
+}
+.wf-select-disabled .wf-select-selection:hover {
+  border-color: #dcdcdc;
+}
 .wf-select-open .wf-select-selection {
   border-color: #6abbef;
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);

@@ -47,4 +47,86 @@
             </code>
         </pre>
     </div>
+    <div class="section" id="radio-hover">
+        <h1 class="title">
+            <span class="text">悬停状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo" id="demo">
+            <div data-role="select" class="wf-select wf-select-hover" id="selectDemo2">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li data-value="wanfangdata" class="wf-select-option">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option wf-select-option-selected">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
+                </ul>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>wf-select-hover</code>类</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div data-role="select" class="wf-select wf-select-hover" id="stDemo1"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="radio-hover">
+        <h1 class="title">
+            <span class="text">不可用状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo" id="demo">
+            <div data-role="select" class="wf-select wf-select-disabled" id="selectDemo2">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li data-value="wanfangdata" class="wf-select-option">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option wf-select-option-selected">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
+                </ul>
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>wf-select-disabled</code>类</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div data-role="select" class="wf-select wf-select-disabled" id="stDemo1"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
 </div>

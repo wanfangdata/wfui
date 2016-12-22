@@ -29,7 +29,7 @@ wf.define('page', ['logger'], function (logger) {
          */
         addElement: function (element) {
             if (this.element[element.name]) {
-                logger.error('页面组件id' + element.name + '重复');
+                logger.error('页面组件id:' + element.name + ' 重复');
                 return;
             }
             this.element[element.name] = element;

@@ -86,6 +86,26 @@
     }
 }
 
+.wf-select-hover {
+    .wf-select-selection {
+        border-color: @color-primary;
+    }
+}
+
+.wf-select-disabled {
+
+    .wf-select-selection {
+        cursor: default;
+        background-color: #f7f7f7;
+        border-color: #dcdcdc;
+        color: #dcdcdc;
+
+        &:hover {
+            border-color: #dcdcdc;
+        }
+    }
+}
+
 .wf-select-open {
     .wf-select-selection {
         border-color: @color-primary;
