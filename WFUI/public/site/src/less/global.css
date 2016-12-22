@@ -193,7 +193,8 @@ a:hover {
   margin-top: -1px;
 }
 .wf-checkbox,
-.wf-radio {
+.wf-radio,
+.wf-select {
   margin-right: 50px;
 }
 .page .title {

@@ -1213,9 +1213,15 @@ button[disabled]:hover {
   height: 38px;
   line-height: 38px;
 }
+.wf-select-large .wf-select-selection .wf-icon {
+  margin-top: 12px;
+}
 .wf-select-small .wf-select-selection {
   height: 22px;
   line-height: 22px;
+}
+.wf-select-small .wf-select-selection .wf-icon {
+  margin-top: 5px;
 }
 .wf-select-hover .wf-select-selection {
   border-color: #6abbef;
