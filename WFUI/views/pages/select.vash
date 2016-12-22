@@ -129,4 +129,101 @@
             </code>
         </pre>
     </div>
+    <div class="section" id="select-size">
+        <h1 class="title">
+            <span class="text">选择器尺寸</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo" id="demo">
+            <div data-role="select" class="wf-select wf-select-large" id="select-size-demo-large">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li data-value="wanfangdata" class="wf-select-option">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option wf-select-option-selected">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
+                </ul>
+            </div>
+            <div data-role="select" class="wf-select wf-select-default" id="select-size-demo-default">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li data-value="wanfangdata" class="wf-select-option">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option wf-select-option-selected">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
+                </ul>
+            </div>
+            <div data-role="select" class="wf-select wf-select-small" id="select-size-demo-small">
+                <div class="wf-select-selection">
+                    <div class="wf-select-selection-value"></div>
+                    <i class="wf-icon icon-moreunfold"></i>
+                </div>
+                <input class="wf-select-input" type="text" />
+                <ul class="wf-select-options">
+                    <li data-value="wanfangdata" class="wf-select-option">wangfangdata</li>
+                    <li data-value="wffe" class="wf-select-option wf-select-option-selected">wffe</li>
+                    <li data-value="bishanshan" class="wf-select-option">bishanshan</li>
+                    <li data-value="selector" class="wf-select-option">选择器</li>
+                </ul>
+            </div>
+        </div>
+        <div class="explain">
+            <p>选择器有大、中、小三种尺寸。</p>
+            <p>
+                通过设置<code>size</code>为<code>large</code><code>small</code>分别把选择器设为大、小尺寸。若不设置<code>size</code>，则尺寸默认为中。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div data-role="select" class="wf-select-large" id="select-disabled-demo-large"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div data-role="select" class="wf-select wf-select-default" id="select-disabled-demo-default"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div data-role="select" class="wf-select wf-select-small" id="select-disabled-demo-small"&gt;
+        &lt;div class="wf-select-selection"&gt;
+            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;input class="wf-select-input" type="text" /&gt;
+        &lt;ul class="wf-select-options"&gt;
+            &lt;li data-value="wanfangdata" class="wf-select-option"&gt;wangfangdata&lt;/li&gt;
+            &lt;li data-value="wffe" class="wf-select-option"&gt;wffe&lt;/li&gt;
+            &lt;li data-value="bishanshan" class="wf-select-option"&gt;bishanshan&lt;/li&gt;
+            &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    
+            </code>
+        </pre>
+    </div>
 </div>
