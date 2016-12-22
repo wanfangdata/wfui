@@ -197,6 +197,9 @@ a:hover {
 .wf-select {
   margin-right: 50px;
 }
+.wf-select {
+  vertical-align: middle;
+}
 .page .title {
   color: #333;
   font-size: 24px;
