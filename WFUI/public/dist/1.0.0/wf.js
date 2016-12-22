@@ -1365,7 +1365,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
     Select.auto = function (page) {
         
         $.each($(dataRole), function (index) {
-            page.addElement(new Select('testSelect', $(this)));
+            page.addElement(new Select($(this).attr('id')||role + index, $(this)));
         });
 
     };

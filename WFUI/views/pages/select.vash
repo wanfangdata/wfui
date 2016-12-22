@@ -12,7 +12,7 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo" id="demo">
-            <div data-role="select" class="wf-select" id="selectDemo1">
+            <div data-role="select" class="wf-select" id="select-basic-demo">
                 <div class="wf-select-selection">
                     <div class="wf-select-selection-value"></div>
                     <i class="wf-icon icon-moreunfold"></i>
@@ -31,7 +31,7 @@
         </div>
         <pre>
         <code class="html">
-    &lt;div data-role="select" class="wf-select" id="stDemo1"&gt;
+    &lt;div data-role="select" class="wf-select" id="select-basic-demo"&gt;
         &lt;div class="wf-select-selection"&gt;
             &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
             &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
@@ -47,13 +47,13 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="radio-hover">
+    <div class="section" id="select-hover">
         <h1 class="title">
             <span class="text">悬停状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo" id="demo">
-            <div data-role="select" class="wf-select wf-select-hover" id="selectDemo2">
+            <div data-role="select" class="wf-select wf-select-hover" id="select-hover-demo">
                 <div class="wf-select-selection">
                     <div class="wf-select-selection-value"></div>
                     <i class="wf-icon icon-moreunfold"></i>
@@ -72,7 +72,7 @@
         </div>
         <pre>
         <code class="html">
-    &lt;div data-role="select" class="wf-select wf-select-hover" id="stDemo1"&gt;
+    &lt;div data-role="select" class="wf-select wf-select-hover" id="select-hover-demo"&gt;
         &lt;div class="wf-select-selection"&gt;
             &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
             &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
@@ -88,13 +88,13 @@
             </code>
         </pre>
     </div>
-    <div class="section" id="radio-hover">
+    <div class="section" id="select-disabled">
         <h1 class="title">
             <span class="text">不可用状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo" id="demo">
-            <div data-role="select" class="wf-select wf-select-disabled" id="selectDemo2">
+            <div data-role="select" class="wf-select wf-select-disabled" id="select-disabled-demo">
                 <div class="wf-select-selection">
                     <div class="wf-select-selection-value"></div>
                     <i class="wf-icon icon-moreunfold"></i>
@@ -113,7 +113,7 @@
         </div>
         <pre>
         <code class="html">
-    &lt;div data-role="select" class="wf-select wf-select-disabled" id="stDemo1"&gt;
+    &lt;div data-role="select" class="wf-select wf-select-disabled" id="select-disabled-demo"&gt;
         &lt;div class="wf-select-selection"&gt;
             &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
             &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
