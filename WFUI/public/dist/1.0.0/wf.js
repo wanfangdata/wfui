@@ -1272,7 +1272,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
         }, 
            
         /**
-         * 获取select值，TODO：与set合并
+         * 获取select值
          * @param {String} value 选中值
          * @param {String} text 选中文本
          */  
