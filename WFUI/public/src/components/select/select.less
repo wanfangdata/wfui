@@ -1,5 +1,11 @@
 ﻿@import "../../core/less/import.less";
 
+@select-width: 160px;
+@selection-padding-leftright-width: 10px;
+@selection-width: @select-width - @selection-padding-leftright-width*2;
+@option-padding-leftright-width: 18px;
+@option-width: @select-width - @option-padding-leftright-width*2;
+
 .wf-select {
     display: inline-block;
     position: relative;
@@ -12,8 +18,8 @@
         position: relative;
         border: 1px solid #e6e6e6;
         border-radius: 4px;
-        padding: 0 10px;
-        width: 138px;
+        padding: 0 @selection-padding-leftright-width;
+        width: @selection-width;
         height: 30px;
         line-height: 30px;
         font-size: 12px;
@@ -47,21 +53,20 @@
         background-color: #fff;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
-        box-sizing: border-box;
         z-index: 1050;
         position: absolute;
         overflow: hidden;
         font-size: 12px;
         outline: none;
         margin-bottom: 0;
-        padding-left: 0;
         max-height: 250px;
         display: none;
 
         .wf-select-option {
             position: relative;
             display: block;
-            padding: 7px 16px;
+            width: @option-width;
+            padding: 10px @option-padding-leftright-width;
             font-weight: normal;
             color: #666;
             cursor: pointer;
@@ -69,6 +74,10 @@
             overflow: hidden;
             -webkit-transition: background 0.3s ease;
             transition: background 0.3s ease;
+
+            &:hover {
+                background-color: #f0f8fd;
+            }
         }
 
         .wf-select-option-selected {
@@ -79,6 +88,8 @@
 
 .wf-select-open {
     .wf-select-selection {
+        border-color: @color-primary;
+        box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
     }
 
     .wf-select-options {
