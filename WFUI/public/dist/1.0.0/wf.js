@@ -1302,16 +1302,26 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                 {
                     selector: 'options', 
                     action: function ($options) {
+                        var $selected;
                         var selectCls = me.selectCls();
-                        var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role))
+                        var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role));
+                        var selected = function ($item) { 
+                            me.set($item.data('value'), $item.text());                                
+                        };
                         $optionList.click(function () {
                             $(this)
                             .addClass(selectCls)
                             .siblings()
                             .removeClass(selectCls);
-                            me.set($(this).data('value'), $(this).text());
+                            selected($(this));
                             me.close();
+                        }).each(function () {
+                            if ($(this).hasClass(selectCls)) { 
+                                $selected = $(this);
+                            }
                         });
+                        if(!$selected){ $selected = $($optionList[0]).addClass(selectCls);}
+                        selected($selected);
                     }
                 }
             ]);
