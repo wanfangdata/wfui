@@ -11,19 +11,19 @@
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
-        <div class="demo wf-radio-group" id="demo">
-            <span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1">
+        <div class="demo wf-radio-group" id="radio-basic-demo">
+            <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-basic-demo1">
                 <span class="wf-radio-inner">
                     <i class="wf-icon icon-radio"></i>
                 </span>
-                <input id="test" class="wf-radio-input" type="radio" />
+                <input class="wf-radio-input" type="radio" />
                 <span class="wf-radio-text">Radio</span>
             </span>
-            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2">
+            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="radio-basic-demo2">
                 <span class="wf-radio-inner">
                     <i class="wf-icon icon-radio"></i>
                 </span>
-                <input id="test" class="wf-radio-input" type="radio" />
+                <input class="wf-radio-input" type="radio" />
                 <span class="wf-radio-text">单选框</span>
             </span>
         </div>
@@ -32,15 +32,15 @@
         </div>
         <pre>
         <code class="html">
-    &lt;div class="demo wf-radio-group" id="wfradioGroupDemo1"&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="cbGroupItemDemo1"&gt;
+    &lt;div class="demo wf-radio-group" id="radio-basic-demo"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-basic-demo1"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
             &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="cbGroupItemDemo2"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="radio-basic-demo2"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
@@ -56,15 +56,15 @@
             <span class="text">悬停状态</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
-        <div class="demo wf-radio-group" id="wfradioGroupDemo2">
-            <span data-role="radio" class="wf-radio wf-radio-group-item" id="cbDemoHover1">
+        <div class="demo wf-radio-group" id="radio-hover-demo">
+            <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-hover-demo1">
                 <span class="wf-radio-inner">
                     <i class="wf-icon icon-radio"></i>
                 </span>
-                <input id="test" class="wf-radio-input" type="radio" />
+                <input class="wf-radio-input" type="radio" />
                 <span class="wf-radio-text">Radio</span>
             </span>
-            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-hover" id="cbDemoHover2">
+            <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-hover" id="radio-hover-demo2">
                 <span class="wf-radio-inner">
                     <i class="wf-icon icon-radio"></i>
                 </span>
@@ -79,15 +79,15 @@
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;div class="demo wf-radio-group" id="wfradioGroupDemo2"&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="cbDemoHover1"&gt;
+    &lt;div class="demo wf-radio-group" id="radio-hover-demo"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-hover-demo1"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
             &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-hover" id="cbDemoHover2"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-hover" id="radio-hover-demo2"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
@@ -105,32 +105,32 @@
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemodisabled1">
+                <span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo1">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemodisabled2">
+                <span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo2">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">Radio</span>
                 </span>
             </div>
             <div class="wf-row">
-                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemodisabled3">
+                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="radio-disabled-demo3">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="cbDemodisabled4">
+                <span data-role="radio" class="wf-radio wf-radio-checked wf-radio-disabled" id="radio-disabled-demo4">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">Radio</span>
                 </span>
             </div>
@@ -140,26 +140,26 @@
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo1"&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo1"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
     &lt;/span&gt;
-    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo2"&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo2"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
         &lt;input class="wf-radio-input" type="radio" /&gt;
         &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo1"&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo3"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
     &lt;/span&gt;
-    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="cbDemo2"&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-disabled" id="radio-disabled-demo4"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
@@ -176,11 +176,11 @@
         </h1>
         <div class="demo">
             <div class="wf-row">
-                <span data-role="radio" class="wf-radio wf-radio-checked" id="cbDemoCheckedEnabled">
+                <span data-role="radio" class="wf-radio wf-radio-checked" id="radio-icon-demo">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">Checked-Enabled</span>
                 </span>
             </div>
@@ -196,14 +196,14 @@
         </div>
         <pre class="language-html">
             <code class="html ">
-    &lt;span data-role="radio" class="wf-radio" id="cbDemo1"&gt;
+    &lt;span data-role="radio" class="wf-radio" id="radio-icon-demo1"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
-        &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+        &lt;input class="wf-radio-input" type="radio" /&gt;
         &lt;span class="wf-radio-text"&gt;Radio&lt;/span&gt;
     &lt;/span&gt;
-    &lt;span data-role="radio" class="wf-radio wf-radio-hover" id="cbDemo2"&gt;
+    &lt;span data-role="radio" class="wf-radio wf-radio-hover" id="radio-icon-demo2"&gt;
         &lt;span class="wf-radio-inner"&gt;
             &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
         &lt;/span&gt;
@@ -219,22 +219,22 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div class="wf-radio-group wf-row" id="rdgroupDemo1">
-                <span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup1">
+            <div class="wf-radio-group wf-row" id="radio-group-demo">
+                <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo1">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">item1</span>
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup2">
+                <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo2">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
                     <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">item2</span>
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup3">
+                <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo3">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
@@ -242,21 +242,21 @@
                     <span class="wf-radio-text">item3</span>
                 </span>
                 <br /><br />
-                <span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup4">
+                <span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo4">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
-                    <input id="test" class="wf-radio-input" type="radio" />
+                    <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">item4</span>
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-disabled" id="rdDemoGroup5">
+                <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-disabled" id="radio-group-demo5">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
                     <input class="wf-radio-input" type="radio" />
                     <span class="wf-radio-text">item5</span>
                 </span>
-                <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked wf-radio-disabled" id="rdDemoGroup6">
+                <span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked wf-radio-disabled" id="radio-group-demo6">
                     <span class="wf-radio-inner">
                         <i class="wf-icon icon-radio"></i>
                     </span>
@@ -270,22 +270,22 @@
         </div>
         <pre class="language-html">
         <code class="html">
-    &lt;div class="wf-radio-group" id="rdgroupDemo1"&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="rdDemoGroup1"&gt;
+    &lt;div class="wf-radio-group" id="radio-group-demo"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item wf-radio-checked" id="radio-group-demo1"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
-            &lt;input id="test" class="wf-radio-input" type="radio" /&gt;
+            &lt;input class="wf-radio-input" type="radio" /&gt;
             &lt;span class="wf-radio-text"&gt;item1&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup2"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo2"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
             &lt;input class="wf-radio-input" type="radio" /&gt;
             &lt;span class="wf-radio-text"&gt;item2&lt;/span&gt;
         &lt;/span&gt;
-        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="rdDemoGroup3"&gt;
+        &lt;span data-role="radio" class="wf-radio wf-radio-group-item" id="radio-group-demo3"&gt;
             &lt;span class="wf-radio-inner"&gt;
                 &lt;i class="wf-icon icon-radio"&gt;&lt;/i&gt;
             &lt;/span&gt;
