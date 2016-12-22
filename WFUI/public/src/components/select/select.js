@@ -177,7 +177,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
                 }, this.selection.$element)
             };
             me.initEvent(events);
-            me.blankClick($([
+            me.blankClick(me.find([
                 UI.CLS_PREFIX + me.clsName('options', role),
                 UI.CLS_PREFIX + me.clsName('selection', role),
             ].join(',')), function () {
