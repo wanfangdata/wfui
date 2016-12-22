@@ -1167,7 +1167,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
 
 /**
  * html结构：
- * <div data-role="select" class="wf-select" id="selectDemo1">
+ * <div data-role="select" class="wf-select" id="select-demo">
  *     <div class="wf-select-selection">
  *         <div class="wf-select-selection-value"></div>
  *         <i class="wf-icon icon-moreunfold"></i>
