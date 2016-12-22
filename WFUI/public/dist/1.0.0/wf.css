@@ -1209,6 +1209,14 @@ button[disabled]:hover {
 .wf-select .wf-select-options .wf-select-option-selected {
   background-color: #f7f7f7;
 }
+.wf-select-large .wf-select-selection {
+  height: 38px;
+  line-height: 38px;
+}
+.wf-select-small .wf-select-selection {
+  height: 22px;
+  line-height: 22px;
+}
 .wf-select-hover .wf-select-selection {
   border-color: #6abbef;
 }

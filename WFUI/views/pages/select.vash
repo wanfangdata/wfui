@@ -148,7 +148,7 @@
                     <li data-value="selector" class="wf-select-option">选择器</li>
                 </ul>
             </div>
-            <div data-role="select" class="wf-select wf-select-default" id="select-size-demo-default">
+            <div data-role="select" class="wf-select" id="select-size-demo-default">
                 <div class="wf-select-selection">
                     <div class="wf-select-selection-value"></div>
                     <i class="wf-icon icon-moreunfold"></i>
@@ -183,7 +183,7 @@
         </div>
         <pre>
         <code class="html">
-    &lt;div data-role="select" class="wf-select-large" id="select-disabled-demo-large"&gt;
+    &lt;div data-role="select" class="wf-select wf-select-large" id="select-disabled-demo-large"&gt;
         &lt;div class="wf-select-selection"&gt;
             &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
             &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
@@ -196,7 +196,7 @@
             &lt;li data-value="selector" class="wf-select-option"&gt;选择器&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;div data-role="select" class="wf-select wf-select-default" id="select-disabled-demo-default"&gt;
+    &lt;div data-role="select" class="wf-select" id="select-disabled-demo-default"&gt;
         &lt;div class="wf-select-selection"&gt;
             &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
             &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
