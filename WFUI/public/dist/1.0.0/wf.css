@@ -1173,6 +1173,7 @@ button[disabled]:hover {
 .wf-select .wf-select-selection .wf-icon {
   float: right;
   font-size: 14px;
+  transition: transform 0.15s ease, -webkit-transform 0.2s ease;
 }
 .wf-select .wf-select-selection:hover {
   border-color: #6abbef;
@@ -1235,6 +1236,9 @@ button[disabled]:hover {
 .wf-select-open .wf-select-selection {
   border-color: #6abbef;
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+}
+.wf-select-open .wf-select-selection .wf-icon {
+  transform: rotate(180deg);
 }
 .wf-select-open .wf-select-options {
   display: block;
