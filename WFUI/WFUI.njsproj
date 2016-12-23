@@ -136,6 +136,17 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
+    <Content Include="views\pages\pagination.vash" />
+    <Content Include="views\pages\message.vash" />
+    <Content Include="views\pages\step.vash" />
+    <Content Include="views\pages\dialog.vash" />
+    <Content Include="views\pages\tab.vash" />
+    <Content Include="views\pages\menu.vash" />
+    <Content Include="views\pages\breadcrumb.vash" />
+    <Content Include="views\pages\icon.vash" />
+    <Content Include="views\pages\grid.vash" />
+    <Content Include="views\pages\form.vash" />
+    <Content Include="views\pages\input.vash" />
     <Content Include="views\pages\select.vash" />
     <Content Include="views\pages\radio.vash" />
     <Content Include="views\pages\checkbox.vash" />

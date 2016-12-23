@@ -1,0 +1,15 @@
+﻿<div class="page">
+    <h1 class="title">
+        Form 表单
+        <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
+    </h1>
+    <p class="desc">
+        具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、选择器等。
+    </p>
+    <div class="section" id="radio-basic">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+    </div>
+</div>

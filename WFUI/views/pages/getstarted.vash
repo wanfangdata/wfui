@@ -1,1 +1,5 @@
-﻿<div>getstarted页面</div>
+﻿<div class="page">
+    <h1 class="title">
+        Get Started
+    </h1>
+</div>

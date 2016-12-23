@@ -1,0 +1,15 @@
+﻿<div class="page">
+    <h1 class="title">
+        Input 输入框
+        <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
+    </h1>
+    <p class="desc">
+        接受用户输入内容。
+    </p>
+    <div class="section" id="radio-basic">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+    </div>
+</div>
