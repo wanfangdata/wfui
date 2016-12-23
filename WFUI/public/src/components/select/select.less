@@ -6,14 +6,14 @@
 @option-padding-leftright-width: 18px;
 @option-width: @select-width - @option-padding-leftright-width*2;
 
-.wf-select {
+.@{ui}-select {
     display: inline-block;
     position: relative;
     -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     .clearfix;
 
-    .wf-select-selection {
+    .@{ui}-select-selection {
         display: inline-block;
         position: relative;
         border: 1px solid #e6e6e6;
@@ -28,13 +28,13 @@
         transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
         .ut-clearfix;
 
-        .wf-select-selection-value {
+        .@{ui}-select-selection-value {
             display: inline-block;
             float: left;
             .overflow-hide(122px)
         }
 
-        .wf-icon {
+        .@{ui}-icon {
             float: right;
             font-size: 14px;
             transition: transform 0.15s ease, -webkit-transform 0.2s ease;
@@ -45,11 +45,11 @@
         }
     }
 
-    .wf-select-input {
+    .@{ui}-select-input {
         display: none;
     }
 
-    .wf-select-options {
+    .@{ui}-select-options {
         background-color: #fff;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
@@ -62,7 +62,7 @@
         max-height: 250px;
         display: none;
 
-        .wf-select-option {
+        .@{ui}-select-option {
             position: relative;
             display: block;
             width: @option-width;
@@ -80,35 +80,35 @@
             }
         }
 
-        .wf-select-option-selected {
+        .@{ui}-select-option-selected {
             background-color: #f7f7f7;
         }
     }
 }
 
-.wf-select-large {
-    .wf-select-selection {
+.@{ui}-select-large {
+    .@{ui}-select-selection {
         height: 38px;
         line-height: 38px;
     }
 }
 
-.wf-select-small {
-    .wf-select-selection {
+.@{ui}-select-small {
+    .@{ui}-select-selection {
         height: 22px;
         line-height: 22px;
     }
 }
 
-.wf-select-hover {
-    .wf-select-selection {
+.@{ui}-select-hover {
+    .@{ui}-select-selection {
         border-color: @color-primary;
     }
 }
 
-.wf-select-disabled {
+.@{ui}-select-disabled {
 
-    .wf-select-selection {
+    .@{ui}-select-selection {
         cursor: default;
         background-color: #f7f7f7;
         border-color: #dcdcdc;
@@ -120,17 +120,17 @@
     }
 }
 
-.wf-select-open {
-    .wf-select-selection {
+.@{ui}-select-open {
+    .@{ui}-select-selection {
         border-color: @color-primary;
         box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 
-        .wf-icon {
+        .@{ui}-icon {
             transform: rotate(180deg);
         }
     }
 
-    .wf-select-options {
+    .@{ui}-select-options {
         display: block;
     }
 }

@@ -2,31 +2,31 @@
 
 .hover() {
     & {
-        .wf-radio-inner {
+        .@{ui}-radio-inner {
             border-color: @color-primary;
         }
     }
 }
 
 .disabled() {
-    .wf-radio-inner {
+    .@{ui}-radio-inner {
         background-color: #f7f7f7;
         border-color: #dcdcdc;
         color: #dcdcdc;
 
-        .wf-icon {
+        .@{ui}-icon {
             background-color: #dcdcdc;
         }
     }
 }
 
-.wf-radio {
+.@{ui}-radio {
     display: inline-block;
     cursor: pointer;
     position: relative;
     .clearfix;
 
-    .wf-radio-inner {
+    .@{ui}-radio-inner {
         display: inline-block;
         width: 14px;
         height: 14px;
@@ -38,7 +38,7 @@
         float: left;
         position: relative;
 
-        .wf-icon {
+        .@{ui}-icon {
             .center-middle(8px,8px);
             border-radius: 50%;
             background-color: @color-primary;
@@ -48,11 +48,11 @@
         }
     }
 
-    .wf-radio-input {
+    .@{ui}-radio-input {
         display: none;
     }
 
-    .wf-radio-text {
+    .@{ui}-radio-text {
         float: left;
         color: @font-color-nomal;
         line-height: 16px;
@@ -63,26 +63,26 @@
     }
 }
 
-.wf-radio-hover {
+.@{ui}-radio-hover {
     .hover;
 }
 
-.wf-radio-checked {
-    .wf-radio-inner {
+.@{ui}-radio-checked {
+    .@{ui}-radio-inner {
         border-color: @color-primary;
 
-        .wf-icon {
+        .@{ui}-icon {
             transform: scale(1);
         }
     }
 
     &[data-target] {
-        .wf-radio-inner {
+        .@{ui}-radio-inner {
             background-color: #fff;
             border-color: @color-primary;
             color: @color-primary;
 
-            .wf-icon {
+            .@{ui}-icon {
                 width: 10px;
                 height: 10px;
                 background-color: @color-primary;
@@ -97,7 +97,7 @@
     }
 }
 
-.wf-radio-disabled {
+.@{ui}-radio-disabled {
     cursor: default;
     .disabled;
 
@@ -108,17 +108,17 @@
 
 /*lt ie9*/
 .ltie9 {
-    .wf-radio {
-        .wf-radio-inner {
-            .wf-icon {
+    .@{ui}-radio {
+        .@{ui}-radio-inner {
+            .@{ui}-icon {
                 display: none;
             }
         }
     }
 
-    .wf-radio-checked {
-        .wf-radio-inner {
-            .wf-icon {
+    .@{ui}-radio-checked {
+        .@{ui}-radio-inner {
+            .@{ui}-icon {
                 display: inline-block;
             }
         }

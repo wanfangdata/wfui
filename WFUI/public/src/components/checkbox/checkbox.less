@@ -2,27 +2,27 @@
 
 .hover() {
     & {
-        .wf-checkbox-inner {
+        .@{ui}-checkbox-inner {
             border-color: @color-primary;
         }
     }
 }
 
 .disabled() {
-    .wf-checkbox-inner {
+    .@{ui}-checkbox-inner {
         background-color: #f7f7f7;
         border-color: #dcdcdc;
         color: #dcdcdc;
     }
 }
 
-.wf-checkbox {
+.@{ui}-checkbox {
     display: inline-block;
     cursor: pointer;
     position: relative;
     .clearfix;
 
-    .wf-checkbox-inner {
+    .@{ui}-checkbox-inner {
         display: inline-block;
         width: 14px;
         height: 14px;
@@ -33,7 +33,7 @@
         margin-right: 8px;
         float: left;
 
-        .wf-icon {
+        .@{ui}-icon {
             position: absolute;
             top: 0;
             left: 0;
@@ -44,11 +44,11 @@
         }
     }
 
-    .wf-checkbox-input {
+    .@{ui}-checkbox-input {
         display: none;
     }
 
-    .wf-checkbox-text {
+    .@{ui}-checkbox-text {
         float: left;
         color: @font-color-nomal;
         line-height: 16px;
@@ -59,10 +59,10 @@
     }
 
     &[data-target] {
-        .wf-checkbox-inner {
+        .@{ui}-checkbox-inner {
             position: relative;
 
-            .wf-icon {
+            .@{ui}-icon {
                 .center-middle(10px,10px);
 
                 &:before {
@@ -73,28 +73,28 @@
     }
 }
 
-.wf-checkbox-hover {
+.@{ui}-checkbox-hover {
     .hover;
 }
 
-.wf-checkbox-checked {
-    .wf-checkbox-inner {
+.@{ui}-checkbox-checked {
+    .@{ui}-checkbox-inner {
         background-color: @color-primary;
         border-color: transparent;
 
-        .wf-icon {
+        .@{ui}-icon {
             -webkit-transform: scale(1);
             transform: scale(1);
         }
     }
 
     &[data-target] {
-        .wf-checkbox-inner {
+        .@{ui}-checkbox-inner {
             background-color: #fff;
             border-color: @color-primary;
             color: @color-primary;
 
-            .wf-icon {
+            .@{ui}-icon {
                 background-color: @color-primary;
 
                 &:before {
@@ -105,7 +105,7 @@
     }
 }
 
-.wf-checkbox-disabled {
+.@{ui}-checkbox-disabled {
     cursor: default;
     .disabled;
 
@@ -116,17 +116,17 @@
 
 /*lt ie9*/
 .ltie9 {
-    .wf-checkbox {
-        .wf-checkbox-inner {
-            .wf-icon {
+    .@{ui}-checkbox {
+        .@{ui}-checkbox-inner {
+            .@{ui}-icon {
                 display: none;
             }
         }
     }
 
-    .wf-checkbox-checked {
-        .wf-checkbox-inner {
-            .wf-icon {
+    .@{ui}-checkbox-checked {
+        .@{ui}-checkbox-inner {
+            .@{ui}-icon {
                 display: inline-block;
             }
         }
