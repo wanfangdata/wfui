@@ -1244,3 +1244,109 @@ button[disabled]:hover {
   display: block;
 }
 /*lt ie9*/
+.wf-input {
+  font-size: 12px;
+  padding: 8px 12px;
+  width: 374px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dcdcdc;
+  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.wf-input:hover,
+.wf-input.wf-input-hover {
+  border-color: #6abbef;
+}
+.wf-input:focus,
+.wf-input.wf-input-focus {
+  border-color: #6abbef;
+  box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+}
+.wf-input-disabled {
+  cursor: default;
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+  color: #dcdcdc;
+}
+.wf-input-disabled:hover {
+  border-color: #dcdcdc;
+}
+.wf-input-large {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.wf-input-small {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.wf-input-label {
+  zoom: 1;
+}
+.wf-input-label:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-input-label .wf-input-addon {
+  float: left;
+  background-color: #f7f7f7;
+  position: relative;
+}
+.wf-input-label .wf-input-addon .wf-select .wf-select-selection {
+  width: 80px;
+  background-color: #f7f7f7;
+  border-radius: 3px 0 0 3px;
+}
+.wf-input-label .wf-input-addon .wf-select .wf-select-selection .wf-select-selection-value {
+  width: 62px;
+}
+.wf-input-label .wf-input-addon .wf-select .wf-select-selection:hover {
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+}
+.wf-input-label .wf-input-addon .wf-select .wf-select-options .wf-select-option {
+  width: 65px;
+}
+.wf-input-label .wf-input-addon .wf-select-open .wf-select-selection {
+  background-color: #f7f7f7;
+  border-color: #dcdcdc;
+  box-shadow: none;
+}
+.wf-input-label .wf-input-addon-suffix {
+  position: relative;
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 0 3px 3px 0;
+  margin-left: -1px;
+}
+.wf-input-label .wf-input {
+  position: relative;
+  margin-left: -1px;
+  float: left;
+  border-radius: 0;
+  cursor: default;
+}
+.wf-input-label .wf-input:hover,
+.wf-input-label .wf-input:focus {
+  z-index: 1;
+}
+.wf-input-icon {
+  display: inline-block;
+  position: relative;
+}
+.wf-input-icon .wf-input {
+  width: 200px;
+}
+.wf-input-icon .wf-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 7px;
+  cursor: pointer;
+}
+.wf-input-icon .wf-icon:hover {
+  color: #6abbef;
+}

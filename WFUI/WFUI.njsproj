@@ -61,6 +61,7 @@
     <Content Include="public\site\src\img\logo.png" />
     <Content Include="public\site\src\less\page.less" />
     <Content Include="public\src\components\button\button.less" />
+    <Content Include="public\src\components\input\input.less" />
     <Content Include="public\src\components\menu\menu.js" />
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
     <Compile Include="public\site\src\js\doc.js" />
@@ -207,6 +208,7 @@
     <Folder Include="public\src\components\checkbox\" />
     <Folder Include="public\src\components\menu\" />
     <Folder Include="public\src\components\button\" />
+    <Folder Include="public\src\components\input\" />
     <Folder Include="public\src\components\radio\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />

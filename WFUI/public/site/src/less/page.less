@@ -12,6 +12,12 @@
     margin-right: 50px;
 }
 
+.wf-input-addon {
+    .wf-select {
+        margin: 0;
+    }
+}
+
 .wf-select {
     vertical-align: middle;
 }
@@ -57,7 +63,7 @@
         }
     }
 
-    .wf-btn{
+    .wf-btn {
         .wf-icon {
             width: 16px;
             height: 16px;
@@ -124,6 +130,16 @@
                     min-width: 80px;
                     display: inline-block;
                 }
+            }
+
+            .wf-input:first-child {
+                margin-right: 100px;
+            }
+        }
+
+        .demo.wf-input-icon {
+            .wf-input {
+                margin: 0;
             }
         }
 
@@ -201,6 +217,13 @@
 
         .icon-more {
             margin-left: .5em;
+        }
+    }
+
+    #input-size {
+        .wf-input {
+            width: 200px;
+            margin-right: 10px;
         }
     }
 }

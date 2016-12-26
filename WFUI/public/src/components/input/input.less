@@ -1,0 +1,124 @@
+﻿@import "../../core/less/import.less";
+
+.@{ui}-input {
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 374px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #dcdcdc;
+    -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+
+    &:hover, &.wf-input-hover {
+        border-color: @primary-color;
+    }
+
+    &:focus, &.@{ui}-input-focus {
+        border-color: @primary-color;
+        box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
+    }
+}
+
+.@{ui}-input-disabled {
+    cursor: default;
+    background-color: #f7f7f7;
+    border-color: #dcdcdc;
+    color: #dcdcdc;
+
+    &:hover {
+        border-color: #dcdcdc;
+    }
+}
+
+.@{ui}-input-large {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.@{ui}-input-small {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.@{ui}-input-label {
+    .ut-clearfix;
+
+    .@{ui}-input-addon {
+        float: left;
+        background-color: #f7f7f7;
+        position: relative;
+
+        .@{ui}-select {
+            .@{ui}-select-selection {
+                width: 80px;
+                background-color: #f7f7f7;
+                border-radius: 3px 0 0 3px;
+
+                .@{ui}-select-selection-value {
+                    width: 62px;
+                }
+
+                &:hover {
+                    background-color: #f7f7f7;
+                    border-color: #dcdcdc;
+                }
+            }
+
+            .@{ui}-select-options {
+                .@{ui}-select-option {
+                    width: 65px;
+                }
+            }
+        }
+
+        .@{ui}-select-open {
+            .@{ui}-select-selection {
+                background-color: #f7f7f7;
+                border-color: #dcdcdc;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .@{ui}-input-addon-suffix {
+        position: relative;
+        padding: 8px 12px;
+        border: 1px solid #dcdcdc;
+        border-radius: 0 3px 3px 0;
+        margin-left: -1px;
+    }
+
+    .@{ui}-input {
+        position: relative;
+        margin-left: -1px;
+        float: left;
+        border-radius: 0;
+        cursor: default;
+
+        &:hover, &:focus {
+            z-index: 1;
+        }
+    }
+}
+
+.@{ui}-input-icon {
+    display: inline-block;
+    position: relative;
+
+    .@{ui}-input {
+        width: 200px;
+    }
+
+    .@{ui}-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 7px;
+        cursor: pointer;
+
+        &:hover {
+            color: @primary-color;
+        }
+    }
+}

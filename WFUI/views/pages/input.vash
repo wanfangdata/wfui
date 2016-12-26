@@ -6,10 +6,159 @@
     <p class="desc">
         接受用户输入内容。
     </p>
-    <div class="section" id="radio-basic">
+    <div class="section" id="input-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
+        <div class="demo">
+            <input type="text" class="wf-input" placeholder="Basic usage" />
+            <input type="text" class="wf-input wf-input-focus" placeholder="Basic usage" value="Input content"/>
+        </div>
+        <div class="explain">
+            <p>基本使用以及用户输入</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;input type="text" class="wf-input" placeholder="Basic usage" /&gt;
+    &lt;input type="text" class="wf-input wf-input-focus" placeholder="Basic usage" value="Input content"/&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="input-hover">
+        <h1 class="title">
+            <span class="text">悬停状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <input type="text" class="wf-input wf-input-hover" placeholder="Basic usage" />
+        </div>
+        <div class="explain">
+            <p>
+                添加<code>wf-input-hover</code>类。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;input type="text" class="wf-input wf-input-hover" placeholder="Basic usage" /&gt;
+        </code>
+        </pre>
+    </div>
+    <div class="section" id="input-disabled">
+        <h1 class="title">
+            <span class="text">不可用状态</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-row">
+                <input type="text" class="wf-input wf-input-disabled" placeholder="Basic usage" disabled />
+            </div>
+        </div>
+        <div class="explain">
+            <p>添加<code>wf-input-disabled</code>类即可让input处于不可用状态。</p>
+        </div>
+        <pre class="language-html">
+        <code class="html">
+    &lt;input type="text" class="wf-input wf-input-disabled" placeholder="Basic usage" disabled &gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="input-size">
+        <h1 class="title">
+            <span class="text">选择器尺寸</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <input type="text" class="wf-input wf-input-large" value="" placeholder="Large size"/>
+            <input type="text" class="wf-input" value="" placeholder="Default size" />
+            <input type="text" class="wf-input wf-input-small" value="" placeholder="Small size"/>
+        </div>
+        <div class="explain">
+            <p>输入框有大、中、小三种尺寸。</p>
+            <p>
+                通过设置<code>size</code>为<code>large</code><code>small</code>分别把选择器设为大、小尺寸。若不设置<code>size</code>，则尺寸默认为中。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;input type="text" class="wf-input wf-input-large" value="" placeholder="Large size"&gt;
+    &lt;input type="text" class="wf-input" value="" placeholder="Default size" /&gt;
+    &lt;input type="text" class="wf-input wf-input-small" value="" placeholder="Small size" &gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="input-label">
+        <h1 class="title">
+            <span class="text">前置/后置标签</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo wf-input-label">
+            <div class="wf-input-addon">
+                <div data-role="select" class="wf-select" id="select-disabled-demo">
+                    <div class="wf-select-selection">
+                        <div class="wf-select-selection-value"></div>
+                        <i class="wf-icon icon-moreunfold"></i>
+                    </div>
+                    <input class="wf-select-input" type="text" />
+                    <ul class="wf-select-options">
+                        <li data-value="a" class="wf-select-option">期刊</li>
+                        <li data-value="b" class="wf-select-option">学位</li>
+                        <li data-value="c" class="wf-select-option">会议</li>
+                        <li data-value="d" class="wf-select-option wf-select-option-selected">地方志</li>
+                    </ul>
+                </div>
+            </div>           
+            <input type="text" class="wf-input" placeholder="Basic usage" />
+            <div class="wf-input-addon wf-input-addon-suffix">.com</div>
+        </div>
+        <div class="explain">
+            <p>
+                用于配置一些固定组合
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div class="demo wf-input-wrapper"&gt;
+        &lt;div class="wf-input-addon"&gt;
+            &lt;div data-role="select" class="wf-select" id="select-disabled-demo"&gt;
+                &lt;div class="wf-select-selection"&gt;
+                    &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
+                    &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;input class="wf-select-input" type="text" /&gt;
+                &lt;ul class="wf-select-options"&gt;
+                    &lt;li data-value="a" class="wf-select-option"&gt;期刊&lt;/li&gt;
+                    &lt;li data-value="b" class="wf-select-option"&gt;学位&lt;/li&gt;
+                    &lt;li data-value="c" class="wf-select-option"&gt;会议&lt;/li&gt;
+                    &lt;li data-value="d" class="wf-select-option wf-select-option-selected"&gt;地方志&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;           
+        &lt;input type="text" class="wf-input" placeholder="Basic usage" /&gt;
+        &lt;div class="wf-input-addon wf-input-addon-suffix"&gt;.com&lt;/div&gt;
+    &lt;/div&gt;
+        </code>
+        </pre>
+    </div>
+    <div class="section" id="input-icon">
+        <h1 class="title">
+            <span class="text">按钮输入框</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo wf-input-icon">
+            <input type="text" class="wf-input" value="" placeholder="Search Text" />
+            <i class="wf-icon icon-search"></i>
+        </div>
+        <div class="explain">
+            <p>带有按钮的输入框</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div class="demo wf-input-icon"&gt;
+        &lt;input type="text" class="wf-input" value="" placeholder="Search Text" /&gt;
+        &lt;i class="wf-icon icon-search"&gt;&lt;/i&gt;
+    &lt;/div>
+        </code>
+        </pre>
     </div>
 </div>
