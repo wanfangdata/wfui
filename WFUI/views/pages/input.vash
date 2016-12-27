@@ -13,7 +13,6 @@
         </h1>
         <div class="demo">
             <input type="text" class="wf-input" placeholder="Basic usage" />
-            <input type="text" class="wf-input wf-input-focus" placeholder="Basic usage" value="Input content"/>
         </div>
         <div class="explain">
             <p>基本使用以及用户输入</p>
