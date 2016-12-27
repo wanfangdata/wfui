@@ -1295,7 +1295,6 @@ textarea.wf-input {
 }
 .wf-input-label .wf-input-addon {
   float: left;
-  background-color: #f7f7f7;
   position: relative;
 }
 .wf-input-label .wf-input-addon .wf-select .wf-select-selection {
@@ -1324,6 +1323,7 @@ textarea.wf-input {
   border: 1px solid #dcdcdc;
   border-radius: 0 3px 3px 0;
   margin-left: -1px;
+  background-color: #f7f7f7;
 }
 .wf-input-label .wf-input {
   position: relative;
