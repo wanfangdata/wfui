@@ -160,7 +160,7 @@
         </code>
         </pre>
     </div>
-    <div class="section" id="input-icon">
+    <div class="section" id="input-textarea">
         <h1 class="title">
             <span class="text">文本域</span>
             <button class="wf-btn wf-btn-small">Code</button>
