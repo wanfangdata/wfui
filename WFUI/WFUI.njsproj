@@ -86,7 +86,6 @@
     <Content Include="public\src\core\less\animate\slideUpIn.less" />
     <Content Include="public\src\core\less\mixins\center-middle.less" />
     <Content Include="public\src\core\less\mixins\overflow-hide.less" />
-    <Content Include="public\src\core\less\variables\var.less" />
     <Content Include="public\src\test\js\ui.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
