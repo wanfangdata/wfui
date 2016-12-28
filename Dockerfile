@@ -2,9 +2,9 @@ FROM  mhart/alpine-node:latest
 
 MAINTAINER yangsj <guobayang@gmail.com>
 
-ADD WFUI wfui
+ADD WFUI /wfui
 
-WORKDIR wfui
+WORKDIR /wfui
 
 RUN npm install --production && npm cache clean
 
