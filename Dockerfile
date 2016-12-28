@@ -2,9 +2,9 @@ FROM  mhart/alpine-node:latest
 
 MAINTAINER yangsj <guobayang@gmail.com>
 
-RUN apk update && apk upgrade && apk add git
+ADD WFUI wfui 
 
-WORKDIR WFUI
+WORKDIR wfui
 
 RUN npm install --production && npm cache clean
 
