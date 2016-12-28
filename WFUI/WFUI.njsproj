@@ -157,22 +157,6 @@
     <Content Include="views\guide\color.vash" />
     <Content Include="views\guide\font.vash" />
     <Content Include="views\guide\getstarted.vash" />
-    <Content Include="views\pages\pagination.vash" />
-    <Content Include="views\pages\message.vash" />
-    <Content Include="views\pages\step.vash" />
-    <Content Include="views\pages\dialog.vash" />
-    <Content Include="views\pages\tab.vash" />
-    <Content Include="views\pages\menu.vash" />
-    <Content Include="views\pages\breadcrumb.vash" />
-    <Content Include="views\pages\icon.vash" />
-    <Content Include="views\pages\grid.vash" />
-    <Content Include="views\pages\form.vash" />
-    <Content Include="views\pages\input.vash" />
-    <Content Include="views\pages\select.vash" />
-    <Content Include="views\pages\radio.vash" />
-    <Content Include="views\pages\checkbox.vash" />
-    <Content Include="views\pages\button.vash" />
-    <Content Include="views\pages\getstarted.vash" />
     <Content Include="views\_menu.vash" />
     <Content Include="views\index.vash" />
     <Content Include="views\layout.vash" />
@@ -246,7 +230,6 @@
     <Folder Include="views\" />
     <Folder Include="views\guide\" />
     <Folder Include="views\components\" />
-    <Folder Include="views\pages\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
