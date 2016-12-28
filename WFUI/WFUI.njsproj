@@ -30,7 +30,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="controllers\guide.js" />
     <Compile Include="controllers\components.js" />
+    <Compile Include="data\guide.js" />
     <Compile Include="data\menu.js" />
     <Compile Include="public\site\js\doc.js" />
     <Compile Include="public\site\js\doc.min.js">
@@ -136,6 +138,25 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
+    <Content Include="views\components\button.vash" />
+    <Content Include="views\components\checkbox.vash" />
+    <Content Include="views\components\dialog.vash" />
+    <Content Include="views\components\form.vash" />
+    <Content Include="views\components\getstarted.vash" />
+    <Content Include="views\components\grid.vash" />
+    <Content Include="views\components\icon.vash" />
+    <Content Include="views\components\input.vash" />
+    <Content Include="views\components\menu.vash" />
+    <Content Include="views\components\message.vash" />
+    <Content Include="views\components\pagination.vash" />
+    <Content Include="views\components\radio.vash" />
+    <Content Include="views\components\select.vash" />
+    <Content Include="views\components\step.vash" />
+    <Content Include="views\components\tab.vash" />
+    <Content Include="views\guide.vash" />
+    <Content Include="views\guide\color.vash" />
+    <Content Include="views\guide\font.vash" />
+    <Content Include="views\guide\getstarted.vash" />
     <Content Include="views\pages\pagination.vash" />
     <Content Include="views\pages\message.vash" />
     <Content Include="views\pages\step.vash" />
@@ -223,6 +244,8 @@
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
     <Folder Include="views\" />
+    <Folder Include="views\guide\" />
+    <Folder Include="views\components\" />
     <Folder Include="views\pages\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

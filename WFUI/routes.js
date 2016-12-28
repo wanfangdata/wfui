@@ -8,6 +8,10 @@ var routes = [
     {
         key: '/',
         value: require('./controllers/components')
+    },
+    {
+        key: '/',
+        value: require('./controllers/guide')
     }
 ];
 

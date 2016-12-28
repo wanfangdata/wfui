@@ -6,7 +6,8 @@ var router = express.Router();
 router.get('/', function (req, res) {
     res.render('index', {
         page: 'getstarted',
-        menu: menu
+        menu: menu,
+        title: 'components'
     });
 });
 

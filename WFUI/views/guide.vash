@@ -5,7 +5,7 @@
             @html.include('_menu',model)
         </div>
         <div class="wf-col-10 doc-content">
-            @html.include('components/'+ model.page)
+            @html.include('guide/'+ model.page)
             <nav></nav>
         </div>       
     </div>    
