@@ -1,6 +1,6 @@
 ﻿var express = require('express');
-var router = express.Router();
 var menu = require('../data/menu');
+var router = express.Router();
 
 /* GET home page. */
 router.get('/components/*', function (req, res) {

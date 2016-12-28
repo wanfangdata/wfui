@@ -1,6 +1,6 @@
 ﻿var express = require('express');
-var menu = require('../data/menu');
 var router = express.Router();
+var menu = require('../data/menu');
 
 /* GET home page. */
 router.get('/', function (req, res) {
