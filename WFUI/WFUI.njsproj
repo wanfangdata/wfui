@@ -155,6 +155,7 @@
     <Content Include="views\components\step.vash" />
     <Content Include="views\components\tab.vash" />
     <Content Include="views\guide.vash" />
+    <Content Include="views\guide\layout.vash" />
     <Content Include="views\guide\color.vash" />
     <Content Include="views\guide\font.vash" />
     <Content Include="views\guide\getstarted.vash" />
