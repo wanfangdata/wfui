@@ -138,6 +138,7 @@
       <SubType>Content</SubType>
       <DependentUpon>public\src\core\less\wf.css</DependentUpon>
     </Content>
+    <Content Include="views\components\breadcrumb.vash" />
     <Content Include="views\components\button.vash" />
     <Content Include="views\components\checkbox.vash" />
     <Content Include="views\components\dialog.vash" />
