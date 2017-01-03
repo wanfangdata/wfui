@@ -3,7 +3,7 @@
 .hover() {
     & {
         .@{ui}-radio-inner {
-            border-color: @primary-color;
+            border-color: @color-primary;
         }
     }
 }
@@ -41,7 +41,7 @@
         .@{ui}-icon {
             .center-middle(8px,8px);
             border-radius: 50%;
-            background-color: @primary-color;
+            background-color: @color-primary;
             transform: scale(0);
             -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
             transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
@@ -54,7 +54,7 @@
 
     .@{ui}-radio-text {
         float: left;
-        color: @text-color-nomal;
+        color: @color-text-nomal;
         line-height: 16px;
     }
 
@@ -69,7 +69,7 @@
 
 .@{ui}-radio-checked {
     .@{ui}-radio-inner {
-        border-color: @primary-color;
+        border-color: @color-primary;
 
         .@{ui}-icon {
             transform: scale(1);
@@ -79,13 +79,13 @@
     &[data-target] {
         .@{ui}-radio-inner {
             background-color: #fff;
-            border-color: @primary-color;
-            color: @primary-color;
+            border-color: @color-primary;
+            color: @color-primary;
 
             .@{ui}-icon {
                 width: 10px;
                 height: 10px;
-                background-color: @primary-color;
+                background-color: @color-primary;
                 margin-left: 2px;
                 overflow: hidden;
 

@@ -3,7 +3,7 @@
 .hover() {
     & {
         .@{ui}-checkbox-inner {
-            border-color: @primary-color;
+            border-color: @color-primary;
         }
     }
 }
@@ -50,7 +50,7 @@
 
     .@{ui}-checkbox-text {
         float: left;
-        color: @text-color-nomal;
+        color: @color-text-nomal;
         line-height: 16px;
     }
 
@@ -79,7 +79,7 @@
 
 .@{ui}-checkbox-checked {
     .@{ui}-checkbox-inner {
-        background-color: @primary-color;
+        background-color: @color-primary;
         border-color: transparent;
 
         .@{ui}-icon {
@@ -91,11 +91,11 @@
     &[data-target] {
         .@{ui}-checkbox-inner {
             background-color: #fff;
-            border-color: @primary-color;
-            color: @primary-color;
+            border-color: @color-primary;
+            color: @color-primary;
 
             .@{ui}-icon {
-                background-color: @primary-color;
+                background-color: @color-primary;
 
                 &:before {
                     display: none;

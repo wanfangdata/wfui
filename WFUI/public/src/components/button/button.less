@@ -7,8 +7,8 @@
 
 .hover {
     &:hover, &.@{ui}-btn-hover {
-        color: @primary-color;
-        border-color: @primary-color;
+        color: @color-primary;
+        border-color: @color-primary;
         background-color: #fff;
         z-index: 1;
     }
@@ -49,14 +49,14 @@
 }
 
 .@{ui}-btn-primary {
-    background-color: @primary-color;
+    background-color: @color-primary;
     color: #fff;
-    border-color: @primary-color;
+    border-color: @color-primary;
 
     &:hover, &.@{ui}-btn-hover {
         color: #fff;
-        border-color: @primary-color-hover;
-        background-color: @primary-color-hover;
+        border-color: @color-normal;
+        background-color: @color-normal;
         z-index: 1;
     }
 }
@@ -98,10 +98,10 @@
     }
 
     .@{ui}-btn-primary:first-child:not(:last-child) {
-        border-right-color: @primary-color-hover;
+        border-right-color: @color-normal;
     }
 
     .@{ui}-btn-primary:last-child:not(:first-child), .@{ui}-btn-group .@{ui}-btn-primary + .@{ui}-btn {
-        border-left-color: @primary-color-hover;
+        border-left-color: @color-normal;
     }
 }
