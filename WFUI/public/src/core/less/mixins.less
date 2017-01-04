@@ -1,4 +1,11 @@
 ﻿// Utilities
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
 @import "mixins/clearfix";
 @import "mixins/center-middle.less";
 @import "mixins/overflow-hide.less";

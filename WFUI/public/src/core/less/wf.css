@@ -794,7 +794,7 @@ button[disabled]:hover {
   cursor: default;
   background-color: #f7f7f7;
   border-color: #f7f7f7;
-  color: #ccc;
+  color: #dcdcdc;
 }
 .wf-btn-primary {
   background-color: #6abbef;
@@ -877,7 +877,7 @@ button[disabled]:hover {
   background-color: #fff;
   color: #fff;
   border-radius: 3px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #e1e1e1;
   margin-right: 8px;
   float: left;
 }
@@ -1014,7 +1014,7 @@ button[disabled]:hover {
   background-color: #fff;
   color: #fff;
   border-radius: 50%;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #e1e1e1;
   margin-right: 8px;
   float: left;
   position: relative;
@@ -1141,7 +1141,7 @@ button[disabled]:hover {
 .wf-select .wf-select-selection {
   display: inline-block;
   position: relative;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #e1e1e1;
   border-radius: 4px;
   padding: 0 10px;
   width: 140px;
@@ -1250,7 +1250,7 @@ button[disabled]:hover {
   width: 374px;
   background-color: #fff;
   border-radius: 3px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #e1e1e1;
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }

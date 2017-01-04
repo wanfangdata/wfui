@@ -4,9 +4,9 @@
     font-size: 12px;
     padding: 8px 12px;
     width: 374px;
-    background-color: #fff;
+    background-color: @color-background;
     border-radius: 3px;
-    border: 1px solid #dcdcdc;
+    border: 1px solid @color-border;
     -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
     transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 
@@ -24,12 +24,12 @@ textarea.@{ui}-input{
 }
 .@{ui}-input-disabled {
     cursor: default;
-    background-color: #f7f7f7;
-    border-color: #dcdcdc;
-    color: #dcdcdc;
+    background-color: @color-background-normal;
+    border-color: @color-disabled;
+    color: @color-disabled;
 
     &:hover {
-        border-color: #dcdcdc;
+        border-color: @color-disabled;
     }
 }
 
@@ -53,7 +53,7 @@ textarea.@{ui}-input{
         .@{ui}-select {
             .@{ui}-select-selection {
                 width: 80px;
-                background-color: #f7f7f7;
+                background-color: @color-background-normal;
                 border-radius: 3px 0 0 3px;
 
                 .@{ui}-select-selection-value {
@@ -61,8 +61,8 @@ textarea.@{ui}-input{
                 }
 
                 &:hover {
-                    background-color: #f7f7f7;
-                    border-color: #dcdcdc;
+                    background-color: @color-background-normal;
+                    border-color: @color-disabled;
                 }
             }
 
@@ -75,8 +75,8 @@ textarea.@{ui}-input{
 
         .@{ui}-select-open {
             .@{ui}-select-selection {
-                background-color: #f7f7f7;
-                border-color: #dcdcdc;
+                background-color: @color-background-normal;
+                border-color: @color-disabled;
                 box-shadow: none;
             }
         }
@@ -85,10 +85,10 @@ textarea.@{ui}-input{
     .@{ui}-input-addon-suffix {
         position: relative;
         padding: 8px 12px;
-        border: 1px solid #dcdcdc;
+        border: 1px solid @color-disabled;
         border-radius: 0 3px 3px 0;
         margin-left: -1px;
-        background-color: #f7f7f7;
+        background-color: @color-background-normal;
     }
 
     .@{ui}-input {

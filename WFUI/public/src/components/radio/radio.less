@@ -10,12 +10,12 @@
 
 .disabled() {
     .@{ui}-radio-inner {
-        background-color: #f7f7f7;
-        border-color: #dcdcdc;
-        color: #dcdcdc;
+        background-color: @color-background-normal;
+        border-color: @color-disabled;
+        color: @color-disabled;
 
         .@{ui}-icon {
-            background-color: #dcdcdc;
+            background-color: @color-disabled;
         }
     }
 }
@@ -30,10 +30,10 @@
         display: inline-block;
         width: 14px;
         height: 14px;
-        background-color: #fff;
-        color: #fff;
+        background-color: @color-background;
+        color: @color;
         border-radius: 50%;
-        border: 1px solid #dcdcdc;
+        border: 1px solid @color-border;
         margin-right: 8px;
         float: left;
         position: relative;
@@ -78,7 +78,7 @@
 
     &[data-target] {
         .@{ui}-radio-inner {
-            background-color: #fff;
+            background-color: @color-background;
             border-color: @color-primary;
             color: @color-primary;
 
