@@ -1127,9 +1127,11 @@ button[disabled]:hover {
 .wf-select {
   display: inline-block;
   position: relative;
-  -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   zoom: 1;
+  -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .wf-select:after {
   display: block;
@@ -1145,11 +1147,13 @@ button[disabled]:hover {
   border-radius: 4px;
   padding: 0 10px;
   width: 140px;
-  height: 30px;
-  line-height: 30px;
   font-size: 12px;
   cursor: pointer;
+  height: 30px;
+  line-height: 30px;
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   zoom: 1;
 }
@@ -1173,7 +1177,10 @@ button[disabled]:hover {
 .wf-select .wf-select-selection .wf-icon {
   float: right;
   font-size: 14px;
-  transition: transform 0.15s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: transform 0.15s ease;
+  -moz-transition: transform 0.15s ease;
+  -o-transition: transform 0.15s ease;
+  transition: transform 0.15s ease;
 }
 .wf-select .wf-select-selection:hover {
   border-color: #6abbef;
@@ -1205,6 +1212,8 @@ button[disabled]:hover {
   white-space: nowrap;
   overflow: hidden;
   -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 .wf-select .wf-select-options .wf-select-option:hover {
@@ -1238,12 +1247,14 @@ button[disabled]:hover {
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 }
 .wf-select-open .wf-select-selection .wf-icon {
-  transform: rotate(180deg);
+  -webkit-transition: rotate(180deg);
+  -moz-transition: rotate(180deg);
+  -o-transition: rotate(180deg);
+  transition: rotate(180deg);
 }
 .wf-select-open .wf-select-options {
   display: block;
 }
-/*lt ie9*/
 .wf-input {
   font-size: 12px;
   padding: 8px 12px;

@@ -1,35 +1,33 @@
 ﻿@import "../../core/less/import.less";
-
 @select-width: 160px;
-@selection-padding-leftright-width: 10px;
-@selection-width: @select-width - @selection-padding-leftright-width*2;
-@option-padding-leftright-width: 18px;
-@option-width: @select-width - @option-padding-leftright-width*2;
-@color-option-hover:#f0f8fd;
+@selection-padding: 10px;
+@selection-width: @select-width - @selection-padding*2;
+@option-padding: 18px;
+@option-width: @select-width - @option-padding*2;
+@color-option-hover: #f0f8fd;
 
-.@{ui}-select {
+@select-pre: ~"@{ui}-select";
+
+.@{select-pre} {
     display: inline-block;
     position: relative;
-    -webkit-transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     .clearfix;
+    .transition(background 1s cubic-bezier(0.075, 0.82, 0.165, 1));
 
-    .@{ui}-select-selection {
+    .@{select-pre}-selection {
         display: inline-block;
         position: relative;
         border: 1px solid @color-border;
         border-radius: 4px;
-        padding: 0 @selection-padding-leftright-width;
+        padding: 0 @selection-padding;
         width: @selection-width;
-        height: 30px;
-        line-height: 30px;
         font-size: 12px;
         cursor: pointer;
-        -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-        transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+        .middle-vertical(30px);
+        .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
         .ut-clearfix;
 
-        .@{ui}-select-selection-value {
+        .@{select-pre}-selection-value {
             display: inline-block;
             float: left;
             .overflow-hide(122px)
@@ -38,7 +36,7 @@
         .@{ui}-icon {
             float: right;
             font-size: 14px;
-            transition: transform 0.15s ease, -webkit-transform 0.2s ease;
+            .transition(transform 0.15s ease);
         }
 
         &:hover {
@@ -46,11 +44,11 @@
         }
     }
 
-    .@{ui}-select-input {
+    .@{select-pre}-input {
         display: none;
     }
 
-    .@{ui}-select-options {
+    .@{select-pre}-options {
         background-color: @color-background;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
@@ -63,53 +61,50 @@
         max-height: 250px;
         display: none;
 
-        .@{ui}-select-option {
+        .@{select-pre}-option {
             position: relative;
             display: block;
             width: @option-width;
-            padding: 10px @option-padding-leftright-width;
+            padding: 10px @option-padding;
             font-weight: normal;
             color: @color-text-nomal;
             cursor: pointer;
             white-space: nowrap;
             overflow: hidden;
-            -webkit-transition: background 0.3s ease;
-            transition: background 0.3s ease;
+            .transition(background 0.3s ease);
 
             &:hover {
                 background-color: @color-option-hover;
             }
         }
 
-        .@{ui}-select-option-selected {
+        .@{select-pre}-option-selected {
             background-color: @color-background-normal;
         }
     }
 }
 
-.@{ui}-select-large {
-    .@{ui}-select-selection {
-        height: 38px;
-        line-height: 38px;
+.@{select-pre}-large {
+    .@{select-pre}-selection {
+        .middle-vertical(38px);
     }
 }
 
-.@{ui}-select-small {
-    .@{ui}-select-selection {
-        height: 22px;
-        line-height: 22px;
+.@{select-pre}-small {
+    .@{select-pre}-selection {
+        .middle-vertical(22px);
     }
 }
 
-.@{ui}-select-hover {
-    .@{ui}-select-selection {
+.@{select-pre}-hover {
+    .@{select-pre}-selection {
         border-color: @color-primary;
     }
 }
 
-.@{ui}-select-disabled {
+.@{select-pre}-disabled {
 
-    .@{ui}-select-selection {
+    .@{select-pre}-selection {
         cursor: default;
         background-color: @color-background-normal;
         border-color: @color-disabled;
@@ -121,22 +116,17 @@
     }
 }
 
-.@{ui}-select-open {
-    .@{ui}-select-selection {
+.@{select-pre}-open {
+    .@{select-pre}-selection {
         border-color: @color-primary;
         box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 
         .@{ui}-icon {
-            transform: rotate(180deg);
+            .transition(rotate(180deg));
         }
     }
 
-    .@{ui}-select-options {
+    .@{select-pre}-options {
         display: block;
     }
-}
-
-
-/*lt ie9*/
-.ltie9 {
 }
