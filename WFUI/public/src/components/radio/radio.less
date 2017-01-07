@@ -1,15 +1,16 @@
 ﻿@import "../../core/less/import.less";
+@radio-pre:~"@{ui}-radio";
 
 .hover() {
     & {
-        .@{ui}-radio-inner {
+        .@{radio-pre}-inner {
             border-color: @color-primary;
         }
     }
 }
 
 .disabled() {
-    .@{ui}-radio-inner {
+    .@{radio-pre}-inner {
         background-color: @color-background-normal;
         border-color: @color-disabled;
         color: @color-disabled;
@@ -20,16 +21,15 @@
     }
 }
 
-.@{ui}-radio {
+.@{radio-pre} {
     display: inline-block;
     cursor: pointer;
     position: relative;
     .clearfix;
 
-    .@{ui}-radio-inner {
+    .@{radio-pre}-inner {
         display: inline-block;
-        width: 14px;
-        height: 14px;
+        .square(14px);
         background-color: @color-background;
         color: @color;
         border-radius: 50%;
@@ -43,16 +43,15 @@
             border-radius: 50%;
             background-color: @color-primary;
             transform: scale(0);
-            -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-            transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+            .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
         }
     }
 
-    .@{ui}-radio-input {
+    .@{radio-pre}-input {
         display: none;
     }
 
-    .@{ui}-radio-text {
+    .@{radio-pre}-text {
         float: left;
         color: @color-text-nomal;
         line-height: 16px;
@@ -63,12 +62,12 @@
     }
 }
 
-.@{ui}-radio-hover {
+.@{radio-pre}-hover {
     .hover;
 }
 
-.@{ui}-radio-checked {
-    .@{ui}-radio-inner {
+.@{radio-pre}-checked {
+    .@{radio-pre}-inner {
         border-color: @color-primary;
 
         .@{ui}-icon {
@@ -77,14 +76,13 @@
     }
 
     &[data-target] {
-        .@{ui}-radio-inner {
+        .@{radio-pre}-inner {
             background-color: @color-background;
             border-color: @color-primary;
             color: @color-primary;
 
             .@{ui}-icon {
-                width: 10px;
-                height: 10px;
+                .square(10px);
                 background-color: @color-primary;
                 margin-left: 2px;
                 overflow: hidden;
@@ -97,7 +95,7 @@
     }
 }
 
-.@{ui}-radio-disabled {
+.@{radio-pre}-disabled {
     cursor: default;
     .disabled;
 
@@ -108,16 +106,16 @@
 
 /*lt ie9*/
 .ltie9 {
-    .@{ui}-radio {
-        .@{ui}-radio-inner {
+    .@{radio-pre} {
+        .@{radio-pre}-inner {
             .@{ui}-icon {
                 display: none;
             }
         }
     }
 
-    .@{ui}-radio-checked {
-        .@{ui}-radio-inner {
+    .@{radio-pre}-checked {
+        .@{radio-pre}-inner {
             .@{ui}-icon {
                 display: inline-block;
             }

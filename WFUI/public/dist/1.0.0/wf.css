@@ -1031,6 +1031,8 @@ button[disabled]:hover {
   background-color: #6abbef;
   transform: scale(0);
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
 .wf-radio .wf-radio-input {
