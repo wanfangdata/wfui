@@ -885,9 +885,14 @@ button[disabled]:hover {
   position: absolute;
   top: 0;
   left: 0;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
 .wf-checkbox .wf-checkbox-input {
@@ -944,6 +949,9 @@ button[disabled]:hover {
   border-color: transparent;
 }
 .wf-checkbox-checked .wf-checkbox-inner .wf-icon {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
@@ -1029,6 +1037,10 @@ button[disabled]:hover {
   margin-top: -4px;
   border-radius: 50%;
   background-color: #6abbef;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
@@ -1073,6 +1085,10 @@ button[disabled]:hover {
   border-color: #6abbef;
 }
 .wf-radio-checked .wf-radio-inner .wf-icon {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 .wf-radio-checked[data-target] .wf-radio-inner {
@@ -1265,6 +1281,8 @@ button[disabled]:hover {
   border-radius: 3px;
   border: 1px solid #e1e1e1;
   -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
 }
 .wf-input:hover,

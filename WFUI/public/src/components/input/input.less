@@ -1,28 +1,30 @@
 ﻿@import "../../core/less/import.less";
+@input-pre: ~"@{ui}-input";
 
-.@{ui}-input {
+.@{input-pre} {
     font-size: 12px;
     padding: 8px 12px;
     width: 374px;
     background-color: @color-background;
     border-radius: 3px;
     border: 1px solid @color-border;
-    -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-    transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
 
     &:hover, &.wf-input-hover {
         border-color: @color-primary;
     }
 
-    &:focus, &.@{ui}-input-focus {
+    &:focus, &.@{input-pre}-focus {
         border-color: @color-primary;
         box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
     }
 }
-textarea.@{ui}-input{
-    resize:vertical;
+
+textarea.@{input-pre} {
+    resize: vertical;
 }
-.@{ui}-input-disabled {
+
+.@{input-pre}-disabled {
     cursor: default;
     background-color: @color-background-normal;
     border-color: @color-disabled;
@@ -33,21 +35,21 @@ textarea.@{ui}-input{
     }
 }
 
-.@{ui}-input-large {
+.@{input-pre}-large {
     padding-top: 11px;
     padding-bottom: 11px;
 }
 
-.@{ui}-input-small {
+.@{input-pre}-small {
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
-.@{ui}-input-label {
+.@{input-pre}-label {
     .ut-clearfix;
 
-    .@{ui}-input-addon {
-        float: left;        
+    .@{input-pre}-addon {
+        float: left;
         position: relative;
 
         .@{ui}-select {
@@ -82,7 +84,7 @@ textarea.@{ui}-input{
         }
     }
 
-    .@{ui}-input-addon-suffix {
+    .@{input-pre}-addon-suffix {
         position: relative;
         padding: 8px 12px;
         border: 1px solid @color-disabled;
@@ -91,7 +93,7 @@ textarea.@{ui}-input{
         background-color: @color-background-normal;
     }
 
-    .@{ui}-input {
+    .@{input-pre} {
         position: relative;
         margin-left: -1px;
         float: left;
@@ -104,11 +106,11 @@ textarea.@{ui}-input{
     }
 }
 
-.@{ui}-input-icon {
+.@{input-pre}-icon {
     display: inline-block;
     position: relative;
 
-    .@{ui}-input {
+    .@{input-pre} {
         width: 200px;
     }
 

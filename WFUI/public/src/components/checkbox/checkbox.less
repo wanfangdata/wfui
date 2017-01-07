@@ -1,31 +1,31 @@
 ﻿@import "../../core/less/import.less";
+@checkbox-pre: ~"@{ui}-checkbox";
 
 .hover() {
     & {
-        .@{ui}-checkbox-inner {
+        .@{checkbox-pre}-inner {
             border-color: @color-primary;
         }
     }
 }
 
 .disabled() {
-    .@{ui}-checkbox-inner {
+    .@{checkbox-pre}-inner {
         background-color: @color-background-normal;
         border-color: @color-disabled;
         color: @color-disabled;
     }
 }
 
-.@{ui}-checkbox {
+.@{checkbox-pre} {
     display: inline-block;
     cursor: pointer;
     position: relative;
     .clearfix;
 
-    .@{ui}-checkbox-inner {
+    .@{checkbox-pre}-inner {
         display: inline-block;
-        width: 14px;
-        height: 14px;
+        .square(14px);
         background-color: @color-background;
         color: @color;
         border-radius: 3px;
@@ -37,18 +37,16 @@
             position: absolute;
             top: 0;
             left: 0;
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
-            transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+            .transform(scale(0));
+            .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
         }
     }
 
-    .@{ui}-checkbox-input {
+    .@{checkbox-pre}-input {
         display: none;
     }
 
-    .@{ui}-checkbox-text {
+    .@{checkbox-pre}-text {
         float: left;
         color: @color-text-nomal;
         line-height: 16px;
@@ -59,7 +57,7 @@
     }
 
     &[data-target] {
-        .@{ui}-checkbox-inner {
+        .@{checkbox-pre}-inner {
             position: relative;
 
             .@{ui}-icon {
@@ -73,23 +71,22 @@
     }
 }
 
-.@{ui}-checkbox-hover {
+.@{checkbox-pre}-hover {
     .hover;
 }
 
-.@{ui}-checkbox-checked {
-    .@{ui}-checkbox-inner {
+.@{checkbox-pre}-checked {
+    .@{checkbox-pre}-inner {
         background-color: @color-primary;
         border-color: transparent;
 
         .@{ui}-icon {
-            -webkit-transform: scale(1);
-            transform: scale(1);
+            .transform(scale(1));
         }
     }
 
     &[data-target] {
-        .@{ui}-checkbox-inner {
+        .@{checkbox-pre}-inner {
             background-color: @color-background;
             border-color: @color-primary;
             color: @color-primary;
@@ -105,7 +102,7 @@
     }
 }
 
-.@{ui}-checkbox-disabled {
+.@{checkbox-pre}-disabled {
     cursor: default;
     .disabled;
 
@@ -116,16 +113,16 @@
 
 /*lt ie9*/
 .ltie9 {
-    .@{ui}-checkbox {
-        .@{ui}-checkbox-inner {
+    .@{checkbox-pre} {
+        .@{checkbox-pre}-inner {
             .@{ui}-icon {
                 display: none;
             }
         }
     }
 
-    .@{ui}-checkbox-checked {
-        .@{ui}-checkbox-inner {
+    .@{checkbox-pre}-checked {
+        .@{checkbox-pre}-inner {
             .@{ui}-icon {
                 display: inline-block;
             }
