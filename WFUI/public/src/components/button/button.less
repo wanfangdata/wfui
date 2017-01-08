@@ -1,7 +1,7 @@
 ﻿@import "../../core/less/import.less";
-
+@btn-pre: ~"@{ui}-btn";
 .hover {
-    &:hover, &.@{ui}-btn-hover {
+    &:hover, &.@{btn-pre}-hover {
         color: @color-primary;
         border-color: @color-primary;
         background-color: @color-background;
@@ -10,7 +10,7 @@
 }
 
 //btn default
-.@{ui}-btn {
+.@{btn-pre} {
     display: inline-block;
     line-height: 1.5;
     margin-bottom: 0;
@@ -36,19 +36,19 @@
     .hover;
 }
 
-.@{ui}-btn.disabled, .@{ui}-btn.disabled:hover, button[disabled], button[disabled]:hover {
+.@{btn-pre}.disabled, .@{btn-pre}.disabled:hover, button[disabled], button[disabled]:hover {
     cursor: default;
     background-color: @color-background-normal;
     border-color: @color-background-normal;
     color: @color-disabled;
 }
 
-.@{ui}-btn-primary {
+.@{btn-pre}-primary {
     background-color: @color-primary;
     color: @color;
     border-color: @color-primary;
 
-    &:hover, &.@{ui}-btn-hover {
+    &:hover, &.@{btn-pre}-hover {
         color: @color;
         border-color: @color-normal;
         background-color: @color-normal;
@@ -56,47 +56,47 @@
     }
 }
 
-.@{ui}-btn-ghost {
+.@{btn-pre}-ghost {
     background-color: @color-background;
     border-color: @color-ghost;
     .hover;
 }
 
-.@{ui}-btn-large {
+.@{btn-pre}-large {
     font-size: 14px;
     padding: 8px 23px;
 }
 
-.@{ui}-btn-small {
+.@{btn-pre}-small {
     padding: 2px 8px;
 }
 
-.@{ui}-btn-group {
+.@{btn-pre}-group {
     position: relative;
     display: inline-block;
 
-    > .@{ui}-btn:last-child:not(:first-child) {
+    > .@{btn-pre}:last-child:not(:first-child) {
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
         margin: 0 0 0 -1px;
     }
 
-    > .@{ui}-btn:first-child:not(:last-child) {
+    > .@{btn-pre}:first-child:not(:last-child) {
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         margin: 0;
     }
 
-    .@{ui}-btn:not(:first-child):not(:last-child) {
+    .@{btn-pre}:not(:first-child):not(:last-child) {
         border-radius: 0;
         margin: 0 0 0 -1px;
     }
 
-    .@{ui}-btn-primary:first-child:not(:last-child) {
+    .@{btn-pre}-primary:first-child:not(:last-child) {
         border-right-color: @color-normal;
     }
 
-    .@{ui}-btn-primary:last-child:not(:first-child), .@{ui}-btn-group .@{ui}-btn-primary + .@{ui}-btn {
+    .@{btn-pre}-primary:last-child:not(:first-child), .@{btn-pre}-group .@{btn-pre}-primary + .@{btn-pre} {
         border-left-color: @color-normal;
     }
 }

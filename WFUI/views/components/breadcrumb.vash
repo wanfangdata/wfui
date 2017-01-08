@@ -3,4 +3,34 @@
         Breadcrumb 面包屑
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <div class="section" id="btn-type">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <button class="wf-btn wf-btn-primary">Primary</button>
+            <button class="wf-btn">Default</button>
+            <button class="wf-btn wf-btn-ghost">Ghost</button>
+        </div>
+        <div class="explain">
+            <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>
+            <p>
+                通过设置
+                <code>wf-btn-primary</code>
+                <code>wf-btn-ghost</code>
+                可分别创建主按钮、幽灵按钮，若不设置则为次按钮。不同的样式可以用来区别其重要程度。
+            </p>
+            <p>
+                主按钮和次按钮可独立使用，幽灵按钮用于和主按钮组合。需要强引导用主按钮，切记主按钮在同一个操作区域最多出现一次。
+            </p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;button class=&quot;wf-btn wf-btn&quot;&gt;Default&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-ghost&quot;&gt;Ghost&lt;/button&gt;
+            </code>
+        </pre>
+    </div>
 </div>

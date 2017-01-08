@@ -62,6 +62,7 @@
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
     <Content Include="public\site\src\less\page.less" />
+    <Content Include="public\src\components\breadcrumb\breadcrumb.less" />
     <Content Include="public\src\components\button\button.less" />
     <Content Include="public\src\components\input\input.less" />
     <Content Include="public\src\components\menu\menu.js" />
@@ -219,6 +220,7 @@
     <Folder Include="public\src\components\menu\" />
     <Folder Include="public\src\components\button\" />
     <Folder Include="public\src\components\input\" />
+    <Folder Include="public\src\components\breadcrumb\" />
     <Folder Include="public\src\components\radio\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />
