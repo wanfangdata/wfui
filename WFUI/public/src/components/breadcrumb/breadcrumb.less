@@ -1,5 +1,25 @@
 ﻿@import "../../core/less/import.less";
 @breadcrumb-pre: ~"@{ui}-breadcrumb";
-.@{breadcrumb-pre}{
 
+.@{breadcrumb-pre} {
+    a {
+        &.@{breadcrumb-pre}-item {
+            color: @color-text-nomal;
+        }
+        &:hover{
+            color:@color-primary;
+        }
+    }
+
+
+    .@{breadcrumb-pre}-leaf {
+        font-weight: 700;
+    }
+
+    .@{breadcrumb-pre}-separator {
+        margin: 0 7px;
+    }
+    .@{ui}-icon{
+        vertical-align:middle;
+    }
 }

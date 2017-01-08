@@ -3,44 +3,104 @@
         Breadcrumb 面包屑
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
-    <div class="section" id="btn-type">
+    <div class="section" id="breadcrumb-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
             <div class="wf-breadcrumb">
-                <span>
-                    <span class="wf-breadcrumb-link">Home</span><span class="wf-breadcrumb-separator">/</span>
-                </span>
-                <span>
-                    <span class="wf-breadcrumb-link"><a href="">Application Center</a></span><span class="wf-breadcrumb-separator">/</span>
-                </span>
-                <span>
-                    <span class="wf-breadcrumb-link"><a href="">Application List</a></span><span class="wf-breadcrumb-separator">/</span>
-                </span>
-                <span>
-                    <span class="wf-breadcrumb-link">An Application</span><span class="wf-breadcrumb-separator">/</span>
-                </span>
+                <a href="" class="wf-breadcrumb-item">首页</a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <a href="" class="wf-breadcrumb-item">期刊首页</a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <a href="" class="wf-breadcrumb-item">大学学报</a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <a href="" class="wf-breadcrumb-item">2015年5期</a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <span class="wf-breadcrumb-item wf-breadcrumb-leaf">基于建模历史一致性的协同 CAD 并发控制方法</span>
             </div>
         </div>
         <div class="explain">
-            <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>
-            <p>
-                通过设置
-                <code>wf-btn-primary</code>
-                <code>wf-btn-ghost</code>
-                可分别创建主按钮、幽灵按钮，若不设置则为次按钮。不同的样式可以用来区别其重要程度。
-            </p>
-            <p>
-                主按钮和次按钮可独立使用，幽灵按钮用于和主按钮组合。需要强引导用主按钮，切记主按钮在同一个操作区域最多出现一次。
-            </p>
+            <p>显示当前页面在系统层级结构中的位置，并能向上返回。</p>
         </div>
         <pre>
         <code class="html">
-    &lt;button class=&quot;wf-btn wf-btn&quot;&gt;Default&lt;/button&gt;
-    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Primary&lt;/button&gt;
-    &lt;button class=&quot;wf-btn wf-btn-ghost&quot;&gt;Ghost&lt;/button&gt;
+    &lt;div class="wf-breadcrumb"&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;首页 &lt;/a&gt;
+        &lt;span class="wf-breadcrumb-separator"&gt;/ &lt;/span&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;期刊首页 &lt;/a&gt;
+        &lt;span class="wf-breadcrumb-separator"&gt;/ &lt;/span&gt;
+        &lt;span href="" class="wf-breadcrumb-item wf-breadcrumb-leaf"&gt;基于建模历史一致性的协同 CAD 并发控制方法 &lt;/span&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="breadcrumb-icon">
+        <h1 class="title">
+            <span class="text">图标面包屑</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-breadcrumb">
+                <a href="" class="wf-breadcrumb-item">
+                    <i class="wf-icon icon-shouye"></i>
+                </a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <a href="" class="wf-breadcrumb-item">
+                    <i class="wf-icon icon-wodejuhuasuan"></i>
+                    <span>Spectroscopy and Spectral Analysis</span>
+                </a>
+                <span class="wf-breadcrumb-separator">/</span>
+                <span class="wf-breadcrumb-item wf-breadcrumb-leaf">A Method to Estimate Metal Abundance from Stellar Spectra Using Ca Line Index</span>
+            </div>
+        </div>
+        <div class="explain">
+            <p>图标放在文字前面。</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div class="wf-breadcrumb"&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;
+            &lt;i class="wf-icon icon-shouye"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;span class="wf-breadcrumb-separator"&gt;/&lt;/span&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;
+            &lt;i class="wf-icon icon-wodejuhuasuan"&gt;&lt;/i&gt;
+            &lt;span&gt;Spectroscopy and Spectral Analysis&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;span class="wf-breadcrumb-separator"&gt;/&lt;/span&gt;
+        &lt;span class="wf-breadcrumb-item wf-breadcrumb-leaf"&gt;A Method to Estimate Metal Abundance from ...&lt;/span&gt;
+    &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="section" id="breadcrumb-separator">
+        <h1 class="title">
+            <span class="text">分隔符</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-breadcrumb">
+                <a href="" class="wf-breadcrumb-item">Home</a>
+                <i class="wf-icon icon-more wf-breadcrumb-separator"></i>
+                <a href="" class="wf-breadcrumb-item">Journal</a>
+                <i class="wf-icon icon-more wf-breadcrumb-separator"></i>
+                <span class="wf-breadcrumb-item wf-breadcrumb-leaf">A Method to Estimate Metal Abundance from Stellar Spectra Using Ca Line Index</span>
+            </div>
+        </div>
+        <div class="explain">
+            <p>图标放在文字前面。</p>
+        </div>
+        <pre>
+        <code class="html">
+    &lt;div class="wf-breadcrumb"&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;Home&lt;/a&gt;
+        &lt;i class="wf-icon icon-more wf-breadcrumb-separator"&gt;&lt;/i&gt;
+        &lt;a href="" class="wf-breadcrumb-item"&gt;Journal&lt;/a&gt;
+        &lt;i class="wf-icon icon-more wf-breadcrumb-separator"&gt;&lt;/i&gt;
+        &lt;span class="wf-breadcrumb-item wf-breadcrumb-leaf"&gt;A Method to Estimate Metal Abundance from ...&lt;/span&gt;
+    &lt;/div&gt;
             </code>
         </pre>
     </div>
