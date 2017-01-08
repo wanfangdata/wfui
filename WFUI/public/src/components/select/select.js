@@ -16,7 +16,7 @@
  *     </ul>
  * </div>
  */
-wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action) {
+wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, UI, Action, browser) {
     
     var role = 'select',
     
@@ -80,7 +80,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
          */
         close: function () {
             var me = this;
-            if (me.supportCss3('animation')) {
+            if (me.supportCss3('animation')&& !browser.msie) {
                 me.animation(
                     this.options.$element,
                     this.animationCls(['slide', 'up', 'out']),

@@ -2,7 +2,7 @@
 /**
  * browser core and version
  */
-wf.define('Browser', '_core_', function (logger) {
+wf.define('browser', '_core_', function (logger) {
     
     var webkit = /(webkit)\/([\w.]+)/,  
         opera = /(opera)(?:.*version)?[ \/]([\w.]+)/,  

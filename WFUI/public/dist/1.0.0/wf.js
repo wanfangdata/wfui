@@ -502,7 +502,7 @@ wf.define('loader', [], function () {
 /**
  * browser core and version
  */
-wf.define('Browser', '_core_', function (logger) {
+wf.define('browser', '_core_', function (logger) {
     
     var webkit = /(webkit)\/([\w.]+)/,  
         opera = /(opera)(?:.*version)?[ \/]([\w.]+)/,  
@@ -1217,7 +1217,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  *     </ul>
  * </div>
  */
-wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action) {
+wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, UI, Action, browser) {
     
     var role = 'select',
     
@@ -1281,7 +1281,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action'], function (logger, UI, Action)
          */
         close: function () {
             var me = this;
-            if (me.supportCss3('animation')) {
+            if (me.supportCss3('animation')&& !browser.msie) {
                 me.animation(
                     this.options.$element,
                     this.animationCls(['slide', 'up', 'out']),
