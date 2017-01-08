@@ -9,9 +9,20 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <button class="wf-btn wf-btn-primary">Primary</button>
-            <button class="wf-btn">Default</button>
-            <button class="wf-btn wf-btn-ghost">Ghost</button>
+            <div class="wf-breadcrumb">
+                <span>
+                    <span class="wf-breadcrumb-link">Home</span><span class="wf-breadcrumb-separator">/</span>
+                </span>
+                <span>
+                    <span class="wf-breadcrumb-link"><a href="">Application Center</a></span><span class="wf-breadcrumb-separator">/</span>
+                </span>
+                <span>
+                    <span class="wf-breadcrumb-link"><a href="">Application List</a></span><span class="wf-breadcrumb-separator">/</span>
+                </span>
+                <span>
+                    <span class="wf-breadcrumb-link">An Application</span><span class="wf-breadcrumb-separator">/</span>
+                </span>
+            </div>
         </div>
         <div class="explain">
             <p>按钮有三种类型：主按钮、次按钮、幽灵按钮。</p>

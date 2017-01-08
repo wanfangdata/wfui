@@ -1229,10 +1229,10 @@ button[disabled]:hover {
   cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  -o-transition: background 0.3s ease;
-  transition: background 0.3s ease;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
+  transition: background 0.2s ease;
 }
 .wf-select .wf-select-options .wf-select-option:hover {
   background-color: rgba(106, 187, 239, 0.1);
@@ -1265,10 +1265,11 @@ button[disabled]:hover {
   box-shadow: 0 0 0 2px rgba(16, 142, 233, 0.2);
 }
 .wf-select-open .wf-select-selection .wf-icon {
-  -webkit-transition: rotate(180deg);
-  -moz-transition: rotate(180deg);
-  -o-transition: rotate(180deg);
-  transition: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .wf-select-open .wf-select-options {
   display: block;
