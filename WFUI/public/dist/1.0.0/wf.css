@@ -1235,7 +1235,7 @@ button[disabled]:hover {
   transition: background 0.3s ease;
 }
 .wf-select .wf-select-options .wf-select-option:hover {
-  background-color: #f0f8fd;
+  background-color: rgba(106, 187, 239, 0.1);
 }
 .wf-select .wf-select-options .wf-select-option-selected {
   background-color: #f7f7f7;

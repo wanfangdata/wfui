@@ -1,12 +1,10 @@
 ﻿@import "../../core/less/import.less";
+@select-pre: ~"@{ui}-select";
 @select-width: 160px;
 @selection-padding: 10px;
 @selection-width: @select-width - @selection-padding*2;
 @option-padding: 18px;
 @option-width: @select-width - @option-padding*2;
-@color-option-hover: #f0f8fd;
-
-@select-pre: ~"@{ui}-select";
 
 .@{select-pre} {
     display: inline-block;
@@ -74,7 +72,7 @@
             .transition(background 0.3s ease);
 
             &:hover {
-                background-color: @color-option-hover;
+                background-color: fade(@color-primary, 10%);
             }
         }
 
