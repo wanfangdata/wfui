@@ -7,7 +7,7 @@
 }
 
 .menu-item-padding(@level: 1) {
-    padding: 0 @level*@menu-item-gap;
+    padding: 0 @menu-item-gap/@level 0 @level*@menu-item-gap;
 }
 
 .menu-item-content-color() {

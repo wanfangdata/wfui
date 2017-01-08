@@ -140,7 +140,7 @@ a:hover {
   font-size: 14px;
 }
 .wf-menu-vertical .wf-menu-item .wf-menu-content {
-  padding: 0 22px;
+  padding: 0 22px 0 22px;
 }
 .wf-menu-vertical .wf-menu-item .wf-menu-content .en {
   color: #666;
@@ -163,14 +163,14 @@ a:hover {
 .wf-menu-vertical .wf-menu-sub .wf-menu-content {
   height: 48px;
   line-height: 48px;
-  padding: 0 22px;
+  padding: 0 22px 0 22px;
 }
 .wf-menu-vertical .wf-menu-sub .wf-menu-content .en,
 .wf-menu-vertical .wf-menu-sub .wf-menu-content .cn {
   color: #aaa;
 }
 .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content {
-  padding: 0 44px;
+  padding: 0 11px 0 44px;
 }
 .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .en {
   color: #666;
