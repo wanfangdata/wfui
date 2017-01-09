@@ -90,7 +90,7 @@
             </div>
         </div>
         <div class="explain">
-            <p>图标放在文字前面。</p>
+            <p>分隔符<code>wf-breadcrumb-separator</code>。</p>
         </div>
         <pre>
         <code class="html">
