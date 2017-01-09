@@ -13,6 +13,8 @@ wf.define('UI', ['logger'], function (logger) {
 
         CLS_PREFIX = '.',
 
+        ID_PREFIX = '#',
+
         UI = wf.inherit({
             /**
              * 组件实例名
@@ -210,6 +212,7 @@ wf.define('UI', ['logger'], function (logger) {
     };
     
     UI.CLS_PREFIX = CLS_PREFIX;
+    UI.ID_PREFIX = ID_PREFIX;
     
     return UI;
 });

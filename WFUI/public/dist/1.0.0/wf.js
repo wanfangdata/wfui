@@ -602,6 +602,8 @@ wf.define('UI', ['logger'], function (logger) {
 
         CLS_PREFIX = '.',
 
+        ID_PREFIX = '#',
+
         UI = wf.inherit({
             /**
              * 组件实例名
@@ -799,6 +801,7 @@ wf.define('UI', ['logger'], function (logger) {
     };
     
     UI.CLS_PREFIX = CLS_PREFIX;
+    UI.ID_PREFIX = ID_PREFIX;
     
     return UI;
 });
@@ -953,7 +956,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      */
     Checkbox.group = function ($controller) {
         var result = { items: {} }, $cb, groupId = $controller.data('target');
-        $.each($('#' + groupId).find(dataRole), function (i) {
+        $.each($(UI.ID_PREFIX + groupId).find(dataRole), function (i) {
             $cb = $(this);
             result.items[name($cb, groupId + i)] =
             generateCB($cb, groupId + i, function () {

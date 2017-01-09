@@ -149,7 +149,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      */
     Checkbox.group = function ($controller) {
         var result = { items: {} }, $cb, groupId = $controller.data('target');
-        $.each($('#' + groupId).find(dataRole), function (i) {
+        $.each($(UI.ID_PREFIX + groupId).find(dataRole), function (i) {
             $cb = $(this);
             result.items[name($cb, groupId + i)] =
             generateCB($cb, groupId + i, function () {
