@@ -1,6 +1,42 @@
 ﻿<div class="page">
     <h1 class="title">
-        Menu 菜单
+        Menu 导航菜单
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <p class="desc">
+        为页面和功能提供导航的菜单列表。
+    </p>
+    <div class="section" id="menu-top">
+        <h1 class="title">
+            <span class="text">顶部导航</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <ul data-role="menu" class="wf-menu wf-menu-horizontal">
+                <li class="wf-menu-item">
+                    <i class="wf-icon icon-viewgallery"></i>
+                    Navigation One
+                </li>
+                <li class="wf-menu-item">
+                    <i class="wf-icon icon-viewlist"></i>
+                    Navigation Two
+                </li>
+                <li class="wf-menu-item ">
+                    <i class="wf-icon icon-set"></i>
+                    Navigation Three - SubMenu
+                </li>
+                <li class="wf-menu-item">Navigation Four</li>
+            </ul>
+        </div>
+        <div class="explain">
+
+        </div>
+        <pre>
+        <code class="html">
+    &lt;button class=&quot;wf-btn wf-btn&quot;&gt;Default&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-primary&quot;&gt;Primary&lt;/button&gt;
+    &lt;button class=&quot;wf-btn wf-btn-ghost&quot;&gt;Ghost&lt;/button&gt;
+        </code>
+        </pre>
+    </div>
 </div>
