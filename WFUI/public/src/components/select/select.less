@@ -10,7 +10,7 @@
     display: inline-block;
     position: relative;
     .clearfix;
-    .transition(background 1s cubic-bezier(0.075, 0.82, 0.165, 1));
+    .transition(background @animate-time-fast cubic-bezier(0.075, 0.82, 0.165, 1));
 
     .@{select-pre}-selection {
         display: inline-block;
@@ -22,7 +22,7 @@
         font-size: 12px;
         cursor: pointer;
         .middle-vertical(30px);
-        .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
+        .transition(all @animate-time-fast+0.05 cubic-bezier(0.12, 0.4, 0.29, 1.46) @animate-time-fast);
         .ut-clearfix;
 
         .@{select-pre}-selection-value {
@@ -34,7 +34,7 @@
         .@{ui}-icon {
             float: right;
             font-size: 14px;
-            .transition(transform 0.15s ease);
+            .transition(transform @animate-time-fast+0.05 ease);
         }
 
         &:hover {

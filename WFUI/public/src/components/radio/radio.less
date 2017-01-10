@@ -1,5 +1,5 @@
 ﻿@import "../../core/less/import.less";
-@radio-pre:~"@{ui}-radio";
+@radio-pre: ~"@{ui}-radio";
 
 .hover() {
     & {
@@ -43,7 +43,7 @@
             border-radius: 50%;
             background-color: @color-primary;
             .transform(scale(0));
-            .transition(all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s);
+            .transition(all @animate-time-fast+0.05 cubic-bezier(0.12, 0.4, 0.29, 1.46) @animate-time-fast);
         }
     }
 

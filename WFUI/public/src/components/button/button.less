@@ -31,8 +31,7 @@
     background-color: @color-background-normal;
     border: 1px solid @color-border;
     outline: none;
-    -webkit-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    .transition(all @animate-time-fast+0.1 cubic-bezier(0.645, 0.045, 0.355, 1));
     .hover;
 }
 

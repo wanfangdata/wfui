@@ -13,7 +13,7 @@
         </h1>
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-horizontal">
-                <li class="wf-menu-item">
+                <li class="wf-menu-item wf-menu-item-active">
                     <i class="wf-icon icon-viewgallery"></i>
                     Navigation One
                 </li>
@@ -21,9 +21,10 @@
                     <i class="wf-icon icon-viewlist"></i>
                     Navigation Two
                 </li>
-                <li class="wf-menu-item ">
+                <li class="wf-menu-item">
                     <i class="wf-icon icon-set"></i>
                     Navigation Three - SubMenu
+                    <i class="wf-icon icon-moreunfold"></i>
                 </li>
                 <li class="wf-menu-item">Navigation Four</li>
             </ul>

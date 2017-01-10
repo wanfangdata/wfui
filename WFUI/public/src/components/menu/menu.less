@@ -1,2 +1,41 @@
 ﻿@import "../../core/less/import.less";
 @menu-pre: ~"@{ui}-menu";
+
+.@{menu-pre} {
+    .ut-clearfix;
+    box-sizing: border-box;
+
+
+    &-horizontal {
+        border-bottom: 1px solid @color-border;
+        box-sizing: border-box;
+        z-index: 0;
+
+        .@{menu-pre}-item {
+            padding: 19px 30px;
+            margin-bottom: -1px;
+            float: left;
+            .transition(all @animate-time-normal ease);
+
+            .@{ui}-icon {
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+
+            &-active {
+                border-bottom: 2px solid @color-primary;
+            }
+
+            &:hover {
+                color: @color-primary;
+            }
+        }
+    }
+
+    &-vertical {
+    }
+
+    .@{menu-pre}-item {
+        cursor: pointer;
+    }
+}
