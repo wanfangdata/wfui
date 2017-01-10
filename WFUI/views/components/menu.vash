@@ -21,10 +21,15 @@
                     <i class="wf-icon icon-viewlist"></i>
                     Navigation Two
                 </li>
-                <li class="wf-menu-item">
+                <li class="wf-menu-item wf-menu-submenu">
                     <i class="wf-icon icon-set"></i>
                     Navigation Three - SubMenu
                     <i class="wf-icon icon-moreunfold"></i>
+                    <ul class="wf-menu wf-menu-sub">
+                        <li class="wf-menu-item">SubMenu - Option1</li>
+                        <li class="wf-menu-item">SubMenu - Option2</li>
+                        <li class="wf-menu-item">SubMenu - Option3</li>
+                    </ul>
                 </li>
                 <li class="wf-menu-item">Navigation Four</li>
             </ul>

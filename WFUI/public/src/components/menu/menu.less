@@ -2,37 +2,83 @@
 @menu-pre: ~"@{ui}-menu";
 
 .@{menu-pre} {
+
+    @icon-margin: 4px;
+
     .ut-clearfix;
+    position: relative;
     box-sizing: border-box;
 
+    .active() {
+        color: @color-primary;
+        border-bottom-color: @color-primary;
+    }
 
     &-horizontal {
         border-bottom: 1px solid @color-border;
         box-sizing: border-box;
-        z-index: 0;
+        line-height: 46px;
 
         .@{menu-pre}-item {
-            padding: 19px 30px;
+            padding: 0 30px;
             margin-bottom: -1px;
             float: left;
+            border-bottom: 2px solid transparent;
             .transition(all @animate-time-normal ease);
 
             .@{ui}-icon {
                 vertical-align: middle;
-                margin-right: 4px;
+                margin-right: @icon-margin;
+                line-height: 1;
+
+                &.icon-moreunfold {
+                    font-size: 14px;
+                    margin-right: 0;
+                    margin-left: @icon-margin;
+                }
             }
 
             &-active {
-                border-bottom: 2px solid @color-primary;
+                .active;
             }
 
             &:hover {
-                color: @color-primary;
+                .active;
+
+                .@{menu-pre}-sub {
+                    .opacity(100);
+                    height: auto;
+                }
+            }
+        }
+
+        .@{menu-pre}-sub {
+            .opacity(0);
+            .ut-clearfix;
+            top: 100%;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            margin-top: 3px;
+            z-index: 1050;
+            transition: background @animate-time-fast cubic-bezier(.075,.82,.165,1);
+            border: 1px solid @color-border;
+            border-radius: 4px;
+            background-color: @color-background;
+            box-shadow: 0 0 4px rgba(204,204,204,.75);
+
+            .@{menu-pre}-item {
+                float: none;
+                display: inline-block;
             }
         }
     }
 
     &-vertical {
+    }
+
+    &-submenu {
+        position: relative;
     }
 
     .@{menu-pre}-item {
