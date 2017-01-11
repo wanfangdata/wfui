@@ -38,68 +38,70 @@
     }
 }
 
-.wf-menu-vertical {
-    padding: @menu-item-gap 0;
+.doc-menu {
+    .wf-menu-vertical {
+        padding: @menu-item-gap 0;
 
-    a {
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .wf-menu-item {
-        .menu-item-height;
-        font-size: 14px;
-
-        .wf-menu-content {
-            .menu-item-padding;
-            .menu-item-content-color
-        }
-    }
-
-    .wf-menu-content {
-        .en {
-            font-size: 14px;
-            font-family: 'Arial';
-            margin-right: 2px;
-        }
-
-        .cn {
-            font-size: 12px;
-            font-family: 'Microsoft YaHei';
-        }
-    }
-
-    .wf-menu-sub {
-        font-size: 12px;
-
-        .wf-menu-content {
-            .menu-item-height;
-            .menu-item-padding();
-
-            .en, .cn {
-                color: #aaa;
+        a {
+            &:hover {
+                opacity: 1;
             }
         }
-    }
-
-    .wf-menu-items {
 
         .wf-menu-item {
+            .menu-item-height;
+            font-size: 14px;
+
             .wf-menu-content {
-                .menu-item-padding(2);
+                .menu-item-padding;
                 .menu-item-content-color
             }
         }
-    }
-
-    .wf-menu-item.active {
-        border-left: 2px solid @color-primary;
-        background-color: #fff;
 
         .wf-menu-content {
-            .en, .cn {
-                color: @color-primary;
+            .en {
+                font-size: 14px;
+                font-family: 'Arial';
+                margin-right: 2px;
+            }
+
+            .cn {
+                font-size: 12px;
+                font-family: 'Microsoft YaHei';
+            }
+        }
+
+        .wf-menu-sub {
+            font-size: 12px;
+
+            .wf-menu-content {
+                .menu-item-height;
+                .menu-item-padding();
+
+                .en, .cn {
+                    color: #aaa;
+                }
+            }
+        }
+
+        .wf-menu-items {
+
+            .wf-menu-item {
+                .wf-menu-content {
+                    .menu-item-padding(2);
+                    .menu-item-content-color
+                }
+            }
+        }
+
+        .wf-menu-item.active {
+            border-left: 2px solid @color-primary;
+            background-color: #fff;
+
+            .wf-menu-content {
+                .en, .cn {
+                    color: @color-primary;
+                }
             }
         }
     }

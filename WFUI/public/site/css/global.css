@@ -137,62 +137,62 @@ a {
 .wf-menu-horizonal .wf-menu-item.active {
   border-top: 2px solid #6abbef;
 }
-.wf-menu-vertical {
+.doc-menu .wf-menu-vertical {
   padding: 22px 0;
 }
-.wf-menu-vertical a:hover {
+.doc-menu .wf-menu-vertical a:hover {
   opacity: 1;
 }
-.wf-menu-vertical .wf-menu-item {
+.doc-menu .wf-menu-vertical .wf-menu-item {
   height: 48px;
   line-height: 48px;
   font-size: 14px;
 }
-.wf-menu-vertical .wf-menu-item .wf-menu-content {
+.doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content {
   padding: 0 22px 0 22px;
 }
-.wf-menu-vertical .wf-menu-item .wf-menu-content .en {
+.doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content .en {
   color: #666;
 }
-.wf-menu-vertical .wf-menu-item .wf-menu-content .cn {
+.doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content .cn {
   color: #aaa;
 }
-.wf-menu-vertical .wf-menu-content .en {
+.doc-menu .wf-menu-vertical .wf-menu-content .en {
   font-size: 14px;
   font-family: 'Arial';
   margin-right: 2px;
 }
-.wf-menu-vertical .wf-menu-content .cn {
+.doc-menu .wf-menu-vertical .wf-menu-content .cn {
   font-size: 12px;
   font-family: 'Microsoft YaHei';
 }
-.wf-menu-vertical .wf-menu-sub {
+.doc-menu .wf-menu-vertical .wf-menu-sub {
   font-size: 12px;
 }
-.wf-menu-vertical .wf-menu-sub .wf-menu-content {
+.doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content {
   height: 48px;
   line-height: 48px;
   padding: 0 22px 0 22px;
 }
-.wf-menu-vertical .wf-menu-sub .wf-menu-content .en,
-.wf-menu-vertical .wf-menu-sub .wf-menu-content .cn {
+.doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content .en,
+.doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content .cn {
   color: #aaa;
 }
-.wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content {
+.doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content {
   padding: 0 11px 0 44px;
 }
-.wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .en {
+.doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .en {
   color: #666;
 }
-.wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .cn {
+.doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .cn {
   color: #aaa;
 }
-.wf-menu-vertical .wf-menu-item.active {
+.doc-menu .wf-menu-vertical .wf-menu-item.active {
   border-left: 2px solid #6abbef;
   background-color: #fff;
 }
-.wf-menu-vertical .wf-menu-item.active .wf-menu-content .en,
-.wf-menu-vertical .wf-menu-item.active .wf-menu-content .cn {
+.doc-menu .wf-menu-vertical .wf-menu-item.active .wf-menu-content .en,
+.doc-menu .wf-menu-vertical .wf-menu-item.active .wf-menu-content .cn {
   color: #6abbef;
 }
 .wf-btn {

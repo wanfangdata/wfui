@@ -1428,7 +1428,7 @@ textarea.wf-input {
 .wf-menu-horizontal {
   border-bottom: 1px solid #e1e1e1;
   box-sizing: border-box;
-  line-height: 46px;
+  line-height: 48px;
 }
 .wf-menu-horizontal .wf-menu-item {
   padding: 0 30px;
@@ -1440,21 +1440,13 @@ textarea.wf-input {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.wf-menu-horizontal .wf-menu-item .wf-icon {
-  vertical-align: middle;
-  margin-right: 4px;
-  line-height: 1;
-}
-.wf-menu-horizontal .wf-menu-item .wf-icon.icon-moreunfold {
-  font-size: 14px;
-  margin-right: 0;
-  margin-left: 4px;
-}
-.wf-menu-horizontal .wf-menu-item-active {
+.wf-menu-horizontal .wf-menu-item-active,
+.wf-menu-horizontal .wf-menu-item-active a {
   color: #6abbef;
   border-bottom-color: #6abbef;
 }
-.wf-menu-horizontal .wf-menu-item:hover {
+.wf-menu-horizontal .wf-menu-item:hover,
+.wf-menu-horizontal .wf-menu-item:hover a {
   color: #6abbef;
   border-bottom-color: #6abbef;
 }
@@ -1490,9 +1482,17 @@ textarea.wf-input {
   box-sizing: border-box;
   border: none;
 }
+.wf-menu-horizontal .wf-menu-sub .wf-menu-item a {
+  color: #333;
+}
 .wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover {
   border: none;
   color: #6abbef;
+}
+.wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover,
+.wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover a {
+  color: #6abbef;
+  border-bottom-color: #6abbef;
 }
 .wf-menu-horizontal .wf-menu-sub:before {
   width: 100%;
@@ -1503,9 +1503,26 @@ textarea.wf-input {
   left: 0;
   background-color: transparent;
 }
+.wf-menu-vertical {
+  width: 240px;
+  padding: 0 20px;
+  border-right: 1px solid #e1e1e1;
+}
 .wf-menu-submenu {
   position: relative;
 }
 .wf-menu .wf-menu-item {
   cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+}
+.wf-menu .wf-menu-item .wf-icon {
+  vertical-align: middle;
+  margin-right: 4px;
+  line-height: 1;
+}
+.wf-menu .wf-menu-item .wf-icon.icon-moreunfold {
+  font-size: 14px;
+  margin-right: 0;
+  margin-left: 4px;
 }
