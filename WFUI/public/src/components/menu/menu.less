@@ -46,14 +46,12 @@
                 .active;
 
                 .@{menu-pre}-sub {
-                    .opacity(100);
-                    height: auto;
+                    display: block;
                 }
             }
         }
 
         .@{menu-pre}-sub {
-            .opacity(0);
             .ut-clearfix;
             top: 100%;
             left: 0;
@@ -61,6 +59,7 @@
             width: 100%;
             margin-top: 3px;
             z-index: 1050;
+            display: none;
             transition: background @animate-time-fast cubic-bezier(.075,.82,.165,1);
             border: 1px solid @color-border;
             border-radius: 4px;
@@ -70,6 +69,24 @@
             .@{menu-pre}-item {
                 float: none;
                 display: inline-block;
+                width: 100%;
+                box-sizing: border-box;
+                border: none;
+
+                &:hover {
+                    border: none;
+                    color: @color-primary;
+                }
+            }
+
+            &:before {
+                width:100%;
+                height: 2px;
+                position: absolute;
+                content: '';
+                top: -2px;
+                left: 0;
+                background-color: transparent;
             }
         }
     }

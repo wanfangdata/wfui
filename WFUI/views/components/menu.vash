@@ -14,24 +14,28 @@
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-horizontal">
                 <li class="wf-menu-item wf-menu-item-active">
-                    <i class="wf-icon icon-viewgallery"></i>
-                    Navigation One
+                    <a href="">
+                        <i class="wf-icon icon-viewgallery"></i>
+                        Navigation One
+                    </a>
                 </li>
                 <li class="wf-menu-item">
-                    <i class="wf-icon icon-viewlist"></i>
-                    Navigation Two
+                    <a href="">
+                        <i class="wf-icon icon-viewlist"></i>
+                        Navigation Two
+                    </a>
                 </li>
                 <li class="wf-menu-item wf-menu-submenu">
                     <i class="wf-icon icon-set"></i>
                     Navigation Three - SubMenu
-                    <i class="wf-icon icon-moreunfold"></i>
+                    <!--<i class="wf-icon icon-moreunfold"></i>-->
                     <ul class="wf-menu wf-menu-sub">
-                        <li class="wf-menu-item">SubMenu - Option1</li>
-                        <li class="wf-menu-item">SubMenu - Option2</li>
-                        <li class="wf-menu-item">SubMenu - Option3</li>
+                        <li class="wf-menu-item"><a href="">SubMenu - Option1</a></li>
+                        <li class="wf-menu-item"><a href="">SubMenu - Option2</a></li>
+                        <li class="wf-menu-item"><a href="">SubMenu - Option3</a></li>
                     </ul>
                 </li>
-                <li class="wf-menu-item">Navigation Four</li>
+                <li class="wf-menu-item"><a href="">Navigation Four</a></li>
             </ul>
         </div>
         <div class="explain">

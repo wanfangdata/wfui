@@ -5,11 +5,11 @@
   background-color: #fff;
 }
 a {
-  color: #6abbef;
   text-decoration: none;
-}
-a:hover {
-  opacity: .8;
+  color: #333;
+  /*&:hover {
+        opacity: .8;
+    }*/
 }
 .content-wrapper {
   position: relative;
@@ -49,7 +49,16 @@ a:hover {
   color: #666;
   display: block;
 }
-/*内容或代码背景色*/
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
 .header {
   height: 70px;
   line-height: 70px;
