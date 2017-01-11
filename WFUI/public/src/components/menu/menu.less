@@ -9,6 +9,34 @@
     position: relative;
     box-sizing: border-box;
 
+    .@{menu-pre}-item {
+        cursor: pointer;
+
+        .@{ui}-icon {
+            vertical-align: middle;
+            margin-right: @icon-margin;
+            line-height: 1;
+
+            &.icon-moreunfold {
+                font-size: 14px;
+                margin-right: 0;
+                margin-left: @icon-margin;
+            }
+        }
+    }
+
+    .@{menu-pre}-title {
+        display: inline-block;
+        .middle-vertical(48px);
+    }
+
+    .@{menu-pre}-sub {
+
+        .@{menu-pre}-item {
+            border: none;
+        }
+    }
+
     &-horizontal {
         .active() {
             &, a {
@@ -41,6 +69,10 @@
             }
         }
 
+        .@{menu-pre}-submenu {
+            position: relative;
+        }
+
         .@{menu-pre}-sub {
             .ut-clearfix;
             top: 100%;
@@ -61,7 +93,7 @@
                 display: inline-block;
                 width: 100%;
                 box-sizing: border-box;
-                border: none;
+
 
                 a {
                     color: @color-text-deep;
@@ -89,26 +121,20 @@
     &-vertical {
         width: 240px;
         padding: 0 20px;
-        border-right: 1px solid @color-border-nomal;
-    }
+        border-right: 1px solid @color-border-deep;
 
-    &-submenu {
-        position: relative;
-    }
+        .@{menu-pre}-item {
+            border-bottom: 1px solid @color-border-nomal;
+            padding: 0 15px;
+        }
 
-    .@{menu-pre}-item {
-        cursor: pointer;
-        .middle-vertical(48px);
-        .@{ui}-icon {
-            vertical-align: middle;
-            margin-right: @icon-margin;
-            line-height: 1;
+        .@{menu-pre}-title {
+            display: inline-block;
+            .middle-vertical(48px);
+        }
 
-            &.icon-moreunfold {
-                font-size: 14px;
-                margin-right: 0;
-                margin-left: @icon-margin;
-            }
+        .@{menu-pre}-sub .@{menu-pre}-item {
+            height: auto;
         }
     }
 }

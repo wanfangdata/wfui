@@ -14,13 +14,13 @@
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-horizontal">
                 <li class="wf-menu-item wf-menu-item-active">
-                    <a href="">
+                    <a href="" class="wf-menu-title">
                         <i class="wf-icon icon-viewgallery"></i>
                         Navigation One
                     </a>
                 </li>
                 <li class="wf-menu-item">
-                    <a href="">
+                    <a href="" class="wf-menu-title" >
                         <i class="wf-icon icon-viewlist"></i>
                         Navigation Two
                     </a>
@@ -30,12 +30,12 @@
                     Navigation Three - SubMenu
                     <!--<i class="wf-icon icon-moreunfold"></i>-->
                     <ul class="wf-menu wf-menu-sub">
-                        <li class="wf-menu-item"><a href="">SubMenu - Option1</a></li>
-                        <li class="wf-menu-item"><a href="">SubMenu - Option2</a></li>
-                        <li class="wf-menu-item"><a href="">SubMenu - Option3</a></li>
+                        <li class="wf-menu-item"><a href=""  class="wf-menu-title">SubMenu - Option1</a></li>
+                        <li class="wf-menu-item"><a href=""  class="wf-menu-title">SubMenu - Option2</a></li>
+                        <li class="wf-menu-item"><a href=""  class="wf-menu-title">SubMenu - Option3</a></li>
                     </ul>
                 </li>
-                <li class="wf-menu-item"><a href="">Navigation Four</a></li>
+                <li class="wf-menu-item"><a href=""  class="wf-menu-title">Navigation Four</a></li>
             </ul>
         </div>
         <div class="explain">
@@ -45,13 +45,13 @@
         <code class="html">
     &lt;ul data-role="menu" class="wf-menu wf-menu-horizontal"&gt;
         &lt;li class="wf-menu-item wf-menu-item-active"&gt;
-            &lt;a href=""&gt;
+            &lt;a href="" class="wf-menu-title"&gt;
                 &lt;i class="wf-icon icon-viewgallery"&gt;&lt;/i&gt;
                 Navigation One
             &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="wf-menu-item"&gt;
-            &lt;a href=""&gt;
+            &lt;a href="" class="wf-menu-title"&gt;
                 &lt;i class="wf-icon icon-viewlist"&gt;&lt;/i&gt;
                 Navigation Two
             &lt;/a&gt;
@@ -60,12 +60,12 @@
             &lt;i class="wf-icon icon-set"&gt;&lt;/i&gt;
             Navigation Three - SubMenu
             &lt;ul class="wf-menu wf-menu-sub"&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option1&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option2&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option3&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-title"&gt;SubMenu - Option1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-title"&gt;SubMenu - Option2&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-title"&gt;SubMenu - Option3&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;Navigation Four&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-title"&gt;Navigation Four&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
         </code>
         </pre>
@@ -77,29 +77,35 @@
         </h1>
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-vertical">
-                <li class="wf-menu-item wf-menu-item-active">
-                    <a href="">
-                        <i class="wf-icon icon-viewgallery"></i>
-                        Navigation One
-                    </a>
-                </li>
-                <li class="wf-menu-item">
-                    <a href="">
-                        <i class="wf-icon icon-viewlist"></i>
-                        Navigation Two
-                    </a>
-                </li>
-                <li class="wf-menu-item wf-menu-submenu">
-                    <i class="wf-icon icon-set"></i>
-                    Navigation Three - SubMenu
-                    <!--<i class="wf-icon icon-moreunfold"></i>-->
+                <li class="wf-menu-item wf-menu-title">
+                    <i class="wf-icon icon-viewgallery"></i>
+                    Navigation One
                     <ul class="wf-menu wf-menu-sub">
-                        <li class="wf-menu-item"><a href="">SubMenu - Option1</a></li>
-                        <li class="wf-menu-item"><a href="">SubMenu - Option2</a></li>
-                        <li class="wf-menu-item"><a href="">SubMenu - Option3</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu1 - Option1</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu1 - Option2</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu1 - Option3</a></li>
                     </ul>
                 </li>
-                <li class="wf-menu-item"><a href="">Navigation Four</a></li>
+                <li class="wf-menu-item wf-menu-title">
+                    <i class="wf-icon icon-viewlist"></i>
+                    Navigation Two
+                    <ul class="wf-menu wf-menu-sub">
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu2 - Option1</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu2 - Option2</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu2 - Option3</a></li>
+                    </ul>
+                </li>
+                <li class="wf-menu-item wf-menu-title">
+                    <i class="wf-icon icon-set"></i>
+                    Navigation Three
+                    <!--<i class="wf-icon icon-moreunfold"></i>-->
+                    <ul class="wf-menu wf-menu-sub">
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu3 - Option1</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu3 - Option2</a></li>
+                        <li class="wf-menu-item"><a href="" class="wf-menu-title">SubMenu3 - Option3</a></li>
+                    </ul>
+                </li>
+                <li class="wf-menu-item"><a href="" class="wf-menu-title">Navigation Four</a></li>
             </ul>
         </div>
         <div class="explain">

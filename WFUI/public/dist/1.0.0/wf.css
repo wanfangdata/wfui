@@ -1425,6 +1425,27 @@ textarea.wf-input {
   visibility: hidden;
   height: 0;
 }
+.wf-menu .wf-menu-item {
+  cursor: pointer;
+}
+.wf-menu .wf-menu-item .wf-icon {
+  vertical-align: middle;
+  margin-right: 4px;
+  line-height: 1;
+}
+.wf-menu .wf-menu-item .wf-icon.icon-moreunfold {
+  font-size: 14px;
+  margin-right: 0;
+  margin-left: 4px;
+}
+.wf-menu .wf-menu-title {
+  display: inline-block;
+  height: 48px;
+  line-height: 48px;
+}
+.wf-menu .wf-menu-sub .wf-menu-item {
+  border: none;
+}
 .wf-menu-horizontal {
   border-bottom: 1px solid #e1e1e1;
   box-sizing: border-box;
@@ -1453,6 +1474,9 @@ textarea.wf-input {
 .wf-menu-horizontal .wf-menu-item:hover .wf-menu-sub {
   display: block;
 }
+.wf-menu-horizontal .wf-menu-submenu {
+  position: relative;
+}
 .wf-menu-horizontal .wf-menu-sub {
   zoom: 1;
   top: 100%;
@@ -1480,7 +1504,6 @@ textarea.wf-input {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
-  border: none;
 }
 .wf-menu-horizontal .wf-menu-sub .wf-menu-item a {
   color: #333;
@@ -1506,23 +1529,17 @@ textarea.wf-input {
 .wf-menu-vertical {
   width: 240px;
   padding: 0 20px;
-  border-right: 1px solid #e1e1e1;
+  border-right: 1px solid #ddd;
 }
-.wf-menu-submenu {
-  position: relative;
+.wf-menu-vertical .wf-menu-item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 15px;
 }
-.wf-menu .wf-menu-item {
-  cursor: pointer;
+.wf-menu-vertical .wf-menu-title {
+  display: inline-block;
   height: 48px;
   line-height: 48px;
 }
-.wf-menu .wf-menu-item .wf-icon {
-  vertical-align: middle;
-  margin-right: 4px;
-  line-height: 1;
-}
-.wf-menu .wf-menu-item .wf-icon.icon-moreunfold {
-  font-size: 14px;
-  margin-right: 0;
-  margin-left: 4px;
+.wf-menu-vertical .wf-menu-sub .wf-menu-item {
+  height: auto;
 }
