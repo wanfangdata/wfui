@@ -1,6 +1,6 @@
 ﻿'use strict';
 /**
- * 扩展String format.
+ * 兼容和扩展
  */
 (function () {
     
@@ -13,11 +13,12 @@
         }
         return source;
     };
-
+    
     String.prototype.empty = function () {
         return '';
     };
     Array.prototype.empty = function () {
         return [];
     };
+
 })();

@@ -80,6 +80,6 @@ wf.define('page', ['logger'], function (logger) {
                 _pg_.auto();
             }
             return _pg_;
-        },
+        }
     };
 });

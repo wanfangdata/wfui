@@ -47,14 +47,16 @@
         </div>
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
-    <script src="../site/js/lib/animated.min.js"></script>
-    <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
-    <script src="../site/module/highlight-9.8.0/highlight.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="../site/js/lib/ie9.js"></script>
+    <![endif]-->
+    <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>    
     <script src="../dist/1.0.0/wf.js"></script>
-    <script>
-        $('.brand .text').textillate({ in: { effect: 'rotateIn' } });
-        hljs.initHighlightingOnLoad();
-    </script>
+    <!--[if !IE]>
+    <script src="../site/module/highlight-9.8.0/highlight.min.js"></script>
+    <script src="../site/js/lib/animated.min.js"></script>
+    <script>$('.brand .text').textillate({ in: { effect: 'rotateIn' } });hljs.initHighlightingOnLoad();</script>
+    <![endif]-->
     @html.block('script')
 </body>
 </html>

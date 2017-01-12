@@ -2,7 +2,7 @@ var page = wf.require('page').render(
     'doc', [
         'UI.Checkbox',
         'UI.Radio',
-        'UI.Select',
+        'UI.Select'
     ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
