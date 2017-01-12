@@ -44,7 +44,7 @@
       <SubType>Code</SubType>
       <DependentUpon>public\site\js\lib\animated.js</DependentUpon>
     </Compile>
-    <Compile Include="public\site\js\lib\ie9.js" />
+    <Compile Include="public\site\js\lib\jquery-migrate-1.4.1.min.js" />
     <Compile Include="public\site\js\lib\jquery.pjax-1.9.6.min.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />

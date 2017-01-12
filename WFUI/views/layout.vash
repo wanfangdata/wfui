@@ -48,7 +48,7 @@
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <!--[if lt IE 9]>
-    <script src="../site/js/lib/ie9.js"></script>
+    <script src="../site/js/lib/jquery-migrate-1.4.1.min.js"></script>
     <![endif]-->
     <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>    
     <script src="../dist/1.0.0/wf.js"></script>
