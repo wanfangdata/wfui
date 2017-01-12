@@ -13,7 +13,7 @@
         </h1>
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-horizontal">
-                <li class="wf-menu-item wf-menu-item-active">
+                <li class="wf-menu-item active">
                     <a href="" class="wf-menu-content">
                         <i class="wf-icon icon-viewgallery"></i>
                         Navigation One
@@ -62,7 +62,7 @@
         <pre>
         <code class="html">
     &lt;ul data-role="menu" class="wf-menu wf-menu-horizontal"&gt;
-        &lt;li class="wf-menu-item wf-menu-item-active"&gt;
+        &lt;li class="wf-menu-item active"&gt;
             &lt;a href="" class="wf-menu-content"&gt;
                 &lt;i class="wf-icon icon-viewgallery"&gt;&lt;/i&gt;
                 Navigation One
@@ -75,15 +75,33 @@
             &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="wf-menu-item wf-menu-submenu"&gt;
-            &lt;i class="wf-icon icon-set"&gt;&lt;/i&gt;
-            Navigation Three - SubMenu
+            &lt;a href="" class="wf-menu-content"&gt;
+                &lt;i class="wf-icon icon-set"&gt;&lt;/i&gt;
+                Navigation Three - SubMenu
+            &lt;/a&gt;
             &lt;ul class="wf-menu wf-menu-sub"&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-content"&gt;SubMenu - Option1&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-content"&gt;SubMenu - Option2&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-content"&gt;SubMenu - Option3&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;
+                        SubMenu - Option1
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;
+                        SubMenu - Option2
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;
+                        SubMenu - Option3
+                    &lt;/a&gt;
+                &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class="wf-menu-item"&gt;&lt;a href="" class="wf-menu-content"&gt;Navigation Four&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="wf-menu-item"&gt;
+            &lt;a href="" class="wf-menu-content"&gt;
+                Navigation Four
+            &lt;/a&gt;
+        &lt;/li&gt;
     &lt;/ul&gt;
         </code>
         </pre>
@@ -96,13 +114,15 @@
         <div class="demo">
             <ul data-role="menu" class="wf-menu wf-menu-vertical">
                 <li class="wf-menu-item wf-menu-open">
-                    <a href="" class="wf-menu-content">
-                        <i class="wf-icon icon-viewgallery"></i>
+                    <span class="wf-menu-content">
                         Navigation One
-                    </a>
+                    </span>
                     <ul class="wf-menu wf-menu-sub">
                         <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu1 - Option1</a>
+                            <span href="" class="wf-menu-content">
+                                <i class="wf-icon icon-more"></i>
+                                SubMenu1 - Option1
+                            </span>
                             <ul class="wf-menu wf-menu-sub">
                                 <li class="wf-menu-item">
                                     <a href="" class="wf-menu-content">Option1</a>
@@ -123,72 +143,170 @@
                         </li>
                     </ul>
                 </li>
-                <li class="wf-menu-item">
+                <li class="wf-menu-item  wf-menu-open">
                     <a href="" class="wf-menu-content">
                         <i class="wf-icon icon-viewlist"></i>
                         Navigation Two
                     </a>
                     <ul class="wf-menu wf-menu-sub">
                         <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu2 - Option1</a>
+                            <span href="" class="wf-menu-content">
+                                <i class="wf-icon icon-more"></i>
+                                SubMenu2 - Option1
+                            </span>
+                            <ul class="wf-menu wf-menu-sub">
+                                <li class="wf-menu-item">
+                                    <a href="" class="wf-menu-content">
+                                        <i class="wf-icon icon-more"></i>
+                                        Option1
+                                    </a>
+                                    <ul class="wf-menu wf-menu-sub">
+                                        <li class="wf-menu-item">
+                                            <a href="" class="wf-menu-content clearfix">
+                                                <span class="wf-menu-content-text">
+                                                    期刊论文
+                                                </span>
+                                                <span class="wf-menu-content-suffix">
+                                                    514篇
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="wf-menu-item active">
+                                            <a href="" class="wf-menu-content">
+                                                <span class="wf-menu-content-text">
+                                                    学位论文
+                                                </span>
+                                                <span class="wf-menu-content-suffix">
+                                                    51400篇
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="wf-menu-item">
+                                            <a href="" class="wf-menu-content">
+                                                <span class="wf-menu-content-text">
+                                                    会议论文
+                                                </span>
+                                                <span class="wf-menu-content-suffix">
+                                                    487563篇
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="wf-menu-item">
+                                    <a href="" class="wf-menu-content">Option2</a>
+                                </li>
+                                <li class="wf-menu-item">
+                                    <a href="" class="wf-menu-content">Option3</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="wf-menu-item">
                             <a href="" class="wf-menu-content">SubMenu2 - Option2</a>
                         </li>
-                        <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu2 - Option3</a>
-                        </li>
                     </ul>
                 </li>
-                <li class="wf-menu-item">
-                    <a href="" class="wf-menu-content">
-                        <i class="wf-icon icon-set"></i>
-                        Navigation Three
-                    </a>                    
-                    <!--<i class="wf-icon icon-moreunfold"></i>-->
-                    <ul class="wf-menu wf-menu-sub">
-                        <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu3 - Option1</a>
-                        </li>
-                        <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu3 - Option2</a>
-                        </li>
-                        <li class="wf-menu-item">
-                            <a href="" class="wf-menu-content">SubMenu3 - Option3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="wf-menu-item"><a href="" class="wf-menu-content">Navigation Four</a></li>
             </ul>
         </div>
         <div class="explain">
-
+            <p>垂直菜单，子菜单内嵌在菜单区域内</p>
         </div>
         <pre>
         <code class="html">
-    &lt;ul data-role="menu" class="wf-menu wf-menu-horizontal"&gt;
-        &lt;li class="wf-menu-item wf-menu-item-active"&gt;
-            &lt;a href=""&gt;
-                &lt;i class="wf-icon icon-viewgallery"&gt;&lt;/i&gt;
+    &lt;ul data-role="menu" class="wf-menu wf-menu-vertical"&gt;
+        &lt;li class="wf-menu-item wf-menu-open"&gt;
+            &lt;span class="wf-menu-content"&gt;
                 Navigation One
-            &lt;/a&gt;
+            &lt;/span&gt;
+            &lt;ul class="wf-menu wf-menu-sub"&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;span href="" class="wf-menu-content"&gt;
+                        &lt;i class="wf-icon icon-more"&gt;&lt;/i&gt;
+                        SubMenu1 - Option1
+                    &lt;/span&gt;
+                    &lt;ul class="wf-menu wf-menu-sub"&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;Option1&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;Option2&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;Option3&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;SubMenu1 - Option2&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;SubMenu1 - Option3&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class="wf-menu-item"&gt;
-            &lt;a href=""&gt;
+        &lt;li class="wf-menu-item  wf-menu-open"&gt;
+            &lt;a href="" class="wf-menu-content"&gt;
                 &lt;i class="wf-icon icon-viewlist"&gt;&lt;/i&gt;
                 Navigation Two
             &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class="wf-menu-item wf-menu-submenu"&gt;
-            &lt;i class="wf-icon icon-set"&gt;&lt;/i&gt;
-            Navigation Three - SubMenu
             &lt;ul class="wf-menu wf-menu-sub"&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option1&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option2&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;SubMenu - Option3&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;span href="" class="wf-menu-content"&gt;
+                        &lt;i class="wf-icon icon-more"&gt;&lt;/i&gt;
+                        SubMenu2 - Option1
+                    &lt;/span&gt;
+                    &lt;ul class="wf-menu wf-menu-sub"&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;
+                                &lt;i class="wf-icon icon-more"&gt;&lt;/i&gt;
+                                Option1
+                            &lt;/a&gt;
+                            &lt;ul class="wf-menu wf-menu-sub"&gt;
+                                &lt;li class="wf-menu-item"&gt;
+                                    &lt;a href="" class="wf-menu-content clearfix"&gt;
+                                        &lt;span class="wf-menu-content-text"&gt;
+                                            期刊论文
+                                        &lt;/span&gt;
+                                        &lt;span class="wf-menu-content-suffix"&gt;
+                                            514篇
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="wf-menu-item"&gt;
+                                    &lt;a href="" class="wf-menu-content"&gt;
+                                        &lt;span class="wf-menu-content-text"&gt;
+                                            学位论文
+                                        &lt;/span&gt;
+                                        &lt;span class="wf-menu-content-suffix"&gt;
+                                            51400篇
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class="wf-menu-item"&gt;
+                                    &lt;a href="" class="wf-menu-content"&gt;
+                                        &lt;span class="wf-menu-content-text"&gt;
+                                            会议论文
+                                        &lt;/span&gt;
+                                        &lt;span class="wf-menu-content-suffix"&gt;
+                                            487563篇
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;Option2&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="wf-menu-item"&gt;
+                            &lt;a href="" class="wf-menu-content"&gt;Option3&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="wf-menu-item"&gt;
+                    &lt;a href="" class="wf-menu-content"&gt;SubMenu2 - Option2&lt;/a&gt;
+                &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/li&gt;
-        &lt;li class="wf-menu-item"&gt;&lt;a href=""&gt;Navigation Four&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
         </code>
         </pre>

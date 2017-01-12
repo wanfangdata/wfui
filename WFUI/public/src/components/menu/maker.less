@@ -4,12 +4,14 @@
 /*根据当前层级设置左右padding,默认最高层级3*/
 @max-level: 3;
 @menu-gap: 20px;
+
 .set-padding(@level: 1) {
     > .@{menu-pre}-content {
         padding-left: @level*@menu-gap;
-        padding-right: @menu-gap/@level;
+        padding-right: 0;
     }
 }
+
 .generate-item-padding(@n, @i: 1) when (@i =< @n) {
 
     > .@{menu-pre}-sub > .@{menu-pre}-item {
@@ -17,10 +19,22 @@
         .generate-item-padding(@n, (@i + 1));
     }
 }
-.make-item-padding(){
-    padding:0;
+
+.make-item-padding() {
+    padding: 0;
     .generate-item-padding(@max-level);
 }
+
+.hover-patch(@height) {
+    content: '';
+    width: 100%;
+    height: @height;
+    position: absolute;
+    top: -@height;
+    left: 0;
+    background-color: transparent;
+}
+
 
 .active(@direction) when (@direction = vertical) {
 }

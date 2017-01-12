@@ -1,46 +1,45 @@
 ﻿@import "mixins.less";
 @menu-item-gap: 22px;
 
-.menu-item-height() {
-    height: 48px;
-    line-height: 48px;
-}
-
-.menu-item-padding(@level: 1) {
-    padding: 0 @menu-item-gap/@level 0 @level*@menu-item-gap;
-}
-
 .menu-item-content-color() {
     .en {
         color: @color-text-nomal;
     }
 
     .cn {
-        color: #aaa;
+        color: @color-text-light;
     }
 }
 
-.wf-menu-horizonal {
-    font-size: 14px;
+.header {
+    .wf-menu-horizontal {
+        font-size: 14px;
+        border-bottom: none;
 
-    .wf-menu-item {
-        height: 68px;
-        line-height: 68px;
-        font-family: 'Microsoft YaHei';
-        display: inline-block;
-        box-sizing: border-box;
-        padding: 0 30px;
-        color: #eee;
-
-        &.active {
-            border-top: 2px solid @color-primary;
+        .wf-menu-content {
+            color: @color;
+            .middle-vertical(70px);
+            margin-top: -2px;
+            padding-left: 28px;
+            padding-right: 28px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+            border-bottom: 0;
         }
     }
 }
 
+
 .doc-menu {
     .wf-menu-vertical {
         padding: @menu-item-gap 0;
+
+        > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content {
+            .en {
+                color: @color-text-deep;
+            }
+        }
 
         a {
             &:hover {
@@ -49,12 +48,12 @@
         }
 
         .wf-menu-item {
-            .menu-item-height;
             font-size: 14px;
+            border: none;
 
             .wf-menu-content {
-                .menu-item-padding;
-                .menu-item-content-color
+                .menu-item-content-color;
+                border: none;
             }
         }
 
@@ -75,11 +74,9 @@
             font-size: 12px;
 
             .wf-menu-content {
-                .menu-item-height;
-                .menu-item-padding();
 
                 .en, .cn {
-                    color: #aaa;
+                    color: @color-text-light;
                 }
             }
         }
@@ -88,15 +85,13 @@
 
             .wf-menu-item {
                 .wf-menu-content {
-                    .menu-item-padding(2);
                     .menu-item-content-color
                 }
             }
         }
 
         .wf-menu-item.active {
-            border-left: 2px solid @color-primary;
-            background-color: #fff;
+            background-color: @color-background;
 
             .wf-menu-content {
                 .en, .cn {

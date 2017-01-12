@@ -17,10 +17,14 @@
                 <i class="icon-doc logo"></i>
                 <span class="text">WF Design</span>
             </a>
-            <nav class="wf-menu wf-menu-horizonal wf-col-10">
-                <a class="wf-menu-item@(model.title=="components"?" active":"")" href="/components/getstarted">组件</a>
-                <a class="wf-menu-item@(model.title=="guide"?" active":"")" href="/guide/getstarted">规范</a>
-            </nav>
+            <ul class="wf-menu wf-menu-horizontal wf-col-10">
+                <li class="wf-menu-item@(model.title=="components"?" active":"")" >
+                    <a href="/components/getstarted" class="wf-menu-content">组件</a>
+                </li>
+                <li class="wf-menu-item@(model.title=="guide"?" active":"")">
+                    <a href="/guide/getstarted" class="wf-menu-content">规范</a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="content-wrapper">

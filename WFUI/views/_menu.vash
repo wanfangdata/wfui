@@ -4,21 +4,25 @@
     var menuItems = function(data,cls){
         @data.forEach(function(item){
             hasChild = item.data && item.data.length>0;
-            <div class="@(hasChild?'wf-menu-sub':'wf-menu-item') @(!hasChild&&item.label.toLowerCase()==model.page.toLowerCase()?'active':'')">
+            <li class="wf-menu-item @(!hasChild&&item.label.toLowerCase()==model.page.toLowerCase()?'active':'')">
                 <i class="wf-icon wf-icon-menu"></i>
                 <a class="wf-menu-content" @(item.data&&item.data.length>0?'':('href=/'+model.title+'/'+item.label.toLowerCase()+''))>
                     <span class="en">@item.label</span>
                     <span class="cn">@item.name</span>
                 </a>                 
                 @if(item.data&&item.data.length>0){
-                    <div class="wf-menu-items">
+                    <ul class="wf-menu-sub">
                         @menuItems(item.data,'wf-menu-sub')
-                    </div>
+                    </ul>
                 }
-            </div>                        
+            </li>                        
         })
     };
-    <div data-role="menu" class="wf-menu wf-menu-vertical wf-menu-open">
-        @menuItems(menu.data)
-    </div>
+    <ul data-role="menu" class="wf-menu wf-menu-vertical wf-menu-open">
+        <li class="wf-menu-item">
+            <ul class="wf-menu-sub">
+                @menuItems(menu.data)
+            </ul>
+        </li>        
+    </ul>
 })

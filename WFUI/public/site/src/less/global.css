@@ -122,40 +122,43 @@ a {
   margin-right: 40px;
   color: #999;
 }
-.wf-menu-horizonal {
+.header .wf-menu-horizontal {
   font-size: 14px;
+  border-bottom: none;
 }
-.wf-menu-horizonal .wf-menu-item {
-  height: 68px;
-  line-height: 68px;
+.header .wf-menu-horizontal .wf-menu-content {
+  color: #fff;
+  height: 70px;
+  line-height: 70px;
+  margin-top: -2px;
+  padding-left: 28px;
+  padding-right: 28px;
+  cursor: pointer;
+  font-size: 14px;
   font-family: 'Microsoft YaHei';
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0 30px;
-  color: #eee;
-}
-.wf-menu-horizonal .wf-menu-item.active {
-  border-top: 2px solid #6abbef;
+  border-bottom: 0;
 }
 .doc-menu .wf-menu-vertical {
   padding: 22px 0;
+}
+.doc-menu .wf-menu-vertical > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content .en {
+  color: #333;
 }
 .doc-menu .wf-menu-vertical a:hover {
   opacity: 1;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item {
-  height: 48px;
-  line-height: 48px;
   font-size: 14px;
+  border: none;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content {
-  padding: 0 22px 0 22px;
+  border: none;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content .en {
   color: #666;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item .wf-menu-content .cn {
-  color: #aaa;
+  color: #999;
 }
 .doc-menu .wf-menu-vertical .wf-menu-content .en {
   font-size: 14px;
@@ -169,26 +172,17 @@ a {
 .doc-menu .wf-menu-vertical .wf-menu-sub {
   font-size: 12px;
 }
-.doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content {
-  height: 48px;
-  line-height: 48px;
-  padding: 0 22px 0 22px;
-}
 .doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content .en,
 .doc-menu .wf-menu-vertical .wf-menu-sub .wf-menu-content .cn {
-  color: #aaa;
-}
-.doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content {
-  padding: 0 11px 0 44px;
+  color: #999;
 }
 .doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .en {
   color: #666;
 }
 .doc-menu .wf-menu-vertical .wf-menu-items .wf-menu-item .wf-menu-content .cn {
-  color: #aaa;
+  color: #999;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item.active {
-  border-left: 2px solid #6abbef;
   background-color: #fff;
 }
 .doc-menu .wf-menu-vertical .wf-menu-item.active .wf-menu-content .en,
