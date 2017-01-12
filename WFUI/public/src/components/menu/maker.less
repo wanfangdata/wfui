@@ -1,0 +1,34 @@
+﻿@import "../../core/less/import.less";
+@menu-pre: ~"@{ui}-menu";
+
+/*根据当前层级设置左右padding,默认最高层级3*/
+@max-level: 3;
+@menu-gap: 20px;
+.set-padding(@level: 1) {
+    > .@{menu-pre}-content {
+        padding-left: @level*@menu-gap;
+        padding-right: @menu-gap/@level;
+    }
+}
+.generate-item-padding(@n, @i: 1) when (@i =< @n) {
+
+    > .@{menu-pre}-sub > .@{menu-pre}-item {
+        .set-padding(@i);
+        .generate-item-padding(@n, (@i + 1));
+    }
+}
+.make-item-padding(){
+    padding:0;
+    .generate-item-padding(@max-level);
+}
+
+.active(@direction) when (@direction = vertical) {
+}
+
+.active(@direction) when (@direction = horizontal) {
+    .@{menu-pre}-item-active {
+        .@{menu-pre}-content {
+            color: @color-primary;
+        }
+    }
+}

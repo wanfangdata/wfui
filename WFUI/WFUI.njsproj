@@ -68,6 +68,7 @@
     <Content Include="public\src\components\menu\menu.js" />
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
     <Compile Include="public\site\src\js\doc.js" />
+    <Content Include="public\src\components\menu\maker.less" />
     <Content Include="public\src\components\radio\radio.js" />
     <Compile Include="public\src\components\select\select.js" />
     <Compile Include="public\src\core\js\action.js" />

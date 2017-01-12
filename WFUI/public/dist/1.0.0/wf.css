@@ -1413,133 +1413,68 @@ textarea.wf-input {
 .wf-breadcrumb .wf-icon {
   vertical-align: middle;
 }
-.wf-menu {
-  zoom: 1;
-  position: relative;
-  box-sizing: border-box;
-}
-.wf-menu:after {
-  display: block;
-  clear: both;
-  content: "";
-  visibility: hidden;
-  height: 0;
-}
+/*根据当前层级设置左右padding,默认最高层级3*/
 .wf-menu .wf-menu-item {
-  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px solid transparent;
 }
-.wf-menu .wf-menu-item .wf-icon {
+.wf-menu .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.wf-menu .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content {
+  padding-left: 40px;
+  padding-right: 10px;
+}
+.wf-menu .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content {
+  padding-left: 60px;
+  padding-right: 6.66666667px;
+}
+.wf-menu .wf-menu-item .wf-menu-content {
+  display: block;
+}
+.wf-menu .wf-menu-item .wf-menu-content .wf-icon {
   vertical-align: middle;
   margin-right: 4px;
-  line-height: 1;
 }
-.wf-menu .wf-menu-item .wf-icon.icon-moreunfold {
-  font-size: 14px;
-  margin-right: 0;
-  margin-left: 4px;
+.wf-menu .wf-menu-item-active .wf-menu-content {
+  color: #6abbef;
 }
-.wf-menu .wf-menu-title {
+.wf-menu .wf-menu-content {
   display: inline-block;
   height: 48px;
   line-height: 48px;
 }
+.wf-menu .wf-menu-sub {
+  display: none;
+}
 .wf-menu .wf-menu-sub .wf-menu-item {
   border: none;
 }
-.wf-menu-horizontal {
-  border-bottom: 1px solid #e1e1e1;
-  box-sizing: border-box;
-  line-height: 48px;
-}
-.wf-menu-horizontal .wf-menu-item {
-  padding: 0 30px;
-  margin-bottom: -1px;
-  float: left;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.wf-menu-horizontal .wf-menu-item-active,
-.wf-menu-horizontal .wf-menu-item-active a {
-  color: #6abbef;
-  border-bottom-color: #6abbef;
-}
-.wf-menu-horizontal .wf-menu-item:hover,
-.wf-menu-horizontal .wf-menu-item:hover a {
-  color: #6abbef;
-  border-bottom-color: #6abbef;
-}
-.wf-menu-horizontal .wf-menu-item:hover .wf-menu-sub {
+.wf-menu-open .wf-menu-sub {
   display: block;
 }
-.wf-menu-horizontal .wf-menu-submenu {
-  position: relative;
-}
-.wf-menu-horizontal .wf-menu-sub {
+.wf-menu-horizontal {
   zoom: 1;
-  top: 100%;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  margin-top: 3px;
-  z-index: 1050;
-  display: none;
-  transition: background 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border: 1px solid #e1e1e1;
-  border-radius: 4px;
-  background-color: #fff;
-  box-shadow: 0 0 4px rgba(204, 204, 204, 0.75);
+  border-bottom: 1px solid #ddd;
 }
-.wf-menu-horizontal .wf-menu-sub:after {
+.wf-menu-horizontal:after {
   display: block;
   clear: both;
   content: "";
   visibility: hidden;
   height: 0;
 }
-.wf-menu-horizontal .wf-menu-sub .wf-menu-item {
-  float: none;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
+.wf-menu-horizontal .wf-menu-item {
+  padding: 0 20px;
+  border-width: 2px;
+  float: left;
 }
-.wf-menu-horizontal .wf-menu-sub .wf-menu-item a {
-  color: #333;
-}
-.wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover {
-  border: none;
-  color: #6abbef;
-}
-.wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover,
-.wf-menu-horizontal .wf-menu-sub .wf-menu-item:hover a {
-  color: #6abbef;
-  border-bottom-color: #6abbef;
-}
-.wf-menu-horizontal .wf-menu-sub:before {
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  content: '';
-  top: -2px;
-  left: 0;
-  background-color: transparent;
+.wf-menu-horizontal .wf-menu-item-active {
+  border-color: #6abbef;
 }
 .wf-menu-vertical {
   width: 240px;
   padding: 0 20px;
   border-right: 1px solid #ddd;
-}
-.wf-menu-vertical .wf-menu-item {
-  border-bottom: 1px solid #e1e1e1;
-  padding: 0 15px;
-}
-.wf-menu-vertical .wf-menu-title {
-  display: inline-block;
-  height: 48px;
-  line-height: 48px;
-}
-.wf-menu-vertical .wf-menu-sub .wf-menu-item {
-  height: auto;
 }
