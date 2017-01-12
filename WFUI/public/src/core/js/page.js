@@ -46,7 +46,7 @@ wf.define('page', ['logger'], function (logger) {
                 } else {
                     logger.error(com + '缺少auto render');
                 }
-            };
+            }
             
         },        
         
