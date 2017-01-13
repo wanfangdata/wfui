@@ -8,7 +8,7 @@ var page = wf.require('page').render(
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
             $(this).parent().parent().find('pre').toggle(200);
         });
-        $('.doc-content nav').html((function () {
+        $('.doc-content .nav').html((function () {
             var result = [];
             $('.doc-content .section').each(function (i, item) {
                 result.push('<a href="#{0}">{1}</a>'.format(
