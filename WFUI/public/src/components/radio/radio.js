@@ -12,12 +12,12 @@
  */
 wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'radio',
+    var role = 'radio';
 
     /**
      * @class Radio
      */
-    Radio = wf.inherit(UI, {
+    var Radio = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -58,8 +58,8 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          * 如果为undefined则根据当前状态修改
          */
         set: function (checked) {
-            var $ele = this.input.$element,
-                result = checked === undefined ?
+            var $ele = this.input.$element;
+            var result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
                 checked;
@@ -111,21 +111,21 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             };
             me.initEvent(events);
         }
-    }),
+    });
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]',
+    var dataRole = '[data-role="' + role + '"]';
 
     /**
      * radio实例name
      * @param {Object} $ele Radio JQuery元素
      * @param {String} index 元素index
      */
-    name = function ($ele, index) {
+    var name = function ($ele, index) {
         return $ele.attr('id') || role + index;
-    },
+    };
 
     /**
      * 创建radio
@@ -133,7 +133,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {String} index radio index
      * @param {Function} click click事件
      */
-    generateRD = function ($elm, index, click) {
+    var generateRD = function ($elm, index, click) {
         return new Radio(
             name($elm, index),
             $elm,

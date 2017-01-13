@@ -16,14 +16,14 @@
  *     </ul>
  * </div>
  */
-wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, UI, Action, browser) {
+wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, UI, Action, browser) {
     
-    var role = 'select',
+    var role = 'select';
     
     /**
      * @class Select
      */
-    Select = wf.inherit(UI, {
+    var Select = wf.inherit(UI, {
         
         /**
          * [data-role]
@@ -43,14 +43,14 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
         disabledCls: function () {
             return this.clsName('disabled');
         },
-            
+        
         /**
          * disabled class
          */
         selectCls: function () {
             return this.clsName('option-selected');
         },    
-
+        
         /**
          * 注册用户自定义事件
          * @event on
@@ -80,7 +80,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
          */
         close: function () {
             var me = this;
-            if (me.supportCss3('animation')&& !browser.msie) {
+            if (me.supportCss3('animation') && !browser.msie) {
                 me.animation(
                     this.options.$element,
                     this.animationCls(['slide', 'up', 'out']),
@@ -92,29 +92,29 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                 me.$element.removeClass(me.openCls());
             }
         },            
-            
+        
         /**
          * 设置select的选中状态
          * @param {String} value 选中值
          * @param {String} text 选中文本
          */
-        set: function (value,text) {
+        set: function (value, text) {
             this.selection
             .$element
             .find(UI.CLS_PREFIX + this.clsName('selection-value'))
             .text(text);
             this.input.$element.val(value);
         }, 
-           
+        
         /**
          * 获取select值
          * @param {String} value 选中值
          * @param {String} text 选中文本
          */  
-        value: function () { 
+        value: function () {
             return this.input.$element.val();
         },    
-
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -141,8 +141,8 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                         var $item;
                         var selectCls = me.selectCls();
                         var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role));
-                        var selected = function ($item) { 
-                            me.set($item.data('value'), $item.text());                                
+                        var selected = function ($item) {
+                            me.set($item.data('value'), $item.text());
                         };
                         $optionList.each(function () {
                             $item = $(this);
@@ -159,12 +159,12 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                                 selected($(this));
                                 me.close();
                             });
-                            if ($item.hasClass(selectCls)) { 
+                            if ($item.hasClass(selectCls)) {
                                 $selected = $item;
                             }
                         });
                         //默认项
-                        if(!$selected){ $selected = $($optionList[0]).addClass(selectCls);}
+                        if (!$selected) { $selected = $($optionList[0]).addClass(selectCls); }
                         selected($selected);
                     }
                 }
@@ -181,9 +181,9 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                         _action_.piping();
                     });
                 }, this.selection.$element),
-                    change: new Action('change', function () { 
+                change: new Action('change', function () { 
                     //在$optionList click触发
-                },this.options.$element)
+                }, this.options.$element)
             };
             me.initEvent(events);
             me.blankClick(me.find([
@@ -195,12 +195,12 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                 }
             });
         }
-    }),
-
+    });
+    
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]';
+    var dataRole = '[data-role="' + role + '"]';
     
     /**
      * 自动初始化

@@ -1,7 +1,7 @@
 ﻿'use strict';
 
 wf.define('logger', [], function () {
-
+    
     /**
      * private
      * 日志级别
@@ -11,29 +11,29 @@ wf.define('logger', [], function () {
         info: 'info',
         warn: 'warn',
         error: 'error'
-    },
-
+    };
+    
     /**
      * private
      * 日志输出模式
      */
-    Mode = {
+    var Mode = {
         local: 'local',
         remote: 'remote'
-    },
-
+    };
+    
     /**
      * private
      * 日志默认输出到本地
      */
-    mode = Mode.local,
-
+    var mode = Mode.local;
+    
     /**
      * private
      * 日志输出到远程的地址
      */
-    remoteUrl = '',
-
+    var remoteUrl = '';
+    
     /**
      * 日志输出
      * private
@@ -41,8 +41,8 @@ wf.define('logger', [], function () {
      * @param {String} msg 日志消息
      * @param {LogLevel} level 日志级别
      */
-    output = function (msg, level) {
-        if (mode = Mode.local) {
+    var output = function (msg, level) {
+        if (mode === Mode.local) {
             console[level](msg);
         } else {
             if (!remoteUrl) {
@@ -53,12 +53,12 @@ wf.define('logger', [], function () {
         }
         return msg;
     };
-
+    
     /**
      * public api
      */
     return {
-
+        
         /**
          * 获取日志输出模式
          * @method getOutputMode
@@ -67,7 +67,7 @@ wf.define('logger', [], function () {
         getOutputMode: function () {
             return mode;
         },
-
+        
         /**
          * 设置日志输出模式,仅当url有值时使用Mode.remote
          * @method setOutputMode
@@ -79,7 +79,7 @@ wf.define('logger', [], function () {
                 mode = Mode.remote;
             }
         },
-
+        
         /**
          * debug模式,调试时输出
          * @method debug
@@ -89,7 +89,7 @@ wf.define('logger', [], function () {
         debug: function (msg) {
             return output(msg, LogLevel.debug);
         },
-
+        
         /**
          * info模式,输出到终端用户
          * @method info
@@ -99,7 +99,7 @@ wf.define('logger', [], function () {
         info: function (msg) {
             return output(msg, LogLevel.info);
         },
-
+        
         /**
          * warn模式,系统警告,建议远程传回
          * @method warn
@@ -109,7 +109,7 @@ wf.define('logger', [], function () {
         warn: function (msg) {
             return output(msg, LogLevel.warn);
         },
-
+        
         /**
          * error模式,系统错误,建议远程传回
          * @method error

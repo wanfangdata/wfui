@@ -12,12 +12,12 @@
  */
 wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'checkbox',
+    var role = 'checkbox';
 
     /**
      * @class Checkbox
      */
-    Checkbox = wf.inherit(UI, {
+    var Checkbox = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -58,8 +58,8 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * 如果为undefined则根据当前状态修改
          */
         set: function (checked) {
-            var $ele = this.input.$element,
-                result = checked === undefined ?
+            var $ele = this.input.$element;
+            var result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
                 checked;
@@ -111,21 +111,21 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             };
             me.initEvent(events);
         }
-    }),
+    });
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]',
+    var dataRole = '[data-role="' + role + '"]';
 
     /**
      * checkbox实例name
      * @param {Object} $ele Checkbox JQuery元素
      * @param {String} index 元素index
      */
-    name = function ($ele, index) {
+    var name = function ($ele, index) {
         return $ele.attr('id') || role + index;
-    },
+    };
 
     /**
      * 创建checkbox
@@ -133,7 +133,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      * @param {String} index checkbox index
      * @param {Function} click click事件
      */
-    generateCB = function ($elm, index, click) {
+    var generateCB = function ($elm, index, click) {
         return new Checkbox(
             name($elm, index),
             $elm,

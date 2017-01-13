@@ -1,8 +1,8 @@
-﻿/*
+﻿'use strict';
+/*
  * cookie module
  *
  */
-
 wf.define('cookie', [], function () {
     return {
         /**
@@ -30,10 +30,12 @@ wf.define('cookie', [], function () {
          */
         get: function (key) {
             var arr, reg = new RegExp('(^| )' + key + '=([^;]*)(;|$)');
-            if (arr = document.cookie.match(reg))
+            if (arr = document.cookie.match(reg)) {
                 return arr[2];
-            else
+            }                
+            else {
                 return null;
+            }                
         },
         /**
          * 删除cookie

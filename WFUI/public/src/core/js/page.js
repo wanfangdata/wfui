@@ -61,8 +61,8 @@ wf.define('page', ['logger'], function (logger) {
          * @return {Object} 返回当前页面
          */
         render: function (name, components , func, auto) {
-            var _pg_ = this,
-                UI_SPLITOR = '.';
+            var _pg_ = this;
+            var UI_SPLITOR = '.';
             _pg_.name = name;
             $.each(components, function () {
                 if (this.indexOf(UI_SPLITOR) > -1) {

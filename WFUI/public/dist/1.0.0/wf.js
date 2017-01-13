@@ -1,180 +1,151 @@
 'use strict';
 (function (global) {
-    
     /**
      * wf module framework.
      * @module wf
      * @base wf
      * @alias f
      */
-
-    var wf = global.wf || {},
-    
-        wf = function () {
-            
-            var name = 'wf',
-                /**
-                 * 核心模块,dependencies
-                 */
-                core = {
-                    token: '_core_',
-                    values: [
-                        'logger'
-                    ]
-                },
-                /**
-                 * private
-                 * 模块集合
-                 */
-                modules = {};
-            
-            /**
-             * WFUI实例
-             */
-            return {
-                
-                /**
-                 * 模块名称
-                 * @property {String} name
-                 */
-                name: 'wf', 
-                
-                /**
-                 * 版本号,项目构建新版本时更新发布版本号
-                 * @property {String} version
-                 */
-                version: '1.0.0',
-                
-                /**
-                 * 模块声明
-                 * @method define
-                 * @param {String} name 模块名称
-                 * @param {Array||String} dependencies 模块依赖项,为core.token时引用核心模块
-                 * @param {String} factory 模块创建工厂
-                 * @return {Module} 返回该定义模块
-                 */
-                define: function (name, dependencies, factory) {
-                    
-                    if (typeof dependencies === 'string' && dependencies === core.token) {
-                        dependencies = core.values;
-                    }
-                    
-                    if (!modules[name]) {
-                        var module = {
-                            name: name,
-                            dependencies: dependencies,
-                            factory: factory
-                        };
-                        
-                        modules[name] = module;
-                    }
-                    
-                    return modules[name];
-                },
-                
-                /**
-                 * 模块引用
-                 * @method require
-                 * @param {String} name 模块名称
-                 * @return {Object} 返回该定义模块的实例
-                 */
-                require: function (name) {
-                    
-                    var module = modules[name];
-                    
-                    if (!module.entity) {
-                        var args = [];
-                        for (var i = 0; i < module.dependencies.length; i++) {
-                            if (modules[module.dependencies[i]].entity) {
-                                args.push(modules[module.dependencies[i]].entity);
-                            }
-                            else {
-                                args.push(this.require(module.dependencies[i]));
-                            }
-                        }
-                        
-                        module.entity = module.factory.apply(function () { 
-                            //noop
-                        }, args);
-                    }
-                    return module.entity;
-                },
-                
-                /**
-                 * 模块继承
-                 * @method inherit
-                 * @param {String} base 父类
-                 * @return {Class} 返回该定义的类型
-                 */
-                inherit: function (base, prop) {
-                    
-                    /**
-                     * 正则匹配函数参数
-                     * private
-                     * @method argumentNames
-                     * @param {Function} fn 函数
-                     * @return {Array}names 参数名数组
-                     */
-                    var argumentNames = function (fn) {
-                        var names = fn.toString().match(/^[\s\(]*function[^(]*\(([^\)]*)\)/)[1].replace(/\s+/g, '').split(',');
-                        return names.length == 1 && !names[0] ? [] : names;
-                    }
-                    
-                    // 本次调用所创建的类（构造函数）
-                    function UI() {
-                        
-                        if (base) {
-                            this.baseprototype = base.prototype;
-                        }
-                        if (!this.init) {
-                            throw new Error('init function is undefind');
-                        }
-                        this.init.apply(this, arguments);
-                    }
-                    
-                    // 单参数情况下 - inherit(prop)
-                    if (typeof (base) === 'object') {
-                        prop = base;
-                        base = null;
-
-                    }
-                    
-                    if (base) {
-                        var MiddleClass = function () { };
-                        MiddleClass.prototype = base.prototype;
-                        UI.prototype = new MiddleClass();
-                        UI.prototype.constructor = UI;
-                    }
-                    
-                    /**
-                     * 重写父类方法,特殊情况下使用_base_访问父类同名方法（必须为第一个参数）
-                     */
-                    for (var name in prop) {
-                        if (prop.hasOwnProperty(name)) {
-                            if (base && typeof (prop[name]) === 'function' && argumentNames(prop[name])[0] === '_base_') {
-                                UI.prototype[name] = (function (name, fn) {
-                                    return function () {
-                                        var that = this,
-                                            _base_ = function () {
-                                                return base.prototype[name].apply(that, arguments);
-                                            };
-                                        return fn.apply(this, Array.prototype.concat.apply(_base_, arguments));
-                                    };
-                                })(name, prop[name]);
-                        
-                            } else {
-                                UI.prototype[name] = prop[name];
-                            }
-                        }
-                    }
-                    
-                    return UI;
-                }
-            };
+    var wf = global.wf || {};
+    wf = function () {
+        var name = 'wf';
+        /**
+         * 核心模块,dependencies
+         */
+        var core = {
+            token: '_core_',
+            values: [
+                'logger'
+            ]
         };
-    
+        /**
+         * private
+         * 模块集合
+         */
+        var modules = {};
+        /**
+         * WFUI实例
+         */
+        return {
+            /**
+             * 模块名称
+             * @property {String} name
+             */
+            name: 'wf',
+            /**
+             * 版本号,项目构建新版本时更新发布版本号
+             * @property {String} version
+             */
+            version: '1.0.0',
+            /**
+             * 模块声明
+             * @method define
+             * @param {String} name 模块名称
+             * @param {Array||String} dependencies 模块依赖项,为core.token时引用核心模块
+             * @param {String} factory 模块创建工厂
+             * @return {Module} 返回该定义模块
+             */
+            define: function (name, dependencies, factory) {
+                if (typeof dependencies === 'string' && dependencies === core.token) {
+                    dependencies = core.values;
+                }
+                if (!modules[name]) {
+                    var module = {
+                        name: name,
+                        dependencies: dependencies,
+                        factory: factory
+                    };
+                    modules[name] = module;
+                }
+                return modules[name];
+            },
+            /**
+             * 模块引用
+             * @method require
+             * @param {String} name 模块名称
+             * @return {Object} 返回该定义模块的实例
+             */
+            require: function (name) {
+                var i;
+                var module = modules[name];
+                if (!module.entity) {
+                    var args = [];
+                    for (i = 0; i < module.dependencies.length; i++) {
+                        if (modules[module.dependencies[i]].entity) {
+                            args.push(modules[module.dependencies[i]].entity);
+                        }
+                        else {
+                            args.push(this.require(module.dependencies[i]));
+                        }
+                    }
+                    module.entity = module.factory.apply(function () {}, args); //noop
+                }
+                return module.entity;
+            },
+            /**
+             * 模块继承
+             * @method inherit
+             * @param {String} base 父类
+             * @return {Class} 返回该定义的类型
+             */
+            inherit: function (base, prop) {
+                /**
+                 * 正则匹配函数参数
+                 * private
+                 * @method argumentNames
+                 * @param {Function} fn 函数
+                 * @return {Array}names 参数名数组
+                 */
+                var argumentNames = function (fn) {
+                    var names = fn.toString().match(/^[\s\(]*function[^(]*\(([^\)]*)\)/)[1].replace(/\s+/g, '').split(',');
+                    return names.length == 1 && !names[0] ? [] : names;
+                };
+                // 本次调用所创建的类（构造函数）
+                function UI() {
+                    if (base) {
+                        this.baseprototype = base.prototype;
+                    }
+                    if (!this.init) {
+                        throw new Error('init function is undefind');
+                    }
+                    this.init.apply(this, arguments);
+                }
+                // 单参数情况下 - inherit(prop)
+                if (typeof (base) === 'object') {
+                    prop = base;
+                    base = null;
+                }
+                if (base) {
+                    var MiddleClass = function () { };
+                    MiddleClass.prototype = base.prototype;
+                    UI.prototype = new MiddleClass();
+                    UI.prototype.constructor = UI;
+                }
+                /**
+                 * 重写父类方法,特殊情况下使用_base_访问父类同名方法（必须为第一个参数）
+                 */
+                for (var name in prop) {
+                    if (prop.hasOwnProperty(name)) {
+                        if (base && typeof (prop[name]) === 'function' && argumentNames(prop[name])[0] === '_base_') {
+                            UI.prototype[name] = (function (name, fn) {
+                                return function () {
+                                    var that = this,
+                                        _base_ = function () {
+                                            return base.prototype[name].apply(that, arguments);
+                                        };
+                                    return fn.apply(this, Array.prototype.concat.apply(_base_, arguments));
+                                };
+                            })(name, prop[name]);
+                        } else {
+                            UI.prototype[name] = prop[name];
+                        }
+                    }
+                }
+                return UI;
+            }
+        };
+    };
     global.wf = wf();
-
 })(window);
 
 'use strict';
@@ -200,43 +171,43 @@
         return [];
     };
 
-})();
+}());
 'use strict';
 
 (function (global) {
     /**
      * 兼容console
      */
-    var _console = global.console || {},
-
-        methods = [
-            'assert',
-            'clear',
-            'count',
-            'debug',
-            'dir',
-            'dirxml',
-            'exception',
-            'error',
-            'group',
-            'groupCollapsed',
-            'groupEnd',
-            'info',
-            'log',
-            'profile',
-            'profileEnd',
-            'table',
-            'time',
-            'timeEnd',
-            'timeStamp',
-            'trace',
-            'warn'
-        ],
-        console = {
-            version: '1.0.0'
-        },
-        key;
-
+    var _console = global.console || {};
+    
+    var methods = [
+        'assert',
+        'clear',
+        'count',
+        'debug',
+        'dir',
+        'dirxml',
+        'exception',
+        'error',
+        'group',
+        'groupCollapsed',
+        'groupEnd',
+        'info',
+        'log',
+        'profile',
+        'profileEnd',
+        'table',
+        'time',
+        'timeEnd',
+        'timeStamp',
+        'trace',
+        'warn'
+    ];
+    var console = {
+        version: '1.0.0'
+    };
+    var key;
+    
     for (var i = 0, len = methods.length; i < len; i++) {
         key = methods[i];
         console[key] = function (key) {
@@ -244,19 +215,19 @@
                 if (typeof _console[key] === 'undefined') {
                     return 0;
                 }
-
+                
                 Function.prototype.apply.call(_console[key], _console, arguments);
             };
         }(key);
     }
-
+    
     global.console = console;
 
 }(window));
 'use strict';
 
 wf.define('logger', [], function () {
-
+    
     /**
      * private
      * 日志级别
@@ -266,29 +237,29 @@ wf.define('logger', [], function () {
         info: 'info',
         warn: 'warn',
         error: 'error'
-    },
-
+    };
+    
     /**
      * private
      * 日志输出模式
      */
-    Mode = {
+    var Mode = {
         local: 'local',
         remote: 'remote'
-    },
-
+    };
+    
     /**
      * private
      * 日志默认输出到本地
      */
-    mode = Mode.local,
-
+    var mode = Mode.local;
+    
     /**
      * private
      * 日志输出到远程的地址
      */
-    remoteUrl = '',
-
+    var remoteUrl = '';
+    
     /**
      * 日志输出
      * private
@@ -296,8 +267,8 @@ wf.define('logger', [], function () {
      * @param {String} msg 日志消息
      * @param {LogLevel} level 日志级别
      */
-    output = function (msg, level) {
-        if (mode = Mode.local) {
+    var output = function (msg, level) {
+        if (mode === Mode.local) {
             console[level](msg);
         } else {
             if (!remoteUrl) {
@@ -308,12 +279,12 @@ wf.define('logger', [], function () {
         }
         return msg;
     };
-
+    
     /**
      * public api
      */
     return {
-
+        
         /**
          * 获取日志输出模式
          * @method getOutputMode
@@ -322,7 +293,7 @@ wf.define('logger', [], function () {
         getOutputMode: function () {
             return mode;
         },
-
+        
         /**
          * 设置日志输出模式,仅当url有值时使用Mode.remote
          * @method setOutputMode
@@ -334,7 +305,7 @@ wf.define('logger', [], function () {
                 mode = Mode.remote;
             }
         },
-
+        
         /**
          * debug模式,调试时输出
          * @method debug
@@ -344,7 +315,7 @@ wf.define('logger', [], function () {
         debug: function (msg) {
             return output(msg, LogLevel.debug);
         },
-
+        
         /**
          * info模式,输出到终端用户
          * @method info
@@ -354,7 +325,7 @@ wf.define('logger', [], function () {
         info: function (msg) {
             return output(msg, LogLevel.info);
         },
-
+        
         /**
          * warn模式,系统警告,建议远程传回
          * @method warn
@@ -364,7 +335,7 @@ wf.define('logger', [], function () {
         warn: function (msg) {
             return output(msg, LogLevel.warn);
         },
-
+        
         /**
          * error模式,系统错误,建议远程传回
          * @method error
@@ -376,11 +347,11 @@ wf.define('logger', [], function () {
         }
     };
 });
+'use strict';
 /*
  * cookie module
  *
  */
-
 wf.define('cookie', [], function () {
     return {
         /**
@@ -408,10 +379,12 @@ wf.define('cookie', [], function () {
          */
         get: function (key) {
             var arr, reg = new RegExp('(^| )' + key + '=([^;]*)(;|$)');
-            if (arr = document.cookie.match(reg))
+            if (arr = document.cookie.match(reg)) {
                 return arr[2];
-            else
+            }                
+            else {
                 return null;
+            }                
         },
         /**
          * 删除cookie
@@ -426,67 +399,67 @@ wf.define('cookie', [], function () {
 'use strict';
 
 wf.define('loader', [], function () {
-
+    
     /**
      * private
      * 动态加载模块集合
      */
-    var loadModules = {},
-
-        /**
-         * 创建模块node
-         * private
-         * @method createModuleNode
-         * @param {String} path 模块url
-         * @return {String} node
-         */
-        createModuleNode = function (path) {
-            var node = document.createElement('script');
-            node.type = 'text/javascript';
-            node.async = 'true';
-            node.src = path + '.js';
-            return node;
-        };
-
+    var loadModules = {};
+    
+    /**
+     * 创建模块node
+     * private
+     * @method createModuleNode
+     * @param {String} path 模块url
+     * @return {String} node
+     */
+    var createModuleNode = function (path) {
+        var node = document.createElement('script');
+        node.type = 'text/javascript';
+        node.async = 'true';
+        node.src = path + '.js';
+        return node;
+    };
+    
     /**
      * public api
      */
     return {
         
         name: 'model loader',
-
+        
         /**
          * 获取日志输出模式
          * @method load 动态获取模块
          */
         load: function (pathArr, callback) {
             for (var i = 0; i < pathArr.length; i++) {
-
+                
                 var path = pathArr[i];
-
+                
                 if (!loadModules[path]) {
-                    var head = document.getElementsByTagName('head')[0],
-                        node = createModuleNode(path),
-
+                    var head = document.getElementsByTagName('head')[0];
+                    var node = createModuleNode(path);
+                    
                     /**
                      * check所有模块加载完成执行callback
                      * @param {Function} callback 加载完成回调函数
                      * private
                      */
-                    checkAllFiles = function () {
+                     var checkAllFiles = function () {
                         var allLoaded = true;
-
+                        
                         for (var i = 0; i < pathArr.length; i++) {
                             if (!loadModules[pathArr[i]]) {
                                 allLoaded = false;
                                 break;
                             }
                         }
-
+                        
                         if (allLoaded) {
                             callback();
                         }
-                    }
+                    };
                     node.onload = function () {
                         loadModules[path] = true;
                         head.removeChild(node);
@@ -504,30 +477,27 @@ wf.define('loader', [], function () {
  * browser core and version
  */
 wf.define('browser', '_core_', function (logger) {
-    
-    var webkit = /(webkit)\/([\w.]+)/,  
-        opera = /(opera)(?:.*version)?[ \/]([\w.]+)/,  
-        msie = /(msie) ([\w.]+)/,  
-        mozilla = /(mozilla)(?:.*? rv:([\w.]+))?/,      
-        browser = {},  
-        ua = window.navigator.userAgent, 
-        uaMatch = function (ua) {
-            ua = ua.toLowerCase();
-            
-            var match = webkit.exec(ua) 
+    var webkit = /(webkit)\/([\w.]+)/;
+    var opera = /(opera)(?:.*version)?[ \/]([\w.]+)/;
+    var msie = /(msie) ([\w.]+)/;
+    var mozilla = /(mozilla)(?:.*? rv:([\w.]+))?/;
+    var browser = {};
+    var ua = window.navigator.userAgent;
+    var uaMatch = function (ua) {
+        ua = ua.toLowerCase();
+        
+        var match = webkit.exec(ua) 
                     || opera.exec(ua) 
                     || msie.exec(ua) 
                     || ua.indexOf('compatible') < 0 && mozilla.exec(ua) 
                     || [];
-            
-            return {
-                browser : match[1] || '',  
-                version : match[2] || '0'
-            };
-        }, 
-        browserMatch = uaMatch(ua);
-    
-    
+        
+        return {
+            browser : match[1] || '',  
+            version : match[2] || '0'
+        };
+    };
+    var browserMatch = uaMatch(ua);
     if (browserMatch.browser) {
         browser[browserMatch.browser] = true;
         browser.version = browserMatch.version;
@@ -538,14 +508,12 @@ wf.define('browser', '_core_', function (logger) {
 /**
  * 事件系统
  */
-wf.define('Action', '_core_', function (logger) {
-    
+wf.define('Action', [], function () {
     return wf.inherit({
         /**
          * 事件名称
          */
         name: String.empty,
-
         /**
          * 事件注册
          * @param {Function} func
@@ -553,7 +521,6 @@ wf.define('Action', '_core_', function (logger) {
         register: function (func) {
             this.funcs.push(func);
         },
-        
         /**
          * 事件管道
          * @parma {*} param 事件自定义参数
@@ -564,14 +531,13 @@ wf.define('Action', '_core_', function (logger) {
                 this(_ac_, param);
             });
         },
-        
         /**
          * 事件初始化
          * @param {String} name 事件名
          * @param {Function} 初始事件体
          * @param {JQuery} $target 触发对象
          */
-        init: function (name , func, $target) {
+        init: function (name, func, $target) {
             this.name = name;
             /**
              * 事件注册的函数
@@ -586,7 +552,6 @@ wf.define('Action', '_core_', function (logger) {
             }
         }
     });
-
 });
 'use strict';
 /**
@@ -597,199 +562,198 @@ wf.define('UI', ['logger'], function (logger) {
     /**
      * UI组件命名规则
      */
-    var _WF_ = 'wf',
-
-        CHAIN = '-',
-
-        CLS_PREFIX = '.',
-
-        ID_PREFIX = '#',
-
-        UI = wf.inherit({
-            /**
-             * 组件实例名
-             */
-            name: String.empty,
+    var _WF_ = 'wf';
+    var CHAIN = '-';
+    var CLS_PREFIX = '.';
+    var ID_PREFIX = '#';
+    var UI = wf.inherit({
+        /**
+         * 组件实例名
+         */
+        name: String.empty,
+        
+        /**
+         * 组件是否激活
+         */
+        active: true,
+        
+        /**
+         * 组件实例JQuery对象
+         */
+        $element: {},   
+        
+        /**
+         * 事件对象
+         */
+        action: {},  
+        
+        /**
+         * 显示
+         */
+        show: function () {
+            this.$element.show();
+        },
+        
+        /**
+         * 隐藏
+         */
+        hide: function () {
+            this.$element.hide();
+        },
+        
+        /**
+         * 移除当前组件实例
+         */
+        remove: function () {
+            this.$element.remove();
+        },
+        
+        /**
+         * 组装className
+         * @param {String} name元素名
+         */
+        clsName: function (name) {
+            return [_WF_, this.role, name].join(CHAIN);
+        },
+        
+        /**
+         * 单个组件实例查找结构元素
+         * @param {String} 元素名（按照组件命名规则）
+         * @return {JQuery} 返回结构元素
+         */
+        find: function (name) {
+            return this.$element.find(CLS_PREFIX + this.clsName(name));
+        },
+        
+        /**
+         * 设置全局点击机制
+         */
+        blankClick: (function () {
             
             /**
-             * 组件是否激活
+             * 全局目标对象列表
              */
-            active: true,
-            
-            /**
-             * 组件实例JQuery对象
-             */
-            $element: {},   
-            
-            /**
-             * 事件对象
-             */
-            action: {},  
-            
-            /**
-             * 显示
-             */
-            show: function () {
-                this.$element.show();
-            },
-            
-            /**
-             * 隐藏
-             */
-            hide: function () {
-                this.$element.hide();
-            },
-            
-            /**
-             * 移除当前组件实例
-             */
-            remove: function () {
-                this.$element.remove();
-            },
-            
-            /**
-             * 组装className
-             * @param {String} name元素名
-             */
-            clsName: function (name) {
-                return [_WF_, this.role, name].join(CHAIN);
-            },
-            
-            /**
-             * 单个组件实例查找结构元素
-             * @param {String} 元素名（按照组件命名规则）
-             * @return {JQuery} 返回结构元素
-             */
-            find: function (name) {
-                return this.$element.find(CLS_PREFIX + this.clsName(name));
-            },
-            
-            /**
-             * 设置全局点击机制
-             */
-            blankClick: (function () {
-                
-                /**
-                 * 全局目标对象列表
-                 */
-                var $targetList = [];
-                $(document).mouseup(function (e) {
-                    $.each($targetList, function () {
-                        if (!this.target.is(e.target) && 
+            var $targetList = [];
+            $(document).mouseup(function (e) {
+                $.each($targetList, function () {
+                    if (!this.target.is(e.target) && 
                             this.target.has(e.target).length === 0) {
-                            if ($.isFunction(this.clickOut)) {
-                                this.clickOut();
-                            }
-                        } else {
-                            if ($.isFunction(this.clickIn)) {
-                                this.clickIn();
-                            };
+                        if ($.isFunction(this.clickOut)) {
+                            this.clickOut();
                         }
-                    });
-                });
-                
-                /**
-                 * @param {JQuery} $target目标对象
-                 * @param {Function} clickOut点击非目标对象时执行函数
-                 * @param {Function} clickIn点击目标对象时执行函数
-                 */
-                return function ($target, clickOut, clickIn) {
-                    $targetList.push({
-                        target: $target,
-                        clickIn: clickIn,
-                        clickOut: clickOut
-                    });
-                }
-            })(),
-            
-            /**
-             * 判断浏览器是否支持某一个CSS3属性
-             * @param  {String} style 属性名称
-             * @return {Boolean} true/false
-             */
-            supportCss3: function supportCss3(style) {
-                var prefix = ['webkit', 'Moz', 'ms', 'o'],
-                    i,
-                    humpString = [],
-                    htmlStyle = document.documentElement.style,
-                    _toHumb = function (string) {
-                        return string.replace(/-(\w)/g, function ($0, $1) {
-                            return $1.toUpperCase();
-                        });
-                    };
-                
-                for (i in prefix) {
-                    humpString.push(_toHumb(prefix[i] + '-' + style));
-                }
-                
-                humpString.push(_toHumb(style));
-                
-                for (i in humpString) {
-                    if (humpString[i] in htmlStyle) return true;
-                }                
-                return false;
-            },
-
-            /**
-             * 获取动画class
-             * @param {Array} keywords 动画关键词
-             */
-            animationCls: function (keywords) {
-                return _WF_ + CHAIN + keywords.join(CHAIN);
-            },
-            
-            /**
-             * 为UI添加一段动画
-             * @param {Object}  $ui jquery对象
-             * @param {String}  cls 动画class
-             * @param {Function}  callback 动画结束后回调
-             */
-            animation: function ($ui, cls, callback) {
-                $ui.addClass(cls);$ui.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                    $ui.removeClass(cls);
-                    if ($.isFunction(callback)) {
-                        callback();
+                    } else {
+                        if ($.isFunction(this.clickIn)) {
+                            this.clickIn();
+                        }
                     }
                 });
-            },
+            });
             
             /**
-             * 初始化组件内部元素
-             * @param {String} elements 组件内部元素
+             * @param {JQuery} $target目标对象
+             * @param {Function} clickOut点击非目标对象时执行函数
+             * @param {Function} clickIn点击目标对象时执行函数
              */
-            initElement: function (elements) {
-                var _ui_ = this;
-                $.each(elements, function () {
-                    this.$element = _ui_.find(this.selector);
-                    if (this.action && $.isFunction(this.action)) {
-                        this.action(this.$element);
-                    }
-                    _ui_[this.selector] = this;
+            return function ($target, clickOut, clickIn) {
+                $targetList.push({
+                    target: $target,
+                    clickIn: clickIn,
+                    clickOut: clickOut
                 });
-            },
+            };
+        })(),
+        
+        /**
+        * 判断浏览器是否支持某一个CSS3属性
+        * @param  {String} style 属性名称
+        * @return {Boolean} true/false
+        */
+        supportCss3: function supportCss3(style) {
+            var prefix = ['webkit', 'Moz', 'ms', 'o'];
+            var i;
+            var humpString = [];
+            var htmlStyle = document.documentElement.style;
+            var _toHumb = function (string) {
+                return string.replace(/-(\w)/g, function ($0, $1) {
+                    return $1.toUpperCase();
+                });
+            };
             
-            /**
-             * 初始化组件内部元素
-             * @param {Object} events 组件事件
-             */
-            initEvent: function (events) {
-                if (!events) { return; }
-                for (var key in events) {
-                    this.on(key, events[key])
-                }
-            },
-            
-            /**
-             * 初始化函数
-             * @param {String} name组件实例名
-             * @param {JQuery} 组件实例JQuery对象
-             */
-            init: function (name, $element) {
-                this.name = name;
-                this.$element = $element;
+            for (i in prefix) {
+                humpString.push(_toHumb(prefix[i] + '-' + style));
             }
+            
+            humpString.push(_toHumb(style));
+            
+            for (i in humpString) {
+                if (humpString[i] in htmlStyle) {
+                    return true;
+                }
+            }
+            return false;
+        },
+        
+        /**
+         * 获取动画class
+         * @param {Array} keywords 动画关键词
+         */
+        animationCls: function (keywords) {
+            return _WF_ + CHAIN + keywords.join(CHAIN);
+        },
+        
+        /**
+         * 为UI添加一段动画
+         * @param {Object}  $ui jquery对象
+         * @param {String}  cls 动画class
+         * @param {Function}  callback 动画结束后回调
+         */
+        animation: function ($ui, cls, callback) {
+            $ui.addClass(cls);
+            $ui.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                $ui.removeClass(cls);
+                if ($.isFunction(callback)) {
+                    callback();
+                }
+            });
+        },
+        
+        /**
+         * 初始化组件内部元素
+         * @param {String} elements 组件内部元素
+         */
+        initElement: function (elements) {
+            var _ui_ = this;
+            $.each(elements, function () {
+                this.$element = _ui_.find(this.selector);
+                if (this.action && $.isFunction(this.action)) {
+                    this.action(this.$element);
+                }
+                _ui_[this.selector] = this;
+            });
+        },
+        
+        /**
+         * 初始化组件内部元素
+         * @param {Object} events 组件事件
+         */
+        initEvent: function (events) {
+            if (!events) { return; }
+            for (var key in events) {
+                this.on(key, events[key])
+            }
+        },
+        
+        /**
+         * 初始化函数
+         * @param {String} name组件实例名
+         * @param {JQuery} 组件实例JQuery对象
+         */
+        init: function (name, $element) {
+            this.name = name;
+            this.$element = $element;
+        }
 
-        });
+    });
     
     /**
      * static 组装className
@@ -820,12 +784,12 @@ wf.define('UI', ['logger'], function (logger) {
  */
 wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'checkbox',
+    var role = 'checkbox';
 
     /**
      * @class Checkbox
      */
-    Checkbox = wf.inherit(UI, {
+    var Checkbox = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -866,8 +830,8 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          * 如果为undefined则根据当前状态修改
          */
         set: function (checked) {
-            var $ele = this.input.$element,
-                result = checked === undefined ?
+            var $ele = this.input.$element;
+            var result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
                 checked;
@@ -919,21 +883,21 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             };
             me.initEvent(events);
         }
-    }),
+    });
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]',
+    var dataRole = '[data-role="' + role + '"]';
 
     /**
      * checkbox实例name
      * @param {Object} $ele Checkbox JQuery元素
      * @param {String} index 元素index
      */
-    name = function ($ele, index) {
+    var name = function ($ele, index) {
         return $ele.attr('id') || role + index;
-    },
+    };
 
     /**
      * 创建checkbox
@@ -941,7 +905,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      * @param {String} index checkbox index
      * @param {Function} click click事件
      */
-    generateCB = function ($elm, index, click) {
+    var generateCB = function ($elm, index, click) {
         return new Checkbox(
             name($elm, index),
             $elm,
@@ -1029,12 +993,12 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
  */
 wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
-    var role = 'radio',
+    var role = 'radio';
 
     /**
      * @class Radio
      */
-    Radio = wf.inherit(UI, {
+    var Radio = wf.inherit(UI, {
 
         /**
          * [data-role]
@@ -1075,8 +1039,8 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          * 如果为undefined则根据当前状态修改
          */
         set: function (checked) {
-            var $ele = this.input.$element,
-                result = checked === undefined ?
+            var $ele = this.input.$element;
+            var result = checked === undefined ?
                 $ele.is(':checked') ?
                 false : true :
                 checked;
@@ -1128,21 +1092,21 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             };
             me.initEvent(events);
         }
-    }),
+    });
 
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]',
+    var dataRole = '[data-role="' + role + '"]';
 
     /**
      * radio实例name
      * @param {Object} $ele Radio JQuery元素
      * @param {String} index 元素index
      */
-    name = function ($ele, index) {
+    var name = function ($ele, index) {
         return $ele.attr('id') || role + index;
-    },
+    };
 
     /**
      * 创建radio
@@ -1150,7 +1114,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {String} index radio index
      * @param {Function} click click事件
      */
-    generateRD = function ($elm, index, click) {
+    var generateRD = function ($elm, index, click) {
         return new Radio(
             name($elm, index),
             $elm,
@@ -1221,14 +1185,14 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  *     </ul>
  * </div>
  */
-wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, UI, Action, browser) {
+wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, UI, Action, browser) {
     
-    var role = 'select',
+    var role = 'select';
     
     /**
      * @class Select
      */
-    Select = wf.inherit(UI, {
+    var Select = wf.inherit(UI, {
         
         /**
          * [data-role]
@@ -1248,14 +1212,14 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
         disabledCls: function () {
             return this.clsName('disabled');
         },
-            
+        
         /**
          * disabled class
          */
         selectCls: function () {
             return this.clsName('option-selected');
         },    
-
+        
         /**
          * 注册用户自定义事件
          * @event on
@@ -1285,7 +1249,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
          */
         close: function () {
             var me = this;
-            if (me.supportCss3('animation')&& !browser.msie) {
+            if (me.supportCss3('animation') && !browser.msie) {
                 me.animation(
                     this.options.$element,
                     this.animationCls(['slide', 'up', 'out']),
@@ -1297,29 +1261,29 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                 me.$element.removeClass(me.openCls());
             }
         },            
-            
+        
         /**
          * 设置select的选中状态
          * @param {String} value 选中值
          * @param {String} text 选中文本
          */
-        set: function (value,text) {
+        set: function (value, text) {
             this.selection
             .$element
             .find(UI.CLS_PREFIX + this.clsName('selection-value'))
             .text(text);
             this.input.$element.val(value);
         }, 
-           
+        
         /**
          * 获取select值
          * @param {String} value 选中值
          * @param {String} text 选中文本
          */  
-        value: function () { 
+        value: function () {
             return this.input.$element.val();
         },    
-
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -1346,8 +1310,8 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                         var $item;
                         var selectCls = me.selectCls();
                         var $optionList = $options.find(UI.CLS_PREFIX + me.clsName('option', role));
-                        var selected = function ($item) { 
-                            me.set($item.data('value'), $item.text());                                
+                        var selected = function ($item) {
+                            me.set($item.data('value'), $item.text());
                         };
                         $optionList.each(function () {
                             $item = $(this);
@@ -1364,12 +1328,12 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                                 selected($(this));
                                 me.close();
                             });
-                            if ($item.hasClass(selectCls)) { 
+                            if ($item.hasClass(selectCls)) {
                                 $selected = $item;
                             }
                         });
                         //默认项
-                        if(!$selected){ $selected = $($optionList[0]).addClass(selectCls);}
+                        if (!$selected) { $selected = $($optionList[0]).addClass(selectCls); }
                         selected($selected);
                     }
                 }
@@ -1386,9 +1350,9 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                         _action_.piping();
                     });
                 }, this.selection.$element),
-                    change: new Action('change', function () { 
+                change: new Action('change', function () { 
                     //在$optionList click触发
-                },this.options.$element)
+                }, this.options.$element)
             };
             me.initEvent(events);
             me.blankClick(me.find([
@@ -1400,12 +1364,12 @@ wf.define('UI.Select', ['logger', 'UI', 'Action','browser'], function (logger, U
                 }
             });
         }
-    }),
-
+    });
+    
     /**
      * dataRole
      */
-    dataRole = '[data-role="' + role + '"]';
+    var dataRole = '[data-role="' + role + '"]';
     
     /**
      * 自动初始化
@@ -1485,8 +1449,8 @@ wf.define('page', ['logger'], function (logger) {
          * @return {Object} 返回当前页面
          */
         render: function (name, components , func, auto) {
-            var _pg_ = this,
-                UI_SPLITOR = '.';
+            var _pg_ = this;
+            var UI_SPLITOR = '.';
             _pg_.name = name;
             $.each(components, function () {
                 if (this.indexOf(UI_SPLITOR) > -1) {
