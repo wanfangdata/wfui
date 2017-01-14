@@ -40,4 +40,18 @@
             padding: 20px 0;
         }
     }
+
+    &-card {
+        .@{tab-pre}-nav-item {
+            border: 1px solid @color-border-deep;
+            border-width: 1px 1px 0 1px;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            .middle-vertical(32px);
+            &.active {
+                color: @color;
+                background-color: @color-primary;
+            }
+        }
+    }
 }

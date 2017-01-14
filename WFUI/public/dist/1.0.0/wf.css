@@ -1627,3 +1627,15 @@ textarea.wf-input {
   width: 100%;
   padding: 20px 0;
 }
+.wf-tab-card .wf-tab-nav-item {
+  border: 1px solid #ddd;
+  border-width: 1px 1px 0 1px;
+  border-radius: 4px 4px 0 0;
+  margin-right: 5px;
+  height: 32px;
+  line-height: 32px;
+}
+.wf-tab-card .wf-tab-nav-item.active {
+  color: #fff;
+  background-color: #6abbef;
+}
