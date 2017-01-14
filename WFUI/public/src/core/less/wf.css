@@ -1605,8 +1605,8 @@ textarea.wf-input {
   float: left;
   position: relative;
   cursor: pointer;
-  height: 42px;
-  line-height: 42px;
+  height: 32px;
+  line-height: 32px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1632,8 +1632,6 @@ textarea.wf-input {
   border-width: 1px 1px 0 1px;
   border-radius: 4px 4px 0 0;
   margin-right: 5px;
-  height: 32px;
-  line-height: 32px;
 }
 .wf-tab-card .wf-tab-nav-item.active {
   color: #fff;
