@@ -1566,3 +1566,41 @@ textarea.wf-input {
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content {
   background-color: rgba(106, 187, 239, 0.1);
 }
+.wf-tab-nav {
+  zoom: 1;
+  border-bottom: 1px solid #ddd;
+}
+.wf-tab-nav:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-tab-nav .wf-tab-nav-item {
+  font-size: 14px;
+  padding: 0 24px;
+  margin-right: 24px;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  height: 42px;
+  line-height: 42px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wf-tab-nav .wf-tab-nav-item:hover {
+  color: #6abbef;
+}
+.wf-tab-nav .active {
+  color: #6abbef;
+  border-color: #6abbef;
+}
+.wf-tab-content .wf-tab-content-item {
+  width: 100%;
+  padding: 20px 0;
+}

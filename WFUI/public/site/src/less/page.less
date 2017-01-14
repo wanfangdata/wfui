@@ -1,24 +1,24 @@
 ﻿@import "mixins.less";
 
-.wf-btn {
+.@{ui}-btn {
     margin-right: 8px;
 
-    .wf-icon {
+    .@{ui}-icon {
         margin-top: -1px;
     }
 }
 
-.wf-checkbox, .wf-radio, .wf-select {
+.@{ui}-checkbox, .@{ui}-radio, .@{ui}-select {
     margin-right: 50px;
 }
 
-.wf-input-addon {
-    .wf-select {
+.@{ui}-input-addon {
+    .@{ui}-select {
         margin: 0;
     }
 }
 
-.wf-select {
+.@{ui}-select {
     vertical-align: middle;
 }
 
@@ -28,7 +28,7 @@
         font-size: 24px;
         line-height: 24px;
 
-        .wf-btn {
+        .@{ui}-btn {
             float: right;
         }
     }
@@ -63,8 +63,8 @@
         }
     }
 
-    .wf-btn {
-        .wf-icon {
+    .@{ui}-btn {
+        .@{ui}-icon {
             width: 16px;
             height: 16px;
             line-height: 1;
@@ -112,7 +112,7 @@
                 z-index: 0;
             }
 
-            .wf-btn {
+            .@{ui}-btn {
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -123,7 +123,7 @@
         .demo {
             margin-top: 25px;
 
-            .wf-row {
+            .@{ui}-row {
                 margin-bottom: 10px;
 
                 label {
@@ -132,13 +132,13 @@
                 }
             }
 
-            .wf-input:first-child {
+            .@{ui}-input:first-child {
                 margin-right: 100px;
             }
         }
 
-        .demo.wf-input-icon {
-            .wf-input {
+        .demo.@{ui}-input-icon {
+            .@{ui}-input {
                 margin: 0;
             }
         }
@@ -208,7 +208,7 @@
         }
     }
 
-    .wf-btn-group {
+    .@{ui}-btn-group {
         margin-right: 8px;
 
         .icon-back {
@@ -221,9 +221,13 @@
     }
 
     #input-size {
-        .wf-input {
+        .@{ui}-input {
             width: 200px;
             margin-right: 10px;
         }
+    }
+
+    .@{ui}-tab {
+        width: 600px;
     }
 }

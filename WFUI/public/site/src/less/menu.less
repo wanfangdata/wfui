@@ -12,11 +12,11 @@
 }
 
 .header {
-    .wf-menu-horizontal {
+    .@{ui}-menu-horizontal {
         font-size: 14px;
         border-bottom: none;
 
-        .wf-menu-content {
+        .@{ui}-menu-content {
             color: @color;
             .middle-vertical(70px);
             margin-top: -2px;
@@ -32,10 +32,10 @@
 
 
 .doc-menu {
-    .wf-menu-vertical {
+    .@{ui}-menu-vertical {
         padding: @menu-item-gap 0;
 
-        > .wf-menu-item > .wf-menu-sub > .wf-menu-item > .wf-menu-content {
+        > .@{ui}-menu-item > .@{ui}-menu-sub > .@{ui}-menu-item > .@{ui}-menu-content {
             .en {
                 color: @color-text-deep;
             }
@@ -47,17 +47,17 @@
             }
         }
 
-        .wf-menu-item {
+        .@{ui}-menu-item {
             font-size: 14px;
             border: none;
 
-            .wf-menu-content {
+            .@{ui}-menu-content {
                 .menu-item-content-color;
                 border: none;
             }
         }
 
-        .wf-menu-content {
+        .@{ui}-menu-content {
             .en {
                 font-size: 14px;
                 font-family: 'Arial';
@@ -70,10 +70,10 @@
             }
         }
 
-        .wf-menu-sub {
+        .@{ui}-menu-sub {
             font-size: 12px;
 
-            .wf-menu-content {
+            .@{ui}-menu-content {
 
                 .en, .cn {
                     color: @color-text-light;
@@ -81,19 +81,19 @@
             }
         }
 
-        .wf-menu-items {
+        .@{ui}-menu-items {
 
-            .wf-menu-item {
-                .wf-menu-content {
+            .@{ui}-menu-item {
+                .@{ui}-menu-content {
                     .menu-item-content-color
                 }
             }
         }
 
-        .wf-menu-item.active {
+        .@{ui}-menu-item.active {
             background-color: @color-background;
 
-            .wf-menu-content {
+            .@{ui}-menu-content {
                 .en, .cn {
                     color: @color-primary;
                 }

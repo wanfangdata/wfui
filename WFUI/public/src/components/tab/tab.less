@@ -1,0 +1,38 @@
+﻿@import "../../core/less/import.less";
+@tab-pre: ~"@{ui}-tab";
+
+.@{tab-pre} {
+    &-nav {
+        .ut-clearfix;
+        border-bottom: 1px solid @color-border-deep;
+
+        .@{tab-pre}-nav-item {
+            font-size: 14px;
+            padding: 0 24px;
+            margin-right: 24px;
+            margin-bottom: -1px;
+            border-bottom: 2px solid transparent;
+            float: left;
+            position: relative;
+            cursor: pointer;
+            .middle-vertical(42px);
+            .transition(all .3s ease);
+
+            &:hover {
+                color: @color-primary;
+            }
+        }
+
+        .active {
+            color: @color-primary;
+            border-color: @color-primary;
+        }
+    }
+
+    &-content {
+        .@{tab-pre}-content-item {
+            width: 100%;
+            padding: 20px 0;
+        }
+    }
+}

@@ -87,36 +87,36 @@ a {
   font-size: 16px;
   background-color: #353e43;
 }
-.footer .wf-row {
+.footer .wfrow {
   max-width: 1200px;
   margin: 0 auto;
 }
-.footer .wf-row .brand {
+.footer .wfrow .brand {
   color: #999;
   font-size: 22px;
   font-family: Impact;
   text-align: center;
   overflow: hidden;
 }
-.footer .wf-row .brand .logo-footer {
+.footer .wfrow .brand .logo-footer {
   width: 18px;
   height: 18px;
   margin-right: 2px;
 }
-.footer .wf-row .links {
+.footer .wfrow .links {
   float: left;
   font-size: 12px;
   font-family: 'Microsoft YaHei';
 }
-.footer .wf-row .links a {
+.footer .wfrow .links a {
   display: inline-block;
   margin: 0 30px;
   color: #999;
 }
-.footer .wf-row .links a:hover {
+.footer .wfrow .links a:hover {
   color: #6abbef;
 }
-.footer .wf-row .copyright {
+.footer .wfrow .copyright {
   font-size: 12px;
   float: right;
   margin-right: 40px;
@@ -367,4 +367,7 @@ a {
 .page #input-size .wf-input {
   width: 200px;
   margin-right: 10px;
+}
+.page .wf-tab {
+  width: 600px;
 }

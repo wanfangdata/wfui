@@ -19,14 +19,14 @@
                     <div class="wf-tab-nav-item">Tab3</div>
                 </div>
                 <div class="wf-tab-content">
-                    <div class="wf-tab-content-item">Content of Tab1</div>
+                    <div class="wf-tab-content-item active">Content of Tab1</div>
                     <div class="wf-tab-content-item">Content of Tab2</div>
                     <div class="wf-tab-content-item">Content of Tab3</div>
                 </div>
             </div>
         </div>
         <div class="explain">
-            <p>基本用法及禁用</p>
+            <p>基本用法</p>
         </div>
         <pre>
         <code class="html">
@@ -44,7 +44,7 @@
         &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
         &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
     &lt;/span&gt;
-            </code>
+        </code>
         </pre>
     </div>
 </div>
