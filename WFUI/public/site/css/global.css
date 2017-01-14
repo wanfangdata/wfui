@@ -232,9 +232,11 @@ a {
 }
 .page pre {
   display: none;
+  overflow: hidden;
 }
 .page pre code {
   border: none;
+  margin-left: -60px;
 }
 .page pre code .hljs-tag {
   line-height: 22px;

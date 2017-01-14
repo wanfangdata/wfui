@@ -48,6 +48,7 @@
         border-bottom: 1px solid @color-border-deep;
 
         .@{menu-pre}-item {
+            font-size: 14px;
             padding: 0 @menu-gap;
             margin-bottom: -1px;
             border-width: 2px;
@@ -55,7 +56,7 @@
             position: relative;
             .transition(all @animate-time-normal ease);
 
-            &:hover,.active {
+            &:hover, .active {
                 border-bottom: 2px solid @color-primary;
 
                 .@{menu-pre}-content {
@@ -87,6 +88,10 @@
                     float: none;
                     display: inline-block;
                     box-sizing: border-box;
+
+                    .@{menu-pre}-content {
+                        padding-left: 0;
+                    }
 
                     a {
                         color: @color-text-deep;

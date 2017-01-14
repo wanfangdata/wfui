@@ -29,23 +29,6 @@
         <div class="explain">
             <p>基本使用</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;div data-role="select" class="wf-select" id="select-basic-demo"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-            </code>
-        </pre>
     </div>
     <div class="section" id="select-hover">
         <h1 class="title">
@@ -70,23 +53,6 @@
         <div class="explain">
             <p>添加<code>wf-select-hover</code>类</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;div data-role="select" class="wf-select wf-select-hover" id="select-hover-demo"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-            </code>
-        </pre>
     </div>
     <div class="section" id="select-disabled">
         <h1 class="title">
@@ -111,23 +77,6 @@
         <div class="explain">
             <p>添加<code>wf-select-disabled</code>类</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;div data-role="select" class="wf-select wf-select-disabled" id="select-disabled-demo"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-            </code>
-        </pre>
     </div>
     <div class="section" id="select-size">
         <h1 class="title">
@@ -181,50 +130,6 @@
                 通过设置<code>size</code>为<code>large</code><code>small</code>分别把选择器设为大、小尺寸。若不设置<code>size</code>，则尺寸默认为中。
             </p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;div data-role="select" class="wf-select wf-select-large" id="select-disabled-demo-large"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div data-role="select" class="wf-select" id="select-disabled-demo-default"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div data-role="select" class="wf-select wf-select-small" id="select-disabled-demo-small"&gt;
-        &lt;div class="wf-select-selection"&gt;
-            &lt;div class="wf-select-selection-value"&gt;&lt;/div&gt;
-            &lt;i class="wf-icon icon-moreunfold"&gt;&lt;/i&gt;
-        &lt;/div&gt;
-        &lt;input class="wf-select-input" type="text" /&gt;
-        &lt;ul class="wf-select-options"&gt;
-            &lt;li data-value="a" class="wf-select-option"&gt;Select.A&lt;/li&gt;
-            &lt;li data-value="b" class="wf-select-option"&gt;Select.B&lt;/li&gt;
-            &lt;li data-value="c" class="wf-select-option"&gt;Select.C&lt;/li&gt;
-            &lt;li data-value="d" class="wf-select-option"&gt;Select.D&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    
-            </code>
-        </pre>
     </div>
     <div class="section section-api" id="select-api">
         <h1 class="title">

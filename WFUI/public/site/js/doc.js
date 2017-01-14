@@ -5,8 +5,13 @@ var page = wf.require('page').render(
         'UI.Select'
     ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
+        var codeFormat = '<pre class="demo-code"><code class="html">{0}</code></pre>';
+        $('.page .demo').each(function () {
+            $(this).next().after(codeFormat.format($('<div>').text($(this).html()).html()));
+        });
+        hljs.initHighlightingOnLoad();
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
-            $(this).parent().parent().find('pre').toggle(200);
+            $(this).parent().parent().find('.demo-code').toggle(200);
         });
         $('.doc-content .nav').html((function () {
             var result = [];

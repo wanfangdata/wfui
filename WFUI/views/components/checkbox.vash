@@ -30,24 +30,6 @@
         <div class="explain">
             <p>简单的checkbox</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-basic-demo"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" id="checkbox-basic-demo-checked"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
-    &lt;/span&gt;
-            </code>
-        </pre>
     </div>
     <div class="section" id="checkbox-hover">
         <h1 class="title">
@@ -75,24 +57,6 @@
                 添加<code>wf-checkbox-hover</code>类。
             </p>
         </div>
-        <pre class="language-html">
-        <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-hover-demo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-hover" id="checkbox-hover-demo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
-    &lt;/span&gt;
-            </code>
-        </pre>
     </div>
     <div class="section" id="checkbox-disabled">
         <h1 class="title">
@@ -134,36 +98,6 @@
         <div class="explain">
             <p>添加<code>wf-checkbox-disabled</code>类即可让checkbox处于不可用状态。</p>
         </div>
-        <pre class="language-html">
-        <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="checkbox-disabled-demo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="checkbox-disabled-demo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="checkbox-disabled-demo3"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="checkbox-disabled-demo4"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-            </code>
-        </pre>
     </div>
     <!--<div class="section" id="checkbox-icon">
         <h1 class="title">
@@ -190,24 +124,6 @@
                 添加<code>wf-checkbox-hover</code>类。
             </p>
         </div>
-        <pre class="language-html">
-            <code class="html ">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-icon-demo1"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-hover" id="checkbox-icon-demo2"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
-    &lt;/span&gt;
-            </code>
-        </pre>
     </div>-->
     <div class="section" id="checkbox-group">
         <h1 class="title">
@@ -265,56 +181,6 @@
         <div class="explain">
             <p>可以把多个<code>Checkbox</code>添加到<code>Checkbox Group</code>中。</p>
         </div>
-        <pre class="language-html">
-        <code class="html">
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox  wf-checkbox-checked" id="checkbox-group-demo1"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item1&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-group-demo2"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item2&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-group-demo3"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item3&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="wf-checkbox-group"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-group-demo4"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item4&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-disabled" id="checkbox-group-demo5"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item5&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked wf-checkbox-disabled" id="checkbox-group-demo6"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item6&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-        </code>
-        </pre>
     </div>
     <div class="section" id="checkbox-checkall">
         <h1 class="title">
@@ -357,42 +223,6 @@
         </div>
         <div class="explain">
         </div>
-        <pre class="language-html">
-        <code class="html">
-    &lt;div class="wf-row"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox" id="cbDemoAll" data-target="cbGroup"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;Check all&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div id="cbGroup" class="wf-checkbox-group wf-row"&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item   wf-checkbox-checked" id="checkbox-checkall-demo1"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item1&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item " id="checkbox-checkall-demo2"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item2&lt;/span&gt;
-        &lt;/span&gt;
-        &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-group-item " id="checkbox-checkall-demo3"&gt;
-            &lt;span class="wf-checkbox-inner"&gt;
-                &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-            &lt;span class="wf-checkbox-text"&gt;item3&lt;/span&gt;
-        &lt;/span&gt;
-    &lt;/div&gt;
-        </code>
-        </pre>
     </div>
     <div class="section section-api" id="checkbox-api">
         <h1 class="title">

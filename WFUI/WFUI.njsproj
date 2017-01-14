@@ -80,6 +80,7 @@
     <Content Include="public\src\components\menu\menu.less" />
     <Content Include="public\src\components\radio\radio.less" />
     <Content Include="public\src\components\select\select.less" />
+    <Content Include="public\src\components\tab\tab.less" />
     <Content Include="public\src\core\font\iconfont.eot" />
     <Content Include="public\src\core\font\iconfont.less" />
     <Content Include="public\src\core\font\iconfont.svg" />
@@ -223,6 +224,7 @@
     <Folder Include="public\src\components\button\" />
     <Folder Include="public\src\components\input\" />
     <Folder Include="public\src\components\breadcrumb\" />
+    <Folder Include="public\src\components\tab\" />
     <Folder Include="public\src\components\radio\" />
     <Folder Include="public\src\components\select\" />
     <Folder Include="public\src\core\" />

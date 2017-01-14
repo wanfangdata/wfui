@@ -28,23 +28,6 @@
         <div class="explain">
             <p>基本用法</p>
         </div>
-        <pre>
-        <code class="html">
-    &lt;span data-role="checkbox" class="wf-checkbox" id="checkbox-basic-demo"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;Checkbox&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span data-role="checkbox" class="wf-checkbox wf-checkbox-checked" id="checkbox-basic-demo-checked"&gt;
-        &lt;span class="wf-checkbox-inner"&gt;
-            &lt;i class="wf-icon icon-selected"&gt;&lt;/i&gt;
-        &lt;/span&gt;
-        &lt;input class="wf-checkbox-input" type="checkbox" /&gt;
-        &lt;span class="wf-checkbox-text"&gt;多选框&lt;/span&gt;
-    &lt;/span&gt;
-        </code>
-        </pre>
+        <pre><code class="html"></code></pre>
     </div>
 </div>

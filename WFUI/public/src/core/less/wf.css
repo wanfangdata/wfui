@@ -1469,6 +1469,7 @@ textarea.wf-input {
   height: 0;
 }
 .wf-menu-horizontal .wf-menu-item {
+  font-size: 14px;
   padding: 0 20px;
   margin-bottom: -1px;
   border-width: 2px;
@@ -1518,6 +1519,9 @@ textarea.wf-input {
   float: none;
   display: inline-block;
   box-sizing: border-box;
+}
+.wf-menu-horizontal .wf-menu-item .wf-menu-sub .wf-menu-item .wf-menu-content {
+  padding-left: 0;
 }
 .wf-menu-horizontal .wf-menu-item .wf-menu-sub .wf-menu-item a {
   color: #333;
