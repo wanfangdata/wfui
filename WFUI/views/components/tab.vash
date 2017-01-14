@@ -14,9 +14,9 @@
         <div class="demo">
             <div role="tab" class="wf-tab">
                 <div class="wf-tab-nav">
-                    <div class="wf-tab-nav-item active">Tab1</div>
-                    <div class="wf-tab-nav-item">Tab2</div>
-                    <div class="wf-tab-nav-item">Tab3</div>
+                    <div class="wf-tab-nav-item active">全部</div>
+                    <div class="wf-tab-nav-item">核心刊</div>
+                    <div class="wf-tab-nav-item">优先出版</div>
                 </div>
                 <div class="wf-tab-content">
                     <div class="wf-tab-content-item active">Content of Tab1</div>
@@ -28,6 +28,37 @@
         <div class="explain">
             <p>基本用法</p>
         </div>
-        <pre><code class="html"></code></pre>
+    </div>
+    <div class="section" id="checkbox-icon">
+        <h1 class="title">
+            <span class="text">图标标签页</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div role="tab" class="wf-tab">
+                <div class="wf-tab-nav">
+                    <div class="wf-tab-nav-item active">
+                        <i class="wf-icon icon-viewgallery"></i>
+                        期刊论文
+                    </div>
+                    <div class="wf-tab-nav-item">
+                        <i class="wf-icon icon-viewlist"></i>
+                        学位论文
+                    </div>
+                    <div class="wf-tab-nav-item">
+                        <i class="wf-icon icon-set"></i>
+                        会议论文
+                    </div>
+                </div>
+                <div class="wf-tab-content">
+                    <div class="wf-tab-content-item active">《中国学术期刊数据库》（China Science Periodical Database，CSPD）,收录始于1998年,7600余种，核心刊3000种，年增300万篇，周更新2次,涵盖理、工、农、医、经济、教育、文艺、社科、哲学政法等学科,全部拥有国内统一连续出版物号,免费注册DOI。</div>
+                    <div class="wf-tab-content-item">中国学位论文全文数据库（China Dissertation Database，CDDB），收录始于1980年，年增30万篇，并逐年回溯，与国内900余所高校、科研院所合作，占研究生学位授予单位85%以上，涵盖理、工、农、医、人文社科、交通运输、航空航天、环境科学等各学科。</div>
+                    <div class="wf-tab-content-item">中国学术会议文献数据库（China Conference Paper Database，CCPD），收录始于1983年，4000个重要的学术会议，年增20万篇全文，每月更新，国家级学会、协会、部委、高校召开的全国性学术会议为主，国内目前收录会议数量较多、质量较高、学科覆盖较广。</div>
+                </div>
+            </div>
+        </div>
+        <div class="explain">
+            <p>基本用法</p>
+        </div>
     </div>
 </div>

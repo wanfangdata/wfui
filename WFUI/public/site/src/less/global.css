@@ -373,3 +373,7 @@ a {
 .page .wf-tab {
   width: 600px;
 }
+.page .wf-tab .wf-tab-content {
+  line-height: 24px;
+  width: 600px;
+}
