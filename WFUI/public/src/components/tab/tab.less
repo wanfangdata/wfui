@@ -2,6 +2,9 @@
 @tab-pre: ~"@{ui}-tab";
 
 .@{tab-pre} {
+    width: 100%;
+    overflow: hidden;
+
     &-nav {
         .ut-clearfix;
         border-bottom: 1px solid @color-border-deep;
@@ -17,6 +20,7 @@
             cursor: pointer;
             .middle-vertical(32px);
             .transition(all .3s ease);
+
 
             &:hover {
                 color: @color-primary;
@@ -35,9 +39,27 @@
     }
 
     &-content {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        will-change: margin-left;
+        .transition(margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+
         .@{tab-pre}-content-item {
             width: 100%;
             padding: 20px 0;
+            flex-shrink: 0;
+            width: 100%;
+            -webkit-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+            .opacity(0);
+        }
+
+        .active {
+            .opacity(1);
         }
     }
 
@@ -47,6 +69,8 @@
             border-width: 1px 1px 0 1px;
             border-radius: 4px 4px 0 0;
             margin-right: 5px;
+
+
             &.active {
                 color: @color;
                 background-color: @color-primary;

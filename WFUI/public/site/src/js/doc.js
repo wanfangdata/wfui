@@ -9,7 +9,6 @@
         $('.page .demo').each(function () {
             $(this).next().after(codeFormat.format($('<div>').text($(this).html()).html()));
         });
-        hljs.initHighlightingOnLoad();
         $('.page .section .title .wf-btn,.page .wf-btn-toggleall').click(function () {
             $(this).parent().parent().find('.demo-code').toggle(200);
         });

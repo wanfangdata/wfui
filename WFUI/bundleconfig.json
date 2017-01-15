@@ -14,6 +14,7 @@
       "public/src/components/checkbox/checkbox.js",
       "public/src/components/radio/radio.js",
       "public/src/components/select/select.js",
+      "public/src/components/tab/tab.js",
       "public/src/core/js/page.js"
     ]
   },

@@ -31,7 +31,7 @@ wf.define('loader', [], function () {
         name: 'model loader',
         
         /**
-         * 获取日志输出模式
+         * 动态加载模块
          * @method load 动态获取模块
          */
         load: function (pathArr, callback) {
@@ -42,6 +42,7 @@ wf.define('loader', [], function () {
                 if (!loadModules[path]) {
                     var head = document.getElementsByTagName('head')[0];
                     var node = createModuleNode(path);
+                    node.path = path;
                     
                     /**
                      * check所有模块加载完成执行callback
@@ -63,8 +64,8 @@ wf.define('loader', [], function () {
                         }
                     };
                     node.onload = function () {
-                        loadModules[path] = true;
-                        head.removeChild(node);
+                        loadModules[this.path] = true;
+                        head.removeChild(this);
                         checkAllFiles(pathArr, callback);
                     };
                     head.appendChild(node);

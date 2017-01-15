@@ -18,10 +18,10 @@
                 <span class="text">WF Design</span>
             </a>
             <ul class="wf-menu wf-menu-horizontal wf-col-10">
-                <li class="wf-menu-item@(model.title=="components"?" active":"")">
+                <li class="wf-menu-item@(model.title==" components"?" active":"")">
                     <a href="/components/getstarted" class="wf-menu-content">组件</a>
                 </li>
-                <li class="wf-menu-item@(model.title=="guide"?" active":"")">
+                <li class="wf-menu-item@(model.title==" guide"?" active":"")">
                     <a href="/guide/getstarted" class="wf-menu-content">规范</a>
                 </li>
             </ul>
@@ -47,14 +47,20 @@
         </div>
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="../site/js/lib/jquery-migrate-1.4.1.min.js"></script>
-    <![endif]-->
     <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
     <script src="../dist/1.0.0/wf.js"></script>
-    <script src="../site/module/highlight-9.8.0/highlight.min.js"></script>
-    <script src="../site/js/lib/animated.min.js"></script>
-    <script>$('.brand .text').textillate({ in: { effect: 'rotateIn' } });</script>
+    <script>
+        var browser = wf.require('browser');
+        if ((browser.msie && parseInt(browser.version) > 8) || !browser.msie) {
+            wf.require('loader').load([
+                '../site/module/highlight-9.8.0/highlight.min',
+                '../site/js/lib/animated.min'
+            ], function () {
+                $('.brand .text').textillate({ 'in': { effect: 'rotateIn' } });
+                hljs.initHighlightingOnLoad();
+            });
+        }
+    </script>
     @html.block('script')
 </body>
 </html>

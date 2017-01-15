@@ -1585,6 +1585,10 @@ textarea.wf-input {
 .wf-menu-vertical .wf-menu-item.active .wf-menu-content {
   background-color: rgba(106, 187, 239, 0.1);
 }
+.wf-tab {
+  width: 100%;
+  overflow: hidden;
+}
 .wf-tab-nav {
   zoom: 1;
   border-bottom: 1px solid #ddd;
@@ -1623,9 +1627,31 @@ textarea.wf-input {
   color: #6abbef;
   border-color: #6abbef;
 }
+.wf-tab-content {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  will-change: margin-left;
+  -webkit-transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 .wf-tab-content .wf-tab-content-item {
-  width: 100%;
   padding: 20px 0;
+  flex-shrink: 0;
+  width: 100%;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.wf-tab-content .active {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .wf-tab-card .wf-tab-nav-item {
   border: 1px solid #ddd;

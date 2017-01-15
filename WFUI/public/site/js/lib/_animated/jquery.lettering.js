@@ -1,4 +1,3 @@
-/*global jQuery */
 /*!	
 * Lettering.JS 0.6.1
 *
@@ -10,6 +9,8 @@
 *
 * Date: Mon Sep 20 17:14:00 2010 -0600
 */
+"use strict";
+
 (function($){
 	function injector(t, splitter, klass, after) {
 		var a = t.text().split(splitter), inject = '';
@@ -63,4 +64,4 @@
 		return this;
 	};
 
-})(jQuery);
+}(jQuery));

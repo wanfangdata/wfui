@@ -44,6 +44,7 @@
       <SubType>Code</SubType>
       <DependentUpon>public\site\js\lib\animated.js</DependentUpon>
     </Compile>
+    <Compile Include="public\site\js\lib\IE9.js" />
     <Compile Include="public\site\js\lib\jquery-migrate-1.4.1.min.js" />
     <Compile Include="public\site\js\lib\jquery.pjax-1.9.6.min.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
@@ -72,6 +73,7 @@
     <Content Include="public\src\components\menu\maker.less" />
     <Content Include="public\src\components\radio\radio.js" />
     <Compile Include="public\src\components\select\select.js" />
+    <Compile Include="public\src\components\tab\tab.js" />
     <Compile Include="public\src\core\js\action.js" />
     <Compile Include="public\src\core\js\browser.js" />
     <Compile Include="public\src\core\js\page.js" />
