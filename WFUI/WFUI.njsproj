@@ -187,10 +187,10 @@
     <Content Include="public\src\test\js\loaderTest.js" />
     <Content Include="public\src\components\checkbox\checkbox.js" />
     <Content Include="public\dist\1.0.0\wf.js" />
-    <Compile Include="public\dist\1.0.0\wf.min.js">
+    <Content Include="public\dist\1.0.0\wf.min.js">
       <SubType>Code</SubType>
       <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
-    </Compile>
+    </Content>
     <Compile Include="public\site\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
@@ -241,9 +241,16 @@
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\node\" />
     <Folder Include="views\" />
     <Folder Include="views\guide\" />
     <Folder Include="views\components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
