@@ -18,10 +18,10 @@
                 <span class="text">WF Design</span>
             </a>
             <ul class="wf-menu wf-menu-horizontal wf-col-10">
-                <li class="wf-menu-item@(model.title==" components"?" active":"")">
+                <li class="wf-menu-item@(model.title=="components"?" active":"")">
                     <a href="/components/getstarted" class="wf-menu-content">组件</a>
                 </li>
-                <li class="wf-menu-item@(model.title==" guide"?" active":"")">
+                <li class="wf-menu-item@(model.title=="guide"?" active":"")">
                     <a href="/guide/getstarted" class="wf-menu-content">规范</a>
                 </li>
             </ul>
