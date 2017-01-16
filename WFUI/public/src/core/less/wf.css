@@ -1652,6 +1652,8 @@ textarea.wf-input {
   flex-shrink: 0;
   width: 100%;
   -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 0;
   filter: alpha(opacity=0);
