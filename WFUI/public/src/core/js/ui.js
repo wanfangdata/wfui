@@ -212,6 +212,7 @@ wf.define('UI', ['logger'], function (logger) {
     
     UI.CLS_PREFIX = CLS_PREFIX;
     UI.ID_PREFIX = ID_PREFIX;
+    UI.CHAIN = CHAIN;
     
     return UI;
 });

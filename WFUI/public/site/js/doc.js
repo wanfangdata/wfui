@@ -2,7 +2,8 @@ var page = wf.require('page').render(
     'doc', [
         'UI.Checkbox',
         'UI.Radio',
-        'UI.Select'
+        'UI.Select',
+        'UI.Tab'
     ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         var codeFormat = '<pre class="demo-code"><code class="html">{0}</code></pre>';

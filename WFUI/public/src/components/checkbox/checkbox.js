@@ -194,7 +194,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
 
         var $this, target;
 
-        $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
+        $.each($(dataRole).not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?

@@ -32,9 +32,18 @@
             }
         }
 
-        .active {
+        .@{tab-pre}-nav-active {
             color: @color-primary;
             border-color: @color-primary;
+        }
+
+        .@{tab-pre}-disabled {
+            color: @color-disabled;
+            cursor: default;
+
+            &:hover {
+                color: @color-disabled;
+            }
         }
     }
 
@@ -58,7 +67,7 @@
             .opacity(0);
         }
 
-        .active {
+        .@{tab-pre}-content-active {
             .opacity(1);
         }
     }
@@ -66,14 +75,18 @@
     &-card {
         .@{tab-pre}-nav-item {
             border: 1px solid @color-border-deep;
-            border-width: 1px 1px 0 1px;
+            border-width: 1px;
             border-radius: 4px 4px 0 0;
+            background-color: @color-background-normal;
             margin-right: 5px;
+        }
 
+        .@{tab-pre}-nav-active {
+            color: @color;
+            background-color: @color-primary;
 
-            &.active {
+            &:hover {
                 color: @color;
-                background-color: @color-primary;
             }
         }
     }
