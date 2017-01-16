@@ -1,0 +1,38 @@
+﻿@import "../../core/less/import.less";
+@step-pre: ~"@{ui}-step";
+
+.@{step-pre} {
+    font-size: 0;
+    width: 100%;
+    line-height: 1.5;
+
+    &-horizontal {
+    }
+
+    &-item {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &-active {
+        color: @color;
+        border-color: @color-primary;
+        background-color: @color-primary;
+
+        a {
+            color: @color;
+        }
+    }
+
+
+    &-disabled, &-disabled:hover {
+        background-color: @color-background-normal;
+        border-color: @color-background-normal;
+        cursor: default;
+
+        a {
+            color: @color-disabled;
+        }
+    }
+}

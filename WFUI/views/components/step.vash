@@ -1,6 +1,58 @@
 ﻿<div class="page">
     <h1 class="title">
-        Step 步骤条
+        Step  步骤条
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <p class="desc">
+        引导用户按照流程完成任务的导航条。
+    </p>
+    <div class="section" id="step-basic">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-step wf-step-horizontal">
+                <div class="wf-step-item wf-step-status-finish">
+                    <div class="wf-step-tail"><i></i></div>
+                    <div class="wf-step-step">
+                        <div class="wf-step-head">
+                            <div class="wf-step-head-inner"><span class="wf-step-icon wficon wficon-check"></span></div>
+                        </div>
+                        <div class="wf-step-main">
+                            <div class="wf-step-title">Finished</div>
+                            <div class="wf-step-description">This is a description.This is a description.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wf-step-item wf-step-status-process" style="margin-right: -72px; width: 50%;">
+                    <div class="wf-step-tail"><i></i></div><div class="wf-step-step">
+                        <div class="wf-step-head">
+                            <div class="wf-step-head-inner"><span class="wf-step-icon">2</span></div>
+                        </div>
+                        <div class="wf-step-main">
+                            <div class="wf-step-title">In Progress</div>
+                            <div class="wf-step-description">This is a description.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wf-step-item wf-step-item-last wf-step-status-wait">
+                    <div class="wf-step-step">
+                        <div class="wf-step-head">
+                            <div class="wf-step-head-inner">
+                                <span class="wf-step-icon">3</span>
+                            </div>
+                        </div>
+                        <div class="wf-step-main">
+                            <div class="wf-step-title">Waiting</div>
+                            <div class="wf-step-description">This is a description.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explain">
+            <p>简单的步骤条</p>
+        </div>
+    </div>
 </div>

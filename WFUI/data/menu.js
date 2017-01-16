@@ -53,10 +53,12 @@
                 {
                     label: 'Checkbox',
                     name: '多选框'
-                }, {
-                    label: 'Form',
-                    name: '表单'
-                }, {
+                },
+                //{
+                //    label: 'Form',
+                //    name: '表单'
+                //}, 
+                {
                     label: 'input',
                     name: '输入框'
                 }, {
