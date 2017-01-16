@@ -42,7 +42,7 @@
                     <a target="_blank" href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
                     <a target="_blank" href="https://trello.com/wanfangfe">万方FE</a>
                 </span>
-                <span class="copyright">©2016 万方数据技术研发中心</span>
+                <span class="copyright">©@(new Date().getFullYear()) 万方数据技术研发中心</span>
             </span>
         </div>
     </div>
