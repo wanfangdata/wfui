@@ -785,7 +785,7 @@ table {
   cursor: pointer;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 5px 15px;
+  padding: 6px 15px;
   font-size: 12px;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -1675,4 +1675,118 @@ textarea.wf-input {
 }
 .wf-tab-card .wf-tab-nav-active:hover {
   color: #fff;
+}
+.wf-pagination {
+  position: relative;
+  zoom: 1;
+}
+.wf-pagination:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.wf-pagination-item {
+  font-size: 14px;
+  padding: 0 11px;
+  margin-right: 8px;
+  float: left;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.wf-pagination-item:hover {
+  border-color: #6abbef;
+}
+.wf-pagination-item:hover a {
+  color: #6abbef;
+}
+.wf-pagination-item .wf-icon {
+  vertical-align: middle;
+}
+.wf-pagination-next,
+.wf-pagination-prev {
+  padding: 0 7px;
+}
+.wf-pagination-active {
+  color: #fff;
+  border-color: #6abbef;
+  background-color: #6abbef;
+}
+.wf-pagination-active a {
+  color: #fff;
+}
+.wf-pagination-disabled,
+.wf-pagination-disabled:hover {
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+  cursor: default;
+}
+.wf-pagination-disabled a,
+.wf-pagination-disabled:hover a {
+  color: #dcdcdc;
+}
+.wf-pagination-jumper {
+  border-color: transparent;
+  cursor: default;
+}
+.wf-pagination-jumper:hover {
+  background-color: #fff;
+  color: #333;
+}
+.wf-pagination-jumper input {
+  font-size: 14px;
+  padding: 0 11px;
+  margin-right: 8px;
+  float: left;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 25px;
+  cursor: text;
+}
+.wf-pagination-jumper-text {
+  font-size: 14px;
+  padding: 0 11px;
+  margin-right: 8px;
+  float: left;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  height: 30px;
+  line-height: 30px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: default;
+  border-color: transparent;
+}
+.wf-pagination-simple .wf-pagination-jumper {
+  float: left;
+  margin-right: 8px;
+  height: 32px;
+  line-height: 32px;
+}
+.wf-pagination-simple .wf-pagination-item {
+  border: none;
 }

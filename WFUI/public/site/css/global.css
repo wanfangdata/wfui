@@ -300,9 +300,6 @@ a {
   min-width: 80px;
   display: inline-block;
 }
-.page .section .demo .wf-input:first-child {
-  margin-right: 100px;
-}
 .page .section .demo.wf-input-icon .wf-input {
   margin: 0;
 }

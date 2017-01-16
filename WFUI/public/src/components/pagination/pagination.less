@@ -1,0 +1,96 @@
+﻿@import "../../core/less/import.less";
+@pagination-pre: ~"@{ui}-pagination";
+
+.@{pagination-pre} {
+    position: relative;
+    .ut-clearfix;
+
+    .item() {
+        font-size: 14px;
+        padding: 0 11px;
+        margin-right: 8px;
+        float: left;
+        cursor: pointer;
+        color: @color-text-deep;
+        background-color: @color-background;
+        border-radius: 4px;
+        border: 1px solid @color-border-nomal;
+        .middle-vertical(30px);
+        .transition(all .3s ease);
+    }
+
+    &-item {
+        .item;
+
+        &:hover {
+            border-color: @color-primary;
+
+            a {
+                color: @color-primary;
+            }
+        }
+
+        .@{ui}-icon {
+            vertical-align: middle;
+        }
+    }
+
+    &-next, &-prev {
+        padding: 0 7px;
+    }
+
+    &-active {
+        color: @color;
+        border-color: @color-primary;
+        background-color: @color-primary;
+
+        a {
+            color: @color;
+        }
+    }
+
+
+    &-disabled, &-disabled:hover {
+        background-color: @color-background-normal;
+        border-color: @color-background-normal;
+        cursor: default;
+
+        a {
+            color: @color-disabled;
+        }
+    }
+
+    &-jumper {
+        border-color: transparent;
+        cursor: default;
+
+        &:hover {
+            background-color: @color-background;
+            color: @color-text-deep;
+        }
+
+        input {
+            .item;
+            width: 25px;
+            cursor: text;
+        }
+    }
+
+    &-jumper-text {
+        .item;
+        cursor: default;
+        border-color: transparent;
+    }
+
+    &-simple {
+        .@{pagination-pre}-jumper {
+            float: left;
+            margin-right: 8px;
+            .middle-vertical(32px);
+        }
+
+        .@{pagination-pre}-item {
+            border: none;
+        }
+    }
+}
