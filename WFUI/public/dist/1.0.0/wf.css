@@ -1762,6 +1762,10 @@ textarea.wf-input {
   width: 25px;
   cursor: text;
 }
+.wf-pagination-jumper .wf-btn {
+  padding-left: 6px;
+  padding-right: 6px;
+}
 .wf-pagination-jumper-text {
   font-size: 14px;
   padding: 0 11px;
