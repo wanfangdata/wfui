@@ -6,7 +6,7 @@
     <p class="desc">
         选项卡切换组件。
     </p>
-    <div class="section" id="checkbox-basic">
+    <div class="section" id="tab-basic">
         <h1 class="title">
             <span class="text">基本用法</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -29,7 +29,7 @@
             <p>基本用法</p>
         </div>
     </div>
-    <div class="section" id="checkbox-icon">
+    <div class="section" id="tab-icon">
         <h1 class="title">
             <span class="text">图标标签页</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -61,7 +61,7 @@
             <p>有图标的标签</p>
         </div>
     </div>
-    <div class="section" id="checkbox-icon">
+    <div class="section" id="tab-card">
         <h1 class="title">
             <span class="text">卡片式页签</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -90,7 +90,7 @@
             <p>卡片式样式页签</p>
         </div>
     </div>
-    <div class="section section-api" id="Tab-api">
+    <div class="section section-api" id="tab-api">
         <h1 class="title">
             <span class="text">API</span>
         </h1>
