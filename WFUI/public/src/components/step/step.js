@@ -29,37 +29,6 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
         role: role,        
         
         /**
-         * disabled class
-         */
-        disabledCls: function () {
-            return this.clsName('disabled');
-        },
-        
-        /**
-         * active class
-         * @param {String} name ,nav或content active
-         */
-        activeCls: function (name) {
-            return this.clsName(name + UI.CHAIN + 'active');
-        },
-        
-        /**
-         * 设置页码为index页为当前页
-         * @param {Number} index 页码
-         */
-        activeTo: function (index) {
-            var me = this;
-            $.each(['nav', 'content'], function () {
-                me[this].$element
-                .find(UI.CLS_PREFIX + me.clsName(this + UI.CHAIN + 'item'))
-                .eq(index)
-                .addClass(me.activeCls(this))
-                .siblings().removeClass(me.activeCls(this));
-            });
-            me.content.$element.css({ 'margin-left': -(index * 100) + '%' });
-        },
-        
-        /**
          * 注册用户自定义事件
          * @event on
          * @param {String} name 事件名称
