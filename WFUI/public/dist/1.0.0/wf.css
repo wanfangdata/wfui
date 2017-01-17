@@ -1754,12 +1754,14 @@ textarea.wf-input {
 .wf-pagination-prev {
   padding: 0 7px;
 }
-.wf-pagination-active {
+.wf-pagination-active,
+.wf-pagination-active:hover {
   color: #fff;
   border-color: #6abbef;
   background-color: #6abbef;
 }
-.wf-pagination-active a {
+.wf-pagination-active a,
+.wf-pagination-active:hover a {
   color: #fff;
 }
 .wf-pagination-disabled,
