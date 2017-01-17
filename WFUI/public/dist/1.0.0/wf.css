@@ -1708,6 +1708,7 @@ textarea.wf-input {
 .wf-tab-card .wf-tab-nav-active {
   color: #fff;
   background-color: #6abbef;
+  border-color: #6abbef;
 }
 .wf-tab-card .wf-tab-nav-active:hover {
   color: #fff;
