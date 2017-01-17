@@ -1,10 +1,10 @@
 ﻿@html.extend('layout', function(model){
     @html.block('content', function(model){
     <div class="content wf-row">        
-        <div class="wf-col-2 doc-menu">
+        <div class="wf-col-4 doc-menu">
             @html.include('_menu',model)
         </div>
-        <div class="wf-col-10 doc-content">
+        <div class="wf-col-20 doc-content">
             @html.include('components/'+ model.page)
             <div class="nav"></div>
         </div>       

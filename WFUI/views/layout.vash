@@ -13,11 +13,11 @@
 <body>
     <div class="header">
         <div class="wf-row">
-            <a class="brand wf-col-2" href="/">
+            <a class="brand wf-col-4" href="/">
                 <i class="icon-doc logo"></i>
                 <span class="text">WF Design</span>
             </a>
-            <ul class="wf-menu wf-menu-horizontal wf-col-10">
+            <ul class="wf-menu wf-menu-horizontal wf-col-20">
                 <li class="wf-menu-item@(model.title=="components"?" active":"")">
                     <a href="/components/getstarted" class="wf-menu-content">组件</a>
                 </li>
@@ -32,11 +32,11 @@
     </div>
     <div class="footer">
         <div class="wf-row">
-            <span class="brand wf-col-2">
+            <span class="brand wf-col-4">
                 <i class="icon-doc logo-footer"></i>
                 <span class="text">WF Design</span>
             </span>
-            <span class="wf-col-10">
+            <span class="wf-col-20">
                 <span class="links">
                     <a target="_blank" href="https://github.com/wanfangdata/wfui" class="github">GitHub仓库</a>
                     <a target="_blank" href="http://www.wanfangdata.com.cn/" class="wfdata">万方数据</a>
