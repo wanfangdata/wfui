@@ -17,7 +17,9 @@
                     <div class="wf-step-tail"><i></i></div>
                     <div class="wf-step-step">
                         <div class="wf-step-head">
-                            <div class="wf-step-head-inner"><span class="wf-step-icon wficon wficon-check"></span></div>
+                            <div class="wf-step-head-inner">
+                                <span class="wf-step-icon"></span>
+                            </div>
                         </div>
                         <div class="wf-step-main">
                             <div class="wf-step-title">Finished</div>

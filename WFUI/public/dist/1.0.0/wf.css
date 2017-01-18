@@ -1222,7 +1222,7 @@ button[disabled]:hover {
   visibility: hidden;
   height: 0;
 }
-.wf-select .wf-select-selection {
+.wf-select-selection {
   display: inline-block;
   position: relative;
   border: 1px solid #e1e1e1;
@@ -1239,14 +1239,14 @@ button[disabled]:hover {
   transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
   zoom: 1;
 }
-.wf-select .wf-select-selection:after {
+.wf-select-selection:after {
   display: block;
   clear: both;
   content: "";
   visibility: hidden;
   height: 0;
 }
-.wf-select .wf-select-selection .wf-select-selection-value {
+.wf-select-selection .wf-select-selection-value {
   display: inline-block;
   float: left;
   width: 122px;
@@ -1256,7 +1256,7 @@ button[disabled]:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.wf-select .wf-select-selection .wf-icon {
+.wf-select-selection .wf-icon {
   float: right;
   font-size: 14px;
   -webkit-transition: transform 0.15s ease;
@@ -1264,13 +1264,13 @@ button[disabled]:hover {
   -o-transition: transform 0.15s ease;
   transition: transform 0.15s ease;
 }
-.wf-select .wf-select-selection:hover {
+.wf-select-selection:hover {
   border-color: #6abbef;
 }
-.wf-select .wf-select-input {
+.wf-select-input {
   display: none;
 }
-.wf-select .wf-select-options {
+.wf-select-options {
   background-color: #fff;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1283,7 +1283,7 @@ button[disabled]:hover {
   max-height: 250px;
   display: none;
 }
-.wf-select .wf-select-options .wf-select-option {
+.wf-select-options .wf-select-option {
   position: relative;
   display: block;
   width: 124px;
@@ -1298,10 +1298,10 @@ button[disabled]:hover {
   -o-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
-.wf-select .wf-select-options .wf-select-option:hover {
+.wf-select-options .wf-select-option:hover {
   background-color: rgba(106, 187, 239, 0.1);
 }
-.wf-select .wf-select-options .wf-select-option-selected {
+.wf-select-options .wf-select-option-selected {
   background-color: #f7f7f7;
 }
 .wf-select-large .wf-select-selection {
@@ -1455,10 +1455,10 @@ textarea.wf-input {
 .wf-breadcrumb a:hover {
   color: #6abbef;
 }
-.wf-breadcrumb .wf-breadcrumb-leaf {
+.wf-breadcrumb-leaf {
   font-weight: 700;
 }
-.wf-breadcrumb .wf-breadcrumb-separator {
+.wf-breadcrumb-separator {
   margin: 0 7px;
 }
 .wf-breadcrumb .wf-icon {

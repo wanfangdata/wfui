@@ -12,7 +12,7 @@
     .clearfix;
     .transition(background @animate-time-fast cubic-bezier(0.075, 0.82, 0.165, 1));
 
-    .@{select-pre}-selection {
+    &-selection {
         display: inline-block;
         position: relative;
         border: 1px solid @color-border-nomal;
@@ -42,11 +42,11 @@
         }
     }
 
-    .@{select-pre}-input {
+    &-input {
         display: none;
     }
 
-    .@{select-pre}-options {
+    &-options {
         background-color: @color-background;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
