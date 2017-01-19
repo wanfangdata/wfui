@@ -1833,3 +1833,22 @@ textarea.wf-input {
 .wf-pagination-simple .wf-pagination-item {
   border: none;
 }
+.wf-step {
+  width: 100%;
+  line-height: 1.5;
+}
+.wf-step-item {
+  width: 33%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.wf-step-active {
+  color: #fff;
+  border-color: #6abbef;
+  background-color: #6abbef;
+}
+.wf-step-active a {
+  color: #fff;
+}

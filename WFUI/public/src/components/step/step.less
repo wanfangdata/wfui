@@ -2,7 +2,6 @@
 @step-pre: ~"@{ui}-step";
 
 .@{step-pre} {
-    font-size: 0;
     width: 100%;
     line-height: 1.5;
 
@@ -25,9 +24,11 @@
     }
 
     &-item {
+        width:33%;
         position: relative;
         display: inline-block;
         vertical-align: top;
+        float:left;
     }
 
     &-active {
@@ -37,17 +38,6 @@
 
         a {
             color: @color;
-        }
-    }
-
-
-    &-disabled, &-disabled:hover {
-        background-color: @color-background-normal;
-        border-color: @color-background-normal;
-        cursor: default;
-
-        a {
-            color: @color-disabled;
         }
     }
 }
