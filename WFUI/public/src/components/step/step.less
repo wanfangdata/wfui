@@ -5,39 +5,136 @@
     width: 100%;
     line-height: 1.5;
 
-    &-horizontal {
+    &-bar {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: @color-border-nomal;
+
+        i {
+            vertical-align: top;
+            display: inline-block;
+            height: 1px;
+            background-color: @color-primary;
+            width: 0;
+            .transition(all @animate-time-fast+0.05 cubic-bezier(0.12, 0.4, 0.29, 1.46) @animate-time-fast);
+        }
     }
 
-    &-vertical {
+    &-content {
+        position: relative;
+    }
+
+    &-icon {
+        width: 30px;
+        vertical-align: top;
+        display: inline-block;
+        padding-left: 10px;
+        background-color: @color-background;
+
+        .@{ui}-icon {
+            width: 30px;
+            .middle-vertical(30px);
+            text-align: center;
+            color: @color;
+            border-radius: 50%;
+            background-color: @color-primary;
+            vertical-align: top;
+            display: inline-block;
+        }
+    }
+
+    &-main {
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 5px;
+        color: @color-primary;
+
+        .@{step-pre}-title {
+            display: inline-block;
+            font-size: 14px;
+            position: relative;
+            padding-right: 10px;
+            padding-left: 7px;
+            background-color: @color-background;
+        }
+
+        .@{step-pre}-desc {
+            padding-left: 7px;
+            font-size: 14px;
+            color: @color-text-light;
+        }
+    }
+
+    &-item {
+        width: 33%;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+
+        &:first-child {
+            .@{step-pre}-icon {
+                padding-left: 0;
+            }
+        }
     }
 
     &-status-finish {
+        .@{step-pre}-bar i {
+            width: 100%;
+        }
+
+        .@{step-pre}-icon .@{ui}-icon, .@{step-pre}-bar i {
+            background-color: fade(@color-primary, 50%);
+        }
+
+        .@{step-pre}-title {
+            color: fade(@color-primary, 50%);
+        }
     }
 
     &-status-process {
     }
 
     &-status-wait {
+        .@{step-pre}-icon .@{ui}-icon {
+            background-color: @color-background-deep;
+        }
+
+        .@{step-pre}-title {
+            color: @color-text-nomal;
+        }
     }
 
     &-status-error {
     }
 
-    &-item {
-        width:33%;
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        float:left;
+    &-horizontal {
     }
 
-    &-active {
-        color: @color;
-        border-color: @color-primary;
-        background-color: @color-primary;
+    &-vertical {
+        .@{step-pre}-item {
+            width: 100%;
+            display: block;
+            min-height: 80px;
 
-        a {
-            color: @color;
+            .@{step-pre}-icon {
+                padding: 10px 0;
+            }
+
+            .@{step-pre}-bar {
+                height: 100%;
+                width: 1px;
+                left: 14px;
+                top: 0;
+            }
+        }
+
+        .@{step-pre}-main {
+            margin-top: 15px;
         }
     }
 }

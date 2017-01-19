@@ -292,6 +292,14 @@ a {
 }
 .page .section .demo {
   margin-top: 25px;
+  zoom: 1;
+}
+.page .section .demo:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
 }
 .page .section .demo .wf-row {
   margin-bottom: 10px;

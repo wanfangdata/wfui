@@ -1837,6 +1837,65 @@ textarea.wf-input {
   width: 100%;
   line-height: 1.5;
 }
+.wf-step-bar {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #e1e1e1;
+}
+.wf-step-bar i {
+  vertical-align: top;
+  display: inline-block;
+  height: 1px;
+  background-color: #6abbef;
+  width: 0;
+  -webkit-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -moz-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  -o-transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  transition: all 0.15s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.wf-step-content {
+  position: relative;
+}
+.wf-step-icon {
+  width: 30px;
+  vertical-align: top;
+  display: inline-block;
+  padding-left: 10px;
+  background-color: #fff;
+}
+.wf-step-icon .wf-icon {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #6abbef;
+  vertical-align: top;
+  display: inline-block;
+}
+.wf-step-main {
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 5px;
+  color: #6abbef;
+}
+.wf-step-main .wf-step-title {
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 7px;
+  background-color: #fff;
+}
+.wf-step-main .wf-step-desc {
+  padding-left: 7px;
+  font-size: 14px;
+  color: #999;
+}
 .wf-step-item {
   width: 33%;
   position: relative;
@@ -1844,11 +1903,39 @@ textarea.wf-input {
   vertical-align: top;
   float: left;
 }
-.wf-step-active {
-  color: #fff;
-  border-color: #6abbef;
-  background-color: #6abbef;
+.wf-step-item:first-child .wf-step-icon {
+  padding-left: 0;
 }
-.wf-step-active a {
-  color: #fff;
+.wf-step-status-finish .wf-step-bar i {
+  width: 100%;
+}
+.wf-step-status-finish .wf-step-icon .wf-icon,
+.wf-step-status-finish .wf-step-bar i {
+  background-color: rgba(106, 187, 239, 0.5);
+}
+.wf-step-status-finish .wf-step-title {
+  color: rgba(106, 187, 239, 0.5);
+}
+.wf-step-status-wait .wf-step-icon .wf-icon {
+  background-color: #ccc;
+}
+.wf-step-status-wait .wf-step-title {
+  color: #666;
+}
+.wf-step-vertical .wf-step-item {
+  width: 100%;
+  display: block;
+  min-height: 80px;
+}
+.wf-step-vertical .wf-step-item .wf-step-icon {
+  padding: 10px 0;
+}
+.wf-step-vertical .wf-step-item .wf-step-bar {
+  height: 100%;
+  width: 1px;
+  left: 14px;
+  top: 0;
+}
+.wf-step-vertical .wf-step-main {
+  margin-top: 15px;
 }
