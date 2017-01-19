@@ -1,0 +1,76 @@
+﻿@import "mixins.less";
+
+.icon-demo {
+
+    ul.wf-icons-list {
+        margin: 40px 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    ul.wf-icons-list li {
+        float: left;
+        width: 16.66%;
+        text-align: center;
+        list-style: none;
+        cursor: pointer;
+        height: 100px;
+        color: @color-text-deep;
+        transition: all 0.2s ease;
+        position: relative;
+        margin: 3px 0;
+        border-radius: 4px;
+        background-color: @color-background;
+        overflow: hidden;
+        padding: 10px 0 0 0;
+    }
+
+    ul.wf-icons-list li:hover {
+        background-color: fade(@color-primary,30%);
+    }
+
+    ul.wf-icons-list li.copied:hover {
+        color: rgba(255,255,255,0.2);
+    }
+
+    ul.wf-icons-list li:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: "已复制到剪切板!";
+        text-align: center;
+        line-height: 110px;
+        color: @color-primary;
+        .transition(all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28));
+        .opacity(0);
+    }
+
+    ul.wf-icons-list li.copied:after {
+        .opacity(1);
+        top: -10px;
+    }
+
+    .wf-icon {
+        font-size: 24px;
+        margin: 12px 0 16px;
+        transition: all .3s;
+        display: inline-block;
+        font-style: normal;
+        vertical-align: baseline;
+        text-align: center;
+        text-transform: none;
+        line-height: 1;
+    }
+
+    ul.wf-icons-list li:hover .wf-icon {
+        transform: scale(1.4);
+    }
+
+    .wf-icon-class {
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+    }
+}

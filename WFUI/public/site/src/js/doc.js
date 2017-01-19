@@ -23,6 +23,26 @@
             });
             return result.join('');
         })());
+        var copy = function (str) {
+            var save = function (e) {
+                e.clipboardData.setData('text/plain', str);
+                e.preventDefault();
+            }
+            document.addEventListener('copy', save);
+            document.execCommand('copy');
+            document.removeEventListener('copy', save);
+        };
+        var copyTip = function ($item) {
+            $item.addClass('copied');
+            var timer = setTimeout(function () {
+                $item.removeClass('copied');
+                clearTimeout(timer);
+            }, 1000);
+        }
+        $('.icon-demo .wf-icons-list li').click(function () {
+            copy($(this).find('.wf-icon').attr('class'));
+            copyTip($(this));
+        });
         //components.Checkbox.group($('#cbDemoAll'));
         //components.Radio.group($('#rdgroupDemo1'));
     }, true

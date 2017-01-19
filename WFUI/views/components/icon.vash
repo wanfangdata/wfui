@@ -3,4 +3,54 @@
         Icon 图标
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <p class="desc">
+        语义化的矢量图形。
+    </p>
+    <div class="section" id="icon-direction">
+        <h1 class="title">
+            <span class="text">方向性图标</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo icon-demo">
+            <ul class="wf-icons-list clearfix icons">
+                <li class=""><i class="wf-icon icon-less"></i><span class="wf-icon-class">icon-less</span></li>
+                <li class=""><i class="wf-icon icon-more"></i><span class="wf-icon-class">icon-more</span></li>
+                <li class=""><i class="wf-icon icon-moreunfold"></i><span class="wf-icon-class">icon-moreunfold</span></li>
+                <li class=""><i class="wf-icon icon-back"></i><span class="wf-icon-class">icon-back</span></li>
+            </ul>
+        </div>
+        <div class="explain"></div>
+    </div>
+    <div class="section" id="icon-direction">
+        <h1 class="title">
+            <span class="text">提示建议性图标</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo icon-demo">
+            <ul class="wf-icons-list clearfix icons">
+                <li class=""><i class="wf-icon icon-success"></i><span class="wf-icon-class">icon-success</span></li>
+                <li class=""><i class="wf-icon icon-wrong"></i><span class="wf-icon-class">icon-wrong</span></li>
+                <li class=""><i class="wf-icon icon-warning"></i><span class="wf-icon-class">icon-warning</span></li>
+                <li class=""><i class="wf-icon icon-information"></i><span class="wf-icon-class">icon-information</span></li>
+            </ul>
+        </div>
+        <div class="explain"></div>
+    </div>
+    <div class="section" id="icon-tip">
+        <h1 class="title">
+            <span class="text">网站通用图标</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo icon-demo">
+            <ul class="wf-icons-list clearfix icons">
+                <li class=""><i class="wf-icon icon-viewlist"></i><span class="wf-icon-class">icon-viewlist</span></li>
+                <li class=""><i class="wf-icon icon-viewgallery"></i><span class="wf-icon-class">icon-viewgallery</span></li>
+                <li class=""><i class="wf-icon icon-shouye"></i><span class="wf-icon-class">icon-shouye</span></li>
+                <li class=""><i class="wf-icon icon-wodejuhuasuan"></i><span class="wf-icon-class">icon-wodejuhuasuan</span></li>
+                <li class=""><i class="wf-icon icon-set"></i><span class="wf-icon-class">icon-set</span></li>
+                <li class=""><i class="wf-icon icon-search"></i><span class="wf-icon-class">icon-search</span></li>
+            </ul>
+        </div>
+        <div class="explain"></div>
+    </div>
 </div>

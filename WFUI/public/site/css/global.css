@@ -488,6 +488,74 @@ a {
   height: 80px;
   line-height: 80px;
 }
+.icon-demo ul.wf-icons-list {
+  margin: 40px 0;
+  list-style: none;
+  overflow: hidden;
+}
+.icon-demo ul.wf-icons-list li {
+  float: left;
+  width: 16.66%;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  height: 100px;
+  color: #333;
+  transition: all 0.2s ease;
+  position: relative;
+  margin: 3px 0;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 10px 0 0 0;
+}
+.icon-demo ul.wf-icons-list li:hover {
+  background-color: rgba(106, 187, 239, 0.3);
+}
+.icon-demo ul.wf-icons-list li.copied:hover {
+  color: rgba(255, 255, 255, 0.2);
+}
+.icon-demo ul.wf-icons-list li:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "已复制到剪切板!";
+  text-align: center;
+  line-height: 110px;
+  color: #6abbef;
+  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -moz-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -o-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.icon-demo ul.wf-icons-list li.copied:after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  top: -10px;
+}
+.icon-demo .wf-icon {
+  font-size: 24px;
+  margin: 12px 0 16px;
+  transition: all .3s;
+  display: inline-block;
+  font-style: normal;
+  vertical-align: baseline;
+  text-align: center;
+  text-transform: none;
+  line-height: 1;
+}
+.icon-demo ul.wf-icons-list li:hover .wf-icon {
+  transform: scale(1.4);
+}
+.icon-demo .wf-icon-class {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
 /*
 This is an example of how to use the image sprite in your own CSS files
 */
