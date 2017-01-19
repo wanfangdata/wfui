@@ -32,11 +32,13 @@
                 <li class=""><i class="wf-icon icon-wrong"></i><span class="wf-icon-class">icon-wrong</span></li>
                 <li class=""><i class="wf-icon icon-warning"></i><span class="wf-icon-class">icon-warning</span></li>
                 <li class=""><i class="wf-icon icon-information"></i><span class="wf-icon-class">icon-information</span></li>
+                <li class=""><i class="wf-icon icon-selected"></i><span class="wf-icon-class">icon-selected</span></li>
+                <li class=""><i class="wf-icon icon-close"></i><span class="wf-icon-class">icon-close</span></li>
             </ul>
         </div>
         <div class="explain"></div>
     </div>
-    <div class="section" id="icon-tip">
+    <div class="section" id="icon-general">
         <h1 class="title">
             <span class="text">网站通用图标</span>
             <button class="wf-btn wf-btn-small">Code</button>
@@ -45,10 +47,12 @@
             <ul class="wf-icons-list clearfix icons">
                 <li class=""><i class="wf-icon icon-viewlist"></i><span class="wf-icon-class">icon-viewlist</span></li>
                 <li class=""><i class="wf-icon icon-viewgallery"></i><span class="wf-icon-class">icon-viewgallery</span></li>
-                <li class=""><i class="wf-icon icon-shouye"></i><span class="wf-icon-class">icon-shouye</span></li>
-                <li class=""><i class="wf-icon icon-wodejuhuasuan"></i><span class="wf-icon-class">icon-wodejuhuasuan</span></li>
+                <li class=""><i class="wf-icon icon-home"></i><span class="wf-icon-class">icon-home</span></li>
+                <li class=""><i class="wf-icon icon-person"></i><span class="wf-icon-class">icon-person</span></li>
                 <li class=""><i class="wf-icon icon-set"></i><span class="wf-icon-class">icon-set</span></li>
                 <li class=""><i class="wf-icon icon-search"></i><span class="wf-icon-class">icon-search</span></li>
+                <li class=""><i class="wf-icon icon-browse"></i><span class="wf-icon-class">icon-browse</span></li>
+                <li class=""><i class="wf-icon icon-personal-center"></i><span class="wf-icon-class">icon-personal-center</span></li>
             </ul>
         </div>
         <div class="explain"></div>

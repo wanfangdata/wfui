@@ -500,13 +500,13 @@ table {
 .icon-browse:before {
   content: "\e6e6";
 }
-.icon-gerenzhongxin:before {
+.icon-personal-center:before {
   content: "\e70b";
 }
-.icon-shouye:before {
+.icon-home:before {
   content: "\e64f";
 }
-.icon-wodejuhuasuan:before {
+.icon-person:before {
   content: "\e659";
 }
 .icon-success:before {

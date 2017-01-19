@@ -33,11 +33,11 @@
         <div class="demo">
             <div class="wf-breadcrumb">
                 <a href="" class="wf-breadcrumb-item">
-                    <i class="wf-icon icon-shouye"></i>
+                    <i class="wf-icon icon-home"></i>
                 </a>
                 <span class="wf-breadcrumb-separator">/</span>
                 <a href="" class="wf-breadcrumb-item">
-                    <i class="wf-icon icon-wodejuhuasuan"></i>
+                    <i class="wf-icon icon-person"></i>
                     <span>Spectroscopy and Spectral Analysis</span>
                 </a>
                 <span class="wf-breadcrumb-separator">/</span>
