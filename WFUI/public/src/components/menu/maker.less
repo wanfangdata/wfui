@@ -34,15 +34,3 @@
     left: 0;
     background-color: transparent;
 }
-
-
-.active(@direction) when (@direction = vertical) {
-}
-
-.active(@direction) when (@direction = horizontal) {
-    .@{menu-pre}-item-active {
-        .@{menu-pre}-content {
-            color: @color-primary;
-        }
-    }
-}
