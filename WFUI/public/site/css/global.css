@@ -454,7 +454,6 @@ a {
 [id^="components-grid-demo-"] .wf-row .demo-col-3,
 .grid-demo .code-box-demo .wf-row .demo-col-3,
 [id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-3 {
-  /*background: rgba(255, 255, 255, 0.2);*/
   color: #999;
 }
 .grid-demo .wf-row .demo-col-4,
@@ -467,7 +466,6 @@ a {
 [id^="components-grid-demo-"] .wf-row .demo-col-5,
 .grid-demo .code-box-demo .wf-row .demo-col-5,
 [id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-5 {
-  /*background: rgba(255, 255, 255, 0.5);*/
   color: #999;
 }
 .grid-demo .code-box-demo .height-100,
