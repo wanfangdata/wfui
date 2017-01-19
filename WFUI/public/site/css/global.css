@@ -382,6 +382,114 @@ a {
   line-height: 24px;
   width: 600px;
 }
+.grid-demo .demo-row,
+[id^="components-grid-demo-"] .demo-row,
+.grid-demo .code-box-demo .demo-row,
+[id^="components-grid-demo-"] .code-box-demo .demo-row {
+  background-image: -webkit-linear-gradient(left, #f7f7f7 4.16666667%, transparent 4.16666667%, transparent 8.33333333%, #f7f7f7 8.33333333%, #f7f7f7 12.5%, transparent 12.5%, transparent 16.66666667%, #f7f7f7 16.66666667%, #f7f7f7 20.83333333%, transparent 20.83333333%, transparent 25%, #f7f7f7 25%, #f7f7f7 29.16666667%, transparent 29.16666667%, transparent 33.33333333%, #f7f7f7 33.33333333%, #f7f7f7 37.5%, transparent 37.5%, transparent 41.66666667%, #f7f7f7 41.66666667%, #f7f7f7 45.83333333%, transparent 45.83333333%, transparent 50%, #f7f7f7 50%, #f7f7f7 54.16666667%, transparent 54.16666667%, transparent 58.33333333%, #f7f7f7 58.33333333%, #f7f7f7 62.5%, transparent 62.5%, transparent 66.66666667%, #f7f7f7 66.66666667%, #f7f7f7 70.83333333%, transparent 70.83333333%, transparent 75%, #f7f7f7 75%, #f7f7f7 79.16666667%, transparent 79.16666667%, transparent 83.33333333%, #f7f7f7 83.33333333%, #f7f7f7 87.5%, transparent 87.5%, transparent 91.66666667%, #f7f7f7 91.66666667%, #f7f7f7 95.83333333%, transparent 95.83333333%);
+  background-image: linear-gradient(90deg, #f7f7f7 4.16666667%, transparent 4.16666667%, transparent 8.33333333%, #f7f7f7 8.33333333%, #f7f7f7 12.5%, transparent 12.5%, transparent 16.66666667%, #f7f7f7 16.66666667%, #f7f7f7 20.83333333%, transparent 20.83333333%, transparent 25%, #f7f7f7 25%, #f7f7f7 29.16666667%, transparent 29.16666667%, transparent 33.33333333%, #f7f7f7 33.33333333%, #f7f7f7 37.5%, transparent 37.5%, transparent 41.66666667%, #f7f7f7 41.66666667%, #f7f7f7 45.83333333%, transparent 45.83333333%, transparent 50%, #f7f7f7 50%, #f7f7f7 54.16666667%, transparent 54.16666667%, transparent 58.33333333%, #f7f7f7 58.33333333%, #f7f7f7 62.5%, transparent 62.5%, transparent 66.66666667%, #f7f7f7 66.66666667%, #f7f7f7 70.83333333%, transparent 70.83333333%, transparent 75%, #f7f7f7 75%, #f7f7f7 79.16666667%, transparent 79.16666667%, transparent 83.33333333%, #f7f7f7 83.33333333%, #f7f7f7 87.5%, transparent 87.5%, transparent 91.66666667%, #f7f7f7 91.66666667%, #f7f7f7 95.83333333%, transparent 95.83333333%);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.grid-demo .wf-row-flex,
+[id^="components-grid-demo-"] .wf-row-flex,
+.grid-demo .code-box-demo .wf-row-flex,
+[id^="components-grid-demo-"] .code-box-demo .wf-row-flex {
+  background: #f7f7f7;
+}
+.grid-demo .wf-row > div,
+[id^="components-grid-demo-"] .wf-row > div,
+.grid-demo .code-box-demo .wf-row > div,
+[id^="components-grid-demo-"] .code-box-demo .wf-row > div,
+.grid-demo .wf-row-flex > div,
+[id^="components-grid-demo-"] .wf-row-flex > div,
+.grid-demo .code-box-demo .wf-row-flex > div,
+[id^="components-grid-demo-"] .code-box-demo .wf-row-flex > div {
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 0;
+  min-height: 30px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.grid-demo .code-box-demo .wf-row > div:not(.gutter-row),
+[id^="components-grid-demo-"] .code-box-demo .wf-row > div:not(.gutter-row),
+.grid-demo .code-box-demo .wf-row-flex > div:not(.gutter-row),
+[id^="components-grid-demo-"] .code-box-demo .wf-row-flex > div:not(.gutter-row) {
+  background: #6abbef;
+  padding: 16px 0;
+}
+.grid-demo .code-box-demo .wf-row > div:not(.gutter-row):nth-child(2n+1),
+[id^="components-grid-demo-"] .code-box-demo .wf-row > div:not(.gutter-row):nth-child(2n+1),
+.grid-demo .code-box-demo .wf-row-flex > div:not(.gutter-row):nth-child(2n+1),
+[id^="components-grid-demo-"] .code-box-demo .wf-row-flex > div:not(.gutter-row):nth-child(2n+1) {
+  background: rgba(106, 187, 239, 0.6);
+}
+.grid-demo .wf-row .demo-col,
+[id^="components-grid-demo-"] .wf-row .demo-col,
+.grid-demo .code-box-demo .wf-row .demo-col,
+[id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col {
+  text-align: center;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.grid-demo .wf-row .demo-col-1,
+[id^="components-grid-demo-"] .wf-row .demo-col-1,
+.grid-demo .wf-row .demo-col-1,
+[id^="components-grid-demo-"] .wf-row .demo-col-1 {
+  background: rgba(106, 187, 239, 0.6);
+}
+.grid-demo .wf-row .demo-col-2,
+[id^="components-grid-demo-"] .wf-row .demo-col-2,
+.grid-demo .code-box-demo .wf-row .demo-col-2,
+[id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-2 {
+  background: rgba(106, 187, 239, 0.6);
+}
+.grid-demo .wf-row .demo-col-3,
+[id^="components-grid-demo-"] .wf-row .demo-col-3,
+.grid-demo .code-box-demo .wf-row .demo-col-3,
+[id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-3 {
+  /*background: rgba(255, 255, 255, 0.2);*/
+  color: #999;
+}
+.grid-demo .wf-row .demo-col-4,
+[id^="components-grid-demo-"] .wf-row .demo-col-4,
+.grid-demo .code-box-demo .wf-row .demo-col-4,
+[id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-4 {
+  background: rgba(106, 187, 239, 0.6);
+}
+.grid-demo .wf-row .demo-col-5,
+[id^="components-grid-demo-"] .wf-row .demo-col-5,
+.grid-demo .code-box-demo .wf-row .demo-col-5,
+[id^="components-grid-demo-"] .code-box-demo .wf-row .demo-col-5 {
+  /*background: rgba(255, 255, 255, 0.5);*/
+  color: #999;
+}
+.grid-demo .code-box-demo .height-100,
+[id^="components-grid-demo-"] .code-box-demo .height-100 {
+  height: 100px;
+  line-height: 100px;
+}
+.grid-demo .code-box-demo .height-50,
+[id^="components-grid-demo-"] .code-box-demo .height-50 {
+  height: 50px;
+  line-height: 50px;
+}
+.grid-demo .code-box-demo .height-120,
+[id^="components-grid-demo-"] .code-box-demo .height-120 {
+  height: 120px;
+  line-height: 120px;
+}
+.grid-demo .code-box-demo .height-80,
+[id^="components-grid-demo-"] .code-box-demo .height-80 {
+  height: 80px;
+  line-height: 80px;
+}
 /*
 This is an example of how to use the image sprite in your own CSS files
 */

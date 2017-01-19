@@ -63,6 +63,7 @@
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.css" />
     <Content Include="public\site\src\img\logo-footer.png" />
     <Content Include="public\site\src\img\logo.png" />
+    <Content Include="public\site\src\less\grid.less" />
     <Content Include="public\site\src\less\page.less" />
     <Content Include="public\src\components\breadcrumb\breadcrumb.less" />
     <Content Include="public\src\components\button\button.less" />
