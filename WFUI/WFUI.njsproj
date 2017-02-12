@@ -155,14 +155,14 @@
     <Content Include="views\components\breadcrumb.vash" />
     <Content Include="views\components\button.vash" />
     <Content Include="views\components\checkbox.vash" />
-    <Content Include="views\components\dialog.vash" />
+    <Content Include="views\components\modal.vash" />
     <Content Include="views\components\form.vash" />
     <Content Include="views\components\getstarted.vash" />
     <Content Include="views\components\grid.vash" />
     <Content Include="views\components\icon.vash" />
     <Content Include="views\components\input.vash" />
     <Content Include="views\components\menu.vash" />
-    <Content Include="views\components\message.vash" />
+    <Content Include="views\components\alert.vash" />
     <Content Include="views\components\pagination.vash" />
     <Content Include="views\components\radio.vash" />
     <Content Include="views\components\select.vash" />

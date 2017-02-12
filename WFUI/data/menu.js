@@ -70,14 +70,14 @@
                 }
             ]
         }, {
-            label: 'Popup',
-            name: '弹出层组件',
+            label: 'Feedback',
+            name: '反馈组件',
             data: [
                 {
-                    label: 'Message',
-                    name:'消息框'
+                    label: 'Alert',
+                    name:'警告提示'
                 }, {
-                    label: 'Dialog',
+                    label: 'Modal',
                     name:'对话框'
                 }
             ]
