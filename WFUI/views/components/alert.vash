@@ -1,6 +1,67 @@
 ﻿<div class="page">
     <h1 class="title">
-        Message 消息框
+        Alert 警告提示
         <button class="wf-btn wf-btn-small wf-btn-toggleall">All Code</button>
     </h1>
+    <p class="desc">
+        警告提示，展现需要关注的信息。
+    </p>
+    <div class="section" id="alert-basic">
+        <h1 class="title">
+            <span class="text">基本用法</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-alert wf-alert-info">
+                <span class="wf-alert-title">INFO : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-success">
+                <span class="wf-alert-title">SUCCESS : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-warning">
+                <span class="wf-alert-title">WARNING : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-error">
+                <span class="wf-alert-title">ERROR : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+        </div>
+        <div class="explain">
+            共有四种样式：<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>
+        </div>
+    </div>
+    <div class="section" id="alert-icon">
+        <h1 class="title">
+            <span class="text">图标警告提示</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <div class="wf-alert wf-alert-info">
+                <i class="wf-icon icon-information"></i>
+                <span class="wf-alert-title">INFO : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-success">
+                <i class="wf-icon icon-success"></i>
+                <span class="wf-alert-title">SUCCESS : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-warning">
+                <i class="wf-icon icon-warning"></i>
+                <span class="wf-alert-title">WARNING : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+            <div class="wf-alert wf-alert-error">
+                <i class="wf-icon icon-wrong"></i>
+                <span class="wf-alert-title">ERROR : </span>
+                <span class="wf-alert-message"></span>
+            </div>
+        </div>
+        <div class="explain">
+            共有四种样式：<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>
+        </div>
+    </div>
 </div>
