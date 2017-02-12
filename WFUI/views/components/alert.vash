@@ -14,23 +14,27 @@
         <div class="demo">
             <div class="wf-alert wf-alert-info">
                 <span class="wf-alert-title">INFO : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">This alert needs your attention, but it’s not important.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-success">
                 <span class="wf-alert-title">SUCCESS : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">You successfully read this important alert message.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-warning">
                 <span class="wf-alert-title">WARNING : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">WARNING :  You’re not looking so good.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-error">
-                <span class="wf-alert-title">ERROR : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-title">登录失败 : </span>
+                <span class="wf-alert-message">用户名或密码错误。</span>
+                <i class="wf-icon icon-close"></i>
             </div>
         </div>
         <div class="explain">
-            共有四种样式：<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>
+            共有四种样式：<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>。
         </div>
     </div>
     <div class="section" id="alert-icon">
@@ -42,26 +46,30 @@
             <div class="wf-alert wf-alert-info">
                 <i class="wf-icon icon-information"></i>
                 <span class="wf-alert-title">INFO : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">This alert needs your attention, but it’s not important.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-success">
                 <i class="wf-icon icon-success"></i>
                 <span class="wf-alert-title">SUCCESS : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">You successfully read this important alert message.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-warning">
                 <i class="wf-icon icon-warning"></i>
                 <span class="wf-alert-title">WARNING : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">WARNING :  You’re not looking so good.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
             <div class="wf-alert wf-alert-error">
                 <i class="wf-icon icon-wrong"></i>
                 <span class="wf-alert-title">ERROR : </span>
-                <span class="wf-alert-message"></span>
+                <span class="wf-alert-message">Change a few things up and try submitting again.</span>
+                <i class="wf-icon icon-close"></i>
             </div>
         </div>
         <div class="explain">
-            共有四种样式：<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>
+            带有图标的警告提示。
         </div>
     </div>
 </div>

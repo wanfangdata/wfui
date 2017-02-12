@@ -1939,3 +1939,41 @@ textarea.wf-input {
 .wf-step-vertical .wf-step-main {
   margin-top: 15px;
 }
+.wf-alert {
+  position: relative;
+  padding: 8px 18px 8px 18px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 12px;
+  line-height: 16px;
+}
+.wf-alert-title {
+  font-weight: 700;
+}
+.wf-alert .wf-icon {
+  vertical-align: middle;
+  margin-right: 12px;
+}
+.wf-alert .icon-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  margin-right: 0;
+  cursor: pointer;
+}
+.wf-alert-info {
+  color: #6abbef;
+  background-color: rgba(106, 187, 239, 0.1);
+}
+.wf-alert-success {
+  color: #38be70;
+  background-color: rgba(56, 190, 112, 0.1);
+}
+.wf-alert-warning {
+  color: #f0bb18;
+  background-color: rgba(240, 187, 24, 0.1);
+}
+.wf-alert-error {
+  color: #f05e4f;
+  background-color: rgba(240, 94, 79, 0.1);
+}

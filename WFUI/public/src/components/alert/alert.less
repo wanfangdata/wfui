@@ -1,0 +1,47 @@
+﻿@import "../../core/less/import.less";
+@import "maker.less";
+@alert-pre: ~"@{ui}-alert";
+
+.@{alert-pre} {
+    position: relative;
+    padding: 8px 18px 8px 18px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+    line-height: 16px;
+
+    &-title {
+        font-weight: 700;
+    }
+
+    .@{ui}-icon {
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    .icon-close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        margin-right: 0;
+        cursor:pointer;
+    }
+
+    &-info {
+        .alert-color(@color-info);
+    }
+
+    &-success {
+        .alert-color(@color-success);
+    }
+
+    &-warning {
+        .alert-color(@color-warning);
+
+
+    }
+
+    &-error {
+        .alert-color(@color-error);
+    }
+}

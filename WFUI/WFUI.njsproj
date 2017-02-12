@@ -66,6 +66,8 @@
     <Content Include="public\site\src\less\grid.less" />
     <Content Include="public\site\src\less\icon.less" />
     <Content Include="public\site\src\less\page.less" />
+    <Content Include="public\src\components\alert\maker.less" />
+    <Content Include="public\src\components\alert\alert.less" />
     <Content Include="public\src\components\breadcrumb\breadcrumb.less" />
     <Content Include="public\src\components\button\button.less" />
     <Content Include="public\src\components\grid\grid.less" />
@@ -231,6 +233,7 @@
     <Folder Include="public\src\components\input\" />
     <Folder Include="public\src\components\breadcrumb\" />
     <Folder Include="public\src\components\grid\" />
+    <Folder Include="public\src\components\alert\" />
     <Folder Include="public\src\components\step\" />
     <Folder Include="public\src\components\pagination\" />
     <Folder Include="public\src\components\tab\" />
