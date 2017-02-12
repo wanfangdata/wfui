@@ -125,7 +125,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
          */
         init: function (_base_, name, $element, events) {
             var me = this;
-            _base_(name, $element);
+            _base_($element,name);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 {

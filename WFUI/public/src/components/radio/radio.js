@@ -87,7 +87,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         init: function (_base_, name, $element, checked, events) {
             var me = this;
-            _base_(name, $element);
+            _base_($element,name);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },

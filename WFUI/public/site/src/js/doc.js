@@ -3,7 +3,8 @@
         'UI.Checkbox',
         'UI.Radio',
         'UI.Select',
-        'UI.Tab'
+        'UI.Tab',
+        'UI.Alert'
     ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         var codeFormat = '<pre class="demo-code"><code class="html">{0}</code></pre>';

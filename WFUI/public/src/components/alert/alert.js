@@ -1,32 +1,26 @@
 ﻿'use strict';
+
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- *
- * 
+ * html结构：
+ * <div class="wf-alert wf-alert-info">
+ *     <span class="wf-alert-title">INFO : </span>
+ *     <span class="wf-alert-message">This alert needs your attention, but it’s not important.</span>
+ *     <i class="wf-icon icon-close"></i>
+ * </div>
  */
-wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
+wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     
+    var role = 'alert';
     
-    var role = 'step';
     /**
-     * @class Menu
+     * @class Alert
      */
-    var Step = wf.inherit(UI, {
+    var Alert = wf.inherit(UI, {
         
         /**
          * [data-role]
          */
-        role: role,        
+        role: role,
         
         /**
          * 注册用户自定义事件
@@ -36,42 +30,44 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
          */
         on: function (name, func) {
             if (!this.action[name]) {
-                logger.error('step 无{0}事件'.format(name));
+                logger.error('alert 无{0}事件'.format(name));
             } else {
                 this.action[name].register(func);
             }
         },
-
+        
+        /**
+         * 关闭警告框
+         */
+        close: function () {
+            this.$element.remove();
+        },
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
          * @param {String} name ui名
          * @param {Object} $element ui jquery对象
-         * @param {Object} events 组件事件
-         * events:{'change',function($element){}}
+         * events:{'click',function($element){}}
          */
         init: function (_base_, name, $element, events) {
-            _base_($element,name);
             var me = this;
-            this.initElement([
-                { selector: 'nav' },
-                { selector: 'content' }
+            _base_($element, name);
+            //初始化组件元素,为JQuery对象
+            me.initElement([
+                { selector: 'icon-close' }
             ]);
             //初始化事件
             me.action = {
-                change: new Action('change', function () {
+                click: new Action('click', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
-                        if ($(this).hasClass(me.disabledCls()) || 
-                            $(this).hasClass(me.activeCls('nav'))) {
-                            return false;
-                        }
-                        me.activeTo($(this).index());
+                        me.close();
                         _action_.piping();
                     });
-                }, this.nav.$element.find(UI.CLS_PREFIX + this.clsName('nav-item')))
+                }, this['icon-close'].$element)
             };
-            this.initEvent(events);
+            me.initEvent(events);
         }
     });
     
@@ -84,14 +80,12 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
      * 自动初始化
      * @param {Object} page页面容器
      */
-    Step.auto = function (page) {
-        
+    Alert.auto = function (page) {
         $.each($(dataRole), function (index) {
-            page.addElement(new step($(this).attr('id') || role + index, $(this)));
+            page.addElement(new Alert('alert' + index, $(this)));
         });
-
     };
     
-    return Step;
+    return Alert;
 
 });

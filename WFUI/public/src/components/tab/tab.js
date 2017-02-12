@@ -82,7 +82,7 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
          * events:{'change',function($element){}}
          */
         init: function (_base_, name, $element, events) {
-            _base_(name, $element);
+            _base_($element,name);
             var me = this;
             this.initElement([
                 { selector: 'nav' },

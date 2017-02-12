@@ -190,11 +190,11 @@ wf.define('UI', ['logger'], function (logger) {
         
         /**
          * 初始化函数
-         * @param {String} name组件实例名
          * @param {JQuery} 组件实例JQuery对象
+         * @param {String} name组件实例名
          */
-        init: function (name, $element) {
-            this.name = name;
+        init: function ($element, name) {
+            this.name = name || $element.attr('id');
             this.$element = $element;
         }
 

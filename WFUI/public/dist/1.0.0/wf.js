@@ -746,11 +746,11 @@ wf.define('UI', ['logger'], function (logger) {
         
         /**
          * 初始化函数
-         * @param {String} name组件实例名
          * @param {JQuery} 组件实例JQuery对象
+         * @param {String} name组件实例名
          */
-        init: function (name, $element) {
-            this.name = name;
+        init: function ($element, name) {
+            this.name = name || $element.attr('id');
             this.$element = $element;
         }
 
@@ -861,7 +861,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
          */
         init: function (_base_, name, $element, checked, events) {
             var me = this;
-            _base_(name, $element);
+            _base_($element,name);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },
@@ -1070,7 +1070,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         init: function (_base_, name, $element, checked, events) {
             var me = this;
-            _base_(name, $element);
+            _base_($element,name);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },
@@ -1296,7 +1296,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
          */
         init: function (_base_, name, $element, events) {
             var me = this;
-            _base_(name, $element);
+            _base_($element,name);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 {
@@ -1472,7 +1472,7 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
          * events:{'change',function($element){}}
          */
         init: function (_base_, name, $element, events) {
-            _base_(name, $element);
+            _base_($element,name);
             var me = this;
             this.initElement([
                 { selector: 'nav' },
@@ -1514,6 +1514,97 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     };
     
     return Tab;
+
+});
+'use strict';
+
+/**
+ * html结构：
+ * <div class="wf-alert wf-alert-info">
+ *     <span class="wf-alert-title">INFO : </span>
+ *     <span class="wf-alert-message">This alert needs your attention, but it’s not important.</span>
+ *     <i class="wf-icon icon-close"></i>
+ * </div>
+ */
+wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
+    
+    var role = 'alert';
+    
+    /**
+     * @class Alert
+     */
+    var Alert = wf.inherit(UI, {
+        
+        /**
+         * [data-role]
+         */
+        role: role,
+        
+        /**
+         * 注册用户自定义事件
+         * @event on
+         * @param {String} name 事件名称
+         * @param {Function} func 事件函数
+         */
+        on: function (name, func) {
+            if (!this.action[name]) {
+                logger.error('alert 无{0}事件'.format(name));
+            } else {
+                this.action[name].register(func);
+            }
+        },
+        
+        /**
+         * 关闭警告框
+         */
+        close: function () {
+            this.$element.remove();
+        },
+        
+        /**
+         * ui初始化
+         * @param {String} _base_ 父类同名方法
+         * @param {String} name ui名
+         * @param {Object} $element ui jquery对象
+         * events:{'click',function($element){}}
+         */
+        init: function (_base_, name, $element, events) {
+            var me = this;
+            _base_($element, name);
+            //初始化组件元素,为JQuery对象
+            me.initElement([
+                { selector: 'icon-close' }
+            ]);
+            //初始化事件
+            me.action = {
+                click: new Action('click', function () {
+                    var _action_ = this;
+                    _action_.$target.click(function () {
+                        me.close();
+                        _action_.piping();
+                    });
+                }, this['icon-close'].$element)
+            };
+            me.initEvent(events);
+        }
+    });
+    
+    /**
+     * dataRole
+     */
+    var dataRole = '[data-role="' + role + '"]';
+    
+    /**
+     * 自动初始化
+     * @param {Object} page页面容器
+     */
+    Alert.auto = function (page) {
+        $.each($(dataRole), function (index) {
+            page.addElement(new Alert('alert' + index, $(this)));
+        });
+    };
+    
+    return Alert;
 
 });
 'use strict';

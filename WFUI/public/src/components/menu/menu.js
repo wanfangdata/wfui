@@ -30,7 +30,7 @@ wf.define('UI.Menu', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
          * ui初始化    
          */
         init: function (_base_, name, $element) {
-            _base_(name, $element);
+            _base_($element,name);
             this.initElement([
                 
             ]);
