@@ -77,9 +77,11 @@
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
     <Compile Include="public\site\src\js\doc.js" />
     <Content Include="public\src\components\menu\maker.less" />
+    <Content Include="public\src\components\modal\modal.less" />
     <Content Include="public\src\components\pagination\pagination.less" />
     <Content Include="public\src\components\radio\radio.js" />
     <Compile Include="public\src\components\alert\alert.js" />
+    <Compile Include="public\src\components\modal\modal.js" />
     <Compile Include="public\src\components\select\select.js" />
     <Compile Include="public\src\components\step\step.js" />
     <Compile Include="public\src\components\tab\tab.js" />
@@ -235,6 +237,7 @@
     <Folder Include="public\src\components\breadcrumb\" />
     <Folder Include="public\src\components\grid\" />
     <Folder Include="public\src\components\alert\" />
+    <Folder Include="public\src\components\modal\" />
     <Folder Include="public\src\components\step\" />
     <Folder Include="public\src\components\pagination\" />
     <Folder Include="public\src\components\tab\" />
