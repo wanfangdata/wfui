@@ -1,7 +1,7 @@
-﻿@import "animate/slideUpIn.less";
-@import "animate/slideUpOut.less";
-@import "animate/slideDownIn.less";
-@import "animate/slideDownOut.less";
+﻿@import "animate/slideUp.less";
+@import "animate/slideDown.less";
+@import "animate/fade.less";
+@import "animate/zoom.less";
 
 .wf-slide-up-in {
     -moz-animation: slideUpIn .2s 1 cubic-bezier(0.23, 1, 0.32, 1);
@@ -12,4 +12,86 @@
 
 .wf-slide-up-out {
     animation: slideUpOut .2s 1 cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.wf-fade-enter {
+    opacity: 0;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.wf-fade-leave {
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.wf-fade-enter.wf-fade-enter-active {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.wf-fade-leave.wf-fade-leave-active {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.wf-zoom-enter {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: wfZoomIn;
+    animation-name: wfZoomIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+    animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+}
+
+.wf-zoom-leave {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: wfZoomOut;
+    animation-name: wfZoomOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+
+.wf-zoom-enter.wf-zoom-enter-active {
+    -webkit-animation-name: wfZoomIn;
+    animation-name: wfZoomIn;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.wf-zoom-leave.wf-zoom-leave-active {
+    -webkit-animation-name: wfZoomOut;
+    animation-name: wfZoomOut;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
 }

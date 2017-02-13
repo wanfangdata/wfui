@@ -2,12 +2,24 @@
 
 /**
  * html结构：
- * <div class="wf-modal wf-modal-info">
- *     <span class="wf-modal-title">INFO : </span>
- *     <span class="wf-modal-message">This modal needs your attention, but it’s not important.</span>
- *     <i class="wf-icon icon-close"></i>
+ * <div class="wf-modal">
+ *     <div class="wf-modal-mask"></div>
+ *     <div class="wf-modal-content">
+ *         <div class="wf-modal-header">
+ *             <div class="wf-modal-title">Title</div>
+ *             <i class="wf-icon icon-close"></i>
+ *         </div>
+ *         <div class="wf-modal-body">
+ *             <p>some contents...</p><p>some contents...</p><p>some contents...</p>
+ *         </div>
+ *         <div class="wf-modal-footer">
+ *             <button type="button" class="wf-btn">Cancel</button>
+ *             <button type="button" class="wf-btn wf-btn-primary">OK</button>
+ *         </div>
+ *     </div>
  * </div>
  */
+
 wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     
     var role = 'modal';
@@ -37,42 +49,87 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         },
         
         /**
+         * hide class
+         */
+        hideCls: function () {
+            return this.clsName('hidden'); wf - modal - mask - hidden
+        },
+        
+        /**
+         * hide class
+         */
+        maskHideCls: function () {
+            return this.clsName('mask-hidden');
+        },
+
+        /**
          * 关闭对话框
          */
         close: function () {
-            this.$element.remove();
+            var me = this;
+            $('body').removeAttr('style');
+            me.animation(me.mask.$element, me.animationCls(['fade', 'leave']) + ' ' + me.animationCls(['fade', 'leave', 'active']));
+            me.animation(me.content.$element, me.animationCls(['zoom', 'leave']) + ' ' + me.animationCls(['zoom', 'leave', 'active']), function () {
+                me.$element.addClass(me.hideCls());
+            });
         },
         
         /**
          * 打开对话框
          */
-        open: function () {
-            this.$element.remove();
+        open: function (origin) {
+            var offset;
+            var me = this;
+            me.$element.removeClass(this.hideCls());
+            offset = me.content.$element.offset();
+            $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
+            me.content.$element.css({ 'transform-origin': (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px' });
+            me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
+            //me.animation(me.mask.$element, me.animationCls(['fade', 'enter', 'active'])); 
+            me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
+            //me.animation(me.content.$element, me.animationCls(['zoom', 'enter', 'active']));
         },
         
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
+         * @param {String} id modal id
          * @param {Object} $element ui jquery对象
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
+        init: function (_base_, id, $element, events) {
             var me = this;
-            
-            _base_($element, name);
+            _base_($element, id);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: ICON_CLOSE }
+                { selector: 'content' }, 
+                { selector: 'mask' }, 
+                { selector: 'closeBtn' }, 
+                { selector: 'cancelBtn' },
+                { selector: 'okBtn' }
             ]);
             //初始化事件
             me.action = {
-                click: new Action('click', function () {
+                click: new Action('close', function () {
+                    var _action_ = this;
+                    _action_.$target.click(function () {
+                        me.close();
+                        _action_.piping();
+                    });
+                }, this.closeBtn.$element),
+                cancel: new Action('cancel', function () {
+                    var _action_ = this;
+                    _action_.$target.click(function () {
+                        me.close();
+                        _action_.piping();
+                    });
+                }, this.cancelBtn.$element),
+                ok: new Action('ok', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
                         _action_.piping();
                     });
-                }, this[ICON_CLOSE].$element)
+                }, this.okBtn.$element)
             };
             me.initEvent(events);
         }
@@ -88,8 +145,13 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {Object} page页面容器
      */
     Modal.auto = function (page) {
-        $.each($(dataRole), function (index) {
-            page.addElement(new Modal('modal' + index, $(this)));
+        $.each($('[data-modal'), function (index) {
+            var id = $(this).data('modal');
+            var modal = new Modal(id, $(UI.ID_PREFIX + id));
+            $(this).click(function (e) {
+                modal.open($(this).offset());
+            });
+            page.addElement(modal);
         });
     };
     

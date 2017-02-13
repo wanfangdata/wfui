@@ -16,6 +16,7 @@
       "public/src/components/select/select.js",
       "public/src/components/tab/tab.js",
       "public/src/components/alert/alert.js",
+      "public/src/components/modal/modal.js",
       "public/src/core/js/page.js"
     ]
   },

@@ -2,6 +2,8 @@
 @modal-pre: ~"@{ui}-modal";
 
 .@{modal-pre} {
+
+
     &-mask {
         position: fixed;
         top: 0;
@@ -15,7 +17,12 @@
         .opacity(.5)
     }
 
+    &-hidden{
+        display: none;
+    }
+
     &-content {
+        /*transform-origin: -100px 90px;*/
         position: fixed;
         top: 100px;
         left: 50%;

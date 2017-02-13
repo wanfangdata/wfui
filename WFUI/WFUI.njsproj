@@ -101,10 +101,10 @@
     <Content Include="public\src\core\font\iconfont.ttf" />
     <Content Include="public\src\core\font\iconfont.woff" />
     <Content Include="public\src\core\less\animate.less" />
-    <Content Include="public\src\core\less\animate\slideDownIn.less" />
-    <Content Include="public\src\core\less\animate\slideDownOut.less" />
-    <Content Include="public\src\core\less\animate\slideUpOut.less" />
-    <Content Include="public\src\core\less\animate\slideUpIn.less" />
+    <Content Include="public\src\core\less\animate\zoom.less" />
+    <Content Include="public\src\core\less\animate\slideDown.less" />
+    <Content Include="public\src\core\less\animate\fade.less" />
+    <Content Include="public\src\core\less\animate\slideUp.less" />
     <Content Include="public\src\core\less\mixins\center-middle.less" />
     <Content Include="public\src\core\less\mixins\opacity.less" />
     <Content Include="public\src\core\less\mixins\overflow-hide.less" />

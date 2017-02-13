@@ -4,7 +4,8 @@
         'UI.Radio',
         'UI.Select',
         'UI.Tab',
-        'UI.Alert'
+        'UI.Alert',
+        'UI.Modal'
     ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         var codeFormat = '<pre class="demo-code"><code class="html">{0}</code></pre>';

@@ -12,26 +12,28 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <button class="wf-btn wf-btn-small">对话框</button>
+            <button class="wf-btn wf-btn-small" data-modal="doc-modal">对话框</button>
         </div>
         <div class="explain">
             <p>用于确认的情景对话框</p>
         </div>
     </div>
 </div>
-<div class="wf-modal">
+<div id="doc-modal" class="wf-modal wf-modal-hidden" data-role="modal">
     <div class="wf-modal-mask"></div>
     <div class="wf-modal-content">
         <div class="wf-modal-header">
             <div class="wf-modal-title">Title</div>
-            <i class="wf-icon icon-close"></i>
+            <i class="wf-icon icon-close wf-modal-closeBtn"></i>
         </div>
         <div class="wf-modal-body">
-            <p>some contents...</p><p>some contents...</p><p>some contents...</p>
+            <p>contents...</p>
+            <p>contents...</p>
+            <p>contents...</p>
         </div>
         <div class="wf-modal-footer">
-            <button type="button" class="wf-btn">Cancel</button>
-            <button type="button" class="wf-btn wf-btn-primary">OK</button>
+            <button type="button" class="wf-btn wf-modal-cancelBtn">Cancel</button>
+            <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
         </div>
     </div>
 </div>
