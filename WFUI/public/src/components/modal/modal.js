@@ -37,12 +37,19 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         },
         
         /**
-         * 关闭警告框
+         * 关闭对话框
          */
         close: function () {
             this.$element.remove();
         },
         
+        /**
+         * 打开对话框
+         */
+        open: function () {
+            this.$element.remove();
+        },
+
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法

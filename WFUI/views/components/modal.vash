@@ -12,20 +12,21 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div tabindex="-1" class="ant-modal-wrap " role="dialog" aria-labelledby="rcDialogTitle1">
-                <div role="document" class="ant-modal" style="width: 520px; transform-origin: -46px 433px 0px;">
-                    <div class="ant-modal-content">
-                        <button aria-label="Close" class="ant-modal-close">
-                            <span class="ant-modal-close-x"></span>
+            <button class="wf-btn wf-btn-small">对话框</button>
+            <div tabindex="-1" class="wf-modal-wrap " role="dialog" aria-labelledby="rcDialogTitle1">
+                <div role="document" class="wf-modal" style="width: 520px; transform-origin: -46px 433px 0px;">
+                    <div class="wf-modal-content">
+                        <button aria-label="Close" class="wf-modal-close">
+                            <span class="wf-modal-close-x"></span>
                         </button>
-                        <div class="ant-modal-header">
-                            <div class="ant-modal-title" id="rcDialogTitle1">Basic Modal</div>
+                        <div class="wf-modal-header">
+                            <div class="wf-modal-title" id="rcDialogTitle1">Basic Modal</div>
                         </div>
-                        <div class="ant-modal-body">
+                        <div class="wf-modal-body">
                             <p>some contents...</p><p>some contents...</p><p>some contents...</p>
                         </div>
-                        <div class="ant-modal-footer">
-                            <button type="button" class="ant-btn ant-btn-lg"><span>Cancel</span></button><button type="button" class="ant-btn ant-btn-primary ant-btn-lg"><span>OK</span></button>
+                        <div class="wf-modal-footer">
+                            <button type="button" class="wf-btn wf-btn-lg"><span>Cancel</span></button><button type="button" class="wf-btn wf-btn-primary wf-btn-lg"><span>OK</span></button>
                         </div>
                     </div>
                     <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinel</div>
