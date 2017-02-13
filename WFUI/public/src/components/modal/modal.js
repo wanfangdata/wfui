@@ -49,7 +49,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         open: function () {
             this.$element.remove();
         },
-
+        
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -59,10 +59,11 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         init: function (_base_, name, $element, events) {
             var me = this;
+            
             _base_($element, name);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: 'icon-close' }
+                { selector: ICON_CLOSE }
             ]);
             //初始化事件
             me.action = {
@@ -71,7 +72,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
                     _action_.$target.click(function () {
                         _action_.piping();
                     });
-                }, this['icon-close'].$element)
+                }, this[ICON_CLOSE].$element)
             };
             me.initEvent(events);
         }

@@ -1977,3 +1977,58 @@ textarea.wf-input {
   color: #f05e4f;
   background-color: rgba(240, 94, 79, 0.1);
 }
+.wf-modal-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #373737;
+  background-color: rgba(55, 55, 55, 0.6);
+  height: 100%;
+  z-index: 1000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.wf-modal-content {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  width: 380px;
+  padding: 0 10px;
+  margin-left: -190px;
+  z-index: 1000;
+  outline: 0;
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.wf-modal-header {
+  padding: 10px;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+}
+.wf-modal-header .wf-modal-title {
+  font-weight: 700;
+}
+.wf-modal-header .wf-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+.wf-modal-header .wf-icon:hover {
+  font-weight: 700;
+}
+.wf-modal-body {
+  padding-top: 20px;
+  line-height: 1.5;
+}
+.wf-modal-footer {
+  text-align: center;
+  padding: 20px 0;
+}
+.wf-modal-footer .wf-btn {
+  min-width: 76px;
+}

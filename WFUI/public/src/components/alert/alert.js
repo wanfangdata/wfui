@@ -52,10 +52,11 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         init: function (_base_, name, $element, events) {
             var me = this;
+            var ICON_CLOSE = 'icon-close';
             _base_($element, name);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: 'icon-close' }
+                { selector: ICON_CLOSE }
             ]);
             //初始化事件
             me.action = {
@@ -65,7 +66,7 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
                         me.close();
                         _action_.piping();
                     });
-                }, this['icon-close'].$element)
+                }, this[ICON_CLOSE].$element)
             };
             me.initEvent(events);
         }

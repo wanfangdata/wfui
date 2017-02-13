@@ -13,31 +13,25 @@
         </h1>
         <div class="demo">
             <button class="wf-btn wf-btn-small">对话框</button>
-            <div tabindex="-1" class="wf-modal-wrap " role="dialog" aria-labelledby="rcDialogTitle1">
-                <div role="document" class="wf-modal" style="width: 520px; transform-origin: -46px 433px 0px;">
-                    <div class="wf-modal-content">
-                        <button aria-label="Close" class="wf-modal-close">
-                            <span class="wf-modal-close-x"></span>
-                        </button>
-                        <div class="wf-modal-header">
-                            <div class="wf-modal-title" id="rcDialogTitle1">Basic Modal</div>
-                        </div>
-                        <div class="wf-modal-body">
-                            <p>some contents...</p><p>some contents...</p><p>some contents...</p>
-                        </div>
-                        <div class="wf-modal-footer">
-                            <button type="button" class="wf-btn wf-btn-lg"><span>Cancel</span></button><button type="button" class="wf-btn wf-btn-primary wf-btn-lg"><span>OK</span></button>
-                        </div>
-                    </div>
-                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinel</div>
-                </div>
-            </div>
         </div>
         <div class="explain">
             <p>用于确认的情景对话框</p>
         </div>
     </div>
 </div>
-<div class="wf-modal-wrap">
-    div
+<div class="wf-modal">
+    <div class="wf-modal-mask"></div>
+    <div class="wf-modal-content">
+        <div class="wf-modal-header">
+            <div class="wf-modal-title">Title</div>
+            <i class="wf-icon icon-close"></i>
+        </div>
+        <div class="wf-modal-body">
+            <p>some contents...</p><p>some contents...</p><p>some contents...</p>
+        </div>
+        <div class="wf-modal-footer">
+            <button type="button" class="wf-btn">Cancel</button>
+            <button type="button" class="wf-btn wf-btn-primary">OK</button>
+        </div>
+    </div>
 </div>
