@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@model.title</title>
     <link href="../site/img/favicon.ico" rel="shortcut icon" />
-    <link href="../dist/1.0.0/wf.min.css" rel="stylesheet" />
+    <link href="../dist/wf.min.css" rel="stylesheet" />
     <link href="../site/css/global.min.css" rel="stylesheet" />
     <link href="../site/css/animate.min.css" rel="stylesheet" />
     <link href="../site/module/highlight-9.8.0/highlight.min.css" rel="stylesheet" />
@@ -48,7 +48,7 @@
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
-    <script src="../dist/1.0.0/wf.js"></script>
+    <script src="../dist/wf.js"></script>
     <script>
         var browser = wf.require('browser');
         if ((browser.msie && parseInt(browser.version) > 8) || !browser.msie) {
