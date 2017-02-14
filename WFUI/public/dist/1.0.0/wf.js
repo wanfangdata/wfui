@@ -1693,14 +1693,14 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         open: function (origin) {
             var offset;
-            var origin; //触发点相对于对话框的位置
+            var transformOrigin;
             var me = this;
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
                 offset = me.content.$element.offset();
-                origin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
+                transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
                 $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
-                me.content.$element.css({ 'transform-origin': origin });
+                me.content.$element.css({ 'transform-origin': transformOrigin });
                 me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
                 me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
             }
