@@ -1696,7 +1696,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
         },
         
         /**
-         * hide class
+         * mask hide class
          */
         maskHideCls: function () {
             return this.clsName('mask-hidden');
