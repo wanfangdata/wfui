@@ -19,8 +19,8 @@
                         <div class="wf-step-icon">
                             <i class="wf-icon icon-selected"></i>
                         </div><div class="wf-step-main">
-                            <div class="wf-step-title">Finished</div>
-                            <div class="wf-step-desc">This is a description.This is a description.</div>
+                            <div class="wf-step-title">第一步</div>
+                            <div class="wf-step-desc">描述</div>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         <div class="wf-step-icon">
                             <span class="wf-icon">3</span>
                         </div><div class="wf-step-main">
-                            <div class="wf-step-title">Waiting</div>
+                            <div class="wf-step-title">完成</div>
                             <div class="wf-step-desc">This is a description.</div>
                         </div>
                     </div>
