@@ -70,6 +70,7 @@
     <Content Include="public\src\components\alert\alert.less" />
     <Content Include="public\src\components\breadcrumb\breadcrumb.less" />
     <Content Include="public\src\components\button\button.less" />
+    <Content Include="public\src\components\button\maker.less" />
     <Content Include="public\src\components\grid\grid.less" />
     <Content Include="public\src\components\grid\maker.less" />
     <Content Include="public\src\components\input\input.less" />

@@ -1,4 +1,5 @@
 ﻿@import "../../core/less/import.less";
+@import "maker.less";
 @btn-pre: ~"@{ui}-btn";
 
 .hover {
@@ -8,12 +9,6 @@
         background-color: @color-background;
         z-index: 1;
     }
-}
-
-.message-color(@msg-color) {
-    background-color: @msg-color;
-    border-color: @msg-color;
-    color: @color;
 }
 //btn default
 .@{btn-pre} {
@@ -41,19 +36,19 @@
     .hover;
 
     &-info {
-        .message-color(@color-info);
+        .message-btn(@color-info);
     }
 
     &-success {
-        .message-color(@color-success);
+        .message-btn(@color-success);
     }
 
     &-warning {
-        .message-color(@color-warning);
+        .message-btn(@color-warning);
     }
 
     &-error {
-        .message-color(@color-error);
+        .message-btn(@color-error);
     }
 }
 

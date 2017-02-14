@@ -1743,6 +1743,9 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
                 ok: new Action('ok', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
+                        if (me.$element.hasClass(me.clsName('message'))) {
+                            me.close();
+                        }
                         _action_.piping();
                     });
                 }, this.okBtn.$element)

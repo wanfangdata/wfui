@@ -53,12 +53,10 @@
                         <i class="wf-icon icon-information"></i>
                     </div>
                     <div class="wf-modal-body">
-                        <p>contents...</p>
-                        <p>contents...</p>
-                        <p>contents...</p>
+                        <p>Modal content Modal content Modal content Modal content Modal content Modal content Modal content ...</p>
                     </div>
                     <div class="wf-modal-footer">
-                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                        <button type="button" class="wf-btn wf-btn-info wf-modal-okBtn">OK</button>
                     </div>
                 </div>
             </div>
@@ -69,12 +67,10 @@
                         <i class="wf-icon icon-success"></i>
                     </div>
                     <div class="wf-modal-body">
-                        <p>contents...</p>
-                        <p>contents...</p>
-                        <p>contents...</p>
+                        <p>交易成功</p>
                     </div>
                     <div class="wf-modal-footer">
-                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                        <button type="button" class="wf-btn wf-btn-success wf-modal-okBtn">OK</button>
                     </div>
                 </div>
             </div>
@@ -85,12 +81,10 @@
                         <i class="wf-icon icon-warning"></i>
                     </div>
                     <div class="wf-modal-body">
-                        <p>contents...</p>
-                        <p>contents...</p>
-                        <p>contents...</p>
+                        <p>账号类型不正确</p>
                     </div>
                     <div class="wf-modal-footer">
-                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                        <button type="button" class="wf-btn wf-btn-warning wf-modal-okBtn">确定</button>
                     </div>
                 </div>
             </div>
@@ -101,12 +95,10 @@
                         <i class="wf-icon icon-wrong"></i>
                     </div>
                     <div class="wf-modal-body">
-                        <p>contents...</p>
-                        <p>contents...</p>
-                        <p>contents...</p>
+                        <p>非法操作！</p>
                     </div>
                     <div class="wf-modal-footer">
-                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                        <button type="button" class="wf-btn wf-btn-error wf-modal-okBtn">确定</button>
                     </div>
                 </div>
             </div>

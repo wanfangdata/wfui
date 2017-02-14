@@ -1,0 +1,16 @@
+﻿@import "../../core/less/import.less";
+
+.message-color(@msg-color) {
+    background-color: @msg-color;
+    border-color: @msg-color;
+    color: @color;
+}
+
+.message-btn(@msg-color) {
+    .message-color(@msg-color);
+
+    &:hover {
+        .message-color(@msg-color);
+        .opacity(.8);
+    }
+}

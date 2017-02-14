@@ -16,7 +16,7 @@
         z-index: 1000;
     }
 
-    &-hidden{
+    &-hidden {
         display: none;
     }
 
@@ -68,6 +68,68 @@
 
         .@{ui}-btn {
             min-width: 76px;
+        }
+    }
+
+    &-message {
+        .@{modal-pre}-header {
+            border: none;
+            text-align: center;
+            padding-top: 20px;
+
+            .@{ui}-icon {
+                position: relative;
+                font-size: 32px;
+                cursor: default;
+                top: auto;
+                right: auto;
+
+                &:hover {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .@{modal-pre}-content {
+            text-align: center;
+        }
+
+        .@{modal-pre}-footer {
+            .@{ui}-btn {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-message-info {
+        .@{modal-pre}-header {
+            .@{ui}-icon {
+                color: @color-info;
+            }
+        }
+    }
+
+    &-message-success {
+        .@{modal-pre}-header {
+            .@{ui}-icon {
+                color: @color-success;
+            }
+        }
+    }
+
+    &-message-warning {
+        .@{modal-pre}-header {
+            .@{ui}-icon {
+                color: @color-warning;
+            }
+        }
+    }
+
+    &-message-error {
+        .@{modal-pre}-header {
+            .@{ui}-icon {
+                color: @color-error;
+            }
         }
     }
 }

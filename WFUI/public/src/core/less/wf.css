@@ -1018,20 +1018,48 @@ table {
   border-color: #6abbef;
   color: #fff;
 }
+.wf-btn-info:hover {
+  background-color: #6abbef;
+  border-color: #6abbef;
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
 .wf-btn-success {
   background-color: #38be70;
   border-color: #38be70;
   color: #fff;
+}
+.wf-btn-success:hover {
+  background-color: #38be70;
+  border-color: #38be70;
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 .wf-btn-warning {
   background-color: #f0bb18;
   border-color: #f0bb18;
   color: #fff;
 }
+.wf-btn-warning:hover {
+  background-color: #f0bb18;
+  border-color: #f0bb18;
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
 .wf-btn-error {
   background-color: #f05e4f;
   border-color: #f05e4f;
   color: #fff;
+}
+.wf-btn-error:hover {
+  background-color: #f05e4f;
+  border-color: #f05e4f;
+  color: #fff;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 .wf-btn.disabled,
 .wf-btn.disabled:hover,
@@ -2215,4 +2243,37 @@ textarea.wf-input {
 }
 .wf-modal-footer .wf-btn {
   min-width: 76px;
+}
+.wf-modal-message .wf-modal-header {
+  border: none;
+  text-align: center;
+  padding-top: 20px;
+}
+.wf-modal-message .wf-modal-header .wf-icon {
+  position: relative;
+  font-size: 32px;
+  cursor: default;
+  top: auto;
+  right: auto;
+}
+.wf-modal-message .wf-modal-header .wf-icon:hover {
+  font-weight: 400;
+}
+.wf-modal-message .wf-modal-content {
+  text-align: center;
+}
+.wf-modal-message .wf-modal-footer .wf-btn {
+  margin-right: 0;
+}
+.wf-modal-message-info .wf-modal-header .wf-icon {
+  color: #6abbef;
+}
+.wf-modal-message-success .wf-modal-header .wf-icon {
+  color: #38be70;
+}
+.wf-modal-message-warning .wf-modal-header .wf-icon {
+  color: #f0bb18;
+}
+.wf-modal-message-error .wf-modal-header .wf-icon {
+  color: #f05e4f;
 }
