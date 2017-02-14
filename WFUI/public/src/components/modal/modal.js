@@ -20,7 +20,7 @@
  * </div>
  */
 
-wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
+wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, Action, Util) {
     
     var role = 'modal';
     
@@ -84,12 +84,14 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         open: function (origin) {
             var offset;
             var transformOrigin;
+            var scrollWidth;
             var me = this;
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
+                scrollWidth = Util.getScrollbarWidth();
                 offset = me.content.$element.offset();
                 transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
-                $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
+                $('body').attr('style', 'margin-right:' + scrollWidth + 'px; overflow: hidden;');
                 me.content.$element.css({ 'transform-origin': transformOrigin });
                 me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
                 me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));

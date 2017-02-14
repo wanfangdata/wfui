@@ -112,6 +112,7 @@
     <Content Include="public\src\core\less\mixins\size.less" />
     <Content Include="public\src\core\less\mixins\transition.less" />
     <Content Include="public\src\test\js\ui.js" />
+    <Compile Include="public\src\core\js\util.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />

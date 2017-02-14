@@ -509,6 +509,36 @@ wf.define('browser', '_core_', function (logger) {
 /**
  * 事件系统
  */
+wf.define('Util', [], function () {
+    return {
+        /**
+         * 获取滚动条宽度
+         */
+        getScrollbarWidth: function () {
+            var outer;
+            var inner;
+            var widthNoScroll;
+            var widthWithScroll;
+            outer = document.createElement('div');
+            outer.style.visibility = 'hidden';
+            outer.style.width = '100px';
+            outer.style.msOverflowStyle = 'scrollbar';
+            document.body.appendChild(outer);
+            widthNoScroll = outer.offsetWidth;
+            outer.style.overflow = 'scroll';
+            inner = document.createElement('div');
+            inner.style.width = '100%';
+            outer.appendChild(inner);
+            widthWithScroll = inner.offsetWidth;
+            outer.parentNode.removeChild(outer);
+            return widthNoScroll - widthWithScroll;
+        }
+    };
+});
+'use strict';
+/**
+ * 事件系统
+ */
 wf.define('Action', [], function () {
     return wf.inherit({
         /**
@@ -1630,7 +1660,7 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  * </div>
  */
 
-wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
+wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, Action, Util) {
     
     var role = 'modal';
     
@@ -1694,12 +1724,14 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         open: function (origin) {
             var offset;
             var transformOrigin;
+            var scrollWidth;
             var me = this;
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
+                scrollWidth = Util.getScrollbarWidth();
                 offset = me.content.$element.offset();
                 transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
-                $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
+                $('body').attr('style', 'margin-right:' + scrollWidth + 'px; overflow: hidden;');
                 me.content.$element.css({ 'transform-origin': transformOrigin });
                 me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
                 me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
