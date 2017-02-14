@@ -34,6 +34,12 @@
     <Compile Include="controllers\components.js" />
     <Compile Include="data\guide.js" />
     <Compile Include="data\menu.js" />
+    <Content Include="public\dist\wf.css" />
+    <Content Include="public\dist\wf.js" />
+    <Compile Include="public\dist\wf.min.js">
+      <SubType>Code</SubType>
+      <DependentUpon>public\dist\wf.js</DependentUpon>
+    </Compile>
     <Compile Include="public\site\js\doc.js" />
     <Compile Include="public\site\js\doc.min.js">
       <SubType>Code</SubType>
@@ -50,6 +56,10 @@
     <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
     <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Content Include="public\dist\wf.min.css">
+      <SubType>Content</SubType>
+      <DependentUpon>public\dist\wf.css</DependentUpon>
+    </Content>
     <Content Include="public\site\img\favicon.ico" />
     <None Include="public\site\img\icon-doc.sprite" />
     <Content Include="public\site\img\icon-doc.sprite.css">
@@ -120,11 +130,6 @@
     <Content Include="compilerconfig.json.defaults">
       <SubType>Content</SubType>
       <DependentUpon>compilerconfig.json</DependentUpon>
-    </Content>
-    <Content Include="public\dist\1.0.0\wf.css" />
-    <Content Include="public\dist\1.0.0\wf.min.css">
-      <SubType>Content</SubType>
-      <DependentUpon>public\dist\1.0.0\wf.css</DependentUpon>
     </Content>
     <Content Include="public\site\css\animate.min.css" />
     <Content Include="public\site\css\global.css" />
@@ -197,11 +202,6 @@
     <Compile Include="public\src\core\js\console.js" />
     <Content Include="public\src\test\js\loaderTest.js" />
     <Content Include="public\src\components\checkbox\checkbox.js" />
-    <Content Include="public\dist\1.0.0\wf.js" />
-    <Content Include="public\dist\1.0.0\wf.min.js">
-      <SubType>Code</SubType>
-      <DependentUpon>C:\Users\bss\Documents\GitHub\wfui\WFUI\public\dist\1.0.0\wf.js</DependentUpon>
-    </Content>
     <Compile Include="public\site\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
@@ -216,7 +216,6 @@
     <Folder Include="data\" />
     <Folder Include="public\" />
     <Folder Include="public\site\css\" />
-    <Folder Include="public\dist\1.0.0\" />
     <Folder Include="public\site\img\" />
     <Folder Include="public\site\js\" />
     <Folder Include="public\site\js\lib\" />

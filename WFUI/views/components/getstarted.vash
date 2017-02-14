@@ -2,4 +2,21 @@
     <h1 class="title">
         Get Started
     </h1>
+    <p class="desc">
+        WFUI 保持产品的一致性提供可定制性。
+    </p>
+    <div class="section" id="pagination-basic">
+        <h1 class="title">
+            <span class="text">快速使用</span>
+        </h1>
+        <div class="demo">
+            <p>
+                <code>
+                    $ npm install wfui
+                </code>
+            </p>
+        </div>
+        <div class="explain">
+        </div>
+    </div>
 </div>

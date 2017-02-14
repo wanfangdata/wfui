@@ -1,6 +1,6 @@
 [
   {
-    "outputFileName": "public/dist/1.0.0/wf.js",
+    "outputFileName": "public/dist/wf.js",
     "inputFiles": [
       "public/src/core/js/base.js",
       "public/src/core/js/extension.js",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "outputFileName": "public/dist/1.0.0/wf.css",
+    "outputFileName": "public/dist/wf.css",
     "inputFiles": [
       "public/src/core/less/wf.css"
     ]

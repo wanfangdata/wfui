@@ -446,9 +446,9 @@ table {
 }
 @font-face {
   font-family: "wf-icon";
-  src: url('../../src/core/font/iconfont.eot?t=1486863835918');
+  src: url('../src/core/font/iconfont.eot?t=1486863835918');
   /* IE9*/
-  src: url('../../src/core/font/iconfont.eot?t=1486863835918#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../../src/core/font/iconfont.woff?t=1486863835918') format('woff'), /* chrome, firefox */ url('../../src/core/font/iconfont.ttf?t=1486863835918') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../../src/core/font/iconfont.svg?t=1486863835918#wf-icon') format('svg');
+  src: url('../src/core/font/iconfont.eot?t=1486863835918#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../src/core/font/iconfont.woff?t=1486863835918') format('woff'), /* chrome, firefox */ url('../src/core/font/iconfont.ttf?t=1486863835918') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../src/core/font/iconfont.svg?t=1486863835918#wf-icon') format('svg');
   /* iOS 4.1- */
 }
 .wf-icon {
