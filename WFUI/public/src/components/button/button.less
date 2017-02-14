@@ -1,5 +1,6 @@
 ﻿@import "../../core/less/import.less";
 @btn-pre: ~"@{ui}-btn";
+
 .hover {
     &:hover, &.@{btn-pre}-hover {
         color: @color-primary;
@@ -9,6 +10,11 @@
     }
 }
 
+.message-color(@msg-color) {
+    background-color: @msg-color;
+    border-color: @msg-color;
+    color: @color;
+}
 //btn default
 .@{btn-pre} {
     display: inline-block;
@@ -33,6 +39,22 @@
     outline: none;
     .transition(all @animate-time-fast+0.1 cubic-bezier(0.645, 0.045, 0.355, 1));
     .hover;
+
+    &-info {
+        .message-color(@color-info);
+    }
+
+    &-success {
+        .message-color(@color-success);
+    }
+
+    &-warning {
+        .message-color(@color-warning);
+    }
+
+    &-error {
+        .message-color(@color-error);
+    }
 }
 
 .@{btn-pre}.disabled, .@{btn-pre}.disabled:hover, button[disabled], button[disabled]:hover {

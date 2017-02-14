@@ -12,28 +12,107 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <button class="wf-btn wf-btn-small" data-modal="doc-modal">对话框</button>
+            <button class="wf-btn" data-modal="basic-modal">基本对话框</button>
+            <div id="basic-modal" class="wf-modal wf-modal-hidden" data-role="modal">
+                <div class="wf-modal-mask"></div>
+                <div class="wf-modal-content">
+                    <div class="wf-modal-header">
+                        <div class="wf-modal-title">Title</div>
+                        <i class="wf-icon icon-close wf-modal-closeBtn"></i>
+                    </div>
+                    <div class="wf-modal-body">
+                        <p>contents...</p>
+                        <p>contents...</p>
+                        <p>contents...</p>
+                    </div>
+                    <div class="wf-modal-footer">
+                        <button type="button" class="wf-btn wf-modal-cancelBtn">Cancel</button>
+                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="explain">
             <p>用于确认的情景对话框</p>
         </div>
     </div>
-</div>
-<div id="doc-modal" class="wf-modal wf-modal-hidden" data-role="modal">
-    <div class="wf-modal-mask"></div>
-    <div class="wf-modal-content">
-        <div class="wf-modal-header">
-            <div class="wf-modal-title">Title</div>
-            <i class="wf-icon icon-close wf-modal-closeBtn"></i>
+    <div class="section" id="modal-message">
+        <h1 class="title">
+            <span class="text">信息提示</span>
+            <button class="wf-btn wf-btn-small">Code</button>
+        </h1>
+        <div class="demo">
+            <button class="wf-btn wf-btn-info" data-modal="message-info">Info</button>
+            <button class="wf-btn wf-btn-success" data-modal="message-success">Success</button>
+            <button class="wf-btn wf-btn-warning" data-modal="message-warning">Waring</button>
+            <button class="wf-btn wf-btn-error" data-modal="message-error">Error</button>
+            <div id="message-info" class="wf-modal wf-modal-message wf-modal-message-info wf-modal-hidden" data-role="modal">
+                <div class="wf-modal-mask"></div>
+                <div class="wf-modal-content">
+                    <div class="wf-modal-header">
+                        <i class="wf-icon icon-information"></i>
+                    </div>
+                    <div class="wf-modal-body">
+                        <p>contents...</p>
+                        <p>contents...</p>
+                        <p>contents...</p>
+                    </div>
+                    <div class="wf-modal-footer">
+                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id="message-success" class="wf-modal wf-modal-message wf-modal-message-success wf-modal-hidden" data-role="modal">
+                <div class="wf-modal-mask"></div>
+                <div class="wf-modal-content">
+                    <div class="wf-modal-header">
+                        <i class="wf-icon icon-success"></i>
+                    </div>
+                    <div class="wf-modal-body">
+                        <p>contents...</p>
+                        <p>contents...</p>
+                        <p>contents...</p>
+                    </div>
+                    <div class="wf-modal-footer">
+                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id="message-warning" class="wf-modal wf-modal-message wf-modal-message-warning wf-modal-hidden" data-role="modal">
+                <div class="wf-modal-mask"></div>
+                <div class="wf-modal-content">
+                    <div class="wf-modal-header">
+                        <i class="wf-icon icon-warning"></i>
+                    </div>
+                    <div class="wf-modal-body">
+                        <p>contents...</p>
+                        <p>contents...</p>
+                        <p>contents...</p>
+                    </div>
+                    <div class="wf-modal-footer">
+                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div id="message-error" class="wf-modal wf-modal-message wf-modal-message-error wf-modal-hidden" data-role="modal">
+                <div class="wf-modal-mask"></div>
+                <div class="wf-modal-content">
+                    <div class="wf-modal-header">
+                        <i class="wf-icon icon-wrong"></i>
+                    </div>
+                    <div class="wf-modal-body">
+                        <p>contents...</p>
+                        <p>contents...</p>
+                        <p>contents...</p>
+                    </div>
+                    <div class="wf-modal-footer">
+                        <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="wf-modal-body">
-            <p>contents...</p>
-            <p>contents...</p>
-            <p>contents...</p>
-        </div>
-        <div class="wf-modal-footer">
-            <button type="button" class="wf-btn wf-modal-cancelBtn">Cancel</button>
-            <button type="button" class="wf-btn wf-btn-primary wf-modal-okBtn">OK</button>
+        <div class="explain">
+            <p>各种类型的信息提示，只提供一个按钮用于关闭。</p>
         </div>
     </div>
 </div>

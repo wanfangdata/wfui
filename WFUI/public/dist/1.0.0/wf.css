@@ -1013,6 +1013,26 @@ table {
 .wf-btn .wf-radio-inner {
   border-color: #6abbef;
 }
+.wf-btn-info {
+  background-color: #6abbef;
+  border-color: #6abbef;
+  color: #fff;
+}
+.wf-btn-success {
+  background-color: #38be70;
+  border-color: #38be70;
+  color: #fff;
+}
+.wf-btn-warning {
+  background-color: #f0bb18;
+  border-color: #f0bb18;
+  color: #fff;
+}
+.wf-btn-error {
+  background-color: #f05e4f;
+  border-color: #f05e4f;
+  color: #fff;
+}
 .wf-btn.disabled,
 .wf-btn.disabled:hover,
 button[disabled],
