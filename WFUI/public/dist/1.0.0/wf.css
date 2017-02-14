@@ -845,18 +845,6 @@ table {
   animation-duration: 0.2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-}
-.wf-fade-enter.wf-fade-enter-active {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-}
-.wf-fade-leave.wf-fade-leave-active {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
@@ -886,18 +874,6 @@ table {
   animation-play-state: running;
   -webkit-animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
   animation-timing-function: cubic-bezier(0.78, 0.14, 0.15, 0.86);
-}
-.wf-zoom-enter.wf-zoom-enter-active {
-  -webkit-animation-name: wfZoomIn;
-  animation-name: wfZoomIn;
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-}
-.wf-zoom-leave.wf-zoom-leave-active {
-  -webkit-animation-name: wfZoomOut;
-  animation-name: wfZoomOut;
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
 }
 .wf-row {
   zoom: 1;
@@ -2169,12 +2145,10 @@ textarea.wf-input {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #373737;
+  background-color: #ccc;
   background-color: rgba(55, 55, 55, 0.6);
   height: 100%;
   z-index: 1000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 .wf-modal-hidden {
   display: none;

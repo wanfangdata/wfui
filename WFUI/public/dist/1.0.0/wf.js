@@ -1671,17 +1671,21 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         maskHideCls: function () {
             return this.clsName('mask-hidden');
         },
-
+        
         /**
          * 关闭对话框
          */
         close: function () {
             var me = this;
             $('body').removeAttr('style');
-            me.animation(me.mask.$element, me.animationCls(['fade', 'leave']) + ' ' + me.animationCls(['fade', 'leave', 'active']));
-            me.animation(me.content.$element, me.animationCls(['zoom', 'leave']) + ' ' + me.animationCls(['zoom', 'leave', 'active']), function () {
+            if (me.supportCss3('animation')) {
+                me.animation(me.mask.$element, me.animationCls(['fade', 'leave']));
+                me.animation(me.content.$element, me.animationCls(['zoom', 'leave']), function () {
+                    me.$element.addClass(me.hideCls());
+                });
+            } else {
                 me.$element.addClass(me.hideCls());
-            });
+            }
         },
         
         /**
@@ -1689,15 +1693,17 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
          */
         open: function (origin) {
             var offset;
+            var origin; //触发点相对于对话框的位置
             var me = this;
             me.$element.removeClass(this.hideCls());
-            offset = me.content.$element.offset();
-            $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
-            me.content.$element.css({ 'transform-origin': (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px' });
-            me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
-            //me.animation(me.mask.$element, me.animationCls(['fade', 'enter', 'active'])); 
-            me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
-            //me.animation(me.content.$element, me.animationCls(['zoom', 'enter', 'active']));
+            if (me.supportCss3('animation')) {
+                offset = me.content.$element.offset();
+                origin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
+                $('body').attr('style', 'padding-right: 17px; overflow: hidden;');
+                me.content.$element.css({ 'transform-origin': origin });
+                me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
+                me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
+            }
         },
         
         /**
