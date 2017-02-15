@@ -52,7 +52,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
          * hide class
          */
         hideCls: function () {
-            return this.clsName('hidden'); wf - modal - mask - hidden
+            return this.clsName('hidden');
         },
         
         /**
