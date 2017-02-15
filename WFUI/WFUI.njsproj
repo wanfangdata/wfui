@@ -40,22 +40,22 @@
       <SubType>Code</SubType>
       <DependentUpon>public\dist\wf.js</DependentUpon>
     </Compile>
-    <Compile Include="public\site\js\doc.js" />
+    <Content Include="public\site\js\doc.js" />
     <Compile Include="public\site\js\doc.min.js">
       <SubType>Code</SubType>
       <DependentUpon>public\site\js\doc.js</DependentUpon>
     </Compile>
-    <Compile Include="public\site\js\lib\animated.js" />
+    <Content Include="public\site\js\lib\animated.js" />
     <Compile Include="public\site\js\lib\animated.min.js">
       <SubType>Code</SubType>
       <DependentUpon>public\site\js\lib\animated.js</DependentUpon>
     </Compile>
-    <Compile Include="public\site\js\lib\IE9.js" />
-    <Compile Include="public\site\js\lib\jquery-migrate-1.4.1.min.js" />
-    <Compile Include="public\site\js\lib\jquery.pjax-1.9.6.min.js" />
-    <Compile Include="public\site\js\lib\_animated\jquery.fittext.js" />
-    <Compile Include="public\site\js\lib\_animated\jquery.lettering.js" />
-    <Compile Include="public\site\js\lib\_animated\jquery.textillate.js" />
+    <Content Include="public\site\js\lib\IE9.js" />
+    <Content Include="public\site\js\lib\jquery-migrate-1.4.1.min.js" />
+    <Content Include="public\site\js\lib\jquery.pjax-1.9.6.min.js" />
+    <Content Include="public\site\js\lib\_animated\jquery.fittext.js" />
+    <Content Include="public\site\js\lib\_animated\jquery.lettering.js" />
+    <Content Include="public\site\js\lib\_animated\jquery.textillate.js" />
     <Content Include="public\dist\wf.min.css">
       <SubType>Content</SubType>
       <DependentUpon>public\dist\wf.css</DependentUpon>
@@ -86,20 +86,20 @@
     <Content Include="public\src\components\input\input.less" />
     <Content Include="public\src\components\menu\menu.js" />
     <Content Include="public\site\module\highlight-9.8.0\highlight.min.js" />
-    <Compile Include="public\site\src\js\doc.js" />
+    <Content Include="public\site\src\js\doc.js" />
     <Content Include="public\src\components\menu\maker.less" />
     <Content Include="public\src\components\modal\modal.less" />
     <Content Include="public\src\components\pagination\pagination.less" />
     <Content Include="public\src\components\radio\radio.js" />
-    <Compile Include="public\src\components\alert\alert.js" />
-    <Compile Include="public\src\components\modal\modal.js" />
-    <Compile Include="public\src\components\select\select.js" />
-    <Compile Include="public\src\components\step\step.js" />
-    <Compile Include="public\src\components\tab\tab.js" />
-    <Compile Include="public\src\core\js\action.js" />
-    <Compile Include="public\src\core\js\browser.js" />
-    <Compile Include="public\src\core\js\page.js" />
-    <Compile Include="public\src\core\js\ui.js" />
+    <Content Include="public\src\components\alert\alert.js" />
+    <Content Include="public\src\components\modal\modal.js" />
+    <Content Include="public\src\components\select\select.js" />
+    <Content Include="public\src\components\step\step.js" />
+    <Content Include="public\src\components\tab\tab.js" />
+    <Content Include="public\src\core\js\action.js" />
+    <Content Include="public\src\core\js\browser.js" />
+    <Content Include="public\src\core\js\page.js" />
+    <Content Include="public\src\core\js\ui.js" />
     <Content Include="public\site\src\less\menu.less" />
     <Content Include="public\src\components\menu\menu.less" />
     <Content Include="public\src\components\radio\radio.less" />
@@ -122,7 +122,7 @@
     <Content Include="public\src\core\less\mixins\size.less" />
     <Content Include="public\src\core\less\mixins\transition.less" />
     <Content Include="public\src\test\js\ui.js" />
-    <Compile Include="public\src\core\js\util.js" />
+    <Content Include="public\src\core\js\util.js" />
     <Compile Include="routes.js" />
     <Compile Include="app.js" />
     <Compile Include="controllers\home.js" />
@@ -190,19 +190,19 @@
     <Content Include="views\layout.vash" />
     <None Include="bundleconfig.json" />
     <Content Include="public\src\components\checkbox\checkbox.less" />
-    <Compile Include="public\src\core\js\base.js" />
-    <Compile Include="public\src\core\js\cookie.js" />
-    <Compile Include="public\src\core\js\extension.js" />
-    <Compile Include="public\src\core\js\loader.js" />
-    <Compile Include="public\src\core\js\logger.js" />
+    <Content Include="public\src\core\js\base.js" />
+    <Content Include="public\src\core\js\cookie.js" />
+    <Content Include="public\src\core\js\extension.js" />
+    <Content Include="public\src\core\js\loader.js" />
+    <Content Include="public\src\core\js\logger.js" />
     <Content Include="public\src\core\less\mixins.less" />
     <Content Include="public\src\core\less\variables.less" />
     <Content Include="public\src\test\js\core.js" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.js" />
-    <Compile Include="public\src\core\js\console.js" />
+    <Content Include="public\src\core\js\console.js" />
     <Content Include="public\src\test\js\loaderTest.js" />
     <Content Include="public\src\components\checkbox\checkbox.js" />
-    <Compile Include="public\site\js\lib\jquery-1.12.4.min.js" />
+    <Content Include="public\site\js\lib\jquery-1.12.4.min.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
     <Content Include="public\src\test\qunit-2.0.1\qunit.css" />
