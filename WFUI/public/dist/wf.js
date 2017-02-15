@@ -1884,11 +1884,11 @@ wf.define('page', ['logger'], function (logger) {
                     }
                 }
             });
-            if ($.isFunction(func)) {
-                func.call(_pg_, _pg_.components, _pg_.element);
-            }
             if (auto === undefined || auto) {
                 _pg_.auto();
+            }
+            if ($.isFunction(func)) {
+                func.call(_pg_, _pg_.components, _pg_.element);
             }
             return _pg_;
         }
