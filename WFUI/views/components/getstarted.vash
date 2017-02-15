@@ -5,7 +5,7 @@
     <p class="desc">
         WFUI 保持产品的一致性提供可定制性。
     </p>
-    <div class="section" id="pagination-basic">
+    <div class="section" id="getstarted-basic">
         <h1 class="title">
             <span class="text">快速使用</span>
         </h1>
@@ -15,8 +15,35 @@
                     $ npm install wfui
                 </code>
             </p>
+            <p></p>
         </div>
         <div class="explain">
         </div>
+    </div>
+    <div class="section" id="grid-basic">
+        <h1 class="title">
+            <span class="text">使用示例</span>
+        </h1>
+        <pre class="language-javascript" style="display:block;">
+            <code class="javascript">
+            wf.require('page').render(
+                'doc', [
+                    'UI.Checkbox',
+                    'UI.Radio',
+                    'UI.Select',
+                    'UI.Tab',
+                    'UI.Alert',
+                    'UI.Modal'
+                ], function (UI , instances) {
+                    //自定义渲染,如果是自动渲染可从instances获取组件实例
+                    var cb = new Checkbox ( 'checkbox' , $('#checkbox') , true , {
+                        click : function () {
+                            console.log( '构造函数click' );
+                        }
+                    });
+                }, true  //是否自动渲染页面组件
+            );
+            </code>
+        </pre>
     </div>
 </div>

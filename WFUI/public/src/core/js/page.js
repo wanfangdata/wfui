@@ -3,26 +3,26 @@
  * Page
  */
 wf.define('page', ['logger'], function (logger) {
-    
+
     /**
      * Page
-     */    
+     */
     return {
         /**
          * 页面名称
          */
         name: String.empty,
-        
+
         /**
          * 页面组件
          */
         components: {},
-        
+
         /**
          * 页面组件实例
          */
         element: {},
-        
+
         /**
          * 添加组件
          * @param {Object} element组件
@@ -34,12 +34,12 @@ wf.define('page', ['logger'], function (logger) {
             }
             this.element[element.name] = element;
         },
-        
+
         /**
          * 自动render页面所有组件
          */
         auto: function () {
-            
+
             for (var com in this.components) {
                 if ($.isFunction(this.components[com].auto)) {
                     this.components[com].auto(this);
@@ -47,11 +47,11 @@ wf.define('page', ['logger'], function (logger) {
                     logger.error(com + '缺少auto render');
                 }
             }
-            
-        },        
-        
+
+        },
+
         logger: logger,
-        
+
         /**
          * 初始化函数
          * @param {String} name页面名称
@@ -60,7 +60,7 @@ wf.define('page', ['logger'], function (logger) {
          * @param {Bool} auto 所有组件是否自动初始化
          * @return {Object} 返回当前页面
          */
-        render: function (name, components , func, auto) {
+        render: function (name, components, func, auto) {
             var _pg_ = this;
             var UI_SPLITOR = '.';
             _pg_.name = name;
@@ -74,7 +74,7 @@ wf.define('page', ['logger'], function (logger) {
                 }
             });
             if ($.isFunction(func)) {
-                func.call(_pg_, _pg_.components);
+                func.call(_pg_, _pg_.components, _pg_.element);
             }
             if (auto === undefined || auto) {
                 _pg_.auto();
