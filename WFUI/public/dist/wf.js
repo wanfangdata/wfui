@@ -782,6 +782,9 @@ wf.define('UI', ['logger'], function (logger) {
         init: function ($element, name) {
             this.name = name || $element.attr('id');
             this.$element = $element;
+            if (!this.name) {
+                logger.error('missing unique identifier');
+            }
         }
 
     });
@@ -1743,13 +1746,12 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} id modal id
          * @param {Object} $element ui jquery对象
          * events:{'click',function($element){}}
          */
-        init: function (_base_, id, $element, events) {
+        init: function (_base_,$element, events) {
             var me = this;
-            _base_($element, id);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'content' },
@@ -1800,7 +1802,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
     Modal.auto = function (page) {
         $.each($('[data-modal'), function (index) {
             var id = $(this).data('modal');
-            var modal = new Modal(id, $(UI.ID_PREFIX + id));
+            var modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {
                 modal.open($(this).offset());
             });

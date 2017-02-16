@@ -196,6 +196,9 @@ wf.define('UI', ['logger'], function (logger) {
         init: function ($element, name) {
             this.name = name || $element.attr('id');
             this.$element = $element;
+            if (!this.name) {
+                logger.error('missing unique identifier');
+            }
         }
 
     });
