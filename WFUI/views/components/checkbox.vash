@@ -230,19 +230,13 @@
         </h1>
         <ul class="ul-apis">
             <li>
-                <h3><code>new Checkbox ( name,$element, checked, events ) </code>构造函数</h3>
+                <h3><code>new Checkbox($element, checked, events)</code>构造函数</h3>
                 <table>
                     <tr>
                         <th>参数</th>
                         <th>说明</th>
                         <th>类型</th>
                         <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>组件名称</td>
-                        <td>String</td>
-                        <td>-</td>
                     </tr>
                     <tr>
                         <td>$element</td>
@@ -266,7 +260,7 @@
             </li>
             <li>
                 <h3>
-                    <code>checkbox.set ( checked ) </code>
+                    <code>checkbox.set(checked)</code>
                     设置选中状态
                 </h3>
                 <table>
@@ -286,7 +280,7 @@
             </li>            
             <li>
                 <h3>
-                    <code>checkbox.setText ( text ) </code>
+                    <code>checkbox.setText(text)</code>
                     设置checkbox文本
                 </h3>
                 <table>
@@ -306,7 +300,7 @@
             </li>
             <li>
                 <h3>
-                    <code>on ( name , func )</code>
+                    <code>checkbox.on(name , func)</code>
                     注册事件
                 </h3>
                 <table>
@@ -332,7 +326,7 @@
             </li>
             <li>
                 <h3>
-                    <code>Checkbox.group ( $controller, groupId ) </code>
+                    <code>Checkbox.group($controller, groupId）</code>
                     创建checkbox组
                 </h3>
                 <table>
@@ -362,15 +356,15 @@
                 </h3>
                 <pre class="language-javascript">
                 <code class="javascript">
-    var cb = new Checkbox ( 'checkbox' , $('#checkbox') , true , {
+    var cb = new Checkbox($('#checkbox') , true , {
         click : function () {
-            console.log( '构造函数click' );
+            console.log('构造函数click'）;
         }
     });
 
-    cb.set( false );
-    cb.setText( '测试' );
-    cb.on( 'click' , function( ){
+    cb.set(false);
+    cb.setText('测试');
+    cb.on('click' , function (){
         console.log('注册事件click');
     });
                     </code>

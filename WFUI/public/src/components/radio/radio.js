@@ -79,15 +79,14 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, events) {
+        init: function (_base_, $element, checked, events) {
             var me = this;
-            _base_($element,name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },
@@ -134,8 +133,10 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {Function} click click事件
      */
     var generateRD = function ($elm, index, click) {
+        if (!$elm.attr('id')) {
+            $elm.attr('id', role + index);
+        }
         return new Radio(
-            name($elm, index),
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),
             click ? { click: click } : null

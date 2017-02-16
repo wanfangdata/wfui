@@ -118,14 +118,13 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
+        init: function (_base_, $element, events) {
             var me = this;
-            _base_($element,name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 {
@@ -209,7 +208,10 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
     Select.auto = function (page) {
         
         $.each($(dataRole), function (index) {
-            page.addElement(new Select($(this).attr('id') || role + index, $(this)));
+            if (!$(this).attr('id')) {
+                $(this).attr('id', role + index);
+            }
+            page.addElement(new Select($(this)));
         });
 
     };

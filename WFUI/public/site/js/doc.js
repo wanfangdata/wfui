@@ -6,7 +6,7 @@ var page = wf.require('page').render(
         'UI.Tab',
         'UI.Alert',
         'UI.Modal'
-    ], function (UI, instances) {
+    ], function (components) {
         //$(document).pjax('.wf-menu-item a', '.doc-content');
         var codeFormat = '<pre class="demo-code"><code class="html">{0}</code></pre>';
         $('.page .demo').each(function () {

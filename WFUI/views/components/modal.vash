@@ -113,19 +113,13 @@
         </h1>
         <ul class="ul-apis">
             <li>
-                <h3><code>new Modal ( name , $element , events ) </code>构造函数</h3>
+                <h3><code>new Modal($element , events)</code>构造函数</h3>
                 <table>
                     <tr>
                         <th>参数</th>
                         <th>说明</th>
                         <th>类型</th>
                         <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>组件名称( id )</td>
-                        <td>String</td>
-                        <td>-</td>
                     </tr>
                     <tr>
                         <td>$element</td>
@@ -135,7 +129,7 @@
                     </tr>
                     <tr>
                         <td>events</td>
-                        <td>事件函数提供close、cancel、ok事件 </td>
+                        <td>事件函数提供close事件</td>
                         <td>Function</td>
                         <td>-</td>
                     </tr>
@@ -143,7 +137,7 @@
             </li>
             <li>
                 <h3>
-                    <code>modal.open ( origin ) </code>
+                    <code>modal.open(origin)</code>
                     打开对话框
                 </h3>
                 <table>
@@ -163,21 +157,13 @@
             </li>
             <li>
                 <h3>
-                    <code>modal.close ( ) </code>
+                    <code>modal.close()</code>
                     关闭对话框
                 </h3>
-                <table>
-                    <tr>
-                        <th>参数</th>
-                        <th>说明</th>
-                        <th>类型</th>
-                        <th>默认值</th>
-                    </tr>
-                </table>
             </li>
             <li>
                 <h3>
-                    <code>on ( name , func )</code>
+                    <code>modal.on(name , func)</code>
                     注册事件
                 </h3>
                 <table>
@@ -207,7 +193,7 @@
                 </h3>
                 <pre class="language-javascript">
                 <code class="javascript">
-    var modal = new Modal('modal', $('modal'));
+    var modal = new Modal($('modal'));
     $('.btn').click(function (e) {
         modal.open($(this).offset());
     });

@@ -34,6 +34,10 @@
     };
     var key;
     
+    if (_console) {
+        return;
+    }
+
     for (var i = 0, len = methods.length; i < len; i++) {
         key = methods[i];
         console[key] = function (key) {

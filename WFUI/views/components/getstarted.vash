@@ -35,7 +35,7 @@
                     'UI.Modal'
                 ], function (UI , instances) {
                     //自定义渲染,如果是自动渲染可从instances获取组件实例
-                    var cb = new UI.Checkbox ( 'checkbox' , $('#checkbox') , true , {
+                    var cb = new UI.Checkbox($('#checkbox') , true , {
                         click : function () {
                             console.log( '构造函数click' );
                         }

@@ -208,6 +208,10 @@
     };
     var key;
     
+    if (_console) {
+        return;
+    }
+
     for (var i = 0, len = methods.length; i < len; i++) {
         key = methods[i];
         console[key] = function (key) {
@@ -886,15 +890,14 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, events) {
+        init: function (_base_, $element, checked, events) {
             var me = this;
-            _base_($element,name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },
@@ -941,8 +944,10 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      * @param {Function} click click事件
      */
     var generateCB = function ($elm, index, click) {
+        if (!$elm.attr('id')) {
+            $elm.attr('id', role + index);
+        }        
         return new Checkbox(
-            name($elm, index),
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),
             click ? { click: click } : null
@@ -976,7 +981,6 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             });
         });
         result.controller = new Checkbox(
-            groupId + 'controller',
             $controller,
             $controller.hasClass(UI.clsName('checked', role)),
             {
@@ -1005,8 +1009,8 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?
-                Checkbox.group($this, target) :
-                generateCB($this, index)
+                Checkbox.group($this, target, index) :
+                generateCB($this)
             );
         });
     };
@@ -1095,15 +1099,14 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Bool} checked 是否选中
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, checked, events) {
+        init: function (_base_, $element, checked, events) {
             var me = this;
-            _base_($element,name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: 'inner' },
@@ -1150,8 +1153,10 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {Function} click click事件
      */
     var generateRD = function ($elm, index, click) {
+        if (!$elm.attr('id')) {
+            $elm.attr('id', role + index);
+        }
         return new Radio(
-            name($elm, index),
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),
             click ? { click: click } : null
@@ -1322,14 +1327,13 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Object} events 组件事件
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
+        init: function (_base_, $element, events) {
             var me = this;
-            _base_($element,name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 {
@@ -1413,7 +1417,10 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
     Select.auto = function (page) {
         
         $.each($(dataRole), function (index) {
-            page.addElement(new Select($(this).attr('id') || role + index, $(this)));
+            if (!$(this).attr('id')) {
+                $(this).attr('id', role + index);
+            }
+            page.addElement(new Select($(this)));
         });
 
     };
@@ -1560,19 +1567,19 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
  * </div>
  */
 wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
-    
+
     var role = 'alert';
-    
+
     /**
      * @class Alert
      */
     var Alert = wf.inherit(UI, {
-        
+
         /**
          * [data-role]
          */
         role: role,
-        
+
         /**
          * 注册用户自定义事件
          * @event on
@@ -1585,33 +1592,33 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             } else {
                 this.action[name].register(func);
             }
+            return this;
         },
-        
+
         /**
          * 关闭警告框
          */
         close: function () {
             this.$element.remove();
         },
-        
+
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * events:{'click',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
+        init: function (_base_, $element, events) {
             var me = this;
             var ICON_CLOSE = 'icon-close';
-            _base_($element, name);
+            _base_($element);
             //初始化组件元素,为JQuery对象
             me.initElement([
                 { selector: ICON_CLOSE }
             ]);
             //初始化事件
             me.action = {
-                click: new Action('click', function () {
+                close: new Action('close', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
                         me.close();
@@ -1622,22 +1629,25 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             me.initEvent(events);
         }
     });
-    
+
     /**
      * dataRole
      */
     var dataRole = '[data-role="' + role + '"]';
-    
+
     /**
      * 自动初始化
      * @param {Object} page页面容器
      */
     Alert.auto = function (page) {
-        $.each($(dataRole), function (index) {
-            page.addElement(new Alert('alert' + index, $(this)));
+        $.each($(dataRole), function (index) {            
+            if (!$(this).attr('id')) {
+                $(this).attr('id', role + index);
+            }
+            page.addElement(new Alert($(this)));
         });
     };
-    
+
     return Alert;
 
 });

@@ -137,19 +137,13 @@
         </h1>
         <ul class="ul-apis">
             <li>
-                <h3><code>new Select ( name, $element, events ) </code>构造函数</h3>
+                <h3><code>new Select($element, events)</code>构造函数</h3>
                 <table>
                     <tr>
                         <th>参数</th>
                         <th>说明</th>
                         <th>类型</th>
                         <th>默认值</th>
-                    </tr>
-                    <tr>
-                        <td>name</td>
-                        <td>组件名称</td>
-                        <td>String</td>
-                        <td>-</td>
                     </tr>
                     <tr>
                         <td>$element</td>
@@ -167,7 +161,7 @@
             </li>
             <li>
                 <h3>
-                    <code>select.set ( value, text ) </code>
+                    <code>select.set(value, text)</code>
                     设置选中项
                 </h3>
                 <table>
@@ -193,25 +187,25 @@
             </li>
             <li>
                 <h3>
-                    <code>select.value ( ) </code>
+                    <code>select.value()</code>
                     获取select值
                 </h3>
             </li>
             <li>
                 <h3>
-                    <code>select.open ( ) </code>
+                    <code>select.open()</code>
                     打开选项列表
                 </h3>
             </li>
             <li>
                 <h3>
-                    <code>select.close ( )</code>
+                    <code>select.close()</code>
                     关闭选项列表
                 </h3>
             </li>
             <li>
                 <h3>
-                    <code>on ( name , func )</code>
+                    <code>select.on(name , func)</code>
                     注册事件 支持click ,change
                 </h3>
                 <table>
@@ -241,15 +235,15 @@
                 </h3>
                 <pre class="language-javascript">
                 <code class="javascript">
-    var select = new Select ( 'select' , $('#select') , {
+    var select = new Select($('#select') , {
         click : function () {
-            console.log( '构造函数click' );
+            console.log('构造函数click');
         }
     });
-    select.on( 'click' , function( e ){
+    select.on('click' , function(e){
         console.log('注册事件click');
     });
-    select.on( 'change' , function( $element , e ){
+    select.on('change' , function($element , e){
         console.log('注册事件change');
     });
                     </code>
