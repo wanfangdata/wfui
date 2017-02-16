@@ -16,8 +16,6 @@
                 </code>
             </p>
         </div>
-        <div class="explain">
-        </div>
     </div>
     <div class="section" id="getstarted-basic">
         <h1 class="title">
@@ -49,11 +47,10 @@
         <h1 class="title">
             <span class="text">浏览器支持</span>
         </h1>
-        <div class="explain">
+        <div class="desc">
             <p>
-                支持所有现代游览器，支持ie8+（ie8不支持动效）
+                支持所有现代游览器，支持ie8+（ie8不支持动效）。ie6、7支持正在考虑中
             </p>
-            <p>ie6、7支持正在考虑中</p>
         </div>
     </div>
 </div>
