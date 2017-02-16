@@ -1,6 +1,6 @@
 ﻿QUnit.test('wf.ui.checkbox', function (assert) {
     var Checkbox = wf.require('UI.Checkbox');
-    var cb = new Checkbox('test', $('[data-role="checkbox"]'), false ,{
+    var cb = new Checkbox($('[data-role="checkbox"]'), false ,{
         click: function () {
             console.log('init click');
         }
