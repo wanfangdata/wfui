@@ -107,4 +107,113 @@
             <p>各种类型的信息提示，只提供一个按钮用于关闭。</p>
         </div>
     </div>
+    <div class="section section-api" id="radio-api">
+        <h1 class="title">
+            <span class="text">API</span>
+        </h1>
+        <ul class="ul-apis">
+            <li>
+                <h3><code>new Modal ( name , $element , events ) </code>构造函数</h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>组件名称( id )</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>$element</td>
+                        <td>组件jquery实例</td>
+                        <td>JQeruy</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>events</td>
+                        <td>事件函数提供close、cancel、ok事件 </td>
+                        <td>Function</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
+                    <code>modal.open ( origin ) </code>
+                    打开对话框
+                </h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                    <tr>
+                        <td>origin</td>
+                        <td>出发点与对话框相对位置</td>
+                        <td>Offset</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
+                    <code>modal.close ( ) </code>
+                    关闭对话框
+                </h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
+                    <code>on ( name , func )</code>
+                    注册事件
+                </h3>
+                <table>
+                    <tr>
+                        <th>参数</th>
+                        <th>说明</th>
+                        <th>类型</th>
+                        <th>默认值</th>
+                    </tr>
+                    <tr>
+                        <td>name</td>
+                        <td>事件名称</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>func</td>
+                        <td>事件函数</td>
+                        <td>Function</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3>
+                    常用示例
+                </h3>
+                <pre class="language-javascript">
+                <code class="javascript">
+    var modal = new Modal('modal', $('modal'));
+    $('.btn').click(function (e) {
+        modal.open($(this).offset());
+    });
+                    </code>
+                </pre>
+            </li>
+        </ul>
+    </div>
 </div>

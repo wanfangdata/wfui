@@ -1758,7 +1758,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             ]);
             //初始化事件
             me.action = {
-                click: new Action('close', function () {
+                close: new Action('close', function () {
                     var _action_ = this;
                     _action_.$target.click(function () {
                         me.close();
