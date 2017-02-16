@@ -111,7 +111,7 @@ wf.define('UI', ['logger'], function (logger) {
         /**
         * 判断浏览器是否支持某一个CSS3属性
         * @param  {String} style 属性名称
-        * @return {Boolean} true/false
+        * @return {Boolean}
         */
         supportCss3: function supportCss3(style) {
             var prefix = ['webkit', 'Moz', 'ms', 'o'];
