@@ -15,12 +15,11 @@
                     $ npm install wfui
                 </code>
             </p>
-            <p></p>
         </div>
         <div class="explain">
         </div>
     </div>
-    <div class="section" id="grid-basic">
+    <div class="section" id="getstarted-basic">
         <h1 class="title">
             <span class="text">使用示例</span>
         </h1>
@@ -45,5 +44,16 @@
             );
             </code>
         </pre>
+    </div>
+    <div class="section" id="getstarted-browser">
+        <h1 class="title">
+            <span class="text">浏览器支持</span>
+        </h1>
+        <div class="explain">
+            <p>
+                支持所有现代游览器，支持ie8+（ie8不支持动效）
+            </p>
+            <p>ie6、7支持正在考虑中</p>
+        </div>
     </div>
 </div>
