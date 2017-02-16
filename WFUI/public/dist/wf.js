@@ -1661,19 +1661,19 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  */
 
 wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, Action, Util) {
-    
+
     var role = 'modal';
-    
+
     /**
      * @class Modal
      */
     var Modal = wf.inherit(UI, {
-        
+
         /**
          * [data-role]
          */
         role: role,
-        
+
         /**
          * 注册用户自定义事件
          * @event on
@@ -1687,21 +1687,21 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
                 this.action[name].register(func);
             }
         },
-        
+
         /**
          * hide class
          */
         hideCls: function () {
             return this.clsName('hidden');
         },
-        
+
         /**
          * mask hide class
          */
         maskHideCls: function () {
             return this.clsName('mask-hidden');
         },
-        
+
         /**
          * 关闭对话框
          */
@@ -1717,7 +1717,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
                 me.$element.addClass(me.hideCls());
             }
         },
-        
+
         /**
          * 打开对话框
          */
@@ -1729,15 +1729,17 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
                 scrollWidth = Util.getScrollbarWidth();
-                offset = me.content.$element.offset();
-                transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
+                if (origin) {
+                    offset = me.content.$element.offset();
+                    transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
+                    me.content.$element.css({ 'transform-origin': transformOrigin });
+                }
                 $('body').attr('style', 'margin-right:' + scrollWidth + 'px; overflow: hidden;');
-                me.content.$element.css({ 'transform-origin': transformOrigin });
                 me.animation(me.mask.$element, me.animationCls(['fade', 'enter']));
                 me.animation(me.content.$element, me.animationCls(['zoom', 'enter']));
             }
         },
-        
+
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
@@ -1750,9 +1752,9 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             _base_($element, id);
             //初始化组件元素,为JQuery对象
             me.initElement([
-                { selector: 'content' }, 
-                { selector: 'mask' }, 
-                { selector: 'closeBtn' }, 
+                { selector: 'content' },
+                { selector: 'mask' },
+                { selector: 'closeBtn' },
                 { selector: 'cancelBtn' },
                 { selector: 'okBtn' }
             ]);
@@ -1785,12 +1787,12 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             me.initEvent(events);
         }
     });
-    
+
     /**
      * dataRole
      */
     var dataRole = '[data-role="' + role + '"]';
-    
+
     /**
      * 自动初始化
      * @param {Object} page页面容器
@@ -1805,7 +1807,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             page.addElement(modal);
         });
     };
-    
+
     return Modal;
 
 });
