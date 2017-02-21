@@ -1,6 +1,4 @@
-﻿var express = require('express');
-
-var routes = [
+﻿module.exports = [
     {
         key: '/',
         value: require('./controllers/home')
@@ -14,5 +12,3 @@ var routes = [
         value: require('./controllers/guide')
     }
 ];
-
-module.exports = routes;
