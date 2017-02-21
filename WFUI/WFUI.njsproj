@@ -34,6 +34,11 @@
     <Compile Include="controllers\components.js" />
     <Compile Include="data\guide.js" />
     <Compile Include="data\menu.js" />
+    <Content Include="public\dist\font\iconfont.eot" />
+    <Content Include="public\dist\font\iconfont.less" />
+    <Content Include="public\dist\font\iconfont.svg" />
+    <Content Include="public\dist\font\iconfont.ttf" />
+    <Content Include="public\dist\font\iconfont.woff" />
     <Content Include="public\dist\wf.css" />
     <Content Include="public\dist\wf.js" />
     <Compile Include="public\dist\wf.min.js">
@@ -106,11 +111,6 @@
     <Content Include="public\src\components\select\select.less" />
     <Content Include="public\src\components\step\step.less" />
     <Content Include="public\src\components\tab\tab.less" />
-    <Content Include="public\src\core\font\iconfont.eot" />
-    <Content Include="public\src\core\font\iconfont.less" />
-    <Content Include="public\src\core\font\iconfont.svg" />
-    <Content Include="public\src\core\font\iconfont.ttf" />
-    <Content Include="public\src\core\font\iconfont.woff" />
     <Content Include="public\src\core\less\animate.less" />
     <Content Include="public\src\core\less\animate\zoom.less" />
     <Content Include="public\src\core\less\animate\slideDown.less" />
@@ -251,7 +251,7 @@
     <Folder Include="public\src\core\less\mixins\" />
     <Folder Include="public\src\core\less\animate\" />
     <Folder Include="public\src\core\less\utilities\" />
-    <Folder Include="public\src\core\font\" />
+    <Folder Include="public\dist\font\" />
     <Folder Include="public\src\test\" />
     <Folder Include="public\src\test\js\" />
     <Folder Include="public\src\test\qunit-2.0.1\" />

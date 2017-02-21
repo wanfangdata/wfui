@@ -6,5 +6,9 @@
   {
     "outputFile": "public/site/src/less/global.css",
     "inputFile": "public/site/src/less/global.less"
+  },
+  {
+    "outputFile": "public/src/core/less/iconfont.css",
+    "inputFile": "public/src/core/less/iconfont.less"
   }
 ]
