@@ -3,7 +3,7 @@ var menu = require('../data/menu');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/components/*', function (req, res) {
+router.get('/*', function (req, res) {
     var urls = req.url.split('/');
     res.render('index', {
         page: urls[urls.length - 1], 

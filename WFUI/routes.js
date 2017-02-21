@@ -6,11 +6,11 @@ var routes = [
         value: require('./controllers/home')
     },
     {
-        key: '/',
+        key: '/components',
         value: require('./controllers/components')
     },
     {
-        key: '/',
+        key: '/guide',
         value: require('./controllers/guide')
     }
 ];

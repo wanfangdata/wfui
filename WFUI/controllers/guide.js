@@ -3,7 +3,7 @@ var router = express.Router();
 var guide = require('../data/guide');
 
 /* GET home page. */
-router.get('/guide/*', function (req, res) {
+router.get('/*', function (req, res) {
     var urls = req.url.split('/');
     res.render('guide', {
         page: urls[urls.length - 1],
