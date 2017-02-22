@@ -89,17 +89,7 @@
              * @return {Class} 返回该定义的类型
              */
             inherit: function (base, prop) {
-                /**
-                 * 正则匹配函数参数
-                 * private
-                 * @method argumentNames
-                 * @param {Function} fn 函数
-                 * @return {Array}names 参数名数组
-                 */
-                var argumentNames = function (fn) {
-                    var names = fn.toString().match(/^[\s\(]*function[^(]*\(([^\)]*)\)/)[1].replace(/\s+/g, '').split(',');
-                    return names.length == 1 && !names[0] ? [] : names;
-                };
+
                 // 本次调用所创建的类（构造函数）
                 function UI() {
                     if (base) {
@@ -126,7 +116,7 @@
                  */
                 for (var name in prop) {
                     if (prop.hasOwnProperty(name)) {
-                        if (base && typeof (prop[name]) === 'function' && argumentNames(prop[name])[0] === '_base_') {
+                        if (base && typeof (prop[name]) === 'function' && name === 'init') {
                             UI.prototype[name] = (function (name, fn) {
                                 return function () {
                                     var that = this,
