@@ -1000,7 +1000,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             target = $this.data('target');
             page.addElement(target ?
                 Checkbox.group($this, target, index) :
-                generateCB($this)
+                generateCB($this, index)
             );
         });
     };
