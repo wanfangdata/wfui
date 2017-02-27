@@ -193,7 +193,7 @@
                 </h3>
                 <pre class="language-javascript">
                 <code class="javascript">
-    var modal = new Modal($('modal'));
+    var modal = new Modal($('#modal'));
     $('.btn').click(function (e) {
         modal.open($(this).offset());
     });
