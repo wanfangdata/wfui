@@ -1624,12 +1624,21 @@ textarea.wf-input {
   box-shadow: none;
 }
 .wf-input-label .wf-input-addon-suffix {
-  position: relative;
   padding: 8px 12px;
   border: 1px solid #dcdcdc;
   border-radius: 0 3px 3px 0;
   margin-left: -1px;
   background-color: #f7f7f7;
+}
+.wf-input-label .wf-input-addon-prefix {
+  padding: 8px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px 0 0 3px;
+  margin-left: -1px;
+  background-color: #f7f7f7;
+}
+.wf-input-label .wf-input-addon-prefix + .wf-input {
+  border-radius: 3px;
 }
 .wf-input-label .wf-input {
   position: relative;

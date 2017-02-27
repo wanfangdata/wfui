@@ -52,9 +52,9 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <input type="text" class="wf-input wf-input-large" value="" placeholder="Large size"/>
+            <input type="text" class="wf-input wf-input-large" value="" placeholder="Large size" />
             <input type="text" class="wf-input" value="" placeholder="Default size" />
-            <input type="text" class="wf-input wf-input-small" value="" placeholder="Small size"/>
+            <input type="text" class="wf-input wf-input-small" value="" placeholder="Small size" />
         </div>
         <div class="explain">
             <p>输入框有大、中、小三种尺寸。</p>
@@ -68,24 +68,30 @@
             <span class="text">前置/后置标签</span>
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
-        <div class="demo wf-input-label">
-            <div class="wf-input-addon">
-                <div data-role="select" class="wf-select" id="select-disabled-demo">
-                    <div class="wf-select-selection">
-                        <div class="wf-select-selection-value"></div>
-                        <i class="wf-icon icon-moreunfold"></i>
+        <div class="demo">
+            <div class="wf-input-label">
+                <div class="wf-input-addon">
+                    <div data-role="select" class="wf-select" id="select-disabled-demo">
+                        <div class="wf-select-selection">
+                            <div class="wf-select-selection-value"></div>
+                            <i class="wf-icon icon-moreunfold"></i>
+                        </div>
+                        <input class="wf-select-input" type="text" />
+                        <ul class="wf-select-options">
+                            <li data-value="a" class="wf-select-option">期刊</li>
+                            <li data-value="b" class="wf-select-option">学位</li>
+                            <li data-value="c" class="wf-select-option">会议</li>
+                            <li data-value="d" class="wf-select-option wf-select-option-selected">地方志</li>
+                        </ul>
                     </div>
-                    <input class="wf-select-input" type="text" />
-                    <ul class="wf-select-options">
-                        <li data-value="a" class="wf-select-option">期刊</li>
-                        <li data-value="b" class="wf-select-option">学位</li>
-                        <li data-value="c" class="wf-select-option">会议</li>
-                        <li data-value="d" class="wf-select-option wf-select-option-selected">地方志</li>
-                    </ul>
                 </div>
-            </div>           
-            <input type="text" class="wf-input" placeholder="Basic usage" />
-            <div class="wf-input-addon wf-input-addon-suffix">.com</div>
+                <input type="text" class="wf-input" placeholder="Basic usage" />
+                <div class="wf-input-addon wf-input-addon-suffix">.com</div>
+            </div>
+            <div class="wf-input-label">
+                <div class="wf-input-addon wf-input-addon-prefix">Email</div>
+                <input type="text" class="wf-input" placeholder="Email" />                
+            </div>
         </div>
         <div class="explain">
             <p>

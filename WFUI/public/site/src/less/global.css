@@ -200,6 +200,9 @@ a {
 .wf-select {
   margin-right: 50px;
 }
+.wf-input-label {
+  margin-bottom: 10px;
+}
 .wf-input-addon .wf-select {
   margin: 0;
 }
