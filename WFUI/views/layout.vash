@@ -48,7 +48,7 @@
     </div>
     <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
     <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
-    <script src="../dist/wf.min.js"></script>
+    <script src="../dist/wf.js"></script>
     <script>
         var browser = wf.require('browser');
         if ((browser.msie && parseInt(browser.version) > 8) || !browser.msie) {

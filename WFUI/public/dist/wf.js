@@ -1403,10 +1403,11 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Select.auto = function (page) {
-        
-        $.each($(dataRole), function (index) {
+    Select.auto = function (page, tagRender) {
+        var $target = tagRender ? $(dataRole).filter('[data-auto="true"]') : $(dataRole);
+        $.each($target, function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }
@@ -1852,12 +1853,13 @@ wf.define('page', ['logger'], function (logger) {
 
         /**
          * 自动render页面所有组件
+         * @param {Bool} tagRender是否为data-auto="true"方式渲染
          */
-        auto: function () {
+        auto: function (tagRender) {
 
             for (var com in this.components) {
                 if ($.isFunction(this.components[com].auto)) {
-                    this.components[com].auto(this);
+                    this.components[com].auto(this, tagRender);
                 } else {
                     logger.error(com + '缺少auto render');
                 }
@@ -1888,9 +1890,7 @@ wf.define('page', ['logger'], function (logger) {
                     }
                 }
             });
-            if (auto === undefined || auto) {
-                _pg_.auto();
-            }
+            _pg_.auto(!auto);
             if ($.isFunction(func)) {
                 func.call(_pg_, _pg_.components, _pg_.element);
             }

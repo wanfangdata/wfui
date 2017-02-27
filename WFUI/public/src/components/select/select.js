@@ -204,10 +204,11 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Select.auto = function (page) {
-        
-        $.each($(dataRole), function (index) {
+    Select.auto = function (page, tagRender) {
+        var $target = tagRender ? $(dataRole).filter('[data-auto="true"]') : $(dataRole);
+        $.each($target, function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }
