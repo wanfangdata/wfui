@@ -155,7 +155,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
     Modal.auto = function (page, tagRender) {
         var fireBtn = $('[data-modal]');
         var $target = tagRender ? fireBtn.filter(UI.AUTO_TAG) : fireBtn;
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             var id = $(this).data('modal');
             var modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {

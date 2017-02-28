@@ -119,7 +119,7 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     Tab.auto = function (page, tagRender) {
 
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             page.addElement(new Tab($(this).attr('id') || role + index, $(this)));
         });
 

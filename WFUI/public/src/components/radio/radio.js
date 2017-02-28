@@ -163,6 +163,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             });
         });
         result.name = groupId;
+        result.$element = $group;
         return result;
     };
 
@@ -176,10 +177,10 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         var groupCls = '.' + UI.clsName('group', role);
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         var $targetGroup = tagRender ? $(groupCls).filter(UI.AUTO_TAG) :$(groupCls);
-        $.each($target.not('.' + UI.clsName('group-item', role)), function (index) {
+        $.each($target.not('.' + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
             page.addElement(generateRD($(this), index));
         });
-        $.each($targetGroup, function (index) {
+        $.each($targetGroup.not(UI.DATA_RENDERED), function (index) {
             page.addElement(Radio.group($(this)));
         });
 

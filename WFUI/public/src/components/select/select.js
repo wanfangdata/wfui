@@ -208,7 +208,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
      */
     Select.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }

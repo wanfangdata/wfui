@@ -87,7 +87,7 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
      */
     Step.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             page.addElement(new step($(this).attr('id') || role + index, $(this)));
         });
 

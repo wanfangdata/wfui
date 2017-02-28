@@ -183,6 +183,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             }
         );
         result.name = groupId;
+        result.$element = result.controller.$element;
         return result;
     };
 
@@ -195,7 +196,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
 
         var $this, target;
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
+        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?

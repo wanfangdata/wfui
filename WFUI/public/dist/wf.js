@@ -986,6 +986,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
             }
         );
         result.name = groupId;
+        result.$element = result.controller.$element;
         return result;
     };
 
@@ -998,7 +999,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
 
         var $this, target;
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
+        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?
@@ -1176,6 +1177,7 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
             });
         });
         result.name = groupId;
+        result.$element = $group;
         return result;
     };
 
@@ -1189,10 +1191,10 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
         var groupCls = '.' + UI.clsName('group', role);
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         var $targetGroup = tagRender ? $(groupCls).filter(UI.AUTO_TAG) :$(groupCls);
-        $.each($target.not('.' + UI.clsName('group-item', role)), function (index) {
+        $.each($target.not('.' + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
             page.addElement(generateRD($(this), index));
         });
-        $.each($targetGroup, function (index) {
+        $.each($targetGroup.not(UI.DATA_RENDERED), function (index) {
             page.addElement(Radio.group($(this)));
         });
 
@@ -1411,7 +1413,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
      */
     Select.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }
@@ -1544,7 +1546,7 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     Tab.auto = function (page, tagRender) {
 
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             page.addElement(new Tab($(this).attr('id') || role + index, $(this)));
         });
 
@@ -1639,7 +1641,7 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      */
     Alert.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }
@@ -1807,7 +1809,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
     Modal.auto = function (page, tagRender) {
         var fireBtn = $('[data-modal]');
         var $target = tagRender ? fireBtn.filter(UI.AUTO_TAG) : fireBtn;
-        $.each($target, function (index) {
+        $.each($target.not(UI.DATA_RENDERED), function (index) {
             var id = $(this).data('modal');
             var modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {
@@ -1824,7 +1826,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
 /**
  * Page容器
  */
-wf.define('page', ['logger','UI'], function (logger,UI) {
+wf.define('page', ['logger', 'UI'], function (logger, UI) {
 
     /**
      * Page
@@ -1855,9 +1857,7 @@ wf.define('page', ['logger','UI'], function (logger,UI) {
                 return;
             }
             this.element[element.name] = element;
-            (element.items ?
-                element.controller.$element :
-                element.$element)['attr'](UI.DATA_RENDERED_STR, true);
+            element.$element.attr(UI.DATA_RENDERED_STR, true);
         },
 
         /**

@@ -2,7 +2,7 @@
 /**
  * Page容器
  */
-wf.define('page', ['logger','UI'], function (logger,UI) {
+wf.define('page', ['logger', 'UI'], function (logger, UI) {
 
     /**
      * Page
@@ -33,9 +33,7 @@ wf.define('page', ['logger','UI'], function (logger,UI) {
                 return;
             }
             this.element[element.name] = element;
-            (element.items ?
-                element.controller.$element :
-                element.$element)['attr'](UI.DATA_RENDERED_STR, true);
+            element.$element.attr(UI.DATA_RENDERED_STR, true);
         },
 
         /**
