@@ -797,7 +797,6 @@ wf.define('UI', ['logger'], function (logger) {
     UI.ID_PREFIX = ID_PREFIX;
     UI.CHAIN = CHAIN;
     UI.AUTO_TAG = '[data-auto="true"]';
-    UI.DATA_RENDERED = 'data-rendered';
     return UI;
 });
 'use strict';
@@ -1821,9 +1820,9 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
 });
 'use strict';
 /**
- * Page容器
+ * Page
  */
-wf.define('page', ['logger','UI'], function (logger,UI) {
+wf.define('page', ['logger'], function (logger) {
 
     /**
      * Page
@@ -1854,9 +1853,6 @@ wf.define('page', ['logger','UI'], function (logger,UI) {
                 return;
             }
             this.element[element.name] = element;
-            (element.items ?
-                element.controller.$element :
-                element.$element)['attr'](UI.DATA_RENDERED, true);
         },
 
         /**
@@ -1903,13 +1899,6 @@ wf.define('page', ['logger','UI'], function (logger,UI) {
                 func.call(_pg_, _pg_.components, _pg_.element);
             }
             return _pg_;
-        },
-
-        /**
-         * page刷新对于新增的组件进行初始化 
-         */
-        refresh: function () {
-            this.auto();
         }
     };
 });

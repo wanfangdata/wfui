@@ -1,8 +1,8 @@
 ﻿'use strict';
 /**
- * Page
+ * Page容器
  */
-wf.define('page', ['logger'], function (logger) {
+wf.define('page', ['logger','UI'], function (logger,UI) {
 
     /**
      * Page
@@ -33,6 +33,9 @@ wf.define('page', ['logger'], function (logger) {
                 return;
             }
             this.element[element.name] = element;
+            (element.items ?
+                element.controller.$element :
+                element.$element)['attr'](UI.DATA_RENDERED, true);
         },
 
         /**
@@ -79,6 +82,13 @@ wf.define('page', ['logger'], function (logger) {
                 func.call(_pg_, _pg_.components, _pg_.element);
             }
             return _pg_;
+        },
+
+        /**
+         * page刷新对于新增的组件进行初始化 
+         */
+        refresh: function () {
+            this.auto();
         }
     };
 });
