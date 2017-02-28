@@ -208,6 +208,7 @@ a {
 }
 .wf-select {
   vertical-align: middle;
+  width: 200px;
 }
 .wf-alert {
   margin-bottom: 12px;

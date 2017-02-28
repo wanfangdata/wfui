@@ -1,10 +1,5 @@
 ﻿@import "../../core/less/import.less";
 @select-pre: ~"@{ui}-select";
-@select-width: 160px;
-@selection-padding: 10px;
-@selection-width: @select-width - @selection-padding*2;
-@option-padding: 18px;
-@option-width: @select-width - @option-padding*2;
 
 .@{select-pre} {
     display: inline-block;
@@ -17,8 +12,7 @@
         position: relative;
         border: 1px solid @color-border-nomal;
         border-radius: 4px;
-        padding: 0 @selection-padding;
-        width: @selection-width;
+        width: 100%;
         font-size: 12px;
         cursor: pointer;
         .middle-vertical(30px);
@@ -28,11 +22,13 @@
         .@{select-pre}-selection-value {
             display: inline-block;
             float: left;
+            padding-left: 10px;
             .overflow-hide(122px)
         }
 
         .@{ui}-icon {
             float: right;
+            margin-right:10px;
             font-size: 14px;
             .transition(transform @animate-time-fast+0.05 ease);
         }
@@ -47,6 +43,7 @@
     }
 
     &-options {
+        width: 100%;
         background-color: @color-background;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
         border-radius: 4px;
@@ -62,8 +59,8 @@
         .@{select-pre}-option {
             position: relative;
             display: block;
-            width: @option-width;
-            padding: 10px @option-padding;
+            width: 90%;
+            padding: 10px 5%;
             font-weight: normal;
             color: @color-text-nomal;
             cursor: pointer;
