@@ -796,7 +796,7 @@ wf.define('UI', ['logger'], function (logger) {
     UI.CLS_PREFIX = CLS_PREFIX;
     UI.ID_PREFIX = ID_PREFIX;
     UI.CHAIN = CHAIN;
-    
+    UI.AUTO_TAG = '[data-auto="true"]';
     return UI;
 });
 'use strict';
@@ -1406,7 +1406,7 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
      * @param {Bool} 是否tagRender渲染方式
      */
     Select.auto = function (page, tagRender) {
-        var $target = tagRender ? $(dataRole).filter('[data-auto="true"]') : $(dataRole);
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target, function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
