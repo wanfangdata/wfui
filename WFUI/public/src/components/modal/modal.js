@@ -148,16 +148,14 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
     });
 
     /**
-     * dataRole
-     */
-    var dataRole = '[data-role="' + role + '"]';
-
-    /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Modal.auto = function (page) {
-        $.each($('[data-modal'), function (index) {
+    Modal.auto = function (page, tagRender) {
+        var fireBtn = $('[data-modal]');
+        var $target = tagRender ? fireBtn.filter(UI.AUTO_TAG) : fireBtn;
+        $.each($target, function (index) {
             var id = $(this).data('modal');
             var modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {

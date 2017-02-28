@@ -990,12 +990,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Checkbox.auto = function (page) {
+    Checkbox.auto = function (page, tagRender) {
 
         var $this, target;
-
-        $.each($(dataRole).not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?
@@ -1179,16 +1180,17 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Radio.auto = function (page) {
-
+    Radio.auto = function (page, tagRender) {
         var $this, target;
-
-        $.each($(dataRole).not('.' + UI.clsName('group-item', role)), function (index) {
+        var groupCls = '.' + UI.clsName('group', role);
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        var $targetGroup = tagRender ? $(groupCls).filter(UI.AUTO_TAG) :$(groupCls);
+        $.each($target.not('.' + UI.clsName('group-item', role)), function (index) {
             page.addElement(generateRD($(this), index));
         });
-
-        $.each($('.' + UI.clsName('group', role)), function (index) {
+        $.each($targetGroup, function (index) {
             page.addElement(Radio.group($(this)));
         });
 
@@ -1535,10 +1537,12 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Tab.auto = function (page) {
-        
-        $.each($(dataRole), function (index) {
+    Tab.auto = function (page, tagRender) {
+
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        $.each($target, function (index) {
             page.addElement(new Tab($(this).attr('id') || role + index, $(this)));
         });
 
@@ -1629,9 +1633,11 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Alert.auto = function (page) {
-        $.each($(dataRole), function (index) {            
+    Alert.auto = function (page, tagRender) {
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        $.each($target, function (index) {
             if (!$(this).attr('id')) {
                 $(this).attr('id', role + index);
             }
@@ -1792,16 +1798,14 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
     });
 
     /**
-     * dataRole
-     */
-    var dataRole = '[data-role="' + role + '"]';
-
-    /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Modal.auto = function (page) {
-        $.each($('[data-modal'), function (index) {
+    Modal.auto = function (page, tagRender) {
+        var fireBtn = $('[data-modal]');
+        var $target = tagRender ? fireBtn.filter(UI.AUTO_TAG) : fireBtn;
+        $.each($target, function (index) {
             var id = $(this).data('modal');
             var modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {

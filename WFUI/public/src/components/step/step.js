@@ -83,10 +83,11 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Step.auto = function (page) {
-        
-        $.each($(dataRole), function (index) {
+    Step.auto = function (page, tagRender) {
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        $.each($target, function (index) {
             page.addElement(new step($(this).attr('id') || role + index, $(this)));
         });
 

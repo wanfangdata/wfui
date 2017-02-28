@@ -189,12 +189,13 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
     /**
      * 自动初始化
      * @param {Object} page页面容器
+     * @param {Bool} 是否tagRender渲染方式
      */
-    Checkbox.auto = function (page) {
+    Checkbox.auto = function (page, tagRender) {
 
         var $this, target;
-
-        $.each($(dataRole).not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
+        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
+        $.each($target.not(UI.CLS_PREFIX + UI.clsName('group-item', role)), function (index) {
             $this = $(this);
             target = $this.data('target');
             page.addElement(target ?
