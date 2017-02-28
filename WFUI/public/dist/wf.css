@@ -1459,12 +1459,6 @@ button[disabled]:hover {
   display: inline-block;
   float: left;
   padding-left: 10px;
-  width: 122px;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .wf-select-selection .wf-icon {
   float: right;
