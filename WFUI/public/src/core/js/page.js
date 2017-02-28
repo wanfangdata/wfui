@@ -35,7 +35,7 @@ wf.define('page', ['logger','UI'], function (logger,UI) {
             this.element[element.name] = element;
             (element.items ?
                 element.controller.$element :
-                element.$element)['attr'](UI.DATA_RENDERED, true);
+                element.$element)['attr'](UI.DATA_RENDERED_STR, true);
         },
 
         /**

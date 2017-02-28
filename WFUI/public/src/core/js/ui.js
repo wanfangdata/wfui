@@ -217,6 +217,7 @@ wf.define('UI', ['logger'], function (logger) {
     UI.ID_PREFIX = ID_PREFIX;
     UI.CHAIN = CHAIN;
     UI.AUTO_TAG = '[data-auto="true"]';
-    UI.DATA_RENDERED = 'data-rendered';
+    UI.DATA_RENDERED_STR = 'data-rendered';
+    UI.DATA_RENDERED = '[' + UI.DATA_RENDERED_STR + ']';
     return UI;
 });
