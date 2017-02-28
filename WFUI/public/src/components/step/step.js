@@ -1,18 +1,5 @@
 ﻿'use strict';
 /**
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- *
- * 
  */
 wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     
@@ -50,7 +37,7 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
          * events:{'change',function($element){}}
          */
         init: function (_base_, $element, events) {
-            _base_($element,name);
+            _base_($element);
             var me = this;
             this.initElement([
                 { selector: 'nav' },
@@ -89,7 +76,6 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
         $.each($target.not(UI.DATA_RENDERED), function (index) {
             page.addElement(new step($(this)));
         });
-
     };
     
     return Step;

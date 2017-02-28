@@ -194,7 +194,7 @@ wf.define('UI', ['logger', 'util'], function (logger, util) {
          * @param {String} name组件实例名
          */
         init: function ($element, name) {
-            this.name = name || $element.attr('id') || (this.role + util.growingID());
+            this.name = !!name || $element.attr('id') || (this.role + util.growingID());
             this.$element = $element;
             if (!this.name) {
                 logger.error('missing unique identifier');

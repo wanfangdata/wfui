@@ -795,7 +795,7 @@ wf.define('UI', ['logger', 'util'], function (logger, util) {
          * @param {String} name组件实例名
          */
         init: function ($element, name) {
-            this.name = name || $element.attr('id') || (this.role + util.growingID());
+            this.name = !!name || $element.attr('id') || (this.role + util.growingID());
             this.$element = $element;
             if (!this.name) {
                 logger.error('missing unique identifier');
@@ -1515,13 +1515,12 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Object} events 组件事件
          * events:{'change',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
-            _base_($element,name);
+        init: function (_base_, $element, events) {
+            _base_($element);
             var me = this;
             this.initElement([
                 { selector: 'nav' },
