@@ -132,10 +132,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      * @param {String} index checkbox index
      * @param {Function} click click事件
      */
-    var generateCB = function ($elm, index, click) {
-        if (!$elm.attr('id')) {
-            $elm.attr('id', role + index);
-        }        
+    var generateCB = function ($elm, index, click) {       
         return new Checkbox(
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),

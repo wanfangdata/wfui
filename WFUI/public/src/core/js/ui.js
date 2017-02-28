@@ -2,7 +2,7 @@
 /**
  * UI组件
  */
-wf.define('UI', ['logger'], function (logger) {
+wf.define('UI', ['logger', 'util'], function (logger, util) {
     
     /**
      * UI组件命名规则
@@ -194,7 +194,7 @@ wf.define('UI', ['logger'], function (logger) {
          * @param {String} name组件实例名
          */
         init: function ($element, name) {
-            this.name = name || $element.attr('id');
+            this.name = name || $element.attr('id') || (this.role + util.growingID());
             this.$element = $element;
             if (!this.name) {
                 logger.error('missing unique identifier');

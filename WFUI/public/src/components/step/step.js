@@ -45,12 +45,11 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
         /**
          * ui初始化
          * @param {String} _base_ 父类同名方法
-         * @param {String} name ui名
          * @param {Object} $element ui jquery对象
          * @param {Object} events 组件事件
          * events:{'change',function($element){}}
          */
-        init: function (_base_, name, $element, events) {
+        init: function (_base_, $element, events) {
             _base_($element,name);
             var me = this;
             this.initElement([
@@ -88,7 +87,7 @@ wf.define('UI.Step', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
     Step.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target.not(UI.DATA_RENDERED), function (index) {
-            page.addElement(new step($(this).attr('id') || role + index, $(this)));
+            page.addElement(new step($(this)));
         });
 
     };

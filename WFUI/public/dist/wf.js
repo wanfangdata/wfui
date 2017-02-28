@@ -503,7 +503,7 @@ wf.define('browser', '_core_', function (logger) {
 /**
  * 事件系统
  */
-wf.define('Util', [], function () {
+wf.define('util', [], function () {
     return {
         /**
          * 获取滚动条宽度
@@ -526,7 +526,28 @@ wf.define('Util', [], function () {
             widthWithScroll = inner.offsetWidth;
             outer.parentNode.removeChild(outer);
             return widthNoScroll - widthWithScroll;
-        }
+        },
+        /**
+         * 获取guid
+         */
+        guid: function () {
+            function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                  .toString(16)
+                  .substring(1);
+            }
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+              s4() + '-' + s4() + s4() + s4();
+        },
+        /**
+         * 获取guid
+         */
+        growingID: (function () {
+            var id = 0;
+            return function () {
+                return id++;
+            }
+        })()
     };
 });
 'use strict';
@@ -582,7 +603,7 @@ wf.define('Action', [], function () {
 /**
  * UI组件
  */
-wf.define('UI', ['logger'], function (logger) {
+wf.define('UI', ['logger', 'util'], function (logger, util) {
     
     /**
      * UI组件命名规则
@@ -774,7 +795,7 @@ wf.define('UI', ['logger'], function (logger) {
          * @param {String} name组件实例名
          */
         init: function ($element, name) {
-            this.name = name || $element.attr('id');
+            this.name = name || $element.attr('id') || (this.role + util.growingID());
             this.$element = $element;
             if (!this.name) {
                 logger.error('missing unique identifier');
@@ -935,10 +956,7 @@ wf.define('UI.Checkbox', ['UI', 'logger', 'Action'], function (UI, logger, Actio
      * @param {String} index checkbox index
      * @param {Function} click click事件
      */
-    var generateCB = function ($elm, index, click) {
-        if (!$elm.attr('id')) {
-            $elm.attr('id', role + index);
-        }        
+    var generateCB = function ($elm, index, click) {       
         return new Checkbox(
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),
@@ -1147,9 +1165,6 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {Function} click click事件
      */
     var generateRD = function ($elm, index, click) {
-        if (!$elm.attr('id')) {
-            $elm.attr('id', role + index);
-        }
         return new Radio(
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),
@@ -1414,9 +1429,6 @@ wf.define('UI.Select', ['logger', 'UI', 'Action', 'browser'], function (logger, 
     Select.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target.not(UI.DATA_RENDERED), function (index) {
-            if (!$(this).attr('id')) {
-                $(this).attr('id', role + index);
-            }
             page.addElement(new Select($(this)));
         });
 
@@ -1547,7 +1559,7 @@ wf.define('UI.Tab', ['UI', 'logger', 'Action'], function (UI, logger, Action) {
 
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target.not(UI.DATA_RENDERED), function (index) {
-            page.addElement(new Tab($(this).attr('id') || role + index, $(this)));
+            page.addElement(new Tab($(this)));
         });
 
     };
@@ -1642,9 +1654,6 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     Alert.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target.not(UI.DATA_RENDERED), function (index) {
-            if (!$(this).attr('id')) {
-                $(this).attr('id', role + index);
-            }
             page.addElement(new Alert($(this)));
         });
     };
@@ -1674,7 +1683,7 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
  * </div>
  */
 
-wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, Action, Util) {
+wf.define('UI.Modal', ['UI', 'logger', 'Action', 'util'], function (UI, logger, Action, util) {
 
     var role = 'modal';
 
@@ -1742,7 +1751,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             var me = this;
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
-                scrollWidth = Util.getScrollbarWidth();
+                scrollWidth = util.getScrollbarWidth();
                 if (origin) {
                     offset = me.content.$element.offset();
                     transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';

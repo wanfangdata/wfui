@@ -85,9 +85,6 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     Alert.auto = function (page, tagRender) {
         var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
         $.each($target.not(UI.DATA_RENDERED), function (index) {
-            if (!$(this).attr('id')) {
-                $(this).attr('id', role + index);
-            }
             page.addElement(new Alert($(this)));
         });
     };

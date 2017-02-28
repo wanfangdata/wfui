@@ -133,9 +133,6 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
      * @param {Function} click click事件
      */
     var generateRD = function ($elm, index, click) {
-        if (!$elm.attr('id')) {
-            $elm.attr('id', role + index);
-        }
         return new Radio(
             $elm,
             $elm.hasClass(UI.clsName('checked', role)),

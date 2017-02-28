@@ -2,7 +2,7 @@
 /**
  * 事件系统
  */
-wf.define('Util', [], function () {
+wf.define('util', [], function () {
     return {
         /**
          * 获取滚动条宽度
@@ -25,6 +25,27 @@ wf.define('Util', [], function () {
             widthWithScroll = inner.offsetWidth;
             outer.parentNode.removeChild(outer);
             return widthNoScroll - widthWithScroll;
-        }
+        },
+        /**
+         * 获取guid
+         */
+        guid: function () {
+            function s4() {
+                return Math.floor((1 + Math.random()) * 0x10000)
+                  .toString(16)
+                  .substring(1);
+            }
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+              s4() + '-' + s4() + s4() + s4();
+        },
+        /**
+         * 获取guid
+         */
+        growingID: (function () {
+            var id = 0;
+            return function () {
+                return id++;
+            }
+        })()
     };
 });

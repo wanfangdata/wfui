@@ -20,7 +20,7 @@
  * </div>
  */
 
-wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, Action, Util) {
+wf.define('UI.Modal', ['UI', 'logger', 'Action', 'util'], function (UI, logger, Action, util) {
 
     var role = 'modal';
 
@@ -88,7 +88,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'Util'], function (UI, logger, 
             var me = this;
             me.$element.removeClass(this.hideCls());
             if (me.supportCss3('animation')) {
-                scrollWidth = Util.getScrollbarWidth();
+                scrollWidth = util.getScrollbarWidth();
                 if (origin) {
                     offset = me.content.$element.offset();
                     transformOrigin = (origin.left - offset.left) + 'px ' + (origin.top - offset.top) + 'px';
