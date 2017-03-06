@@ -169,6 +169,9 @@ a {
   font-size: 12px;
   font-family: 'Microsoft YaHei';
 }
+.doc-menu .wf-menu-vertical .wf-menu-content:not([href]) {
+  cursor: default;
+}
 .doc-menu .wf-menu-vertical .wf-menu-sub {
   font-size: 12px;
 }

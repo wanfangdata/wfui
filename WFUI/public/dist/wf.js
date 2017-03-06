@@ -33,7 +33,7 @@
              */
             name: 'wf',
             /**
-             * 版本号,项目构建新版本时更新发布版本号
+             * base 版本号
              * @property {String} version
              */
             version: '1.0.0',
