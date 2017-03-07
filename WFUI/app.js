@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes');
 
 var app = express();
+var virtualDir = '/ui';
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'vash');
@@ -15,14 +16,14 @@ app.set('view engine', 'vash');
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.set('trust proxy', true);
-app.use('/', express.static(__dirname + '/public'));
+app.use(virtualDir, express.static(__dirname + '/public'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 //路由注册
-routes.forEach(route=>app.use(route.key, route.value));
+routes.forEach(route=>app.use(virtualDir + route.key, route.value));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
