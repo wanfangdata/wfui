@@ -6,7 +6,7 @@
             hasChild = item.data && item.data.length>0;
             <li class="wf-menu-item @(!hasChild&&item.label.toLowerCase()==model.page.toLowerCase()?'active':'')">
                 <i class="wf-icon wf-icon-menu"></i>
-                <a class="wf-menu-content" @(item.data&&item.data.length>0?'':('href=/ui/'+model.title+'/'+item.label.toLowerCase()+''))>
+                <a class="wf-menu-content" @(item.data&&item.data.length>0?'':('href=/'+model.title+'/'+item.label.toLowerCase()+''))>
                     <span class="en">@item.label</span>
                     <span class="cn">@item.name</span>
                 </a>                 

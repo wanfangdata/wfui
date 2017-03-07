@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@model.title</title>
-    <link href="/ui/site/img/favicon.ico" rel="shortcut icon" />
-    <link href="/ui/dist/wf.min.css" rel="stylesheet" />
-    <link href="/ui/site/css/global.min.css" rel="stylesheet" />
-    <link href="/ui/site/css/animate.min.css" rel="stylesheet" />
-    <link href="/ui/site/module/highlight-9.8.0/highlight.min.css" rel="stylesheet" />
+    <link href="../site/img/favicon.ico" rel="shortcut icon" />
+    <link href="../dist/wf.min.css" rel="stylesheet" />
+    <link href="../site/css/global.min.css" rel="stylesheet" />
+    <link href="../site/css/animate.min.css" rel="stylesheet" />
+    <link href="../site/module/highlight-9.8.0/highlight.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
@@ -19,10 +19,10 @@
             </a>
             <ul class="wf-menu wf-menu-horizontal wf-col-20">
                 <li class="wf-menu-item@(model.title=="components"?" active":"")">
-                    <a href="/ui/components/getstarted" class="wf-menu-content">组件</a>
+                    <a href="../components/getstarted" class="wf-menu-content">组件</a>
                 </li>
                 <li class="wf-menu-item@(model.title=="guide"?" active":"")">
-                    <a href="/ui/guide/getstarted" class="wf-menu-content">规范</a>
+                    <a href="../guide/getstarted" class="wf-menu-content">规范</a>
                 </li>
             </ul>
         </div>
@@ -46,9 +46,9 @@
             </span>
         </div>
     </div>
-    <script src="/ui/site/js/lib/jquery-1.12.4.min.js"></script>
-    <script src="/ui/site/js/lib/jquery.pjax-1.9.6.min.js"></script>
-    <script src="/ui/dist/wf.js"></script>
+    <script src="../site/js/lib/jquery-1.12.4.min.js"></script>
+    <script src="../site/js/lib/jquery.pjax-1.9.6.min.js"></script>
+    <script src="../dist/wf.js"></script>
     <script>
         var browser = wf.require('browser');
         if ((browser.msie && parseInt(browser.version) > 8) || !browser.msie) {
