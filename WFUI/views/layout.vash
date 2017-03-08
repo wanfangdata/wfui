@@ -53,8 +53,8 @@
         var browser = wf.require('browser');
         if ((browser.msie && parseInt(browser.version) > 8) || !browser.msie) {
             wf.require('loader').load([
-                '/ui/site/module/highlight-9.8.0/highlight.min',
-                '/ui/site/js/lib/animated.min'
+                '../site/module/highlight-9.8.0/highlight.min',
+                '../site/js/lib/animated.min'
             ], function () {
                 $('.brand .text').textillate({ 'in': { effect: 'rotateIn' } });
                 hljs.initHighlightingOnLoad();
