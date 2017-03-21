@@ -106,7 +106,7 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'util'], function (UI, logger, 
          * @param {Object} $element ui jquery对象
          * events:{'click',function($element){}}
          */
-        init: function (_base_,$element, events) {
+        init: function (_base_, $element, events) {
             var me = this;
             _base_($element);
             //初始化组件元素,为JQuery对象
@@ -150,14 +150,17 @@ wf.define('UI.Modal', ['UI', 'logger', 'Action', 'util'], function (UI, logger, 
     /**
      * 自动初始化
      * @param {Object} page页面容器
-     * @param {Bool} 是否tagRender渲染方式
      */
-    Modal.auto = function (page, tagRender) {
+    Modal.auto = function (page) {
         var fireBtn = $('[data-modal]');
-        var $target = tagRender ? fireBtn.filter(UI.AUTO_TAG) : fireBtn;
-        $.each($target.not(UI.DATA_RENDERED), function (index) {
+        $.each(fireBtn, function (index) {
             var id = $(this).data('modal');
-            var modal = new Modal($(UI.ID_PREFIX + id));
+            var $modal = $(UI.ID_PREFIX + id);
+            var modal;
+            if ($modal.attr(UI.DATA_RENDERED_STR)) {
+                return;
+            }
+            modal = new Modal($(UI.ID_PREFIX + id));
             $(this).click(function (e) {
                 modal.open($(this).offset());
             });

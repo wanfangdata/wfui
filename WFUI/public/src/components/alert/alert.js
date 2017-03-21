@@ -80,11 +80,9 @@ wf.define('UI.Alert', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     /**
      * 自动初始化
      * @param {Object} page页面容器
-     * @param {Bool} 是否tagRender渲染方式
      */
-    Alert.auto = function (page, tagRender) {
-        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        $.each($target.not(UI.DATA_RENDERED), function (index) {
+    Alert.auto = function (page) {
+        $.each($(dataRole).not(UI.DATA_RENDERED), function (index) {
             page.addElement(new Alert($(this)));
         });
     };

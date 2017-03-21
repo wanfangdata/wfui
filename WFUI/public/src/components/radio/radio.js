@@ -167,17 +167,14 @@ wf.define('UI.Radio', ['UI', 'logger', 'Action'], function (UI, logger, Action) 
     /**
      * 自动初始化
      * @param {Object} page页面容器
-     * @param {Bool} 是否tagRender渲染方式
      */
-    Radio.auto = function (page, tagRender) {
+    Radio.auto = function (page) {
         var $this, target;
         var groupCls = '.' + UI.clsName('group', role);
-        var $target = tagRender ? $(dataRole).filter(UI.AUTO_TAG) : $(dataRole);
-        var $targetGroup = tagRender ? $(groupCls).filter(UI.AUTO_TAG) :$(groupCls);
-        $.each($target.not('.' + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
+        $.each($(dataRole).not('.' + UI.clsName('group-item', role)).not(UI.DATA_RENDERED), function (index) {
             page.addElement(generateRD($(this), index));
         });
-        $.each($targetGroup.not(UI.DATA_RENDERED), function (index) {
+        $.each($(groupCls).not(UI.DATA_RENDERED), function (index) {
             page.addElement(Radio.group($(this)));
         });
 

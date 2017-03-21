@@ -38,13 +38,12 @@ wf.define('page', ['logger', 'UI'], function (logger, UI) {
 
         /**
          * 自动render页面所有组件
-         * @param {Bool} tagRender是否为data-auto="true"方式渲染
          */
-        auto: function (tagRender) {
+        auto: function () {
 
             for (var com in this.components) {
                 if ($.isFunction(this.components[com].auto)) {
-                    this.components[com].auto(this, tagRender);
+                    this.components[com].auto(this);
                 } else {
                     logger.error(com + '缺少auto render');
                 }
@@ -75,7 +74,9 @@ wf.define('page', ['logger', 'UI'], function (logger, UI) {
                     }
                 }
             });
-            _pg_.auto(!auto);
+            if (auto) {
+                _pg_.auto();
+            }
             if ($.isFunction(func)) {
                 func.call(_pg_, _pg_.components, _pg_.element);
             }
