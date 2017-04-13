@@ -12,21 +12,19 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div data-role="tab" class="wf-tab">
-                <ul class="wf-pagination">
-                    <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
-                        <a><i class="wf-icon icon-back"></i></a>
-                    </li>
-                    <li title="1" class="wf-pagination-item"><a>1</a></li>
-                    <li title="2" class="wf-pagination-item wf-pagination-active"><a>2</a></li>
-                    <li title="3" class="wf-pagination-item"><a>3</a></li>
-                    <li title="4" class="wf-pagination-item"><a>4</a></li>
-                    <li title="5" class="wf-pagination-item"><a>5</a></li>
-                    <li title="Next Page" class="wf-pagination-item wf-pagination-next wf-pagination-disabled">
-                        <a><i class="wf-icon icon-more"></i></a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="wf-pagination">
+                <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
+                    <a><i class="wf-icon icon-back"></i></a>
+                </li>
+                <li title="1" class="wf-pagination-item"><a>1</a></li>
+                <li title="2" class="wf-pagination-item wf-pagination-active"><a>2</a></li>
+                <li title="3" class="wf-pagination-item"><a>3</a></li>
+                <li title="4" class="wf-pagination-item"><a>4</a></li>
+                <li title="5" class="wf-pagination-item"><a>5</a></li>
+                <li title="Next Page" class="wf-pagination-item wf-pagination-next wf-pagination-disabled">
+                    <a><i class="wf-icon icon-more"></i></a>
+                </li>
+            </ul>
         </div>
         <div class="explain">
             <p>基本用法</p>
@@ -38,26 +36,24 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div data-role="tab" class="wf-tab">
-                <ul class="wf-pagination">
-                    <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
-                        <a><i class="wf-icon icon-back"></i></a>
-                    </li>
-                    <li title="1" class="wf-pagination-item"><a>1</a></li>
-                    <li title="2" class="wf-pagination-item"><a>2</a></li>
-                    <li title="3" class="wf-pagination-item  wf-pagination-active"><a>3</a></li>
-                    <li title="4" class="wf-pagination-item"><a>4</a></li>
-                    <li title="5" class="wf-pagination-item"><a>5</a></li>
-                    <li title="Next Page" class="wf-pagination-item wf-pagination-next">
-                        <a><i class="wf-icon icon-more"></i></a>
-                    </li>
-                    <li class="wf-pagination-jumper">
-                        <span class="wf-pagination-jumper-text">跳到</span>
-                        <input class="wf-input" type="text" value="1">
-                        <button class="wf-btn">GO</button>
-                    </li>
-                </ul>
-            </div>
+            <ul class="wf-pagination">
+                <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
+                    <a><i class="wf-icon icon-back"></i></a>
+                </li>
+                <li title="1" class="wf-pagination-item"><a>1</a></li>
+                <li title="2" class="wf-pagination-item"><a>2</a></li>
+                <li title="3" class="wf-pagination-item  wf-pagination-active"><a>3</a></li>
+                <li title="4" class="wf-pagination-item"><a>4</a></li>
+                <li title="5" class="wf-pagination-item"><a>5</a></li>
+                <li title="Next Page" class="wf-pagination-item wf-pagination-next">
+                    <a><i class="wf-icon icon-more"></i></a>
+                </li>
+                <li class="wf-pagination-jumper">
+                    <span class="wf-pagination-jumper-text">跳到</span>
+                    <input class="wf-input" type="text" value="1">
+                    <button class="wf-btn">GO</button>
+                </li>
+            </ul>
         </div>
         <div class="explain">
             <p>快速跳转到某一页</p>
@@ -69,21 +65,19 @@
             <button class="wf-btn wf-btn-small">Code</button>
         </h1>
         <div class="demo">
-            <div data-role="tab" class="wf-tab">
-                <ul class="wf-pagination wf-pagination-simple">
-                    <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
-                        <a><i class="wf-icon icon-back"></i></a>
-                    </li>
-                    <li title="2/5" class="wf-pagination-jumper">
-                        <input class="wf-input" type="text" value="2">
-                        <span class="wf-pagination-slash">／</span>
-                        10
-                    </li>
-                    <li title="Next Page" class="wf-pagination-item wf-pagination-next">
-                        <a><i class="wf-icon icon-more"></i></a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="wf-pagination wf-pagination-simple">
+                <li title="Previous Page" class="wf-pagination-item wf-pagination-prev">
+                    <a><i class="wf-icon icon-back"></i></a>
+                </li>
+                <li title="2/5" class="wf-pagination-jumper">
+                    <input class="wf-input" type="text" value="2">
+                    <span class="wf-pagination-slash">／</span>
+                    10
+                </li>
+                <li title="Next Page" class="wf-pagination-item wf-pagination-next">
+                    <a><i class="wf-icon icon-more"></i></a>
+                </li>
+            </ul>
         </div>
         <div class="explain">
             <p>简单的翻页</p>
