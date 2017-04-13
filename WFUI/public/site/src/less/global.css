@@ -209,9 +209,12 @@ a {
 .wf-input-addon .wf-select {
   margin: 0;
 }
-.wf-select {
+.wf-select-label {
   vertical-align: middle;
   width: 200px;
+}
+.wf-input .wf-select {
+  width: 80px;
 }
 .wf-alert {
   margin-bottom: 12px;

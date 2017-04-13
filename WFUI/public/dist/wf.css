@@ -1604,7 +1604,6 @@ textarea.wf-input {
   position: relative;
 }
 .wf-input-label .wf-input-addon .wf-select .wf-select-selection {
-  width: 80px;
   background-color: #f7f7f7;
   border-radius: 3px 0 0 3px;
 }
@@ -1614,9 +1613,6 @@ textarea.wf-input {
 .wf-input-label .wf-input-addon .wf-select .wf-select-selection:hover {
   background-color: #f7f7f7;
   border-color: #dcdcdc;
-}
-.wf-input-label .wf-input-addon .wf-select .wf-select-options .wf-select-option {
-  width: 65px;
 }
 .wf-input-label .wf-input-addon .wf-select-open .wf-select-selection {
   background-color: #f7f7f7;
